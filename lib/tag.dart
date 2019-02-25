@@ -1,4 +1,6 @@
-class Tag {
+import 'package:dungeon_world_data/_base.dart';
+
+class Tag extends DWEntity {
   /** Tag or feature name */
   final String name;
   /** Value, if applicable */
@@ -20,5 +22,10 @@ class Tag {
       return null;
     }
     return Tag(obj);
+  }
+
+  @override
+  Map toJSON() {
+    return hasValue ? {name: value} : name;
   }
 }

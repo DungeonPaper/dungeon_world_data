@@ -1,7 +1,8 @@
+import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 
-class Spell {
+class Spell extends DWEntity {
   /** Spell key */
   final String key;
   /** Spell name */
@@ -31,4 +32,15 @@ class Spell {
 
   @override
   String toString() => '$name ($level)';
+
+  @override
+  Map toJSON() {
+    return {
+      'key': key,
+      'name': name,
+      'description': description,
+      'level': level,
+      'tags': listMapper<Tag, Map>(tags, (tag) => tag.toJSON()),
+    };
+  }
 }

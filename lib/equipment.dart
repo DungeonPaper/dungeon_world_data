@@ -1,7 +1,8 @@
+import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 
-class Equipment {
+class Equipment extends DWEntity {
   /** Equipment name */
   final String name;
   /** Equipment tags */
@@ -19,4 +20,13 @@ class Equipment {
         listMapper(map['tags'], (i) => Tag.parse(i)),
         map['key'],
       );
+
+  @override
+  Map toJSON() {
+    return {
+      'name': name,
+      'tags': tags,
+      'key': key,
+    };
+  }
 }

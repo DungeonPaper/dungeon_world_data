@@ -1,3 +1,4 @@
+import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/alignment.dart';
 import 'package:dungeon_world_data/dice.dart';
 import 'package:dungeon_world_data/gear_choice.dart';
@@ -5,7 +6,7 @@ import 'package:dungeon_world_data/move.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/spell.dart';
 
-class PlayerClass {
+class PlayerClass extends DWEntity {
   /** Class name */
   final String name;
   /** Class description */
@@ -69,4 +70,23 @@ class PlayerClass {
         spells: spellsMapper(map['spells']),
         gearChoices: gearChoiceMapper(map['gear_choices']),
       );
+
+  @override
+  Map toJSON() {
+    return {
+      'name': name,
+      'description': description,
+      'load': load,
+      'baseHP': baseHP,
+      'damage': damage.toString(),
+      'names': names,
+      'bonds': bonds,
+      'looks': looks,
+      'alignments': alignments,
+      'raceMoves': listMapper<Move, Map>(raceMoves, (move) => move.toJSON()),
+      'startingMoves': listMapper<Move, Map>(startingMoves, (move) => move.toJSON()),
+      'spells': mapMapper(spells, (k, v) => MapEntry(k, v.toJSON())),
+      'gearChoices': listMapper<GearChoice, Map>(gearChoices, (choice) => choice.toJSON()),
+    };
+  }
 }

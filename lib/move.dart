@@ -1,6 +1,7 @@
+import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 
-class Move {
+class Move extends DWEntity {
   /** Move unique identifier */
   final String key;
   /** Move name */
@@ -22,4 +23,14 @@ class Move {
             : [],
         description: map['description'],
       );
+
+  @override
+  Map toJSON() {
+    return {
+      'key': key,
+      'name': name,
+      'classes': classes,
+      'description': description,
+    };
+  }
 }

@@ -1,7 +1,8 @@
+import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 
-class Monster {
+class Monster extends DWEntity {
   /** Monster key */
   final String key;
   /** Monster name */
@@ -25,7 +26,8 @@ class Monster {
   });
 
   @override
-  toString() => '$name\n  tags: $tags,\n  moves: ${moves}\n  instinct: $instinct';
+  toString() =>
+      '$name\n  tags: $tags,\n  moves: ${moves}\n  instinct: $instinct';
 
   static Monster fromJSON(Map map) => Monster(
       key: map['key'],
@@ -34,4 +36,16 @@ class Monster {
       instinct: map['instinct'],
       tags: listMapper(map['tags'], (i) => Tag.parse(i)),
       moves: listMapper(map['moves'], (i) => i.toString()));
+
+  @override
+  Map toJSON() {
+    return {
+      'key': key,
+      'name': name,
+      'description': description,
+      'instinct': instinct,
+      'tags': listMapper<Tag, Map>(tags, (tag) => tag.toJSON()),
+      'moves': moves,
+    };
+  }
 }

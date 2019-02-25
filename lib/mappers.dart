@@ -7,7 +7,7 @@ import 'package:dungeon_world_data/player_class.dart';
 import 'package:dungeon_world_data/spell.dart';
 import 'package:dungeon_world_data/tag.dart';
 
-List<R> listMapper<R>(List lst, R Function(dynamic obj) mapper) =>
+List<R> listMapper<T, R>(List lst, R Function(T obj) mapper) =>
     lst != null && lst.length > 0
         ? List.from(lst).map<R>(mapper).toList()
         : <R>[];
@@ -18,7 +18,7 @@ Map<String, R> mapMapper<R>(Map map,
 
 List<Move> moveListMapper(List lst) => lst == null || lst.length == 0
     ? <Move>[]
-    : listMapper<Move>(lst, (v) => Move.fromJSON(v));
+    : listMapper<Map, Move>(lst, (v) => Move.fromJSON(v));
 
 Map<String, Move> moveMapMapper(Map map) => mapMapper<Move>(
     map, (k, v) => MapEntry<String, Move>(k.toString(), Move.fromJSON(v)));
@@ -31,7 +31,7 @@ Map<String, PlayerClass> classMapper(Map map) => mapMapper(
 Map<String, List<String>> nameMapper(Map map) => mapMapper<List<String>>(
     map,
     (k, v) => MapEntry<String, List<String>>(
-        k.toString(), listMapper<String>(v, (j) => j.toString())));
+        k.toString(), listMapper<dynamic, String>(v, (j) => j.toString())));
 
 List<List<String>> looksMapper(List lst) =>
     listMapper(lst, (i) => listMapper(i, (j) => j.toString()));

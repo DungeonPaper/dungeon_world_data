@@ -9,7 +9,7 @@ import 'package:dungeon_world_data/spell.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:path/path.dart';
 
-const String VERSION = '1.0.0';
+const String VERSION = '1.0.2';
 
 class DungeonWorldData {
   /** Raw data */
@@ -20,6 +20,10 @@ class DungeonWorldData {
   List<Move> basicMoves;
   /** Special moves */
   List<Move> specialMoves;
+  /** Starting moves (per class) */
+  Map<String, List<Move>> startingMoves;
+  /** Advanced moves  (per class) */
+  Map<String, List<Move>> advancedMoves;
   /** Map of `PlayerClass.key` => `PlayerClass` */
   Map<String, PlayerClass> classes;
   /** Map of `Equipment.key` => `Equipment` */
@@ -49,8 +53,20 @@ class DungeonWorldData {
     monsters = monsterMapper(raw['monsters']);
     tags = tagMapper(raw['tags']);
     version = raw['version'];
+
+    startingMoves = gatherStartingMoves();
+    advancedMoves = gatherRaceMoves();
+  }
+
+  Map<String, List<Move>> gatherStartingMoves() {
+    return classes.map((k, v) => MapEntry(k, v.startingMoves));
+  }
+
+  Map<String, List<Move>> gatherRaceMoves() {
+    return classes.map((k, v) => MapEntry(k, v.raceMoves));
   }
 }
+
 
 DungeonWorldData dungeonWorld = DungeonWorldData();
 

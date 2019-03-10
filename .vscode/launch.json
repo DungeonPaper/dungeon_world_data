@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "Dart",
-            "program": "dw_data.dart",
+            "program": "bin/dw_data.dart",
             "request": "launch",
             "type": "dart"
         }

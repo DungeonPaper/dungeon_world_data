@@ -1,11 +1,13 @@
 import 'package:dungeon_world_data/_base.dart';
 
 class Tag extends DWEntity {
-  /** Tag or feature name */
+  /// Tag or feature name
   final String name;
-  /** Value, if applicable */
+
+  /// Value, if applicable
   final dynamic value;
-  /** Returns whether this tag has a corresponding value or not */
+
+  /// Returns whether this tag has a corresponding value or not
   final bool hasValue;
 
   Tag(this.name, [this.value]) : hasValue = value != null;

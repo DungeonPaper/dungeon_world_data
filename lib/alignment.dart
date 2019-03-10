@@ -1,9 +1,10 @@
 import 'package:dungeon_world_data/_base.dart';
 
 class Alignment extends DWEntity {
-  /** Alignment name */
+  /// Alignment name
   final String name;
-  /** Alignment description */
+
+  /// Alignment description
   final String description;
 
   Alignment(this.name, this.description);

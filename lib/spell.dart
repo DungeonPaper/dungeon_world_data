@@ -3,15 +3,19 @@ import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 
 class Spell extends DWEntity {
-  /** Spell key */
+  /// Spell key
   final String key;
-  /** Spell name */
+
+  /// Spell name
   final String name;
-  /** Spell description */
+
+  /// Spell description
   final String description;
-  /** Spell level */
+
+  /// Spell level
   final String level;
-  /** Spell tags */
+
+  /// Spell tags
   final List<Tag> tags;
 
   Spell({

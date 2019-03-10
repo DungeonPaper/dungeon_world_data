@@ -1,5 +1,3 @@
-
-
 import 'package:dungeon_world_data/_base.dart';
 
 class GearChoice extends DWEntity {

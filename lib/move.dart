@@ -2,15 +2,17 @@ import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 
 class Move extends DWEntity {
-  /** Move unique identifier */
+  /// Move unique identifier
   final String key;
-  /** Move name */
+
+  /// Move name
   final String name;
-  /** Move description */
+
+  /// Move description
   final String description;
 
-  /** Classes that can use this move.
-   * The keys correspond to the `PlayerClass` key. */
+  /// Classes that can use this move.
+  /// The keys correspond to the `PlayerClass` key.
   final List<String> classes;
 
   Move({this.name, this.description, this.key, this.classes});

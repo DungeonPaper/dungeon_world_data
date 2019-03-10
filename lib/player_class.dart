@@ -7,31 +7,49 @@ import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/spell.dart';
 
 class PlayerClass extends DWEntity {
-  /** Class name */
+  /// Class name
   final String name;
-  /** Class description */
+
+  /// Class description
   final String description;
-  /** Max. weight load */
+
+  /// Max. weight load
   final num load;
-  /** Base HP */
+
+  /// Base HP
   final num baseHP;
-  /** Hit die */
+
+  /// Hit die
   final Dice damage;
-  /** Character name options, mapped by race */
+
+  /// Character name options, mapped by race
   final Map<String, List<String>> names;
-  /** Class Bonds */
+
+  /// Class Bonds
   final List<String> bonds;
-  /** Character look options */
+
+  /// Character look options
   final List<List<String>> looks;
-  /** Character alignment options. Map of `Alignment.key` => `Alignment` */
+
+  /// Character alignment options. Map of `Alignment.key` => `Alignment`
   final Map<String, Alignment> alignments;
-  /** Race moves */
+
+  /// Race moves
   final List<Move> raceMoves;
-  /** Starting moves */
+
+  /// Starting moves
   final List<Move> startingMoves;
-  /** Spells */
+
+  /// Starting moves
+  final List<Move> advancedMoves1;
+
+  /// Starting moves
+  final List<Move> advancedMoves2;
+
+  /// Spells
   final Map<String, Spell> spells;
-  /** Gear choices */
+
+  /// Gear choices
   final List<GearChoice> gearChoices;
 
   PlayerClass({
@@ -46,6 +64,8 @@ class PlayerClass extends DWEntity {
     this.alignments,
     this.raceMoves,
     this.startingMoves,
+    this.advancedMoves1,
+    this.advancedMoves2,
     this.spells,
     this.gearChoices,
   });
@@ -67,6 +87,8 @@ class PlayerClass extends DWEntity {
         alignments: alignmentsMapper(map['alignments']),
         raceMoves: moveListMapper(map['race_moves']),
         startingMoves: moveListMapper(map['starting_moves']),
+        advancedMoves1: moveListMapper(map['advanced_moves_1']),
+        advancedMoves2: moveListMapper(map['advanced_moves_2']),
         spells: spellsMapper(map['spells']),
         gearChoices: gearChoiceMapper(map['gear_choices']),
       );
@@ -84,9 +106,11 @@ class PlayerClass extends DWEntity {
       'looks': looks,
       'alignments': alignments,
       'raceMoves': listMapper<Move, Map>(raceMoves, (move) => move.toJSON()),
-      'startingMoves': listMapper<Move, Map>(startingMoves, (move) => move.toJSON()),
+      'startingMoves':
+          listMapper<Move, Map>(startingMoves, (move) => move.toJSON()),
       'spells': mapMapper(spells, (k, v) => MapEntry(k, v.toJSON())),
-      'gearChoices': listMapper<GearChoice, Map>(gearChoices, (choice) => choice.toJSON()),
+      'gearChoices':
+          listMapper<GearChoice, Map>(gearChoices, (choice) => choice.toJSON()),
     };
   }
 }

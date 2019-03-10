@@ -3,17 +3,22 @@ import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 
 class Monster extends DWEntity {
-  /** Monster key */
+  /// Monster key
   final String key;
-  /** Monster name */
+
+  /// Monster name
   final String name;
-  /** Monster description */
+
+  /// Monster description
   final String description;
-  /** Monster instinct */
+
+  /// Monster instinct
   final String instinct;
-  /** Monster tags */
+
+  /// Monster tags
   final List<Tag> tags;
-  /** Monster moves */
+
+  /// Monster moves
   final List<String> moves;
 
   Monster({

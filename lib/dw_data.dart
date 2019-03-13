@@ -56,9 +56,12 @@ class DungeonWorldData {
     specialMoves = moveListMapper(raw['special_moves']);
     classes = classMapper(raw['classes']);
     equipment = equipmentMapper(raw['equipment']);
-    spells = spellsMapper(raw['spells']);
     monsters = monsterMapper(raw['monsters']);
     tags = tagMapper(raw['tags']);
+    spells = {};
+    classes.values.forEach((cls) {
+      spells.addAll(cls.spells);
+  });
 
     startingMoves = gatherStartingMoves();
     advancedMoves = gatherRaceMoves();

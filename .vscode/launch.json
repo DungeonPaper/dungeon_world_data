@@ -5,8 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Dart",
+            "name": "Main",
             "program": "bin/dw_data.dart",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Example",
+            "program": "example/example.dart",
             "request": "launch",
             "type": "dart"
         }

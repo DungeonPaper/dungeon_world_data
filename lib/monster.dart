@@ -1,6 +1,7 @@
 import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
+import 'package:meta/meta.dart';
 
 class Monster extends DWEntity {
   /// Monster key
@@ -22,12 +23,12 @@ class Monster extends DWEntity {
   final List<String> moves;
 
   Monster({
-    this.key,
-    this.name,
-    this.description,
-    this.instinct,
-    this.tags,
-    this.moves,
+    @required this.key,
+    @required this.name,
+    @required this.description,
+    @required this.instinct,
+    @required this.tags,
+    @required this.moves,
   });
 
   @override

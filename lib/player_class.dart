@@ -5,8 +5,12 @@ import 'package:dungeon_world_data/gear_choice.dart';
 import 'package:dungeon_world_data/move.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/spell.dart';
+import 'package:meta/meta.dart';
 
 class PlayerClass extends DWEntity {
+  /// Class key
+  final String key;
+
   /// Class name
   final String name;
 
@@ -53,21 +57,22 @@ class PlayerClass extends DWEntity {
   final List<GearChoice> gearChoices;
 
   PlayerClass({
-    this.name,
-    this.description,
-    this.load,
-    this.baseHP,
-    this.damage,
-    this.names,
-    this.bonds,
-    this.looks,
-    this.alignments,
-    this.raceMoves,
-    this.startingMoves,
-    this.advancedMoves1,
-    this.advancedMoves2,
-    this.spells,
-    this.gearChoices,
+    @required this.key,
+    @required this.name,
+    @required this.description,
+    @required this.load,
+    @required this.baseHP,
+    @required this.damage,
+    @required this.names,
+    @required this.bonds,
+    @required this.looks,
+    @required this.alignments,
+    @required this.raceMoves,
+    @required this.startingMoves,
+    @required this.advancedMoves1,
+    @required this.advancedMoves2,
+    @required this.spells,
+    @required this.gearChoices,
   });
 
   @override
@@ -76,6 +81,10 @@ class PlayerClass extends DWEntity {
   }
 
   static PlayerClass fromJSON(Map map) => PlayerClass(
+        key: map['name']
+            .toString()
+            .toLowerCase()
+            .replaceAll(RegExp('[^a-z]'), '_'),
         name: map['name'],
         description: map['description'],
         load: map['load'],

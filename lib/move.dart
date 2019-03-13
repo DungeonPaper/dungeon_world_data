@@ -1,5 +1,6 @@
 import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
+import 'package:meta/meta.dart';
 
 class Move extends DWEntity {
   /// Move unique identifier
@@ -15,7 +16,12 @@ class Move extends DWEntity {
   /// The keys correspond to the `PlayerClass` key.
   final List<String> classes;
 
-  Move({this.name, this.description, this.key, this.classes});
+  Move({
+    @required this.name,
+    @required this.description,
+    @required this.key,
+    @required this.classes,
+  });
 
   static Move fromJSON(Map map) => Move(
         key: map['key'],

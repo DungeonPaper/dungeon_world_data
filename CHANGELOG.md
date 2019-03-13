@@ -1,4 +1,7 @@
-# v1.2.1
+# v1.2.4
+* Fix JSON output for Equipment item
+
+# v1.2.1-v1.2.3
 * Tag bugfixes
 
 # v1.2.0

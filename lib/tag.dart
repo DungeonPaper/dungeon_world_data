@@ -5,13 +5,13 @@ class Tag extends DWEntity {
   final String name;
 
   /// Value, if applicable
-  final Map<String, dynamic> values;
+  final Map values;
 
   /// Returns whether this tag has a corresponding value or not
-  final bool hasValue;
+  final bool hasValues;
 
   Tag(this.name, [this.values])
-      : hasValue = values is Map && values.values.any((v) => v != null) ||
+      : hasValues = values is Map && values.values.any((v) => v != null) ||
             values is List && values.isNotEmpty ||
             values != null;
 
@@ -29,7 +29,7 @@ class Tag extends DWEntity {
 
   static Tag parse(obj) {
     if (obj is Map) {
-      String key = obj.keys.first;
+      String key = obj.keys.first.toString();
 
       return Tag(key, obj);
     }
@@ -41,6 +41,6 @@ class Tag extends DWEntity {
 
   @override
   dynamic toJSON() {
-    return hasValue ? {name: values} : name;
+    return hasValues ? values : name;
   }
 }

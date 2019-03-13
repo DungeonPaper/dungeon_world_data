@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:dungeon_world_data/_data.dart';
 import 'package:dungeon_world_data/equipment.dart';
 import 'package:dungeon_world_data/mappers.dart';

@@ -5,13 +5,11 @@ class Dice {
   final num amount;
   final num sides;
 
-  /** Simple dice, with sides and die count.
-   * You can multiply, add or subtract Dice objects to change the amount of rolls (notice dice must
-   * be with the same amount of sides).
-   *
-   * To roll multiple dice at once, you may use the static `Dice.roll(<Dice>[...])`.
-   */
-
+  /// Simple dice, with sides and die count.
+  /// You can multiply, add or subtract Dice objects to change the amount of rolls (notice dice must
+  /// be with the same amount of sides).
+  ///
+  /// To roll multiple dice at once, you may use the static `Dice.roll(<Dice>[...])`.
   Dice(this.sides, [this.amount = 1]);
 
   static Dice d4 = Dice(4);

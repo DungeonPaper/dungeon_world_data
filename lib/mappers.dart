@@ -8,7 +8,7 @@ import 'package:dungeon_world_data/spell.dart';
 import 'package:dungeon_world_data/tag.dart';
 
 List<R> listMapper<T, R>(List<T> lst, R Function(dynamic obj) mapper) =>
-    lst != null && lst.length > 0
+    lst != null && lst.isNotEmpty
         ? List.from(lst).map<R>(mapper).toList()
         : <R>[];
 
@@ -16,7 +16,7 @@ Map<String, R> mapMapper<R>(Map map,
         MapEntry<String, R> Function(dynamic key, dynamic obj) mapper) =>
     map != null ? Map.from(map).map<String, R>(mapper) : {};
 
-List<Move> moveListMapper(List lst) => lst == null || lst.length == 0
+List<Move> moveListMapper(List lst) => lst == null || lst.isEmpty
     ? <Move>[]
     : listMapper<Map, Move>(List<Map>.from(lst), (v) => Move.fromJSON(v));
 

@@ -2,13 +2,13 @@ import 'package:dungeon_world_data/_base.dart';
 
 class Tag extends DWEntity {
   /// Tag or feature name
-  final String name;
+  String name;
 
   /// Value, if applicable
-  final Map values;
+  Map values;
 
   /// Returns whether this tag has a corresponding value or not
-  final bool hasValues;
+  bool hasValues;
 
   Tag(this.name, [this.values])
       : hasValues = values is Map && values.values.any((v) => v != null) ||
@@ -28,14 +28,25 @@ class Tag extends DWEntity {
   }
 
   static Tag parse(obj) {
+    if (obj is String) {
+      if (obj == '') {
+        return null;
+      }
+      RegExp amountThenName = RegExp('([0-9]+)\\s(.*)');
+      if (amountThenName.hasMatch(obj)) {
+        Match match = amountThenName.allMatches(obj).toList().first;
+        String name = match.group(2);
+        String value = match.group(1);
+        return Tag(name, {name: value});
+      }
+    }
+
     if (obj is Map) {
       String key = obj.keys.first.toString();
 
       return Tag(key, obj);
     }
-    if (obj == '') {
-      return null;
-    }
+
     return Tag(obj);
   }
 

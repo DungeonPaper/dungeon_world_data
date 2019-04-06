@@ -5,19 +5,19 @@ import 'package:meta/meta.dart';
 
 class Equipment extends DWEntity {
   /// Equipment key
-  final String key;
+  String key;
 
   /// Equipment name
-  final String name;
+  String name;
 
   /// Equipment name, in plural
-  final String pluralName;
+  String pluralName;
 
   /// Item description
-  final String description;
+  String description;
 
   /// Equipment tags
-  final List<Tag> tags;
+  List<Tag> tags;
 
   Equipment({
     @required this.name,

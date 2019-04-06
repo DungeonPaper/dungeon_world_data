@@ -2,8 +2,8 @@ import 'dart:math';
 import 'package:quiver/core.dart';
 
 class Dice {
-  final num amount;
-  final num sides;
+  num amount;
+  num sides;
 
   /// Simple dice, with sides and die count.
   /// You can multiply, add or subtract Dice objects to change the amount of rolls (notice dice must
@@ -110,25 +110,13 @@ class Dice {
 
 class DiceResult {
   /// The corresponding dice.
-  final Dice dice;
+  Dice dice;
 
   /// List of results, by order of dice rolled.
-  final List<num> results;
-
-  /// Total accumulated results
-  final num total;
-
-  /// `true` if any dice is a roll of 20.
-  final bool hit20;
-
-  /// Dice index which hit 20. `null` if none hit;
-  final int hit20At;
+  List<num> results;
 
   /// Represents a result of a die roll
-  DiceResult(this.dice, this.results)
-      : total = results.reduce((tot, cur) => tot + cur),
-        hit20 = results.any((r) => r == 20),
-        hit20At = results.any((r) => r == 20) ? results.indexOf(20) : null;
+  DiceResult(this.dice, this.results);
 
   @override
   String toString() => '$dice${hit20 ? '*' : ''} => $total';
@@ -141,4 +129,8 @@ class DiceResult {
     }
     return out.toString();
   }
+
+  num get total => results.reduce((tot, cur) => tot + cur);
+  bool get hit20 => results.any((r) => r == 20);
+  num get hit20At => hit20 ? results.indexOf(20) : null;
 }

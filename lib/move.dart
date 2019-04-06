@@ -4,21 +4,25 @@ import 'package:meta/meta.dart';
 
 class Move extends DWEntity {
   /// Move unique identifier
-  final String key;
+  String key;
 
   /// Move name
-  final String name;
+  String name;
 
   /// Move description
-  final String description;
+  String description;
+
+  /// Move explanation
+  String explanation;
 
   /// Classes that can use this move.
   /// The keys correspond to the `PlayerClass` key.
-  final List<String> classes;
+  List<String> classes;
 
   Move({
     @required this.name,
     @required this.description,
+    @required this.explanation,
     @required this.key,
     @required this.classes,
   });
@@ -30,6 +34,7 @@ class Move extends DWEntity {
             ? listMapper(map['classes'], (j) => j.toString())
             : [],
         description: map['description'],
+        explanation: map['explanation'],
       );
 
   @override
@@ -39,6 +44,7 @@ class Move extends DWEntity {
       'name': name,
       'classes': classes,
       'description': description,
+      'explanation': explanation,
     };
   }
 }

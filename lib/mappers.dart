@@ -41,8 +41,11 @@ Map<String, Alignment> alignmentsMapper(Map map) => mapMapper(
     (k, v) => MapEntry<String, Alignment>(
         k.toString(), Alignment(v['name'], v['name'], v['description'])));
 
-gearChoiceMapper(List lst) => listMapper(lst,
-    (v) => GearChoice(v['label'], listMapper(v['list'], (j) => j.toString())));
+List<GearChoice> gearChoiceMapper(List lst) => listMapper(lst,
+    (v) => GearChoice.parse(v));
+
+List<GearOption> gearOptionMapper(List lst) => listMapper(lst,
+    (v) => GearOption.parse(v));
 
 Map<String, Equipment> equipmentMapper(Map map) => mapMapper(map,
     (k, v) => MapEntry<String, Equipment>(k.toString(), Equipment.fromJSON(v)));

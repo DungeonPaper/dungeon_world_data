@@ -9,52 +9,52 @@ import 'package:meta/meta.dart';
 
 class PlayerClass extends DWEntity {
   /// Class key
-  final String key;
+  String key;
 
   /// Class name
-  final String name;
+  String name;
 
   /// Class description
-  final String description;
+  String description;
 
   /// Max. weight load
-  final num load;
+  num load;
 
   /// Base HP
-  final num baseHP;
+  num baseHP;
 
   /// Hit die
-  final Dice damage;
+  Dice damage;
 
   /// Character name options, mapped by race
-  final Map<String, List<String>> names;
+  Map<String, List<String>> names;
 
   /// Class Bonds
-  final List<String> bonds;
+  List<String> bonds;
 
   /// Character look options
-  final List<List<String>> looks;
+  List<List<String>> looks;
 
   /// Character alignment options. Map of `Alignment.key` => `Alignment`
-  final Map<String, Alignment> alignments;
+  Map<String, Alignment> alignments;
 
   /// Race moves
-  final List<Move> raceMoves;
+  List<Move> raceMoves;
 
   /// Starting moves
-  final List<Move> startingMoves;
+  List<Move> startingMoves;
 
   /// Starting moves
-  final List<Move> advancedMoves1;
+  List<Move> advancedMoves1;
 
   /// Starting moves
-  final List<Move> advancedMoves2;
+  List<Move> advancedMoves2;
 
   /// Spells
-  final Map<String, Spell> spells;
+  Map<String, Spell> spells;
 
   /// Gear choices
-  final List<GearChoice> gearChoices;
+  List<GearChoice> gearChoices;
 
   PlayerClass({
     @required this.key,

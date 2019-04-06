@@ -5,22 +5,22 @@ import 'package:meta/meta.dart';
 
 class Monster extends DWEntity {
   /// Monster key
-  final String key;
+  String key;
 
   /// Monster name
-  final String name;
+  String name;
 
   /// Monster description
-  final String description;
+  String description;
 
   /// Monster instinct
-  final String instinct;
+  String instinct;
 
   /// Monster tags
-  final List<Tag> tags;
+  List<Tag> tags;
 
   /// Monster moves
-  final List<String> moves;
+  List<String> moves;
 
   Monster({
     @required this.key,
@@ -50,7 +50,7 @@ class Monster extends DWEntity {
       'name': name,
       'description': description,
       'instinct': instinct,
-      'tags': listMapper<Tag, Map>(tags, (tag) => tag.toJSON()),
+      'tags': listMapper<Tag, dynamic>(tags, (tag) => tag.toJSON()),
       'moves': moves,
     };
   }

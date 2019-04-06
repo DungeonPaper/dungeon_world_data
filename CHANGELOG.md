@@ -1,3 +1,12 @@
+# v1.3.0
+* Updated gear choice and option mapping
+
+# v1.2.6
+* Fixed tag JSON output in other classes
+
+# v1.2.5
+* Turned fields to non final, so they're changable for users
+
 # v1.2.4
 * Fix JSON output for Equipment item
 

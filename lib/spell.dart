@@ -5,19 +5,19 @@ import 'package:meta/meta.dart';
 
 class Spell extends DWEntity {
   /// Spell key
-  final String key;
+  String key;
 
   /// Spell name
-  final String name;
+  String name;
 
   /// Spell description
-  final String description;
+  String description;
 
   /// Spell level
-  final String level;
+  String level;
 
   /// Spell tags
-  final List<Tag> tags;
+  List<Tag> tags;
 
   Spell({
     @required this.key,
@@ -45,7 +45,7 @@ class Spell extends DWEntity {
       'name': name,
       'description': description,
       'level': level,
-      'tags': listMapper<Tag, Map>(tags, (tag) => tag.toJSON()),
+      'tags': listMapper<Tag, dynamic>(tags, (tag) => tag.toJSON()),
     };
   }
 }

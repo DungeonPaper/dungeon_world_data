@@ -1,3 +1,6 @@
+# v1.3.1
+* Added missing toJSON() on GearOption
+
 # v1.3.0
 * Updated gear choice and option mapping
 

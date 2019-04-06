@@ -18,12 +18,12 @@ class GearChoice extends DWEntity {
   Map toJSON() {
     return {
       'label': label,
-      'list': list,
+      'list': listMapper<GearOption, Map>(list, (i) => i.toJSON()),
     };
   }
 }
 
-class GearOption {
+class GearOption extends DWEntity {
   String name;
   List<Tag> tags;
 
@@ -42,5 +42,13 @@ class GearOption {
     tags = rawTags.isNotEmpty
         ? rawTags.split(',').map((tag) => Tag.parse(tag)).toList()
         : [];
+  }
+
+  @override
+  toJSON() {
+    return {
+      'name': name,
+      'tags': tags,
+    };
   }
 }

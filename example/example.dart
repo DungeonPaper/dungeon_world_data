@@ -22,8 +22,5 @@ void main() {
   print(dungeonWorld.equipment.values.where((i) => i.description != null).toList().join('\n\n'));
   print('');
 
-  Map l = {'name': 'one'};
-  print(Tag.parse(l));
-  print(dungeonWorld.equipment['axe'].toJSON());
-  print(dungeonWorld.equipment.values.firstWhere((i) => i.description != null && i.description.isNotEmpty));
+  print(dungeonWorld.classes['bard'].gearChoices.map((i) => i.toJSON()).toList());
 }

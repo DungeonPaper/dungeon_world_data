@@ -1,3 +1,6 @@
+# v1.3.3
+* Removed test package from dependencies
+
 # v1.3.2
 * Fixed 'looks' sections in some classes being concatenated and not split
 * Added 2 tests

@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:dungeon_world_data/_data.dart';
 import 'package:dungeon_world_data/equipment.dart';
 import 'package:dungeon_world_data/mappers.dart';
@@ -8,7 +7,7 @@ import 'package:dungeon_world_data/player_class.dart';
 import 'package:dungeon_world_data/spell.dart';
 import 'package:dungeon_world_data/tag.dart';
 
-const String VERSION = '1.0.2';
+const String VERSION = '1.0.3';
 
 class DungeonWorldData {
   /// Raw data
@@ -45,9 +44,7 @@ class DungeonWorldData {
   final String version = VERSION;
 
   DungeonWorldData() {
-    String cleaned = DW_DATA;
-    // print(cleaned);
-    raw = jsonDecode(cleaned);
+    raw = DW_DATA;
     _initFromData();
   }
 
@@ -61,7 +58,7 @@ class DungeonWorldData {
     spells = {};
     classes.values.forEach((cls) {
       spells.addAll(cls.spells);
-  });
+    });
 
     startingMoves = gatherStartingMoves();
     advancedMoves = gatherRaceMoves();

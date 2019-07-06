@@ -1,3 +1,6 @@
+# v1.3.4
+* Removed test dump file from source
+
 # v1.3.3
 * Removed test package from dependencies
 

@@ -1,3 +1,7 @@
+# v1.3.2
+* Fixed 'looks' sections in some classes being concatenated and not split
+* Added 2 tests
+
 # v1.3.1
 * Added missing toJSON() on GearOption
 

@@ -1,31 +1,23 @@
 import 'package:dungeon_world_data/_base.dart';
 
-class Tag extends DWEntity {
+class Tag<T> extends DWEntity {
   /// Tag or feature name
   String name;
 
   /// Value, if applicable
-  Map values;
+  T value;
 
-  /// Returns whether this tag has a corresponding value or not
-  bool hasValues;
+  String description;
 
-  Tag(this.name, [this.values])
-      : hasValues = values is Map && values.values.any((v) => v != null) ||
-            values is List && values.isNotEmpty ||
-            values != null;
+  Tag(this.name, [this.value, this.description]);
 
   @override
-  toString() => values != null ? '$name: $values' : name;
+  toString() => hasValue ? '$name: $value' : name;
 
-  /// Returns a value from the `values` map, if it exists.
-  /// Falls back to `defaultValue`
-  T get<T>(String key, [T defaultValue]) {
-    if (values.containsKey(key)) {
-      return values[key];
-    }
-    return defaultValue;
-  }
+  /// Returns whether this tag has a corresponding value or not
+  bool get hasValue => value != null;
+
+  String get key => name.replaceAll(RegExp(r'[^a-z]+'), '_').toLowerCase();
 
   static Tag parse(obj) {
     if (obj is String) {
@@ -37,14 +29,13 @@ class Tag extends DWEntity {
         Match match = amountThenName.allMatches(obj).toList().first;
         String name = match.group(2);
         String value = match.group(1);
-        return Tag(name, {name: value});
+        return Tag(name, value);
       }
     }
 
     if (obj is Map) {
       String key = obj.keys.first.toString();
-
-      return Tag(key, obj);
+      return Tag(key, obj[key]);
     }
 
     return Tag(obj);
@@ -52,6 +43,6 @@ class Tag extends DWEntity {
 
   @override
   dynamic toJSON() {
-    return hasValues ? values : name;
+    return hasValue ? value : name;
   }
 }

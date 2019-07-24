@@ -1,3 +1,12 @@
+# v1.4.2
+* Updated tags to allow description
+
+# v1.4.1
+* Fixed Tags toString() behavior
+
+# v1.4.0
+* Simplified Tags behavior. This will break some Tag usages
+
 # v1.3.4
 * Removed test dump file from source
 

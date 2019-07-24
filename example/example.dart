@@ -1,4 +1,5 @@
 import 'package:dungeon_world_data/dw_data.dart';
+import 'package:dungeon_world_data/tag.dart';
 
 void main() {
   // Get all monsters
@@ -21,5 +22,13 @@ void main() {
   print(dungeonWorld.equipment.values.where((i) => i.description != null).toList().join('\n\n'));
   print('');
 
+  // Get gear choices for class
   print(dungeonWorld.classes['bard'].gearChoices.map((i) => i.toJSON()).toList());
+
+  // Get starting moves for classs
+  print(dungeonWorld.classes['thief'].startingMoves);
+
+  // Parse tags from objects or strings
+  print(Tag.parse({'weight': 1}));
+  print(Tag.parse('close'));
 }

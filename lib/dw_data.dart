@@ -54,7 +54,7 @@ class DungeonWorldData {
     classes = classMapper(raw['classes']);
     equipment = equipmentMapper(raw['equipment']);
     monsters = monsterMapper(raw['monsters']);
-    tags = tagMapper(raw['tags']);
+    tags = tagInfoMapper(raw['tags'].removeWhere((k, v) => k == 'key'));
     spells = {};
     classes.values.forEach((cls) {
       spells.addAll(cls.spells);

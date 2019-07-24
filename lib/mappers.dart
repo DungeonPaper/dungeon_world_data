@@ -65,3 +65,8 @@ Map<String, Monster> monsterMapper(Map map) => mapMapper(map,
 
 Map<String, Tag> tagMapper(Map map) =>
     mapMapper(map, (k, v) => MapEntry<String, Tag>(k.toString(), Tag.parse(v)));
+
+Map<String, Tag> tagInfoMapper(Map map) => mapMapper(
+    map,
+    (k, v) => MapEntry<String, Tag>(
+        k.toString(), Tag(v['name'], null, v['description'])));

@@ -28,5 +28,14 @@ void main() {
       var tag = Tag.parse('near');
       expect(tag.toString(), equals('near'));
     });
+    test('toJSON with value', () {
+      var tag = Tag.parse({'weight':10});
+      var json = tag.toJSON();
+      expect(json, equals({'weight':10}));
+    });
+    test('toJSON without value', () {
+      var tag = Tag.parse('two-handed');
+      expect(tag.toJSON(), equals('two-handed'));
+    });
   });
 }

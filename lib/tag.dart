@@ -43,6 +43,6 @@ class Tag<T> extends DWEntity {
 
   @override
   dynamic toJSON() {
-    return hasValue ? value : name;
+    return hasValue ? {name: value} : name;
   }
 }

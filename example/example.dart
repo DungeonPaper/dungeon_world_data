@@ -31,4 +31,7 @@ void main() {
   // Parse tags from objects or strings
   print(Tag.parse({'weight': 1}));
   print(Tag.parse('close'));
+
+  // All info tags
+  print(dungeonWorld.tags.values.toList());
 }

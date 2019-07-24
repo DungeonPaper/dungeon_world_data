@@ -1,3 +1,9 @@
+# v1.4.4
+* Fixed tag toJSON method
+
+# v1.4.3
+* Fixed info tag mapping in main data
+
 # v1.4.2
 * Updated tags to allow description
 

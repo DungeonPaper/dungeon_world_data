@@ -4100,7 +4100,7 @@ Map<String, dynamic> DW_DATA = {
       "key": "bonus"
     },
     "coins": {
-      "name": "coins",
+      "name": "n coins",
       "description":
           "How much it costs to buy, normally. If the cost includes “-Charisma” a little negotiation subtracts the haggler’s Charisma score (not modifier) from the price.",
       "key": "coins"

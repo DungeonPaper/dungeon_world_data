@@ -1,4 +1,5 @@
 import 'package:dungeon_world_data/_base.dart';
+import 'package:dungeon_world_data/tag_pre_parser.dart' as tagParser;
 
 class Tag<T> extends DWEntity {
   /// Tag or feature name
@@ -9,7 +10,12 @@ class Tag<T> extends DWEntity {
 
   String description;
 
-  Tag(this.name, [this.value, this.description]);
+  Tag(this.name, [this.value, this.description]) {
+    if (tagParser.isParsed)
+      description ??= tagParser.ALL_TAGS.values
+          .firstWhere((t) => t.name == name, orElse: () => null)
+          ?.description;
+  }
 
   @override
   toString() => hasValue ? '$name: $value' : name;
@@ -28,8 +34,8 @@ class Tag<T> extends DWEntity {
       if (amountThenName.hasMatch(obj)) {
         Match match = amountThenName.allMatches(obj).toList().first;
         String name = match.group(2);
-        String value = match.group(1);
-        return Tag(name, value);
+        int value = int.tryParse(match.group(1));
+        return Tag<num>(name, value);
       }
     }
 

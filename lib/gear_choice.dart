@@ -40,7 +40,7 @@ class GearOption extends DWEntity {
         ? str.substring(openParen + 1, closeParen)
         : '';
     tags = rawTags.isNotEmpty
-        ? rawTags.split(',').map((tag) => Tag.parse(tag)).toList()
+        ? rawTags.split(',').map((tag) => Tag.parse(tag.trim())).toList()
         : [];
   }
 

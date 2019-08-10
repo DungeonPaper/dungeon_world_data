@@ -6,6 +6,7 @@ import 'package:dungeon_world_data/move.dart';
 import 'package:dungeon_world_data/player_class.dart';
 import 'package:dungeon_world_data/spell.dart';
 import 'package:dungeon_world_data/tag.dart';
+import 'package:dungeon_world_data/tag_pre_parser.dart' as tagParser;
 
 const String VERSION = '1.0.3';
 
@@ -49,12 +50,13 @@ class DungeonWorldData {
   }
 
   void _initFromData() {
+    tagParser.init();
+    tags = tagParser.ALL_TAGS;
     basicMoves = moveListMapper(raw['basic_moves']);
     specialMoves = moveListMapper(raw['special_moves']);
     classes = classMapper(raw['classes']);
     equipment = equipmentMapper(raw['equipment']);
     monsters = monsterMapper(raw['monsters']);
-    tags = tagInfoMapper(raw['tags']..removeWhere((k, v) => k == 'key'));
     spells = {};
     classes.values.forEach((cls) {
       spells.addAll(cls.spells);

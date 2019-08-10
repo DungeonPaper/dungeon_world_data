@@ -69,7 +69,7 @@ Map<String, Tag> tagMapper(Map map) =>
 Map<String, Tag> tagInfoMapper(Map map) => mapMapper(map, (k, v) {
       String cleanName = v['name']
           .toString()
-          .replaceAll(RegExp(r'[^a-z]'), ' ')
+          .replaceAll(RegExp(r'[^a-z]', caseSensitive: false), ' ')
           .trim()
           .replaceFirst(RegExp(r'^n\s'), '')
           .trim();

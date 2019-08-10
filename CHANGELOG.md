@@ -1,3 +1,7 @@
+# v1.4.5
+* Fixed case sensitivity in info tag parsing
+* Improved tag parsing from starting gear options
+
 # v1.4.4
 * Fixed tag toJSON method
 

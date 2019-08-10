@@ -27,6 +27,7 @@ void main() {
 
   // Get starting moves for classs
   print(dungeonWorld.classes['thief'].startingMoves);
+  print(dungeonWorld.classes['wizard'].spells);
 
   // Parse tags from objects or strings
   print(Tag.parse({'weight': 1}));

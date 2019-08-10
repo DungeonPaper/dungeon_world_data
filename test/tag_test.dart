@@ -10,9 +10,15 @@ void main() {
       expect(tag.key, equals('two_handed'));
     });
     test('Parse string', () {
-      var tag = Tag.parse('close');
-      expect(tag.hasValue, equals(false));
-      expect(tag.name, equals('close'));
+      var tag1 = Tag.parse('close');
+      var tag2 = Tag.parse('1 coins');
+
+      expect(tag1.hasValue, equals(false));
+      expect(tag1.name, equals('close'));
+
+      expect(tag2.hasValue, equals(true));
+      expect(tag2.value, equals(1));
+      expect(tag2.name, equals('coins'));
     });
     test('Parse map', () {
       var tag = Tag.parse({'weight': 1});

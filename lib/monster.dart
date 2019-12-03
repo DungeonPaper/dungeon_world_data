@@ -54,4 +54,7 @@ class Monster extends DWEntity {
       'moves': moves,
     };
   }
+
+  @override
+  Monster copy() => Monster.fromJSON(toJSON());
 }

@@ -30,7 +30,7 @@ class Equipment extends DWEntity {
   @override
   toString() => '$name: $description (tags: $tags)';
 
-  static Equipment fromJSON(Map map) => Equipment(
+  factory Equipment.fromJSON(Map map) => Equipment(
         key: map['key'],
         name: map['name'],
         pluralName: map['plural_name'],
@@ -47,5 +47,10 @@ class Equipment extends DWEntity {
       'plural_name': pluralName,
       'key': key,
     };
+  }
+
+  @override
+  Equipment copy() {
+    return Equipment.fromJSON(toJSON());
   }
 }

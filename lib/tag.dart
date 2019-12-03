@@ -48,7 +48,10 @@ class Tag<T> extends DWEntity {
   }
 
   @override
-  dynamic toJSON() {
-    return hasValue ? {name: value} : name;
+  Map toJSON() {
+    return hasValue ? {name: value} : (name as dynamic);
   }
+
+  @override
+  Tag copy() => Tag.parse(toJSON());
 }

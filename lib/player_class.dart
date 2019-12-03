@@ -80,7 +80,7 @@ class PlayerClass extends DWEntity {
     return 'Class: $name, baseHP: $baseHP';
   }
 
-  static PlayerClass fromJSON(Map map) => PlayerClass(
+  factory PlayerClass.fromJSON(Map map) => PlayerClass(
         key: map['name']
             .toString()
             .toLowerCase()
@@ -103,8 +103,7 @@ class PlayerClass extends DWEntity {
       );
 
   @override
-  Map toJSON() {
-    return {
+  Map toJSON() => {
       'name': name,
       'description': description,
       'load': load,
@@ -121,5 +120,7 @@ class PlayerClass extends DWEntity {
       'gearChoices':
           listMapper<GearChoice, Map>(gearChoices, (choice) => choice.toJSON()),
     };
-  }
+
+  @override
+  PlayerClass copy() => PlayerClass.fromJSON(toJSON());
 }

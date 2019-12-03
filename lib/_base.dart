@@ -1,4 +1,6 @@
 abstract class DWEntity {
-  // fromJSON(Map map);
-  dynamic toJSON();
+  // static DWEntity fromJSON(Map map);
+  Map toJSON();
+
+  DWEntity copy();
 }

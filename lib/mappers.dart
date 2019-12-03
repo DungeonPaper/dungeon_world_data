@@ -42,7 +42,7 @@ Map<String, Alignment> alignmentsMapper(Map map) => mapMapper(
         k.toString(), Alignment(v['name'], v['name'], v['description'])));
 
 List<GearChoice> gearChoiceMapper(List lst) =>
-    listMapper(lst, (v) => GearChoice.parse(v));
+    listMapper(lst, (v) => GearChoice.fromJSON(v));
 
 List<GearOption> gearOptionMapper(List lst) =>
     listMapper(lst, (v) => GearOption.parse(v));

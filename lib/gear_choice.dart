@@ -9,18 +9,19 @@ class GearChoice extends DWEntity {
 
   GearChoice(this.label, this.list);
 
-  GearChoice.parse(Map map) {
-    label = map['label'];
-    list = gearOptionMapper(map['list']);
-  }
+  factory GearChoice.fromJSON(Map map) => GearChoice(
+        map['label'],
+        gearOptionMapper(map['list']),
+      );
 
   @override
-  Map toJSON() {
-    return {
+  Map toJSON() => {
       'label': label,
       'list': listMapper<GearOption, Map>(list, (i) => i.toJSON()),
     };
-  }
+
+  @override
+  GearChoice copy() => GearChoice.fromJSON(toJSON());
 }
 
 class GearOption extends DWEntity {
@@ -31,6 +32,11 @@ class GearOption extends DWEntity {
     @required this.name,
     @required this.tags,
   });
+
+  factory GearOption.fromJSON(Map map) => GearOption(
+        name: map['name'],
+        tags: listMapper(map['tags'], (t) => Tag.parse(t)),
+      );
 
   GearOption.parse(String str) {
     num openParen = str.indexOf('(');
@@ -45,10 +51,11 @@ class GearOption extends DWEntity {
   }
 
   @override
-  toJSON() {
-    return {
+  Map toJSON() => {
       'name': name,
       'tags': tags,
     };
-  }
+
+  @override
+  GearOption copy() => GearOption.fromJSON(toJSON());
 }

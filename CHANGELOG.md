@@ -1,3 +1,6 @@
+# v1.5.0
+* Added `copy` method to every DWEntity subclass
+
 # v1.4.5
 * Fixed case sensitivity in info tag parsing
 * Improved tag parsing from starting gear options

@@ -48,4 +48,7 @@ class Spell extends DWEntity {
       'tags': listMapper<Tag, dynamic>(tags, (tag) => tag.toJSON()),
     };
   }
+
+  @override
+  Spell copy() => Spell.fromJSON(toJSON());
 }

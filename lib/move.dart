@@ -27,7 +27,7 @@ class Move extends DWEntity {
     @required this.classes,
   });
 
-  static Move fromJSON(Map map) => Move(
+  factory Move.fromJSON(Map map) => Move(
         key: map['key'],
         name: map['name'],
         classes: map['classes'] != null
@@ -38,13 +38,14 @@ class Move extends DWEntity {
       );
 
   @override
-  Map toJSON() {
-    return {
+  Map toJSON() => {
       'key': key,
       'name': name,
       'classes': classes,
       'description': description,
       'explanation': explanation,
     };
-  }
+
+  @override
+  Move copy() => Move.fromJSON(toJSON());
 }

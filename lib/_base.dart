@@ -1,6 +1,8 @@
 abstract class DWEntity {
   // static DWEntity fromJSON(Map map);
-  Map toJSON();
+  dynamic toJSON();
 
   DWEntity copy();
 }
+
+// typedef Key = String Function(String);

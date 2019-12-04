@@ -36,10 +36,8 @@ Map<String, List<String>> nameMapper(Map map) => mapMapper<List<String>>(
 List<List<String>> looksMapper(List lst) =>
     listMapper(lst, (i) => listMapper(i, (j) => j.toString()));
 
-Map<String, Alignment> alignmentsMapper(Map map) => mapMapper(
-    map,
-    (k, v) => MapEntry<String, Alignment>(
-        k.toString(), Alignment(v['name'], v['name'], v['description'])));
+Map<String, Alignment> alignmentsMapper(Map map) => mapMapper(map,
+    (k, v) => MapEntry<String, Alignment>(k.toString(), Alignment.fromJSON(v)));
 
 List<GearChoice> gearChoiceMapper(List lst) =>
     listMapper(lst, (v) => GearChoice.fromJSON(v));
@@ -64,7 +62,7 @@ Map<String, Monster> monsterMapper(Map map) => mapMapper(map,
     (k, v) => MapEntry<String, Monster>(k.toString(), Monster.fromJSON(v)));
 
 Map<String, Tag> tagMapper(Map map) =>
-    mapMapper(map, (k, v) => MapEntry<String, Tag>(k.toString(), Tag.parse(v)));
+    mapMapper(map, (k, v) => MapEntry<String, Tag>(k.toString(), Tag.fromJSON(v)));
 
 Map<String, Tag> tagInfoMapper(Map map) => mapMapper(map, (k, v) {
       String cleanName = v['name']

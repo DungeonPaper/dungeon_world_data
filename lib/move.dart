@@ -1,6 +1,7 @@
 import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:meta/meta.dart';
+import 'package:uuid/uuid.dart';
 
 class Move extends DWEntity {
   /// Move unique identifier
@@ -20,12 +21,12 @@ class Move extends DWEntity {
   List<String> classes;
 
   Move({
+    String key,
     @required this.name,
     @required this.description,
     @required this.explanation,
-    @required this.key,
     @required this.classes,
-  });
+  }) : key = key ?? Uuid().v4();
 
   factory Move.fromJSON(Map map) => Move(
         key: map['key'],
@@ -39,12 +40,12 @@ class Move extends DWEntity {
 
   @override
   Map toJSON() => {
-      'key': key,
-      'name': name,
-      'classes': classes,
-      'description': description,
-      'explanation': explanation,
-    };
+        'key': key,
+        'name': name,
+        'classes': classes,
+        'description': description,
+        'explanation': explanation,
+      };
 
   @override
   Move copy() => Move.fromJSON(toJSON());

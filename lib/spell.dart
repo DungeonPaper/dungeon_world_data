@@ -2,6 +2,7 @@ import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:meta/meta.dart';
+import 'package:uuid/uuid.dart';
 
 class Spell extends DWEntity {
   /// Spell key
@@ -20,19 +21,19 @@ class Spell extends DWEntity {
   List<Tag> tags;
 
   Spell({
-    @required this.key,
+    String key,
     @required this.name,
     @required this.description,
     @required this.level,
     @required this.tags,
-  });
+  }): key = key ?? Uuid().v4();
 
   static Spell fromJSON(Map map) => Spell(
         key: map['key'],
         name: map['name'],
         description: map['description'],
         level: map['level'].toString(),
-        tags: listMapper(map['tags'], (i) => Tag.parse(i)),
+        tags: listMapper(map['tags'], (i) => Tag.fromJSON(i)),
       );
 
   @override

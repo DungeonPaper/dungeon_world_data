@@ -6,6 +6,7 @@ import 'package:dungeon_world_data/move.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/spell.dart';
 import 'package:meta/meta.dart';
+import 'package:uuid/uuid.dart';
 
 class PlayerClass extends DWEntity {
   /// Class key
@@ -57,7 +58,7 @@ class PlayerClass extends DWEntity {
   List<GearChoice> gearChoices;
 
   PlayerClass({
-    @required this.key,
+    String key,
     @required this.name,
     @required this.description,
     @required this.load,
@@ -73,7 +74,7 @@ class PlayerClass extends DWEntity {
     @required this.advancedMoves2,
     @required this.spells,
     @required this.gearChoices,
-  });
+  }) : key = key ?? Uuid().v4();
 
   @override
   String toString() {
@@ -81,10 +82,11 @@ class PlayerClass extends DWEntity {
   }
 
   factory PlayerClass.fromJSON(Map map) => PlayerClass(
-        key: map['name']
-            .toString()
-            .toLowerCase()
-            .replaceAll(RegExp('[^a-z]'), '_'),
+        key: map['key'] ??
+            map['name']
+                .toString()
+                .toLowerCase()
+                .replaceAll(RegExp('[^a-z]'), '_'),
         name: map['name'],
         description: map['description'],
         load: map['load'],
@@ -104,22 +106,23 @@ class PlayerClass extends DWEntity {
 
   @override
   Map toJSON() => {
-      'name': name,
-      'description': description,
-      'load': load,
-      'baseHP': baseHP,
-      'damage': damage.toString(),
-      'names': names,
-      'bonds': bonds,
-      'looks': looks,
-      'alignments': alignments,
-      'raceMoves': listMapper<Move, Map>(raceMoves, (move) => move.toJSON()),
-      'startingMoves':
-          listMapper<Move, Map>(startingMoves, (move) => move.toJSON()),
-      'spells': mapMapper(spells, (k, v) => MapEntry(k, v.toJSON())),
-      'gearChoices':
-          listMapper<GearChoice, Map>(gearChoices, (choice) => choice.toJSON()),
-    };
+        'key': key,
+        'name': name,
+        'description': description,
+        'load': load,
+        'baseHP': baseHP,
+        'damage': damage.toString(),
+        'names': names,
+        'bonds': bonds,
+        'looks': looks,
+        'alignments': alignments,
+        'raceMoves': listMapper<Move, Map>(raceMoves, (move) => move.toJSON()),
+        'startingMoves':
+            listMapper<Move, Map>(startingMoves, (move) => move.toJSON()),
+        'spells': mapMapper(spells, (k, v) => MapEntry(k, v.toJSON())),
+        'gearChoices': listMapper<GearChoice, Map>(
+            gearChoices, (choice) => choice.toJSON()),
+      };
 
   @override
   PlayerClass copy() => PlayerClass.fromJSON(toJSON());

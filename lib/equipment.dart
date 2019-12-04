@@ -2,6 +2,7 @@ import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:meta/meta.dart';
+import 'package:uuid/uuid.dart';
 
 class Equipment extends DWEntity {
   /// Equipment key
@@ -20,12 +21,12 @@ class Equipment extends DWEntity {
   List<Tag> tags;
 
   Equipment({
+    String key,
     @required this.name,
     @required this.pluralName,
     @required this.description,
     @required this.tags,
-    @required this.key,
-  });
+  }) : key = key ?? Uuid().v4();
 
   @override
   toString() => '$name: $description (tags: $tags)';
@@ -35,7 +36,7 @@ class Equipment extends DWEntity {
         name: map['name'],
         pluralName: map['plural_name'],
         description: map['description'],
-        tags: listMapper(map['tags'], (i) => Tag.parse(i)),
+        tags: listMapper(map['tags'], (i) => Tag.fromJSON(i)),
       );
 
   @override

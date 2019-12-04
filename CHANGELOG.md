@@ -1,5 +1,7 @@
 # v1.5.0
 * Added `copy` method to every DWEntity subclass
+* Unified public API for easier use
+* Updated `key`s to use `Uuid().v4()` fallback
 
 # v1.4.5
 * Fixed case sensitivity in info tag parsing

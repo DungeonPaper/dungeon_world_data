@@ -2,6 +2,7 @@ import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:meta/meta.dart';
+import 'package:uuid/uuid.dart';
 
 class Monster extends DWEntity {
   /// Monster key
@@ -23,13 +24,13 @@ class Monster extends DWEntity {
   List<String> moves;
 
   Monster({
-    @required this.key,
+    String key,
     @required this.name,
     @required this.description,
     @required this.instinct,
     @required this.tags,
     @required this.moves,
-  });
+  }): key = key ?? Uuid().v4();
 
   @override
   toString() =>
@@ -40,7 +41,7 @@ class Monster extends DWEntity {
       name: map['name'],
       description: map['description'],
       instinct: map['instinct'],
-      tags: listMapper(map['tags'], (i) => Tag.parse(i)),
+      tags: listMapper(map['tags'], (i) => Tag.fromJSON(i)),
       moves: listMapper(map['moves'], (i) => i.toString()));
 
   @override

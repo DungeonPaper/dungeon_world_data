@@ -30,8 +30,8 @@ void main() {
   print(dungeonWorld.classes['wizard'].spells);
 
   // Parse tags from objects or strings
-  print(Tag.parse({'weight': 1}));
-  print(Tag.parse('close'));
+  print(Tag.fromJSON({'weight': 1}));
+  print(Tag.fromJSON('close'));
 
   // All info tags
   print(dungeonWorld.tags.values.toList());

@@ -25,7 +25,7 @@ class Tag<T> extends DWEntity {
 
   String get key => name.replaceAll(RegExp(r'[^a-z]+'), '_').toLowerCase();
 
-  static Tag parse(obj) {
+  factory Tag.fromJSON(obj) {
     if (obj is String) {
       if (obj == '') {
         return null;
@@ -35,7 +35,7 @@ class Tag<T> extends DWEntity {
         Match match = amountThenName.allMatches(obj).toList().first;
         String name = match.group(2);
         int value = int.tryParse(match.group(1));
-        return Tag<num>(name, value);
+        return Tag(name, value as dynamic);
       }
     }
 
@@ -48,10 +48,10 @@ class Tag<T> extends DWEntity {
   }
 
   @override
-  Map toJSON() {
-    return hasValue ? {name: value} : (name as dynamic);
+  dynamic toJSON() {
+    return hasValue ? {name: value} : name;
   }
 
   @override
-  Tag copy() => Tag.parse(toJSON());
+  Tag copy() => Tag.fromJSON(toJSON());
 }

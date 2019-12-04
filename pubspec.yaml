@@ -2,7 +2,7 @@ name: dungeon_world_data
 author: Chen Asraf
 homepage: https://github.com/chenasraf/dungeon_world_data
 description: Data dump of Dungeon World classes, moves, equipment, and more
-version: 1.4.5
+version: 1.5.0
 
 environment:
   sdk: ">=1.8.0 <3.0.0"

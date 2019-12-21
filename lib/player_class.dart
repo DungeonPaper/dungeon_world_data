@@ -6,7 +6,6 @@ import 'package:dungeon_world_data/move.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/spell.dart';
 import 'package:meta/meta.dart';
-import 'package:uuid/uuid.dart';
 
 class PlayerClass extends DWEntity {
   /// Class key
@@ -52,7 +51,7 @@ class PlayerClass extends DWEntity {
   List<Move> advancedMoves2;
 
   /// Spells
-  Map<String, Spell> spells;
+  List<Spell> spells;
 
   /// Gear choices
   List<GearChoice> gearChoices;
@@ -74,7 +73,9 @@ class PlayerClass extends DWEntity {
     @required this.advancedMoves2,
     @required this.spells,
     @required this.gearChoices,
-  }) : key = key ?? Uuid().v4();
+  }) : super(key: key ?? DWEntity.generateKey(name));
+
+  List<Move> get advancedMoves => advancedMoves1 + advancedMoves2;
 
   @override
   String toString() {
@@ -119,7 +120,7 @@ class PlayerClass extends DWEntity {
         'raceMoves': listMapper<Move, Map>(raceMoves, (move) => move.toJSON()),
         'startingMoves':
             listMapper<Move, Map>(startingMoves, (move) => move.toJSON()),
-        'spells': mapMapper(spells, (k, v) => MapEntry(k, v.toJSON())),
+        'spells': listMapper(spells, (v) => v.toJSON()),
         'gearChoices': listMapper<GearChoice, Map>(
             gearChoices, (choice) => choice.toJSON()),
       };

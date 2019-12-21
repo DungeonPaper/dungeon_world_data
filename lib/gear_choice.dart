@@ -2,7 +2,6 @@ import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:meta/meta.dart';
-import 'package:uuid/uuid.dart';
 
 class GearChoice extends DWEntity {
   String key;
@@ -13,7 +12,7 @@ class GearChoice extends DWEntity {
     String key,
     @required this.label,
     @required this.gearOptions,
-  }) : key = key ?? Uuid().v4();
+  }) : super(key: key);
 
   factory GearChoice.fromJSON(Map map) => GearChoice(
         key: map['key'],
@@ -41,7 +40,7 @@ class GearOption extends DWEntity {
     String key,
     @required this.name,
     @required this.tags,
-  }) : key = key ?? Uuid().v4();
+  }) : super(key: key ?? DWEntity.generateKey(name));
 
   factory GearOption.fromJSON(Map map) => GearOption(
         key: map['key'],

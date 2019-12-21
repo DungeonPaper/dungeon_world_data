@@ -2,7 +2,6 @@ import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:meta/meta.dart';
-import 'package:uuid/uuid.dart';
 
 class Equipment extends DWEntity {
   /// Equipment key
@@ -23,10 +22,11 @@ class Equipment extends DWEntity {
   Equipment({
     String key,
     @required this.name,
-    @required this.pluralName,
+    String pluralName,
     @required this.description,
     @required this.tags,
-  }) : key = key ?? Uuid().v4();
+  })  : pluralName = pluralName ?? _calcPluralName(name),
+        super(key: key ?? DWEntity.generateKey(name));
 
   @override
   toString() => '$name: $description (tags: $tags)';
@@ -54,4 +54,6 @@ class Equipment extends DWEntity {
   Equipment copy() {
     return Equipment.fromJSON(toJSON());
   }
+
+  static String _calcPluralName(String name) => '${name}s';
 }

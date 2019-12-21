@@ -2,15 +2,7 @@
 
 This dart package contains data for Dungeon World, such as classes, moves, spells, equipment, etc.
 
-## How to install
-
-First, add to your pubspec:
-```
-dependencies:
-  ..
-  dungeon_world_data: ^1.0.0
-```
-
+## How to use
 After importing, access `dungeonWorld` to access the entire data structure.
 There is more information in the doc directory.
 

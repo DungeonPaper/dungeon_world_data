@@ -1,6 +1,5 @@
 import 'package:dungeon_world_data/_base.dart';
 import 'package:meta/meta.dart';
-import 'package:uuid/uuid.dart';
 
 class Alignment extends DWEntity {
   /// Alignment key
@@ -16,7 +15,7 @@ class Alignment extends DWEntity {
     String key,
     @required this.name,
     @required this.description,
-  }) : key = key ?? Uuid().v4();
+  }) : super(key: key ?? DWEntity.generateKey(name));
 
   factory Alignment.fromJSON(Map map) => Alignment(
         key: map['key'],

@@ -1,3 +1,8 @@
+# v2.0.0
+* The imported data is now not parsed from JSON, but directly declared in Dart.
+* Better key generation
+* The data has been reorganized to lists, and data redundancy has been removed.
+
 # v1.5.0
 * Added `copy` method to every DWEntity subclass
 * Unified public API for easier use

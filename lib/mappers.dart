@@ -48,21 +48,19 @@ List<GearOption> gearOptionMapper(List lst) =>
 Map<String, Equipment> equipmentMapper(Map map) => mapMapper(map,
     (k, v) => MapEntry<String, Equipment>(k.toString(), Equipment.fromJSON(v)));
 
-Map<String, Spell> spellsMapper(Map map) {
-  if (map == null) {
-    return {};
+List<Spell> spellsMapper(List lst) {
+  if (lst == null) {
+    return [];
   }
 
-  map.remove('key');
-  return mapMapper(
-      map, (k, v) => MapEntry<String, Spell>(k.toString(), Spell.fromJSON(v)));
+  return listMapper(lst, (v) => Spell.fromJSON(v));
 }
 
 Map<String, Monster> monsterMapper(Map map) => mapMapper(map,
     (k, v) => MapEntry<String, Monster>(k.toString(), Monster.fromJSON(v)));
 
-Map<String, Tag> tagMapper(Map map) =>
-    mapMapper(map, (k, v) => MapEntry<String, Tag>(k.toString(), Tag.fromJSON(v)));
+Map<String, Tag> tagMapper(Map map) => mapMapper(
+    map, (k, v) => MapEntry<String, Tag>(k.toString(), Tag.fromJSON(v)));
 
 Map<String, Tag> tagInfoMapper(Map map) => mapMapper(map, (k, v) {
       String cleanName = v['name']

@@ -1,7 +1,8 @@
 import 'package:dungeon_world_data/_base.dart';
-import 'package:dungeon_world_data/tag_pre_parser.dart' as tagParser;
 
 class Tag<T> extends DWEntity {
+  static Map<String, String> tagInfoCache = {};
+
   /// Tag or feature name
   String name;
 
@@ -11,10 +12,14 @@ class Tag<T> extends DWEntity {
   String description;
 
   Tag(this.name, [this.value, this.description]) {
-    if (tagParser.isParsed)
-      description ??= tagParser.ALL_TAGS.values
-          .firstWhere((t) => t.name == name, orElse: () => null)
-          ?.description;
+    if (description != null &&
+        description.isNotEmpty &&
+        !tagInfoCache.containsKey(key)) {
+      tagInfoCache[key] = description;
+    } else if (description == null ||
+        description.isEmpty && tagInfoCache.containsKey(key)) {
+      description = tagInfoCache[key];
+    }
   }
 
   @override
@@ -23,7 +28,7 @@ class Tag<T> extends DWEntity {
   /// Returns whether this tag has a corresponding value or not
   bool get hasValue => value != null;
 
-  String get key => name.replaceAll(RegExp(r'[^a-z]+'), '_').toLowerCase();
+  String get key => DWEntity.generateKey(name);
 
   factory Tag.fromJSON(obj) {
     if (obj is String) {

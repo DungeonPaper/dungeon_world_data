@@ -1,18 +1,19 @@
 import 'package:dungeon_world_data/_data.dart';
 import 'package:dungeon_world_data/equipment.dart';
-import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/monster.dart';
 import 'package:dungeon_world_data/move.dart';
 import 'package:dungeon_world_data/player_class.dart';
 import 'package:dungeon_world_data/spell.dart';
 import 'package:dungeon_world_data/tag.dart';
-import 'package:dungeon_world_data/tag_pre_parser.dart' as tagParser;
+import '_cache.dart';
+import '_base.dart';
+import '_homebrew.dart';
 
-const String VERSION = '1.0.3';
+const String VERSION = '2.0.0';
 
 class DungeonWorldData {
   /// Raw data
-  Map<String, dynamic> raw;
+  Map<String, dynamic> get raw => {};
 
   /// Basic moves
   List<Move> basicMoves;
@@ -20,59 +21,50 @@ class DungeonWorldData {
   /// Special moves
   List<Move> specialMoves;
 
-  /// Map of `PlayerClass.key` => `Move`
-  Map<String, List<Move>> startingMoves;
+  /// Classes
+  List<PlayerClass> classes;
 
-  /// Map of `PlayerClass.key` => `Move`
-  Map<String, List<Move>> advancedMoves;
+  /// Equipment
+  List<Equipment> equipment;
 
-  /// Map of `PlayerClass.key` => `PlayerClass`
-  Map<String, PlayerClass> classes;
+  /// Spells
+  List<Spell> spells;
 
-  /// Map of `Equipment.key` => `Equipment`
-  Map<String, Equipment> equipment;
+  /// Monsters
+  List<Monster> monsters;
 
-  /// Map of `Spell.key` => `Spell`
-  Map<String, Spell> spells;
-
-  /// Map of `Monster.key` => `Monster`
-  Map<String, Monster> monsters;
-
-  /// Map of `Tag.name` => `Tag`
-  Map<String, Tag> tags;
+  /// Tags
+  List<Tag> tags;
 
   /// Current version of data, corresponds to same version of https://www.npmjs.com/package/dungeonworld-data
   final String version = VERSION;
 
   DungeonWorldData() {
-    raw = DW_DATA;
     _initFromData();
   }
 
   void _initFromData() {
-    tagParser.init();
-    tags = tagParser.ALL_TAGS;
-    basicMoves = moveListMapper(raw['basic_moves']);
-    specialMoves = moveListMapper(raw['special_moves']);
-    classes = classMapper(raw['classes']);
-    equipment = equipmentMapper(raw['equipment']);
-    monsters = monsterMapper(raw['monsters']);
-    spells = {};
-    classes.values.forEach((cls) {
-      spells.addAll(cls.spells);
-    });
+    initData();
+    initHomebrew();
 
-    startingMoves = gatherStartingMoves();
-    advancedMoves = gatherRaceMoves();
+    tags = tagList;
+    basicMoves = basicMovesList;
+    specialMoves = specialMovesList;
+    classes = playerClassList;
+    equipment = equipmentList;
+    monsters = monsterList;
+    spells = spellList;
   }
 
-  Map<String, List<Move>> gatherStartingMoves() {
-    return classes.map((k, v) => MapEntry(k, v.startingMoves));
+  static Map<String, T> listToMap<T extends DWEntity>(
+    Iterable<T> list, {
+    String Function(T) key = entryKey,
+  }) {
+    return Map<String, T>.fromEntries(
+        list.map((v) => MapEntry<String, T>(key(v), v)));
   }
 
-  Map<String, List<Move>> gatherRaceMoves() {
-    return classes.map((k, v) => MapEntry(k, v.raceMoves));
-  }
+  static String entryKey(DWEntity item) => item.key;
 }
 
 DungeonWorldData dungeonWorld = DungeonWorldData();

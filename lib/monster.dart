@@ -2,7 +2,6 @@ import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:meta/meta.dart';
-import 'package:uuid/uuid.dart';
 
 class Monster extends DWEntity {
   /// Monster key
@@ -30,7 +29,7 @@ class Monster extends DWEntity {
     @required this.instinct,
     @required this.tags,
     @required this.moves,
-  }): key = key ?? Uuid().v4();
+  }): super(key: key ?? DWEntity.generateKey(name));
 
   @override
   toString() =>

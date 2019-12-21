@@ -4,8 +4,10 @@ import 'package:dungeon_world_data/mappers.dart';
 import 'package:meta/meta.dart';
 
 class GearChoice extends DWEntity {
-  // String key;
+  /// Description of choices, possibly with other benefits to the stats.
   String label;
+
+  /// The list of options to choose from. `label` should specify how many to choose.
   List<GearOption> gearOptions;
 
   GearChoice({
@@ -24,7 +26,8 @@ class GearChoice extends DWEntity {
   Map toJSON() => {
         'key': key,
         'label': label,
-        'list': listMapper<GearOption, dynamic, GearOption>(gearOptions, (i) => i.toJSON()),
+        'list': listMapper<GearOption, dynamic, GearOption>(
+            gearOptions, (i) => i.toJSON()),
       };
 
   @override

@@ -7,7 +7,6 @@ import 'package:dungeon_world_data/tag.dart';
 import 'package:dungeon_world_data/_cache.dart';
 
 void initHomebrew() {
-
   playerClassList.add(PlayerClass(
     key: 'immolator',
     name: 'Immolator',

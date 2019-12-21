@@ -3,11 +3,7 @@ import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:meta/meta.dart';
 
-class Spell extends DWEntity {
-  /// Spell key
-  // String key;
-
-  /// Spell name
+class Spell extends DWEntity {/// Spell name
   String name;
 
   /// Spell description

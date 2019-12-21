@@ -18,7 +18,8 @@ Map<String, R> mapMapper<R>(Map map,
 
 List<Move> moveListMapper(List lst) => lst == null || lst.isEmpty
     ? <Move>[]
-    : listMapper<Map, Move, dynamic>(List<Map>.from(lst), (v) => Move.fromJSON(v));
+    : listMapper<Map, Move, dynamic>(
+        List<Map>.from(lst), (v) => Move.fromJSON(v));
 
 Map<String, Move> moveMapMapper(Map map) => mapMapper<Move>(
     map, (k, v) => MapEntry<String, Move>(k.toString(), Move.fromJSON(v)));
@@ -30,8 +31,8 @@ Map<String, PlayerClass> classMapper(Map map) => mapMapper(
 
 Map<String, List<String>> nameMapper(Map map) => mapMapper<List<String>>(
     map,
-    (k, v) => MapEntry<String, List<String>>(
-        k.toString(), listMapper<dynamic, String, dynamic>(v, (j) => j.toString())));
+    (k, v) => MapEntry<String, List<String>>(k.toString(),
+        listMapper<dynamic, String, dynamic>(v, (j) => j.toString())));
 
 List<List<String>> looksMapper(List lst) =>
     listMapper(lst, (i) => listMapper(i, (j) => j.toString()));

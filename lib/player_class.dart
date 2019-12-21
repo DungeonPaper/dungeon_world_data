@@ -7,11 +7,7 @@ import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/spell.dart';
 import 'package:meta/meta.dart';
 
-class PlayerClass extends DWEntity {
-  /// Class key
-  // String key;
-
-  /// Class name
+class PlayerClass extends DWEntity {  /// Class name
   String name;
 
   /// Class description

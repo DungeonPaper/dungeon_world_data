@@ -4,9 +4,6 @@ import 'package:dungeon_world_data/tag.dart';
 import 'package:meta/meta.dart';
 
 class Monster extends DWEntity {
-  /// Monster key
-  // String key;
-
   /// Monster name
   String name;
 
@@ -29,7 +26,7 @@ class Monster extends DWEntity {
     @required this.instinct,
     @required this.tags,
     @required this.moves,
-  }): super(key: key ?? DWEntity.generateKey(name));
+  }) : super(key: key ?? DWEntity.generateKey(name));
 
   @override
   String toString() =>

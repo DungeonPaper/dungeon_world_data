@@ -2,11 +2,7 @@ import 'package:dungeon_world_data/_base.dart';
 import 'package:dungeon_world_data/mappers.dart';
 import 'package:meta/meta.dart';
 
-class Move extends DWEntity {
-  /// Move unique identifier
-  // String key;
-
-  /// Move name
+class Move extends DWEntity {/// Move name
   String name;
 
   /// Move description

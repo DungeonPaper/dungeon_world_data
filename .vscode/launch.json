@@ -24,7 +24,7 @@
   },
   {
     "name": "Dump Dart",
-    "program": "bin/dump/dump.dart",
+    "program": "scripts/dump/dump.dart",
     "request": "launch",
     "type": "dart"
   }, ]

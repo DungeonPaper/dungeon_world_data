@@ -43,7 +43,7 @@ class Equipment extends DWEntity {
   Map toJSON() {
     return {
       'name': name,
-      'tags': listMapper<Tag, dynamic>(tags, (t) => t.toJSON()),
+      'tags': listMapper<Tag, dynamic, Tag>(tags, (t) => t.toJSON()),
       'description': description,
       'plural_name': pluralName,
       'key': key,

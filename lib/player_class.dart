@@ -17,7 +17,7 @@ class PlayerClass extends DWEntity {
   /// Class description
   String description;
 
-  /// Max. weight load
+  /// Base max. weight load, without the +STR.
   num load;
 
   /// Base HP
@@ -75,6 +75,7 @@ class PlayerClass extends DWEntity {
     @required this.gearChoices,
   }) : super(key: key ?? DWEntity.generateKey(name));
 
+  /// Combined list of `advancedMoves1` and `advancedMoves2`
   List<Move> get advancedMoves => advancedMoves1 + advancedMoves2;
 
   @override
@@ -117,11 +118,12 @@ class PlayerClass extends DWEntity {
         'bonds': bonds,
         'looks': looks,
         'alignments': alignments,
-        'raceMoves': listMapper<Move, Map>(raceMoves, (move) => move.toJSON()),
+        'raceMoves':
+            listMapper<Move, Map, Move>(raceMoves, (move) => move.toJSON()),
         'startingMoves':
-            listMapper<Move, Map>(startingMoves, (move) => move.toJSON()),
+            listMapper<Move, Map, Move>(startingMoves, (move) => move.toJSON()),
         'spells': listMapper(spells, (v) => v.toJSON()),
-        'gearChoices': listMapper<GearChoice, Map>(
+        'gearChoices': listMapper<GearChoice, Map, GearChoice>(
             gearChoices, (choice) => choice.toJSON()),
       };
 

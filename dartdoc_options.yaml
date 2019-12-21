@@ -1,0 +1,7 @@
+dartdoc:
+  exclude:
+    - _base
+    - _cache
+    - _data
+    - _homebrew
+    - mappers

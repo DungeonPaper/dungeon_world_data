@@ -1,5 +1,6 @@
 import 'package:dungeon_world_data/_data.dart';
 import 'package:dungeon_world_data/equipment.dart';
+import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/monster.dart';
 import 'package:dungeon_world_data/move.dart';
 import 'package:dungeon_world_data/player_class.dart';
@@ -12,8 +13,13 @@ import '_homebrew.dart';
 const String VERSION = '2.0.0';
 
 class DungeonWorldData {
+  Map<String, dynamic> _raw;
+
   /// Raw data
-  Map<String, dynamic> get raw => {};
+  Map<String, dynamic> get raw {
+    if (_raw == null) _raw = toJSON();
+    return _raw;
+  }
 
   /// Basic moves
   List<Move> basicMoves;
@@ -56,13 +62,28 @@ class DungeonWorldData {
     spells = spellList;
   }
 
+  Map<String, dynamic> toJSON() => {
+        'tags': listMapper<Tag, dynamic, Tag>(tags, (t) => t.toJSON()),
+        'basic_moves':
+            listMapper<Move, dynamic, Move>(basicMoves, (t) => t.toJSON()),
+        'special_moves':
+            listMapper<Move, dynamic, Move>(specialMoves, (t) => t.toJSON()),
+        'classes': listMapper<PlayerClass, dynamic, PlayerClass>(
+            classes, (t) => t.toJSON()),
+        'equipment': listMapper<Equipment, dynamic, Equipment>(
+            equipment, (t) => t.toJSON()),
+        'monsters':
+            listMapper<Monster, dynamic, Monster>(monsters, (t) => t.toJSON()),
+        'spells': listMapper<Spell, dynamic, Spell>(spells, (t) => t.toJSON()),
+      };
+
   static Map<String, T> listToMap<T extends DWEntity>(
     Iterable<T> list, {
     String Function(T) key = entryKey,
-  }) {
-    return Map<String, T>.fromEntries(
-        list.map((v) => MapEntry<String, T>(key(v), v)));
-  }
+  }) =>
+      Map<String, T>.fromEntries(
+        list.map((v) => MapEntry<String, T>(key(v), v)),
+      );
 
   static String entryKey(DWEntity item) => item.key;
 }

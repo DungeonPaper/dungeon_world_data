@@ -7,6 +7,12 @@ abstract class DWEntity {
     this.key = key ?? DWEntity.generateKey(null);
   }
 
+  /// Generates unique key for identification.
+  ///
+  /// If a non-empty String identifier is supplied, it is cleaned up of non-alphabetic characters
+  /// and turned to lowercase.
+  ///
+  /// Otherwise, a `Uuid().v4()` is generated for it.
   static String generateKey(String identifier) =>
       identifier != null && identifier.trim().isNotEmpty
           ? identifier
@@ -17,9 +23,10 @@ abstract class DWEntity {
               .toLowerCase()
           : Uuid().v4();
 
-  // static DWEntity fromJSON(Map map);
+  /// Returns a JSON representation of this object.
   dynamic toJSON();
 
+  /// Creates a new instance of this identity, using the existing previous values.
   DWEntity copy();
 }
 

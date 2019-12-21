@@ -24,7 +24,7 @@ class GearChoice extends DWEntity {
   Map toJSON() => {
         'key': key,
         'label': label,
-        'list': listMapper<GearOption, Map>(gearOptions, (i) => i.toJSON()),
+        'list': listMapper<GearOption, dynamic, GearOption>(gearOptions, (i) => i.toJSON()),
       };
 
   @override

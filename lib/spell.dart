@@ -25,7 +25,7 @@ class Spell extends DWEntity {
     @required this.description,
     @required this.level,
     @required this.tags,
-  }): super(key: key ?? DWEntity.generateKey(name));
+  }) : super(key: key ?? DWEntity.generateKey(name));
 
   static Spell fromJSON(Map map) => Spell(
         key: map['key'],
@@ -45,7 +45,7 @@ class Spell extends DWEntity {
       'name': name,
       'description': description,
       'level': level,
-      'tags': listMapper<Tag, dynamic>(tags, (tag) => tag.toJSON()),
+      'tags': listMapper<Tag, dynamic, Spell>(tags, (tag) => tag.toJSON()),
     };
   }
 

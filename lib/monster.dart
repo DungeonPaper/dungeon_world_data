@@ -50,7 +50,7 @@ class Monster extends DWEntity {
       'name': name,
       'description': description,
       'instinct': instinct,
-      'tags': listMapper<Tag, dynamic>(tags, (tag) => tag.toJSON()),
+      'tags': listMapper<Tag, dynamic, Tag>(tags, (tag) => tag.toJSON()),
       'moves': moves,
     };
   }

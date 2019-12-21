@@ -4,7 +4,7 @@ import 'package:meta/meta.dart';
 
 class Move extends DWEntity {
   /// Move unique identifier
-  String key;
+  // String key;
 
   /// Move name
   String name;

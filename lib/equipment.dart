@@ -5,7 +5,7 @@ import 'package:meta/meta.dart';
 
 class Equipment extends DWEntity {
   /// Equipment key
-  String key;
+  // String key;
 
   /// Equipment name
   String name;
@@ -29,7 +29,7 @@ class Equipment extends DWEntity {
         super(key: key ?? DWEntity.generateKey(name));
 
   @override
-  toString() => '$name: $description (tags: $tags)';
+  String toString() => '$name: $description (tags: $tags)';
 
   factory Equipment.fromJSON(Map map) => Equipment(
         key: map['key'],

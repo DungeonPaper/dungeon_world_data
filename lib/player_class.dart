@@ -9,7 +9,7 @@ import 'package:meta/meta.dart';
 
 class PlayerClass extends DWEntity {
   /// Class key
-  String key;
+  // String key;
 
   /// Class name
   String name;

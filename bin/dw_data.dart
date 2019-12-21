@@ -1,6 +1,6 @@
 import 'package:dungeon_world_data/dw_data.dart';
 
-main() {
+void main() {
   dungeonWorld = DungeonWorldData();
 
   print('Data version: ${dungeonWorld.version}');

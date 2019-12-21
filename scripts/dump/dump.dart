@@ -8,15 +8,14 @@ import 'package:dungeon_world_data/spell.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:path/path.dart';
 import 'package:dungeon_world_data/equipment.dart';
+import 'package:pedantic/pedantic.dart';
 import 'parsers.dart';
 
-main() async {
-  print("Parsing");
-  stdout.flush();
-  List<ParseDef> arrays = [
+void main() async {
+  print('Parsing');
+  var arrays = [
     ParseDef<Tag>('Tag', dungeonWorld.tags, parseInfoTags),
-    ParseDef<Equipment>(
-        'Equipment', dungeonWorld.equipment, parseEquipment),
+    ParseDef<Equipment>('Equipment', dungeonWorld.equipment, parseEquipment),
     ParseDef<PlayerClass>(
         'PlayerClass', dungeonWorld.classes, parsePlayerClass),
     ParseDef<Monster>('Monster', dungeonWorld.monsters, parseMonster),
@@ -27,7 +26,7 @@ main() async {
         arrayName: 'specialMovesList'),
   ];
 
-  String arraysImports = ({
+  var arraysImports = ({
     "import 'package:dungeon_world_data/tag.dart';",
     "import 'package:dungeon_world_data/dice.dart';",
     "import 'package:dungeon_world_data/spell.dart';",
@@ -41,33 +40,36 @@ main() async {
 
   // String arraysDeclares =
   //     arrays.map((a) => "List<${a.name}> ${a.arrayName} = [];").join('\n');
-  String arrayFills = arrays
+  var arrayFills = arrays
       .map((arr) => arr.list
-          .map((item) => "${arr.arrayName}.add(${arr.parse(item)});")
+          .map((item) => '${arr.arrayName}.add(${arr.parse(item)});')
           .join('\n'))
       .join('\n');
-  print("Writing string");
-  String str = """
+  print('Writing string');
+  var str = '''
     ${arraysImports}
-    initData() {
+    void initData() {
       ${arrayFills}
     }
-  """;
-  File file = File(join(Directory.current.path, 'output.dart'));
-  File beforeFormatFile =
+  ''';
+  var file = File(join(Directory.current.path, 'output.dart'));
+  var beforeFormatFile =
       File(join(Directory.current.path, 'before-format.dart'));
-  print("Formatting");
+  print('Formatting');
   try {
-    DartFormatter formatter = DartFormatter();
-    String formatted = formatter.format(str);
-    print("Writing to file");
-    file.writeAsString(formatted);
+    var formatter = DartFormatter();
+    var formatted = formatter.format(str);
+    print('Writing to file');
+    unawaited(file.writeAsString(formatted));
     if (beforeFormatFile.existsSync()) {
-      beforeFormatFile.delete();
+      print('Deleting before-format file');
+      unawaited(beforeFormatFile.delete());
     }
   } on FormatterException catch (e) {
-    beforeFormatFile.writeAsString(str);
     print(e);
+    print('Writing before-format file');
+
+    unawaited(beforeFormatFile.writeAsString(str));
   } catch (e) {
     print(e);
   }

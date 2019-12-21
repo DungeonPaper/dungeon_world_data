@@ -5,7 +5,7 @@ import 'package:meta/meta.dart';
 
 class Spell extends DWEntity {
   /// Spell key
-  String key;
+  // String key;
 
   /// Spell name
   String name;

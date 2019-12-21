@@ -1,3 +1,6 @@
+# v2.0.0+1
+* Updated code to improve static analysis score.
+
 # v2.0.0
 * The imported data is now not parsed from JSON, but directly declared in Dart.
 * Better key generation

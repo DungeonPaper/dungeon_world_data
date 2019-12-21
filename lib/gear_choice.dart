@@ -4,7 +4,7 @@ import 'package:dungeon_world_data/mappers.dart';
 import 'package:meta/meta.dart';
 
 class GearChoice extends DWEntity {
-  String key;
+  // String key;
   String label;
   List<GearOption> gearOptions;
 
@@ -32,7 +32,7 @@ class GearChoice extends DWEntity {
 }
 
 class GearOption extends DWEntity {
-  String key;
+  // String key;
   String name;
   List<Tag> tags;
 
@@ -51,18 +51,18 @@ class GearOption extends DWEntity {
   factory GearOption.parse(String str) {
     final num openParen = str.indexOf('(');
     final num closeParen = str.indexOf(')');
-    final String name = str.substring(0, openParen > -1 ? openParen : null);
-    final String rawTags = openParen > -1 && closeParen > -1
+    final name = str.substring(0, openParen > -1 ? openParen : null);
+    final rawTags = openParen > -1 && closeParen > -1
         ? str.substring(openParen + 1, closeParen)
         : '';
-    final List<Tag> tags = rawTags.isNotEmpty
+    final tags = rawTags.isNotEmpty
         ? rawTags.split(',').map((tag) => Tag.fromJSON(tag.trim())).toList()
         : [];
     return GearOption(name: name, tags: tags);
   }
 
   @override
-  Map toJSON() => {
+  dynamic toJSON() => {
         'name': name,
         'tags': tags,
       };

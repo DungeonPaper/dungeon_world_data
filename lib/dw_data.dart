@@ -17,7 +17,7 @@ class DungeonWorldData {
 
   /// Raw data
   Map<String, dynamic> get raw {
-    if (_raw == null) _raw = toJSON();
+    _raw ??= toJSON();
     return _raw;
   }
 

@@ -1,5 +1,4 @@
 import 'package:dungeon_world_data/dw_data.dart';
-import 'package:dungeon_world_data/player_class.dart';
 import 'package:dungeon_world_data/tag.dart';
 
 void main() {
@@ -8,7 +7,7 @@ void main() {
   print('');
 
   // Get all bard advanced moves
-  PlayerClass bard = dungeonWorld.classes.firstWhere((k) {
+  var bard = dungeonWorld.classes.firstWhere((k) {
     print(k.key);
     return k.key == 'bard';
   });
@@ -34,8 +33,8 @@ void main() {
   print(bard.gearChoices.map((i) => i.toJSON()).toList());
 
   // Get starting moves for classs
-  PlayerClass thief = dungeonWorld.classes.firstWhere((k) => k.key == 'thief');
-  PlayerClass wizard = dungeonWorld.classes.firstWhere((k) => k.key == 'wizard');
+  var thief = dungeonWorld.classes.firstWhere((k) => k.key == 'thief');
+  var wizard = dungeonWorld.classes.firstWhere((k) => k.key == 'wizard');
   print(thief.startingMoves);
   print(wizard.spells);
 

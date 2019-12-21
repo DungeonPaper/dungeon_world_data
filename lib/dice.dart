@@ -31,7 +31,7 @@ class Dice {
   @override
   String toString() => '${amount}d${sides}';
 
-  operator *(obj) {
+  Dice operator *(obj) {
     if (obj is Dice) {
       if (obj.sides != sides) {
         throw ("Can't multiply different sided die!");
@@ -46,7 +46,7 @@ class Dice {
     return this;
   }
 
-  operator +(obj) {
+  Dice operator +(obj) {
     if (obj is Dice) {
       if (obj.sides != sides) {
         throw ("Can't add different sided die!");
@@ -61,7 +61,7 @@ class Dice {
     return this;
   }
 
-  operator -(obj) {
+  Dice operator -(obj) {
     if (obj is Dice) {
       if (obj.sides != sides) {
         throw ("Can't subtract different sided die!");
@@ -76,7 +76,8 @@ class Dice {
     return this;
   }
 
-  operator ==(obj) {
+  @override
+  bool operator ==(obj) {
     if (obj is Dice) {
       return amount == obj.amount && sides == obj.sides;
     }
@@ -89,7 +90,7 @@ class Dice {
 
   /// Rolls the dice and returns the `DiceResult`.
   DiceResult getRoll() {
-    List<num> results = [];
+    var results = <num>[];
     for (num i = 0; i < amount; i++) {
       results.add(Random().nextInt(sides) + 1);
     }
@@ -99,7 +100,7 @@ class Dice {
 
   /// Roll arbitrary amount of (possibly) different sided dice.
   static List<DiceResult> roll(List<Dice> dice) {
-    List<DiceResult> results = [];
+    var results = <DiceResult>[];
     dice.forEach((die) {
       results.add(die.getRoll());
     });
@@ -123,7 +124,7 @@ class DiceResult {
   String get detailed =>
       '$dice${hit20 ? '*' : ''} => $total\n  $mappedResults\n  ${hit20 ? "Die no. ${hit20At} hit 20" : "Didn\'t hit 20"}';
   String get mappedResults {
-    List<String> out = [];
+    var out = <String>[];
     for (num i = 0; i < results.length; i++) {
       out.add('${i + 1}: ${results[i]}');
     }

@@ -9,7 +9,7 @@ import 'package:dungeon_world_data/tag.dart';
 
 List<R> listMapper<T, R, A>(List<T> lst, R Function(A obj) mapper) =>
     lst != null && lst.isNotEmpty
-        ? List.from(lst).map<R>(mapper).toList()
+        ? List.from(lst).map<R>((obj) => obj is A ? mapper(obj) : null).toList()
         : <R>[];
 
 Map<String, R> mapMapper<R>(Map map,
@@ -63,7 +63,7 @@ Map<String, Tag> tagMapper(Map map) => mapMapper(
     map, (k, v) => MapEntry<String, Tag>(k.toString(), Tag.fromJSON(v)));
 
 Map<String, Tag> tagInfoMapper(Map map) => mapMapper(map, (k, v) {
-      String cleanName = v['name']
+      var cleanName = v['name']
           .toString()
           .replaceAll(RegExp(r'[^a-z]', caseSensitive: false), ' ')
           .trim()

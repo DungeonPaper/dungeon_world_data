@@ -23,11 +23,12 @@ class Tag<T> extends DWEntity {
   }
 
   @override
-  toString() => hasValue ? '$name: $value' : name;
+  String toString() => hasValue ? '$name: $value' : name;
 
   /// Returns whether this tag has a corresponding value or not
   bool get hasValue => value != null;
 
+  @override
   String get key => DWEntity.generateKey(name);
 
   factory Tag.fromJSON(obj) {
@@ -35,17 +36,17 @@ class Tag<T> extends DWEntity {
       if (obj == '') {
         return null;
       }
-      RegExp amountThenName = RegExp('([0-9]+)\\s(.*)');
+      var amountThenName = RegExp('([0-9]+)\\s(.*)');
       if (amountThenName.hasMatch(obj)) {
-        Match match = amountThenName.allMatches(obj).toList().first;
-        String name = match.group(2);
-        int value = int.tryParse(match.group(1));
+        var match = amountThenName.allMatches(obj).toList().first;
+        var name = match.group(2);
+        var value = int.tryParse(match.group(1));
         return Tag(name, value as dynamic);
       }
     }
 
     if (obj is Map) {
-      String key = obj.keys.first.toString();
+      var key = obj.keys.first.toString();
       return Tag(key, obj[key]);
     }
 

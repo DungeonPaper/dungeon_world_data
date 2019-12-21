@@ -5,7 +5,7 @@ import 'package:meta/meta.dart';
 
 class Monster extends DWEntity {
   /// Monster key
-  String key;
+  // String key;
 
   /// Monster name
   String name;
@@ -32,7 +32,7 @@ class Monster extends DWEntity {
   }): super(key: key ?? DWEntity.generateKey(name));
 
   @override
-  toString() =>
+  String toString() =>
       '$name\n  tags: $tags,\n  moves: ${moves}\n  instinct: $instinct';
 
   static Monster fromJSON(Map map) => Monster(

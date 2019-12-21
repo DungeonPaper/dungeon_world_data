@@ -34,7 +34,7 @@ String parseArray<T>(
 }
 
 String parseTag(Tag tag) {
-  return """Tag.fromJSON(${parseValue(tag.toJSON().toString())})""";
+  return '''Tag.fromJSON(${parseValue(tag.toString())})''';
 }
 
 String parseTagsArray(List<Tag> list) {
@@ -42,15 +42,23 @@ String parseTagsArray(List<Tag> list) {
 }
 
 String parseDice(Dice dice) {
-  return """Dice.parse("${dice.toString()}")""";
+  return '''Dice.parse(${parseValue(dice.toString())})''';
 }
 
 String parseValue<T>(T value) {
   if (value is String) {
-    if (value.toString().contains(RegExp('[\n\"\']')))
-      return '"""${value.replaceAll(RegExp('\r?\n'), '\\n').replaceAll("'", "\'")}"""';
+    String val = value;
+    if (val.contains('\n')) {
+      val = val.replaceAll(RegExp('\r?\n'), '\\n');
+    }
 
-    return '"$value"';
+    if (val.contains("'")) {
+      return '"${val.replaceAll('"', "\\\"")}"';
+    } else if (val.contains('"')) {
+      return "'${val.replaceAll("'", "\\\'")}'";
+    }
+
+    return "'$val'";
   }
   return '$value';
 }
@@ -58,29 +66,29 @@ String parseValue<T>(T value) {
 String Function(Tag) parseTags = createAnyParser<Tag>(parseTag);
 String Function(Tag) parseInfoTags = createClassParser<Tag>(
   'Tag',
-  (i) => """
+  (i) => '''
         ${parseValue(i.name)},
         ${parseValue(i.value)},
         ${parseValue(i.description)},
-      """,
+      ''',
   includeKey: false,
 );
 
 String Function(Alignment) parseAlignment = createClassParser<Alignment>(
     'Alignment',
-    (i) => """
+    (i) => '''
         name: ${parseValue(i.name)},
         description: ${parseValue(i.description)},
-      """);
+      ''');
 
 String Function(Equipment) parseEquipment = createClassParser<Equipment>(
     'Equipment',
-    (i) => """
+    (i) => '''
         name: ${parseValue(i.name)},
         pluralName: ${parseValue(i.pluralName)},
         description: ${parseValue(i.description)},
         tags: ${parseTagsArray(i.tags)},
-      """);
+      ''');
 
 String Function(PlayerClass) parsePlayerClass = createClassParser<PlayerClass>(
     'PlayerClass',
@@ -113,12 +121,12 @@ String Function(Move) parseMove = createClassParser<Move>(
 
 String Function(Spell) parseSpell = createClassParser<Spell>(
     'Spell',
-    (i) => """
+    (i) => '''
         name: ${parseValue(i.name)},
         description: ${parseValue(i.description)},
         level: ${parseValue(i.level)},
         tags: ${parseTagsArray(i.tags)},
-      """);
+      ''');
 
 String Function(GearChoice) parseGearChoice = createClassParser<GearChoice>(
     'GearChoice',
@@ -129,10 +137,10 @@ String Function(GearChoice) parseGearChoice = createClassParser<GearChoice>(
 
 String Function(GearOption) parseGearOption = createClassParser<GearOption>(
     'GearOption',
-    (i) => """
+    (i) => '''
         name: ${parseValue(i.name)},
         tags: ${parseTagsArray(i.tags)},
-      """);
+      ''');
 
 String Function(Monster) parseMonster = createClassParser<Monster>(
     'Monster',
@@ -172,6 +180,6 @@ class ParseDef<T> {
           .substring(1) +
       '.dart';
 
-  static _arrayNameFromName(String name) =>
-      "${name[0].toLowerCase()}${name.substring(1)}List";
+  static String _arrayNameFromName(String name) =>
+      '${name[0].toLowerCase()}${name.substring(1)}List';
 }

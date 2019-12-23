@@ -1,3 +1,6 @@
+# v2.0.0+2
+* Fixed exported alignment key
+
 # v2.0.0+1
 * Updated code to improve static analysis score.
 

@@ -57,17 +57,17 @@ void initHomebrew() {
       ['Crackling voice', 'Whispering voice', 'Roaring voice']
     ],
     alignments: {
-      'Evil': Alignment(
+      'evil': Alignment(
         key: 'evil',
         name: 'Evil',
         description: 'Sacrifice an unwilling victim to the flames.',
       ),
-      'Chaotic': Alignment(
+      'chaotic': Alignment(
         key: 'chaotic',
         name: 'Chaotic',
         description: 'Spread a dangerous new idea',
       ),
-      'Neutral': Alignment(
+      'neutral': Alignment(
         key: 'neutral',
         name: 'Neutral',
         description:
@@ -329,12 +329,12 @@ void initHomebrew() {
       ['Scraps', 'Silks', "Scavenger's outfit", 'Weather inappropriate clothes']
     ],
     alignments: {
-      'Chaotic': Alignment(
+      'chaotic': Alignment(
         key: 'chaotic',
         name: 'Chaotic',
         description: 'You eschew a convention of the civilized world.',
       ),
-      'Neutral': Alignment(
+      'neutral': Alignment(
         key: 'neutral',
         name: 'Neutral',
         description: 'Teach someone the ways of your people.',

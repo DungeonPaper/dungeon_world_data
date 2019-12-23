@@ -1088,17 +1088,17 @@ void initData() {
       ['Fit Body', 'Well-fed Body', 'Thin Body']
     ],
     alignments: {
-      'Good': Alignment(
+      'good': Alignment(
         key: 'good',
         name: 'Good',
         description: 'Perform your art to aid someone else.',
       ),
-      'Neutral': Alignment(
+      'neutral': Alignment(
         key: 'neutral',
         name: 'Neutral',
         description: 'Avoid a conflict or defuse a tense situation.',
       ),
-      'Chaotic': Alignment(
+      'chaotic': Alignment(
         key: 'chaotic',
         name: 'Chaotic',
         description:
@@ -1482,18 +1482,18 @@ void initData() {
       ['Thin Body', 'Knobby Body', 'Flabby Body']
     ],
     alignments: {
-      'Good': Alignment(
+      'good': Alignment(
         key: 'good',
         name: 'Good',
         description: 'Endanger yourself to heal another.',
       ),
-      'Lawful': Alignment(
+      'lawful': Alignment(
         key: 'lawful',
         name: 'Lawful',
         description:
             'Endanger yourself following the precepts of your church or god.',
       ),
-      'Evil': Alignment(
+      'evil': Alignment(
         key: 'evil',
         name: 'Evil',
         description:
@@ -1878,17 +1878,17 @@ void initData() {
       ['Ceremonial Garb', 'Practical Leathers', 'Weathered Hides']
     ],
     alignments: {
-      'Chaotic': Alignment(
+      'chaotic': Alignment(
         key: 'chaotic',
         name: 'Chaotic',
         description: 'Destroy a symbol of civilization.',
       ),
-      'Good': Alignment(
+      'good': Alignment(
         key: 'good',
         name: 'Good',
         description: 'Help something or someone grow.',
       ),
-      'Neutral': Alignment(
+      'neutral': Alignment(
         key: 'neutral',
         name: 'Neutral',
         description: 'Eliminate an unnatural menace.',
@@ -2275,17 +2275,17 @@ void initData() {
       ['Built Body', 'Lithe Body', 'Ravaged Body']
     ],
     alignments: {
-      'Good': Alignment(
+      'good': Alignment(
         key: 'good',
         name: 'Good',
         description: 'Defend those weaker than you.',
       ),
-      'Neutral': Alignment(
+      'neutral': Alignment(
         key: 'neutral',
         name: 'Neutral',
         description: 'Defeat a worthy opponent.',
       ),
-      'Evil': Alignment(
+      'evil': Alignment(
         key: 'evil',
         name: 'Evil',
         description: 'Kill a defenseless or surrendered enemy.',
@@ -2595,12 +2595,12 @@ void initData() {
       ['Fit Body', 'Bulky Body', 'Thin Body']
     ],
     alignments: {
-      'Lawful': Alignment(
+      'lawful': Alignment(
         key: 'lawful',
         name: 'Lawful',
         description: 'Deny mercy to a criminal or unbeliever.',
       ),
-      'Good': Alignment(
+      'good': Alignment(
         key: 'good',
         name: 'Good',
         description: 'Endanger yourself to protect someone weaker than you.',
@@ -2895,17 +2895,17 @@ void initData() {
       ['Lithe Body', 'Wild Body', 'Sharp Body']
     ],
     alignments: {
-      'Chaotic': Alignment(
+      'chaotic': Alignment(
         key: 'chaotic',
         name: 'Chaotic',
         description: 'Free someone from literal or figurative bonds.',
       ),
-      'Good': Alignment(
+      'good': Alignment(
         key: 'good',
         name: 'Good',
         description: 'Endanger yourself to combat an unnatural threat.',
       ),
-      'Neutral': Alignment(
+      'neutral': Alignment(
         key: 'neutral',
         name: 'Neutral',
         description: 'Help an animal or spirit of the wild.',
@@ -3222,17 +3222,17 @@ void initData() {
       ['Lithe Body', 'Knobby Body', 'Flabby Body']
     ],
     alignments: {
-      'Chaotic': Alignment(
+      'chaotic': Alignment(
         key: 'chaotic',
         name: 'Chaotic',
         description: 'Leap into danger without a plan.',
       ),
-      'Neutral': Alignment(
+      'neutral': Alignment(
         key: 'neutral',
         name: 'Neutral',
         description: 'Avoid detection or infiltrate a location.',
       ),
-      'Evil': Alignment(
+      'evil': Alignment(
         key: 'evil',
         name: 'Evil',
         description: 'Shift danger or blame from yourself to someone else.',
@@ -3559,17 +3559,17 @@ void initData() {
       ['Pudgy Body', 'Creepy Body', 'Thin Body']
     ],
     alignments: {
-      'Good': Alignment(
+      'good': Alignment(
         key: 'good',
         name: 'Good',
         description: 'Use magic to directly aid another.',
       ),
-      'Neutral': Alignment(
+      'neutral': Alignment(
         key: 'neutral',
         name: 'Neutral',
         description: 'Discover something about a magical mystery.',
       ),
-      'Evil': Alignment(
+      'evil': Alignment(
         key: 'evil',
         name: 'Evil',
         description: 'Use magic to cause terror and fear.',

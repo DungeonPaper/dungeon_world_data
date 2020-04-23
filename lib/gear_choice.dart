@@ -51,7 +51,10 @@ class GearOption extends DWEntity {
         tags: listMapper(map['tags'], (t) => Tag.fromJSON(t)),
       );
 
-  factory GearOption.parse(String str) {
+  factory GearOption.parse(dynamic str) {
+    if (str is Map) {
+      return GearOption.fromJSON(str);
+    }
     final num openParen = str.indexOf('(');
     final num closeParen = str.indexOf(')');
     final name = str.substring(0, openParen > -1 ? openParen : null);
@@ -67,7 +70,7 @@ class GearOption extends DWEntity {
   @override
   dynamic toJSON() => {
         'name': name,
-        'tags': tags,
+        'tags': listMapper<Tag, dynamic, Tag>(tags, (t) => t.toJSON()),
       };
 
   @override

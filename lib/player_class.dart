@@ -109,19 +109,19 @@ class PlayerClass extends DWEntity {
         'name': name,
         'description': description,
         'load': load,
-        'baseHP': baseHP,
+        'base_hp': baseHP,
         'damage': damage.toString(),
         'names': names,
         'bonds': bonds,
         'looks': looks,
         'alignments':
             mapMapper<Map>(alignments, (k, v) => MapEntry(k, v.toJSON())),
-        'raceMoves':
+        'race_moves':
             listMapper<Move, Map, Move>(raceMoves, (move) => move.toJSON()),
-        'startingMoves':
+        'starting_moves':
             listMapper<Move, Map, Move>(startingMoves, (move) => move.toJSON()),
         'spells': listMapper(spells, (v) => v.toJSON()),
-        'gearChoices': listMapper<GearChoice, Map, GearChoice>(
+        'gear_choices': listMapper<GearChoice, Map, GearChoice>(
             gearChoices, (choice) => choice.toJSON()),
       };
 

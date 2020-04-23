@@ -1,3 +1,6 @@
+# v2.0.0+4
+* Fixed player class export JSON keys
+
 # v2.0.0+3
 * Fixed exported alignment value
 

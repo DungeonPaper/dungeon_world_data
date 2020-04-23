@@ -1,7 +1,7 @@
 name: dungeon_world_data
 homepage: https://github.com/chenasraf/dungeon_world_data
 description: Data dump of Dungeon World classes, moves, equipment, and more
-version: 2.0.0+3
+version: 2.0.0+4
 
 environment:
   sdk: ">=2.3.0 <3.0.0"

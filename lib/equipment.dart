@@ -3,7 +3,8 @@ import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/tag.dart';
 import 'package:meta/meta.dart';
 
-class Equipment extends DWEntity {/// Equipment name
+class Equipment extends DWEntity {
+  /// Equipment name
   String name;
 
   /// Equipment name, in plural

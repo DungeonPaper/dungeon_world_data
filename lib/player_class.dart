@@ -7,7 +7,8 @@ import 'package:dungeon_world_data/mappers.dart';
 import 'package:dungeon_world_data/spell.dart';
 import 'package:meta/meta.dart';
 
-class PlayerClass extends DWEntity {  /// Class name
+class PlayerClass extends DWEntity {
+  /// Class name
   String name;
 
   /// Class description
@@ -113,7 +114,8 @@ class PlayerClass extends DWEntity {  /// Class name
         'names': names,
         'bonds': bonds,
         'looks': looks,
-        'alignments': alignments,
+        'alignments':
+            mapMapper<Map>(alignments, (k, v) => MapEntry(k, v.toJSON())),
         'raceMoves':
             listMapper<Move, Map, Move>(raceMoves, (move) => move.toJSON()),
         'startingMoves':

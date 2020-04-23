@@ -1,3 +1,6 @@
+# v2.0.0+3
+* Fixed exported alignment value
+
 # v2.0.0+2
 * Fixed exported alignment key
 

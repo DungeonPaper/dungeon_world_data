@@ -1,6 +1,6 @@
 {
   "name": "dw-data",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "raw_data.js",
   "repository": "https://github.com/chenasraf/dw-data",
   "author": "Chen Asraf <inbox@casraf.com>",

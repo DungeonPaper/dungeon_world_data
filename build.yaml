@@ -1,0 +1,19 @@
+# targets:
+#   $default:
+#     builders:
+#       entrypoint:
+#         enabled: false
+#         generate_for:
+#           - web/package.json
+#       build_web_compilers|entrypoint:
+#         # enabled: false
+#         generate_for:
+#           - web/scripts/code.dart
+#         options:
+#           compiler: dart2js
+#       build_node_compilers|entrypoint:
+#         # enabled: false
+#         generate_for:
+#           - web/scripts/build.dart
+#         options:
+#           compiler: dart2js

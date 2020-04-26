@@ -22,3 +22,4 @@ doc/api/
 doc/
 .dart_tool/pub/bin/test
 output.dart
+npm_package/

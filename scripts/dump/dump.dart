@@ -1,13 +1,7 @@
 import 'dart:io';
 import 'package:dart_style/dart_style.dart';
 import 'package:dungeon_world_data/dw_data.dart';
-import 'package:dungeon_world_data/monster.dart';
-import 'package:dungeon_world_data/move.dart';
-import 'package:dungeon_world_data/player_class.dart';
-import 'package:dungeon_world_data/spell.dart';
-import 'package:dungeon_world_data/tag.dart';
 import 'package:path/path.dart';
-import 'package:dungeon_world_data/equipment.dart';
 import 'package:pedantic/pedantic.dart';
 import 'parsers.dart';
 
@@ -26,15 +20,7 @@ void main() async {
         arrayName: 'specialMovesList'),
   ];
 
-  var arraysImports = ({
-    "import 'package:dungeon_world_data/tag.dart';",
-    "import 'package:dungeon_world_data/dice.dart';",
-    "import 'package:dungeon_world_data/spell.dart';",
-    "import 'package:dungeon_world_data/move.dart';",
-    "import 'package:dungeon_world_data/alignment.dart';",
-    "import 'package:dungeon_world_data/gear_choice.dart';",
-    "import 'package:dungeon_world_data/_cache.dart';",
-  }..addAll(Set.from(
+  var arraysImports = ({"part of '_dungeon_world_data.dart';"}..addAll(Set.from(
           arrays.map((a) => "import 'package:dungeon_world_data/${a.file}';"))))
       .join('\n');
 

@@ -1,4 +1,4 @@
-import 'package:uuid/uuid.dart';
+part of '_dungeon_world_data.dart';
 
 abstract class DWEntity {
   String key;
@@ -22,6 +22,12 @@ abstract class DWEntity {
               .replaceAll(RegExp('\\s+'), '_')
               .toLowerCase()
           : Uuid().v4();
+
+  @override
+  int get hashCode => hash2(runtimeType, key);
+
+  @override
+  bool operator ==(obj) => obj.hashCode == hashCode;
 
   /// Returns a JSON representation of this object.
   dynamic toJSON();

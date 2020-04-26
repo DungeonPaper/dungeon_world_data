@@ -1,4 +1,4 @@
-import 'package:dungeon_world_data/dice.dart';
+import 'package:dungeon_world_data/dw_data.dart';
 import 'package:test/test.dart';
 
 void main() {

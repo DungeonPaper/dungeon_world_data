@@ -1,5 +1,4 @@
 import 'package:dungeon_world_data/dw_data.dart';
-import 'package:dungeon_world_data/tag.dart';
 
 void main() {
   // Get all monsters

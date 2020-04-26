@@ -1,10 +1,4 @@
-import 'package:dungeon_world_data/alignment.dart';
-import 'package:dungeon_world_data/gear_choice.dart';
-import 'package:dungeon_world_data/move.dart';
-import 'package:dungeon_world_data/player_class.dart';
-import 'package:dungeon_world_data/dice.dart';
-import 'package:dungeon_world_data/tag.dart';
-import 'package:dungeon_world_data/_cache.dart';
+part of '_dungeon_world_data.dart';
 
 void initHomebrew() {
   playerClassList.add(PlayerClass(

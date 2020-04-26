@@ -1,3 +1,11 @@
+# v2.0.2
+* Bugfix in tag parsing
+
+# v2.0.1
+* Implemented base entity equality comparitor
+* Moved source files to `lib/src`, and selectively expose on `lib/` root.
+* Added build steps to NPM package containing all the static data.
+
 # v2.0.0+4
 * Fixed player class export JSON keys
 

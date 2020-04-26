@@ -39,6 +39,7 @@ void main() {
 
   // Parse tags from objects or strings
   print(Tag.fromJSON({'weight': 1}));
+  print(Tag.fromJSON('{coins: 3}'));
   print(Tag.fromJSON('close'));
 
   // All info tags

@@ -11,7 +11,7 @@ class Tag<T> extends DWEntity {
 
   String description;
 
-  Tag(this.name, [this.value, this.description]) {
+  Tag(this.name, [this.value, this.description]) : super(key: name) {
     if (description != null &&
         description.isNotEmpty &&
         !tagInfoCache.containsKey(key)) {
@@ -43,7 +43,7 @@ class Tag<T> extends DWEntity {
         var value = int.tryParse(match.group(1));
         return Tag(name, value as dynamic);
       }
-      var mapLike = RegExp('\\{(.*):\\s?([0-9]+)\\}');
+      var mapLike = RegExp('\\{(.*):\\s?([+-]?[0-9]+)\\}');
 
       if (mapLike.hasMatch(obj)) {
         var match = mapLike.allMatches(obj).toList().first;

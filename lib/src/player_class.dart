@@ -107,14 +107,16 @@ class PlayerClass extends DWEntity {
         'names': names,
         'bonds': bonds,
         'looks': looks,
-        'alignments': mapMapper<String, Map>(alignments, (k, v) {
-          // print('k: $k, v: $v, toJSON: ${v.toJSON()}');
-          return MapEntry(k, v.toJSON());
-        }),
+        'alignments': mapMapper<String, Map>(
+            alignments, (k, v) => MapEntry(k, v.toJSON())),
         'race_moves':
             listMapper<Move, Map, Move>(raceMoves, (move) => move.toJSON()),
         'starting_moves':
             listMapper<Move, Map, Move>(startingMoves, (move) => move.toJSON()),
+        'advanced_moves_1': listMapper<Move, Map, Move>(
+            advancedMoves1, (move) => move.toJSON()),
+        'advanced_moves_2': listMapper<Move, Map, Move>(
+            advancedMoves2, (move) => move.toJSON()),
         'spells': listMapper(spells, (v) => v.toJSON()),
         'gear_choices': listMapper<GearChoice, Map, GearChoice>(
             gearChoices, (choice) => choice.toJSON()),

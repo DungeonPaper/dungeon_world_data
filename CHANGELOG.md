@@ -1,3 +1,6 @@
+# v2.0.3+1
+* Bugfix in player classes advanced move
+
 # v2.0.2
 * Bugfix in tag parsing
 

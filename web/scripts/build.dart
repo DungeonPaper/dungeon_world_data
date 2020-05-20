@@ -16,15 +16,15 @@ void main() async {
     'spells': dungeonWorld.spells.map((el) => el.toJSON()).toList(),
   };
 
-  var rawDataJsonString = jsonEncode(before)
-      .replaceAll('"', '\\"')
-      .replaceAll('\'', "\\'")
-      .replaceAll('\\n', '\\\\n');
+  var rawDataJsonString = jsonEncode(before);
+  // .replaceAll('"', '\\"')
+  // .replaceAll("'", "\\'")
+  // .replaceAll('\\n', '\\\\n');
 
   print('Wrapping JSON string...');
   rawDataJsonString = '''
-      var _raw = '$rawDataJsonString';
-      var _dw = JSON.parse(_raw);
+      var _dw =
+      $rawDataJsonString;
       _dw.default = _dw;
       module.exports = _dw;
     '''

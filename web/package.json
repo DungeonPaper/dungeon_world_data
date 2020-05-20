@@ -1,9 +1,0 @@
-{
-  "name": "dw-data",
-  "version": "1.0.8",
-  "main": "raw_data.js",
-  "repository": "https://github.com/chenasraf/dungeon_world_data",
-  "author": "Chen Asraf <inbox@casraf.com>",
-  "license": "MIT",
-  "types": "./index.d.ts"
-}

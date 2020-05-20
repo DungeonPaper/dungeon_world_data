@@ -32,11 +32,11 @@ void main() async {
 
   print('Clearing build directory...');
   var outputDir = Directory(join(Directory.current.path, 'npm_package'));
-  var inputDir = Directory(join(Directory.current.path, 'web'));
+  var inputDir = Directory(join(Directory.current.path, 'web', 'public'));
   await outputDir.delete(recursive: true);
   await outputDir.create();
 
-  var blacklist = ['scripts/**/*', 'scripts/*'];
+  var blacklist = <String>[];
 
   await for (var file in inputDir.list(recursive: true)) {
     var relativePath = relative(file.path, from: inputDir.path);

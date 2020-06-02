@@ -1,19 +1,17 @@
-import 'dart:math';
-import 'package:meta/meta.dart';
 import 'package:quiver/core.dart';
 import 'package:uuid/uuid.dart';
+import '../tag.dart';
+import '../alignment.dart';
+import '../equipment.dart';
+import '../mappers.dart';
+import '../monster.dart';
+import '../move.dart';
+import '../player_class.dart';
+import '../spell.dart';
+import '../gear_choice.dart';
+import '../dice.dart';
 
 part '_data.dart';
-part 'tag.dart';
-part 'alignment.dart';
-part 'equipment.dart';
-part 'mappers.dart';
-part 'monster.dart';
-part 'move.dart';
-part 'player_class.dart';
-part 'spell.dart';
-part 'gear_choice.dart';
-part 'dice.dart';
 part '_cache.dart';
 part '_base.dart';
 

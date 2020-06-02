@@ -39,7 +39,7 @@ class Spell extends DWEntity {
       'name': name,
       'description': description,
       'level': level,
-      'tags': listMapper<Tag, dynamic, Spell>(tags, (tag) => tag.toJSON()),
+      'tags': listMapper<Tag, dynamic, Tag>(tags, (tag) => tag.toJSON()),
     };
   }
 

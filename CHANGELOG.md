@@ -1,3 +1,6 @@
+# v2.0.3+2
+* Bugfix in exporting spell tags
+
 # v2.0.3+1
 * Bugfix in player classes advanced move
 

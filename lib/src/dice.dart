@@ -39,7 +39,22 @@ class Dice {
     }
 
     if (obj is num) {
-      return Dice(sides, amount * obj);
+      return Dice(sides, (amount * obj).toInt());
+    }
+
+    return this;
+  }
+
+  Dice operator /(obj) {
+    if (obj is Dice) {
+      if (obj.sides != sides) {
+        throw ("Can't divide different sided die!");
+      }
+      return Dice(sides, obj.amount / amount);
+    }
+
+    if (obj is num) {
+      return Dice(sides, amount ~/ obj);
     }
 
     return this;
@@ -54,7 +69,7 @@ class Dice {
     }
 
     if (obj is num) {
-      return Dice(sides, amount + obj);
+      return Dice(sides, amount + obj.toInt());
     }
 
     return this;
@@ -69,7 +84,7 @@ class Dice {
     }
 
     if (obj is num) {
-      return Dice(sides, amount - obj);
+      return Dice(sides, amount - obj.toInt());
     }
 
     return this;
@@ -96,6 +111,9 @@ class Dice {
 
     return DiceResult(this, results);
   }
+
+  Dice get single => this / amount;
+  Dice multiple(int amount) => single * amount;
 
   /// Roll arbitrary amount of (possibly) different sided dice.
   static List<DiceResult> roll(List<Dice> dice) {

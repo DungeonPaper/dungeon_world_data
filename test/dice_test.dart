@@ -21,8 +21,18 @@ void main() {
     });
 
     test('Equality', () {
-      var dice = Dice(12);
-      expect(dice, equals(Dice.d12));
+      var compare = {
+        Dice(4): Dice.d4,
+        Dice(6): Dice.d6,
+        Dice(8): Dice.d8,
+        Dice(10): Dice.d10,
+        Dice(12): Dice.d12,
+        Dice(20): Dice.d20,
+      };
+      for (var d in compare.keys) {
+        expect(d, equals(compare[d]));
+        expect(compare.values.where((el) => el == d).length, equals(1));
+      }
     });
 
     test('Roll', () {

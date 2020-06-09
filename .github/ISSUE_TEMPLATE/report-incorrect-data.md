@@ -1,6 +1,6 @@
 ---
 name: Report Incorrect Data
-about: Create a report to help us improve
+about: Report data that mismatches official Dungeon World rules, or suggest default Homebrew content
 title: "[DATA]"
 labels: data-issue
 assignees: chenasraf

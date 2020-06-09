@@ -7,7 +7,7 @@ assignees: chenasraf
 
 ---
 
-**Describe the incorrect/missing daya**
+**Describe the incorrect/missing data**
 Explanation of what piece of data is missing or incorrect.
 Also include the correct information to use, or a link to the correct reference.
 

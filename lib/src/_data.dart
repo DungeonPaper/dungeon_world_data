@@ -589,6 +589,14 @@ void initData() {
     ],
   ));
   equipmentList.add(Equipment(
+    key: 'spellbook',
+    name: 'Spellbook',
+    pluralName: 'spellbooks',
+    description:
+        'You have mastered several Spells and inscribed them in your spellbook. You start out with three first level Spells in your spellbook as well as the cantrips. Whenever you gain a level, you add a new spell of your level or lower to your spellbook. You spellbook is 1 weight.',
+    tags: [Tag.fromJSON('{weight: 1}')],
+  ));
+  equipmentList.add(Equipment(
     key: 'antitoxin',
     name: 'Antitoxin',
     pluralName: 'Antitoxins',

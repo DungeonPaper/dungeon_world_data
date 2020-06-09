@@ -161,14 +161,6 @@ void initHomebrew() {
         classes: ['immolator'],
       ),
       Move(
-        key: 'a_little_help_from_my_friends',
-        name: 'A Little Help From My Friends',
-        description:
-            'When you successfully aid someone you take +1 forward as well.',
-        explanation: null,
-        classes: ['immolator'],
-      ),
-      Move(
         key: 'firebrand',
         name: 'Firebrand',
         description:

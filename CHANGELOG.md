@@ -1,3 +1,10 @@
+# v2.0.5
+* DW data updates/fixes
+
+# v2.0.4
+* File structure changes
+* Bugfixes
+
 # v2.0.3+2
 * Bugfix in exporting spell tags
 

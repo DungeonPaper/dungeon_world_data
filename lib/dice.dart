@@ -4,6 +4,7 @@ import 'package:quiver/core.dart';
 class Dice {
   num amount;
   num sides;
+  DiceResult lastResult;
 
   /// Simple dice, with sides and die count.
   /// You can multiply, add or subtract Dice objects to change the amount of rolls (notice dice must
@@ -109,8 +110,7 @@ class Dice {
     for (num i = 0; i < amount; i++) {
       results.add(Random().nextInt(sides) + 1);
     }
-
-    return DiceResult(this, results);
+    return lastResult = DiceResult(this, results);
   }
 
   Dice get single => this / amount;

@@ -1,5 +1,7 @@
 # Dungeon World Data
 
+![](https://img.shields.io/pub/v/dungeon_world_data)
+
 This dart package contains data for Dungeon World, such as classes, moves, spells, equipment, etc.
 
 Homebew classes included:

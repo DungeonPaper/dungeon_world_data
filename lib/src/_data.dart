@@ -1635,7 +1635,7 @@ void initData() {
       Move(
         key: 'divine_protection',
         name: 'Divine Protection',
-        description: 'You get +2 armor while on a quest.',
+        description: 'When you wear no armor or Shield you get 2 armor.',
         explanation: null,
         classes: ['cleric', 'paladin'],
       ),
@@ -2768,7 +2768,7 @@ void initData() {
       Move(
         key: 'divine_protection',
         name: 'Divine Protection',
-        description: 'You get +2 armor while on a quest.',
+        description: 'When you wear no armor or Shield you get 2 armor.',
         explanation: null,
         classes: ['cleric', 'paladin'],
       ),
@@ -2967,7 +2967,7 @@ void initData() {
         key: 'half_elven',
         name: 'Half-Elven',
         description:
-            'Somewhere in your lineage lies mixed blood and it begins to show its presence. You gain the elf starting move if you took the human one at character creation or vice versa.',
+            'Somewhere in your lineage lies mixed blood and it begins to show its presence. You gain the elf starting move if you took the human one at character creation or vice versa.\n\nYou may take this move only if it is your first advancement.',
         explanation: null,
         classes: ['ranger'],
       ),

@@ -6,8 +6,8 @@ void initHomebrew() {
     name: 'Immolator',
     description: '',
     load: 9,
-    baseHP: 6,
-    damage: Dice.parse('1d6'),
+    baseHP: 4,
+    damage: Dice.parse('1d8'),
     names: {
       'human': [
         'Solomon',
@@ -365,7 +365,7 @@ void initHomebrew() {
         key: 'what_are_you_waiting_for',
         name: 'What Are You Waiting For?',
         description:
-            'When you cry out a challenge to your enemies, roll+Con.\n\n* On a 10+ they treat you as the most obvious threat to be dealt with and ignore your companions, take +2 damage ongoing against them.\n* On a 7–9 only a few (the weakest or most foolhardy among them) fall prey to your taunting.\n\nIn addition, choose one of the moves "Full Plate and Packing Steel" or "Unencumbered, Unharmed" to start with.',
+            'When you cry out a challenge to your enemies, roll+Con.\n\n* On a 10+ they treat you as the most obvious threat to be dealt with and ignore your companions, take +2 damage ongoing against them.\n* On a 7–9 only a few (the weakest or most foolhardy among them) fall prey to your taunting.',
         explanation: null,
         classes: ['barbarian'],
       )
@@ -474,10 +474,10 @@ void initHomebrew() {
         classes: ['barbarian'],
       ),
       Move(
-        key: 'one_the_move',
-        name: 'One The Move',
+        key: 'on_the_move',
+        name: 'On The Move',
         description:
-            'When you defy a danger caused by movement (maybe falling off a narrow bridge or rushing past an armed guard) take +1.\n\nWhen you gain a level from 6–10, choose from these moves or the level 2–5 moves.',
+            'When you defy a danger caused by movement (maybe falling off a narrow bridge or rushing past an armed guard) take +1.',
         explanation: null,
         classes: ['barbarian'],
       ),

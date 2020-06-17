@@ -6,7 +6,7 @@ void main() {
 
   // Get gear choices for class
 
-  var bard = dungeonWorld.classes.firstWhere((k) => k.key == 'bard');
+  var bard = DWEntity.getByKey('bard', dungeonWorld.classes);
   var gearChoices1 = bard.gearChoices.map((i) => i.toJSON()).toList();
   ;
 }

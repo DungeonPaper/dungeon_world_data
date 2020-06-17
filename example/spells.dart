@@ -5,6 +5,6 @@ void main() {
   var spell1 = dungeonWorld.spells.first;
 
   // Get spells for class
-  var wizard = dungeonWorld.classes.firstWhere((k) => k.key == 'wizard');
+  var wizard = DWEntity.getByKey('wizard', dungeonWorld.classes);
   var spells1 = wizard.spells;
 }

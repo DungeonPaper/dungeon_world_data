@@ -34,6 +34,13 @@ abstract class DWEntity {
 
   /// Creates a new instance of this identity, using the existing previous values.
   DWEntity copy();
+
+  /// Helper method for getting any `DWEntity` by its key.
+  static T getByKey<T extends DWEntity>(String key, Iterable<T> list) =>
+      list.firstWhere(
+        (element) => element.key == key,
+        orElse: () => null,
+      );
 }
 
 // typedef Key = String Function(String);

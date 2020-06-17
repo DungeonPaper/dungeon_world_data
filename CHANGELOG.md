@@ -1,3 +1,10 @@
+# v2.0.5+4
+* Added convenience methods to Dice
+
+# v2.0.5+3
+* Added `getByKey` helper method to DWEntity
+* Added modifiers to Dice
+
 # v2.0.5+2
 * Doc updates
 

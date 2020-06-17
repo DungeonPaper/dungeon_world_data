@@ -1,5 +1,7 @@
 # Dungeon World Data
 
+![](https://img.shields.io/pub/v/dungeon_world_data)
+
 This dart package contains data for Dungeon World, such as classes, moves, spells, equipment, etc.
 
 Homebew classes included:
@@ -16,11 +18,9 @@ There is more information in the doc directory.
 | ---- | ---- | ----------- |
 | basicMoves | `List<Move>` | Dungeon World's basic moves, such as Hack & Slash, Defy Danger, etc. |
 | specialMoves | `List<Move>` | Dungeon World's special moves, such as Make Camp, Take Watch, etc. |
-| classes | `List<PlayerClass>` | All of Dungeon World's classes, plus some homebrews.
-  See `PlayerClass` class for a full description of the usable properties. |
+| classes | `List<PlayerClass>` | All of Dungeon World's classes, plus some homebrews. See `PlayerClass` class for a full description of the usable properties. |
 | equipment | `List<Equipment>` | Dungeon World's main list of items. |
-| spells | `List<Spell>` | Dungeon World's main spellbook list. Each class can have its own spells
-  list, see `PlayerClass` in the docs for more information. |
+| spells | `List<Spell>` | Dungeon World's main spellbook list. Each class can have its own spells list, see `PlayerClass` in the docs for more information. |
 | monsters | `List<Monster>` | Dungeon World's main monster list. |
 | tags | `List<Tag>` | List of all basic tags, along with descriptions. |
 

@@ -1,3 +1,6 @@
+# v2.0.5+5
+* Fixed Barbarian advanced moves
+
 # v2.0.5+4
 * Added convenience methods to Dice
 

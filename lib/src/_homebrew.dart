@@ -481,6 +481,8 @@ void initHomebrew() {
         explanation: null,
         classes: ['barbarian'],
       ),
+    ],
+    advancedMoves2: [
       Move(
         key: 'a_good_day_to_die',
         name: 'A Good Day To Die',
@@ -546,7 +548,6 @@ void initHomebrew() {
         classes: ['barbarian'],
       ),
     ],
-    advancedMoves2: [],
     spells: [],
     gearChoices: [
       GearChoice(

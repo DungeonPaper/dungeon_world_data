@@ -1,9 +1,13 @@
 {
   "name": "dw-data",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "main": "raw_data.js",
   "repository": "https://github.com/chenasraf/dungeon_world_data",
   "author": "Chen Asraf <inbox@casraf.com>",
   "license": "MIT",
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "cd ../.. && dart web/scripts/build_npm.dart",
+    "postbuild": "node -e 'require(\"../../npm_package/raw_data.js\")'"
+  }
 }

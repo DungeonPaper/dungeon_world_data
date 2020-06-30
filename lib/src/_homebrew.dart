@@ -434,8 +434,8 @@ void initHomebrew() {
         classes: ['barbarian'],
       ),
       Move(
-        key: 'hirelings',
-        name: 'Hirelings',
+        key: 'khan_of_khans',
+        name: 'Khan Of Khans',
         description:
             'Your hirelings always accept the gratuitous fulfillment of one of your appetites as payment.',
         explanation: null,

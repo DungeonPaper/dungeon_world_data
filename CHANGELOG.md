@@ -1,3 +1,6 @@
+# v2.0.5+6
+* Fixed Barbarian move "Khan Of Khans"
+
 # v2.0.5+5
 * Fixed Barbarian advanced moves
 

@@ -44,7 +44,8 @@ class Dice {
   }
 
   @override
-  String toString() => '${amount}d${sides}';
+  String toString() =>
+      '${amount}d${sides}${modifier != null && modifier != 0 ? modRepr : ''}';
 
   Dice operator *(obj) {
     if (obj is Dice) {

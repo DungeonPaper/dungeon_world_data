@@ -1,3 +1,6 @@
+# v2.0.5+7
+* Added modifier to `Dice.toString()` (e.g. 2d6+3)
+
 # v2.0.5+6
 * Fixed Barbarian move "Khan Of Khans"
 

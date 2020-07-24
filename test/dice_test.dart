@@ -10,8 +10,12 @@ void main() {
     });
 
     test('String representation', () {
-      var dice = Dice(10, 4);
-      expect(dice.toString(), equals('4d10'));
+      var dice1 = Dice(10, 4);
+      var dice2 = Dice(6, 2, 3);
+      var dice3 = Dice(20, 2, -4);
+      expect(dice1.toString(), equals('4d10'));
+      expect(dice2.toString(), equals('2d6+3'));
+      expect(dice3.toString(), equals('2d20-4'));
     });
 
     test('Multiplication', () {

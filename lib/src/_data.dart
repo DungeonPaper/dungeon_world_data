@@ -2020,7 +2020,7 @@ void initData() {
         key: 'formcrafter',
         name: 'Formcrafter',
         description:
-            'When you Shapeshifter choose a stat: you take +1 ongoing to rolls using that stat while shifted. The GM will choose a stat, too: you take -1 ongoing to rolls using that stat while shifted.',
+            'When you shapeshift choose a stat: you take +1 ongoing to rolls using that stat while shifted. The GM will choose a stat, too: you take -1 ongoing to rolls using that stat while shifted.',
         explanation: null,
         classes: ['druid'],
       ),
@@ -2046,7 +2046,7 @@ void initData() {
         key: 'embracing_no_form',
         name: 'Embracing No Form',
         description:
-            'When you Shapeshifter, roll 1d4 and add that total to your hold.',
+            'When you shapeshift, roll 1d4 and add that total to your hold.',
         explanation: null,
         classes: ['druid'],
       ),
@@ -2093,7 +2093,7 @@ void initData() {
         key: 'formshaper',
         name: 'Formshaper',
         description:
-            'You may increase your armor by 1 or deal an additional +1d4 damage while in an animal form. Choose which when you Shapeshifter.',
+            'You may increase your armor by 1 or deal an additional +1d4 damage while in an animal form. Choose which when you shapeshift.',
         explanation: null,
         classes: ['druid'],
       ),
@@ -2101,7 +2101,7 @@ void initData() {
         key: 'chimera',
         name: 'Chimera',
         description:
-            'When you Shapeshifter, you may create a merged form of up to three different shapes. You may be a bear with the wings of an eagle and the head of a ram, for example. Each feature will grant you a different move to make. Your chimera form follows the same rules as shapeshifter otherwise. ',
+            'When you shapeshift, you may create a merged form of up to three different shapes. You may be a bear with the wings of an eagle and the head of a ram, for example. Each feature will grant you a different move to make. Your chimera form follows the same rules as shapeshifter otherwise. ',
         explanation: null,
         classes: ['druid'],
       ),

@@ -1,3 +1,6 @@
+# v2.0.5+8
+* Unified "Cast A Spell" from separate Cleric/Wizard moves to one move
+
 # v2.0.5+7
 * Added modifier to `Dice.toString()` (e.g. 2d6+3)
 

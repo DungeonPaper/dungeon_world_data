@@ -1556,7 +1556,7 @@ void initData() {
         description:
             'When you unleash a spell granted to you by your deity, roll+Wis. On a 10+, the spell is successfully cast and your deity does not revoke the spell, so you may cast it again. On a 7–9, the spell is cast, but choose one:\n\n - You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n - Your casting distances you from your deity—take -1 ongoing to cast a spell until the next time you commune.\n - After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.',
         explanation: null,
-        classes: ['cleric'],
+        classes: ['cleric', 'wizard'],
       )
     ],
     advancedMoves1: [
@@ -3606,14 +3606,6 @@ void initData() {
         name: 'Prepare Spells',
         description:
             'When you spend uninterrupted time (an hour or so) in quiet contemplation of your spellbook, you:\nLose any spells you already have prepared\n\nPrepare new spells of your choice from your spellbook whose total levels don’t exceed your own level+1.\n\nPrepare your cantrips which never count against your limit.\n - Lose any spells you already have prepared\n - Prepare new spells of your choice from your spellbook whose total levels don’t exceed your own level+1.\n - Prepare your cantrips which never count against your limit.',
-        explanation: null,
-        classes: ['wizard'],
-      ),
-      Move(
-        key: 'cast_a_spell',
-        name: 'Cast a Spell',
-        description:
-            'When you release a spell you’ve prepared, roll+Int. On a 10+, the spell is successfully cast and you do not forget the spell—you may cast it again later. On a 7-9, the spell is cast, but choose one:\nYou draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n\nThe spell disturbs the fabric of reality as it is cast—take -1 ongoing to cast a spell until the next time you Prepare Spells.\n\nAfter it is cast, the spell is forgotten. You cannot cast the spell again until you prepare spells.\n - You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n - The spell disturbs the fabric of reality as it is cast—take -1 ongoing to cast a spell until the next time you Prepare Spells.\n - After it is cast, the spell is forgotten. You cannot cast the spell again until you prepare spells.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.',
         explanation: null,
         classes: ['wizard'],
       ),

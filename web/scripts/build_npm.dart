@@ -5,8 +5,12 @@ import 'package:path/path.dart';
 import 'package:quiver/pattern.dart';
 
 void main() async {
+  final _scr = Platform.script.path;
+  final _dir = join(dirname(_scr), '..', '..');
+  Directory.current = Directory(join(dirname(_scr), '..'));
+
   print('Node: Building output file');
-  var before = {
+  final before = {
     'tags': dungeonWorld.tags.map((el) => el.toJSON()).toList(),
     'basicMoves': dungeonWorld.basicMoves.map((el) => el.toJSON()).toList(),
     'specialMoves': dungeonWorld.specialMoves.map((el) => el.toJSON()).toList(),
@@ -23,7 +27,7 @@ void main() async {
 
   print('Wrapping JSON string...');
   rawDataJsonString = '''
-      var _dw =
+      final _dw =
       $rawDataJsonString;
       _dw.default = _dw;
       module.exports = _dw;
@@ -31,22 +35,22 @@ void main() async {
       .replaceAll(' ' * 6, '');
 
   print('Clearing build directory...');
-  var outputDir = Directory(join(Directory.current.path, 'npm_package'));
-  var inputDir = Directory(join(Directory.current.path, 'web', 'public'));
+  final outputDir = Directory(join(_dir, 'npm_package'));
+  final inputDir = Directory(join(_dir, 'web', 'public'));
   await outputDir.delete(recursive: true);
   await outputDir.create();
 
-  var blacklist = <String>[];
+  final blacklist = <String>[];
 
-  await for (var file in inputDir.list(recursive: true)) {
-    var relativePath = relative(file.path, from: inputDir.path);
-    var outputPath = join(outputDir.path, relativePath);
+  await for (final file in inputDir.list(recursive: true)) {
+    final relativePath = relative(file.path, from: inputDir.path);
+    final outputPath = join(outputDir.path, relativePath);
 
     print('Found file: ${file.path}, relative: $relativePath');
-    var inPattern =
+    final inPattern =
         blacklist.any((l) => Glob(join(inputDir.path, l)).hasMatch(file.path));
     if (!inPattern && (await file.stat()).type == FileSystemEntityType.file) {
-      var contents = await File(file.path).readAsString();
+      final contents = await File(file.path).readAsString();
       print('Writing to file: $outputPath');
       if (!await Directory(dirname(outputPath)).exists()) {
         await Directory(dirname(outputPath)).create(recursive: true);
@@ -55,7 +59,7 @@ void main() async {
     }
   }
 
-  var rawDataOutputPath = join(outputDir.path, 'raw_data.js');
+  final rawDataOutputPath = join(outputDir.path, 'raw_data.js');
   print('Writing file $rawDataOutputPath...');
   await File(rawDataOutputPath).writeAsString(rawDataJsonString);
 

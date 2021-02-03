@@ -1522,7 +1522,7 @@ void initData() {
         key: 'deity',
         name: 'Deity',
         description:
-            'You serve and worship some deity or power which grants you spells. Give your god a name (maybe Helferth, Sucellus, Zorica or Krugon the Bleak) and choose your deity’s domain:\n\n - Healing and Restoration\n - Bloody Conquest\n - Civilization\n - Knowledge and Hidden Things\n - The Downtrodden and Forgotten\n - What Lies Beneath\nChoose one precept of your religion:\n\n - Your religion preaches the sanctity of suffering, add Petition: Suffering\n - Your religion is cultish and insular, add Petition: Gaining Secrets\n - Your religion has important sacrificial rites, add Petition: Offering\n - Your religion believes in trial by combat, add Petition: Personal Victory',
+            'You serve and worship some deity or power which grants you spells. Give your god a name (maybe Helferth, Sucellus, Zorica or Krugon the Bleak) and choose your deity’s domain:\n\n - Healing and Restoration\n - Bloody Conquest\n - Civilization\n - Knowledge and Hidden Things\n - The Downtrodden and Forgotten\n - What Lies Beneath\n\nChoose one precept of your religion:\n\n - Your religion preaches the sanctity of suffering, add Petition: Suffering\n - Your religion is cultish and insular, add Petition: Gaining Secrets\n - Your religion has important sacrificial rites, add Petition: Offering\n - Your religion believes in trial by combat, add Petition: Personal Victory',
         explanation: null,
         classes: ['cleric'],
       ),
@@ -3624,6 +3624,14 @@ void initData() {
             'When you draw on a place of power to create a magical effect, tell the GM what you’re trying to achieve. Ritual effects are always possible, but the GM will give you one to four of the following conditions:\nIt’s going to take days/weeks/months\n\nFirst you must __________\n\nYou’ll need help from __________\n\nIt will require a lot of money\n\nThe best you can do is a lesser version, unreliable and limited\n\nYou and your allies will risk danger from __________\n\nYou’ll have to disenchant __________ to do it\n - It’s going to take days/weeks/months\n - First you must __________\n - You’ll need help from __________\n - It will require a lot of money\n - The best you can do is a lesser version, unreliable and limited\n - You and your allies will risk danger from __________\n - You’ll have to disenchant __________ to do it',
         explanation: null,
         classes: ['wizard'],
+      ),
+      Move(
+        key: 'cast_a_spell',
+        name: 'Cast a Spell',
+        description:
+            'When you unleash a spell granted to you by your deity, roll+Wis. On a 10+, the spell is successfully cast and your deity does not revoke the spell, so you may cast it again. On a 7–9, the spell is cast, but choose one:\n\n - You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n - Your casting distances you from your deity—take -1 ongoing to cast a spell until the next time you commune.\n - After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.',
+        explanation: null,
+        classes: ['cleric', 'wizard'],
       )
     ],
     advancedMoves1: [

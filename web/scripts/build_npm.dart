@@ -27,7 +27,7 @@ void main() async {
 
   print('Wrapping JSON string...');
   rawDataJsonString = '''
-      final _dw =
+      const _dw =
       $rawDataJsonString;
       _dw.default = _dw;
       module.exports = _dw;

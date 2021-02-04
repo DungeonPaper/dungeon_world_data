@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 10.0.15
+
+- Bugfixes
+
 ## 10.0.14
 
 - Fix cleric move "Deity" description

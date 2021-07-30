@@ -5,16 +5,16 @@ import 'mappers.dart';
 
 class Equipment extends DWEntity {
   /// Equipment name
-  String name;
+  String/*!*/ name;
 
   /// Equipment name, in plural
   String pluralName;
 
   /// Item description
-  String description;
+  String/*!*/ description;
 
   /// Equipment tags
-  List<Tag> tags;
+  List<Tag/*!*/> tags;
 
   Equipment({
     String key,

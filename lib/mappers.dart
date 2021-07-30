@@ -7,16 +7,16 @@ import 'monster.dart';
 import 'player_class.dart';
 import 'tag.dart';
 
-List<R> listMapper<T, R, A>(List<T> lst, R Function(A obj) mapper) =>
+List<R/*!*/> listMapper<T, R, A>(List<T> lst, R Function(A obj) mapper) =>
     lst != null && lst.isNotEmpty
         ? List.from(lst).map<R>((obj) => obj is A ? mapper(obj) : null).toList()
         : <R>[];
 
-Map<K, V> mapMapper<K, V>(
-        Map map, MapEntry<K, V> Function(dynamic key, dynamic obj) mapper) =>
+Map<K, V/*!*/> mapMapper<K, V>(
+        Map map, MapEntry<K, V/*!*/> Function(dynamic key, dynamic obj) mapper) =>
     map != null ? Map.from(map).map<K, V>(mapper) : {};
 
-List<Move> moveListMapper(List lst) => lst == null || lst.isEmpty
+List<Move/*!*/> moveListMapper(List lst) => lst == null || lst.isEmpty
     ? <Move>[]
     : listMapper<Map, Move, dynamic>(
         List<Map>.from(lst), (v) => Move.fromJSON(v));
@@ -29,7 +29,7 @@ Map<String, PlayerClass> classMapper(Map map) => mapMapper(
     (k, v) =>
         MapEntry<String, PlayerClass>(k.toString(), PlayerClass.fromJSON(v)));
 
-Map<String, List<String>> nameMapper(Map map) =>
+Map<String, List<String/*!*/>/*!*/> nameMapper(Map map) =>
     mapMapper<String, List<String>>(
         map,
         (k, v) => MapEntry<String, List<String>>(k.toString(),

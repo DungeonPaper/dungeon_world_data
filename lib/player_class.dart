@@ -9,49 +9,49 @@ import 'gear_choice.dart';
 
 class PlayerClass extends DWEntity {
   /// Class name
-  String name;
+  String /*!*/ name;
 
   /// Class description
-  String description;
+  String /*!*/ description;
 
   /// Base max. weight load, without the +STR.
-  num load;
+  num /*!*/ load;
 
   /// Base HP
-  num baseHP;
+  num /*!*/ baseHP;
 
   /// Hit die
-  Dice damage;
+  Dice /*!*/ damage;
 
   /// Character name options, mapped by race
-  Map<String, List<String>> names;
+  Map<String, List<String /*!*/ > /*!*/ > names;
 
   /// Class Bonds
-  List<String> bonds;
+  List<String /*!*/ > bonds;
 
   /// Character look options
-  List<List<String>> looks;
+  List<List<String /*!*/ > /*!*/ > looks;
 
   /// Character alignment options. Map of `Alignment.key` => `Alignment`
   Map<String, Alignment> alignments;
 
   /// Race moves
-  List<Move> raceMoves;
+  List<Move /*!*/ > raceMoves;
 
   /// Starting moves
-  List<Move> startingMoves;
+  List<Move /*!*/ > startingMoves;
 
   /// Starting moves
-  List<Move> advancedMoves1;
+  List<Move /*!*/ > advancedMoves1;
 
   /// Starting moves
-  List<Move> advancedMoves2;
+  List<Move /*!*/ > advancedMoves2;
 
   /// Spells
-  List<Spell> spells;
+  List<Spell /*!*/ > spells;
 
   /// Gear choices
-  List<GearChoice> gearChoices;
+  List<GearChoice /*!*/ > gearChoices;
 
   PlayerClass({
     String key,
@@ -114,7 +114,7 @@ class PlayerClass extends DWEntity {
         'names': names,
         'bonds': bonds,
         'looks': looks,
-        'alignments': mapMapper<String, Map>(
+        'alignments': mapMapper<String, Map /*!*/ >(
             alignments, (k, v) => MapEntry(k, v.toJSON())),
         'race_moves':
             listMapper<Move, Map, Move>(raceMoves, (move) => move.toJSON()),

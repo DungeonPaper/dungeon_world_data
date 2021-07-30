@@ -5,10 +5,10 @@ import 'mappers.dart';
 
 class GearChoice extends DWEntity {
   /// Description of choices, possibly with other benefits to the stats.
-  String label;
+  String/*!*/ label;
 
   /// The list of options to choose from. `label` should specify how many to choose.
-  List<GearOption> gearOptions;
+  List<GearOption/*!*/> gearOptions;
 
   GearChoice({
     String key,
@@ -36,8 +36,8 @@ class GearChoice extends DWEntity {
 
 class GearOption extends DWEntity {
   // String key;
-  String name;
-  List<Tag> tags;
+  String/*!*/ name;
+  List<Tag/*!*/>/*!*/ tags;
 
   GearOption({
     String key,

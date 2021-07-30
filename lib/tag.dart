@@ -1,10 +1,10 @@
 import 'dw_entity.dart';
 
 class Tag<T> extends DWEntity {
-  static Map<String, String> tagInfoCache = {};
+  static Map<String, String /*!*/ > tagInfoCache = {};
 
   /// Tag or feature name
-  String name;
+  String /*!*/ name;
 
   /// Value, if applicable
   T value;
@@ -34,7 +34,7 @@ class Tag<T> extends DWEntity {
   factory Tag.fromJSON(obj) {
     if (obj is String) {
       if (obj == '') {
-        return null;
+        throw TypeError();
       }
       var amountThenName = RegExp('([0-9]+)\\s(.*)');
       if (amountThenName.hasMatch(obj)) {

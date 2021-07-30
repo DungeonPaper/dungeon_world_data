@@ -65,7 +65,7 @@ String Function(Tag) parseInfoTags = createClassParser<Tag>(
   includeKey: false,
 );
 
-String Function(Alignment) parseAlignment = createClassParser<Alignment>(
+String Function(Alignment/*!*/) parseAlignment = createClassParser<Alignment>(
     'Alignment',
     (i) => '''
         name: ${parseValue(i.name)},

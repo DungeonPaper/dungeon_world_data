@@ -5,19 +5,19 @@ import 'mappers.dart';
 
 class Monster extends DWEntity {
   /// Monster name
-  String name;
+  String /*!*/ name;
 
   /// Monster description
-  String description;
+  String /*!*/ description;
 
   /// Monster instinct
-  String instinct;
+  String /*!*/ instinct;
 
   /// Monster tags
-  List<Tag> tags;
+  List<Tag/*!*/> tags;
 
   /// Monster moves
-  List<String> moves;
+  List<String/*!*/> moves;
 
   Monster({
     String key,

@@ -3,10 +3,10 @@ import 'dw_entity.dart';
 
 class Alignment extends DWEntity {
   /// Alignment name
-  String name;
+  String/*!*/ name;
 
   /// Alignment description
-  String description;
+  String/*!*/ description;
 
   Alignment({
     String key,

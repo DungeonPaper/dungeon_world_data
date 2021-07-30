@@ -4,17 +4,17 @@ import 'mappers.dart';
 
 class Move extends DWEntity {
   /// Move name
-  String name;
+  String/*!*/ name;
 
   /// Move description
-  String description;
+  String/*!*/ description;
 
   /// Move explanation
-  String explanation;
+  String/*!*/ explanation;
 
   /// Classes that can use this move.
   /// The keys correspond to the `PlayerClass` key.
-  List<String> classes;
+  List<String/*!*/> classes;
 
   Move({
     String key,

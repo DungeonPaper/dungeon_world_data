@@ -20,7 +20,7 @@ part '_homebrew.dart';
 const String VERSION = '2.0.0';
 
 class DungeonWorldData {
-  Map<String, dynamic> _raw;
+  /*late*/ Map<String, dynamic> _raw;
 
   /// Raw data
   Map<String, dynamic> get raw {
@@ -29,25 +29,25 @@ class DungeonWorldData {
   }
 
   /// Basic moves
-  List<Move> basicMoves;
+  /*late*/ List<Move> basicMoves;
 
   /// Special moves
-  List<Move> specialMoves;
+  /*late*/ List<Move> specialMoves;
 
   /// Classes
-  List<PlayerClass> classes;
+  /*late*/ List<PlayerClass> classes;
 
   /// Equipment
-  List<Equipment> equipment;
+  /*late*/ List<Equipment> equipment;
 
   /// Spells
-  List<Spell> spells;
+  /*late*/ List<Spell> spells;
 
   /// Monsters
-  List<Monster> monsters;
+  /*late*/ List<Monster> monsters;
 
   /// Tags
-  List<Tag> tags;
+  /*late*/ List<Tag> tags;
 
   /// Current version of data, corresponds to same version of https://www.npmjs.com/package/dungeonworld-data
   final String version = VERSION;
@@ -92,5 +92,5 @@ class DungeonWorldData {
         list.map((v) => MapEntry<String, T>(key(v), v)),
       );
 
-  static String entryKey(DWEntity item) => item.key;
+  static String entryKey(DWEntity item) => item.key /*!*/;
 }

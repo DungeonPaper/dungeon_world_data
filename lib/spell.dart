@@ -5,16 +5,16 @@ import 'tag.dart';
 
 class Spell extends DWEntity {
   /// Spell name
-  String name;
+  String/*!*/ name;
 
   /// Spell description
-  String description;
+  String/*!*/ description;
 
   /// Spell level
   String level;
 
   /// Spell tags
-  List<Tag> tags;
+  List<Tag/*!*/> tags;
 
   Spell({
     String key,

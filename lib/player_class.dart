@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'alignment.dart';
 import 'dice.dart';
 import 'dw_entity.dart';
@@ -9,67 +8,67 @@ import 'gear_choice.dart';
 
 class PlayerClass extends DWEntity {
   /// Class name
-  String /*!*/ name;
+  String name;
 
   /// Class description
-  String /*!*/ description;
+  String description;
 
   /// Base max. weight load, without the +STR.
-  num /*!*/ load;
+  num load;
 
   /// Base HP
-  num /*!*/ baseHP;
+  num baseHP;
 
   /// Hit die
-  Dice /*!*/ damage;
+  Dice damage;
 
   /// Character name options, mapped by race
-  Map<String, List<String /*!*/ > /*!*/ > names;
+  Map<String, List<String>> names;
 
   /// Class Bonds
-  List<String /*!*/ > bonds;
+  List<String> bonds;
 
   /// Character look options
-  List<List<String /*!*/ > /*!*/ > looks;
+  List<List<String>> looks;
 
   /// Character alignment options. Map of `Alignment.key` => `Alignment`
   Map<String, Alignment> alignments;
 
   /// Race moves
-  List<Move /*!*/ > raceMoves;
+  List<Move> raceMoves;
 
   /// Starting moves
-  List<Move /*!*/ > startingMoves;
+  List<Move> startingMoves;
 
   /// Starting moves
-  List<Move /*!*/ > advancedMoves1;
+  List<Move> advancedMoves1;
 
   /// Starting moves
-  List<Move /*!*/ > advancedMoves2;
+  List<Move> advancedMoves2;
 
   /// Spells
-  List<Spell /*!*/ > spells;
+  List<Spell> spells;
 
   /// Gear choices
-  List<GearChoice /*!*/ > gearChoices;
+  List<GearChoice> gearChoices;
 
   PlayerClass({
-    String key,
-    @required this.name,
-    @required this.description,
-    @required this.load,
-    @required this.baseHP,
-    @required this.damage,
-    @required this.names,
-    @required this.bonds,
-    @required this.looks,
-    @required this.alignments,
-    @required this.raceMoves,
-    @required this.startingMoves,
-    @required this.advancedMoves1,
-    @required this.advancedMoves2,
-    @required this.spells,
-    @required this.gearChoices,
+    String? key,
+    required this.name,
+    required this.description,
+    required this.load,
+    required this.baseHP,
+    required this.damage,
+    required this.names,
+    required this.bonds,
+    required this.looks,
+    required this.alignments,
+    required this.raceMoves,
+    required this.startingMoves,
+    required this.advancedMoves1,
+    required this.advancedMoves2,
+    required this.spells,
+    required this.gearChoices,
   }) : super(key: key ?? DWEntity.generateKey(name));
 
   /// Combined list of `advancedMoves1` and `advancedMoves2`
@@ -92,7 +91,7 @@ class PlayerClass extends DWEntity {
         baseHP: map['base_hp'],
         damage: Dice.parse(map['damage']),
         names: nameMapper(map['names']),
-        bonds: listMapper(map['bonds'], (j) => j.toString()),
+        bonds: listMapper(map['bonds'], (dynamic j) => j.toString()),
         looks: looksMapper(map['looks']),
         alignments: alignmentsMapper(map['alignments']),
         raceMoves: moveListMapper(map['race_moves']),
@@ -114,8 +113,8 @@ class PlayerClass extends DWEntity {
         'names': names,
         'bonds': bonds,
         'looks': looks,
-        'alignments': mapMapper<String, Map /*!*/ >(
-            alignments, (k, v) => MapEntry(k, v.toJSON())),
+        'alignments':
+            mapMapper(alignments, ((k, v) => MapEntry(k, v.toJSON()))),
         'race_moves':
             listMapper<Move, Map, Move>(raceMoves, (move) => move.toJSON()),
         'starting_moves':
@@ -124,7 +123,7 @@ class PlayerClass extends DWEntity {
             advancedMoves1, (move) => move.toJSON()),
         'advanced_moves_2': listMapper<Move, Map, Move>(
             advancedMoves2, (move) => move.toJSON()),
-        'spells': listMapper(spells, (v) => v.toJSON()),
+        'spells': listMapper(spells, (dynamic v) => v.toJSON()),
         'gear_choices': listMapper<GearChoice, Map, GearChoice>(
             gearChoices, (choice) => choice.toJSON()),
       };

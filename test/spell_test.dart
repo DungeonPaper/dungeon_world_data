@@ -4,12 +4,12 @@ import 'package:dungeon_world_data/dw_data.dart';
 void main() {
   group('Spells', () {
     test('Key', () {
-      var equipment = DWEntity.getByKey('plague', dungeonWorld.spells);
+      var equipment = DWEntity.getByKey('plague', dungeonWorld.spells)!;
       expect(equipment.key, equals('plague'));
     });
 
     test('toJSON', () {
-      var equipment = DWEntity.getByKey('plague', dungeonWorld.spells);
+      var equipment = DWEntity.getByKey('plague', dungeonWorld.spells)!;
       expect(equipment.toJSON()['tags'], contains('ongoing'));
       var json = equipment.toJSON();
       expect(json['key'], equals('plague'));

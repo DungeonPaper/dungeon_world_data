@@ -1,34 +1,33 @@
-import 'package:meta/meta.dart';
 import 'dw_entity.dart';
 import 'mappers.dart';
 
 class Move extends DWEntity {
   /// Move name
-  String/*!*/ name;
+  String name;
 
   /// Move description
-  String/*!*/ description;
+  String description;
 
   /// Move explanation
-  String/*!*/ explanation;
+  String? explanation;
 
   /// Classes that can use this move.
   /// The keys correspond to the `PlayerClass` key.
-  List<String/*!*/> classes;
+  List<String> classes;
 
   Move({
-    String key,
-    @required this.name,
-    @required this.description,
-    @required this.explanation,
-    @required this.classes,
+    String? key,
+    required this.name,
+    required this.description,
+    this.explanation,
+    required this.classes,
   }) : super(key: key ?? DWEntity.generateKey(name));
 
   factory Move.fromJSON(Map map) => Move(
         key: map['key'],
         name: map['name'],
         classes: map['classes'] != null
-            ? listMapper(map['classes'], (j) => j.toString())
+            ? listMapper(map['classes'], (dynamic j) => j.toString())
             : [],
         description: map['description'],
         explanation: map['explanation'],

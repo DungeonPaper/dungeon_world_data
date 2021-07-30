@@ -33,9 +33,9 @@ void main() async {
       .join('\n');
   print('Writing string');
   var str = '''
-    ${arraysImports}
+    $arraysImports
     void initData() {
-      ${arrayFills}
+      $arrayFills
     }
   ''';
   var file = File(join(Directory.current.path, 'output.dart'));

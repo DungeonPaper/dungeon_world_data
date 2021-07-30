@@ -4,7 +4,7 @@ String dumpClass<T extends DWEntity>(
     String className, T obj, String Function(T) parser,
     {bool includeKey = true}) {
   return """
-    ${className}(${includeKey && obj.key != null ? "key: ${parseValue(obj.key)}, " : ""}${parser(obj).trim()})
+    $className(${includeKey && obj.key != null ? "key: ${parseValue(obj.key)}, " : ""}${parser(obj).trim()})
   """;
 }
 
@@ -29,7 +29,7 @@ String parseTag(Tag tag) {
 }
 
 String parseTagsArray(List<Tag> list) {
-  return parseArray('Tag', list.where((t) => t != null), parseTag);
+  return parseArray('Tag', list, parseTag);
 }
 
 String parseDice(Dice dice) {
@@ -65,7 +65,7 @@ String Function(Tag) parseInfoTags = createClassParser<Tag>(
   includeKey: false,
 );
 
-String Function(Alignment/*!*/) parseAlignment = createClassParser<Alignment>(
+String Function(Alignment) parseAlignment = createClassParser<Alignment>(
     'Alignment',
     (i) => '''
         name: ${parseValue(i.name)},
@@ -91,7 +91,7 @@ String Function(PlayerClass) parsePlayerClass = createClassParser<PlayerClass>(
         damage: ${parseDice(i.damage)},
         names: ${i.names.map((r, s) => MapEntry(parseValue(r), parseArray('String', s, parseValue)))},
         bonds: ${parseArray('String', i.bonds, parseValue)},
-        looks: ${parseArray('List<String>', i.looks, (s) => parseArray('String', s, parseValue))},
+        looks: ${parseArray('List<String>', i.looks, (dynamic s) => parseArray('String', s, parseValue))},
         alignments: ${i.alignments.map((k, v) => MapEntry(parseValue(v.name), parseAlignment(v)))},
         raceMoves: ${parseArray('Move', i.raceMoves, parseMove)},
         startingMoves: ${parseArray('Move', i.startingMoves, parseMove)},
@@ -152,7 +152,7 @@ class ParseDef<T> {
   String get file => _file;
   String get arrayName => _arrayName;
 
-  ParseDef(this.name, this.list, this.parser, {String file, String arrayName})
+  ParseDef(this.name, this.list, this.parser, {String? file, String? arrayName})
       : _file = file ?? _fileFromName(name),
         _arrayName = arrayName ?? _arrayNameFromName(name);
 
@@ -166,7 +166,7 @@ class ParseDef<T> {
   static String _fileFromName(String name) =>
       name
           .splitMapJoin(RegExp('([A-Z])'),
-              onMatch: (match) => '_' + match.group(1).toLowerCase(),
+              onMatch: (match) => '_' + match.group(1)!.toLowerCase(),
               onNonMatch: (i) => i)
           .substring(1) +
       '.dart';

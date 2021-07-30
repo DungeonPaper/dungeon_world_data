@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart' show IterableExtension;
 import 'package:quiver/core.dart';
 import 'package:uuid/uuid.dart';
 import '../tag.dart';
@@ -20,40 +21,38 @@ part '_homebrew.dart';
 const String VERSION = '2.0.0';
 
 class DungeonWorldData {
-  /*late*/ Map<String, dynamic> _raw;
+  late Map<String, dynamic> _raw;
 
   /// Raw data
-  Map<String, dynamic> get raw {
-    _raw ??= toJSON();
-    return _raw;
-  }
+  Map<String, dynamic> get raw => _raw;
 
   /// Basic moves
-  /*late*/ List<Move> basicMoves;
+  late List<Move> basicMoves;
 
   /// Special moves
-  /*late*/ List<Move> specialMoves;
+  late List<Move> specialMoves;
 
   /// Classes
-  /*late*/ List<PlayerClass> classes;
+  late List<PlayerClass> classes;
 
   /// Equipment
-  /*late*/ List<Equipment> equipment;
+  late List<Equipment> equipment;
 
   /// Spells
-  /*late*/ List<Spell> spells;
+  late List<Spell> spells;
 
   /// Monsters
-  /*late*/ List<Monster> monsters;
+  late List<Monster> monsters;
 
   /// Tags
-  /*late*/ List<Tag> tags;
+  late List<Tag> tags;
 
   /// Current version of data, corresponds to same version of https://www.npmjs.com/package/dungeonworld-data
   final String version = VERSION;
 
   DungeonWorldData() {
     _initFromData();
+    _raw = toJSON();
   }
 
   void _initFromData() {
@@ -92,5 +91,5 @@ class DungeonWorldData {
         list.map((v) => MapEntry<String, T>(key(v), v)),
       );
 
-  static String entryKey(DWEntity item) => item.key /*!*/;
+  static String entryKey(DWEntity item) => item.key!;
 }

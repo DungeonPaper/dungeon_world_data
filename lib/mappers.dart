@@ -7,16 +7,18 @@ import 'monster.dart';
 import 'player_class.dart';
 import 'tag.dart';
 
-List<R/*!*/> listMapper<T, R, A>(List<T> lst, R Function(A obj) mapper) =>
+List<R> listMapper<T, R, A>(List<T>? lst, R Function(A obj) mapper) =>
     lst != null && lst.isNotEmpty
-        ? List.from(lst).map<R>((obj) => obj is A ? mapper(obj) : null).toList()
+        ? (List<A>.from(lst.where((obj) => obj != null && obj is A))
+            .map<R>((obj) => mapper(obj))
+            .toList())
         : <R>[];
 
-Map<K, V/*!*/> mapMapper<K, V>(
-        Map map, MapEntry<K, V/*!*/> Function(dynamic key, dynamic obj) mapper) =>
+Map<K, V> mapMapper<K, V>(
+        Map? map, MapEntry<K, V> Function(dynamic key, dynamic obj) mapper) =>
     map != null ? Map.from(map).map<K, V>(mapper) : {};
 
-List<Move/*!*/> moveListMapper(List lst) => lst == null || lst.isEmpty
+List<Move> moveListMapper(List? lst) => lst == null || lst.isEmpty
     ? <Move>[]
     : listMapper<Map, Move, dynamic>(
         List<Map>.from(lst), (v) => Move.fromJSON(v));
@@ -29,33 +31,33 @@ Map<String, PlayerClass> classMapper(Map map) => mapMapper(
     (k, v) =>
         MapEntry<String, PlayerClass>(k.toString(), PlayerClass.fromJSON(v)));
 
-Map<String, List<String/*!*/>/*!*/> nameMapper(Map map) =>
+Map<String, List<String>> nameMapper(Map? map) =>
     mapMapper<String, List<String>>(
         map,
         (k, v) => MapEntry<String, List<String>>(k.toString(),
             listMapper<dynamic, String, dynamic>(v, (j) => j.toString())));
 
-List<List<String>> looksMapper(List lst) =>
-    listMapper(lst, (i) => listMapper(i, (j) => j.toString()));
+List<List<String>> looksMapper(List? lst) =>
+    listMapper(lst, (dynamic i) => listMapper(i, (dynamic j) => j.toString()));
 
-Map<String, Alignment> alignmentsMapper(Map map) => mapMapper(map,
+Map<String, Alignment> alignmentsMapper(Map? map) => mapMapper(map,
     (k, v) => MapEntry<String, Alignment>(k.toString(), Alignment.fromJSON(v)));
 
-List<GearChoice> gearChoiceMapper(List lst) =>
-    listMapper(lst, (v) => GearChoice.fromJSON(v));
+List<GearChoice> gearChoiceMapper(List? lst) =>
+    listMapper(lst, (dynamic v) => GearChoice.fromJSON(v));
 
-List<GearOption> gearOptionMapper(List lst) =>
-    listMapper(lst, (v) => GearOption.parse(v));
+List<GearOption> gearOptionMapper(List? lst) =>
+    listMapper(lst, (dynamic v) => GearOption.parse(v));
 
 Map<String, Equipment> equipmentMapper(Map map) => mapMapper(map,
     (k, v) => MapEntry<String, Equipment>(k.toString(), Equipment.fromJSON(v)));
 
-List<Spell> spellsMapper(List lst) {
+List<Spell> spellsMapper(List? lst) {
   if (lst == null) {
     return [];
   }
 
-  return listMapper(lst, (v) => Spell.fromJSON(v));
+  return listMapper(lst, (dynamic v) => Spell.fromJSON(v));
 }
 
 Map<String, Monster> monsterMapper(Map map) => mapMapper(map,

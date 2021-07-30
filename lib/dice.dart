@@ -9,10 +9,10 @@ class Dice {
   num sides;
 
   // Modifier value for dice, can be added to `DiceResult` value
-  num modifier;
+  num? modifier;
 
   // Last result rolled by this die
-  DiceResult lastResult;
+  DiceResult? lastResult;
 
   /// Simple dice, with sides, die count and modifier.
   /// You can multiply, add or subtract Dice objects to change the amount of rolls (notice dice must
@@ -28,7 +28,7 @@ class Dice {
   static Dice d12 = Dice(12);
   static Dice d20 = Dice(20);
 
-  Dice copyWith({int sides, int amount, int modifier}) => Dice(
+  Dice copyWith({int? sides, int? amount, int? modifier}) => Dice(
         sides ?? this.sides,
         amount ?? this.amount,
         modifier ?? this.modifier,
@@ -45,6 +45,7 @@ class Dice {
 
   @override
   String toString() =>
+      // ignore: unnecessary_brace_in_string_interps
       '${amount}d${sides}${modifier != null && modifier != 0 ? modRepr : ''}';
 
   Dice operator *(obj) {
@@ -125,7 +126,7 @@ class Dice {
   DiceResult getRoll() {
     var results = <num>[];
     for (num i = 0; i < amount; i++) {
-      results.add(Random().nextInt(sides) + 1);
+      results.add(Random().nextInt(sides as int) + 1);
     }
     return lastResult = DiceResult(this, results);
   }
@@ -143,7 +144,7 @@ class Dice {
     return results;
   }
 
-  String get modRepr => (modifier > 0 ? '+' : '') + modifier.toString();
+  String get modRepr => ((modifier ?? 0) > 0 ? '+' : '') + modifier.toString();
 }
 
 class DiceResult {
@@ -161,19 +162,20 @@ class DiceResult {
 
   // More detailed version of `toString`.
   String get toDetailedString =>
-      '$dice${didHitNaturalMax ? '*' : ''} => $total\n  $mappedResults\n  ${didHitNaturalMax ? "Die no. ${indexOfNaturalMax} hit 20" : "Didn\'t hit 20"}';
+      '$dice${didHitNaturalMax ? '*' : ''} => $total\n  $mappedResults\n  ${didHitNaturalMax ? "Die no. $indexOfNaturalMax hit 20" : "Didn\'t hit 20"}';
 
   // All results layed out with their respective die.
   String get mappedResults {
     var out = <String>[];
     for (num i = 0; i < results.length; i++) {
-      out.add('${i + 1}: ${results[i]}');
+      out.add('${i + 1}: ${results[i as int]}');
     }
     return out.toString() + (dice.modifier != 0 ? ' (${dice.modRepr})' : '');
   }
 
   /// Total (accumulated) value of result, including modifiers.
-  num get total => results.reduce((tot, cur) => tot + cur) + dice.modifier;
+  num get total =>
+      results.reduce((tot, cur) => tot + cur) + (dice.modifier ?? 0);
 
   // Boolean that represents whether any of the rolled dice hit their natural max value (e.g. 20 for d20)
   bool get didHitNaturalMax => results.any((r) => r == dice.sides);

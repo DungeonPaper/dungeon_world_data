@@ -1,27 +1,26 @@
-import 'package:meta/meta.dart';
 import 'dw_entity.dart';
 import 'tag.dart';
 import 'mappers.dart';
 
 class Equipment extends DWEntity {
   /// Equipment name
-  String/*!*/ name;
+  String name;
 
   /// Equipment name, in plural
   String pluralName;
 
   /// Item description
-  String/*!*/ description;
+  String? description;
 
   /// Equipment tags
-  List<Tag/*!*/> tags;
+  List<Tag> tags;
 
   Equipment({
-    String key,
-    @required this.name,
-    String pluralName,
-    @required this.description,
-    @required this.tags,
+    String? key,
+    required this.name,
+    String? pluralName,
+    this.description,
+    required this.tags,
   })  : pluralName = pluralName ?? _calcPluralName(name),
         super(key: key ?? DWEntity.generateKey(name));
 
@@ -33,7 +32,7 @@ class Equipment extends DWEntity {
         name: map['name'],
         pluralName: map['plural_name'],
         description: map['description'],
-        tags: listMapper(map['tags'], (i) => Tag.fromJSON(i)),
+        tags: listMapper(map['tags'], (dynamic i) => Tag.fromJSON(i)),
       );
 
   @override

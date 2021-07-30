@@ -1,12 +1,11 @@
-import 'package:meta/meta.dart';
 import 'package:test/test.dart';
 import 'package:dungeon_world_data/dw_data.dart';
 
 class Test1 extends DWEntity {
   final int value;
   Test1({
-    String key,
-    @required this.value,
+    String? key,
+    required this.value,
   }) : super(key: key);
 
   @override

@@ -1,9 +1,9 @@
 part of '_dungeon_world_data.dart';
 
 abstract class DWEntity {
-  String key;
+  String? key;
 
-  DWEntity({String key}) {
+  DWEntity({String? key}) {
     this.key = key ?? DWEntity.generateKey(null);
   }
 
@@ -13,7 +13,7 @@ abstract class DWEntity {
   /// and turned to lowercase.
   ///
   /// Otherwise, a `Uuid().v4()` is generated for it.
-  static String generateKey(String identifier) =>
+  static String generateKey(String? identifier) =>
       identifier != null && identifier.trim().isNotEmpty
           ? identifier
               .trim()
@@ -36,10 +36,9 @@ abstract class DWEntity {
   DWEntity copy();
 
   /// Helper method for getting any `DWEntity` by its key.
-  static T getByKey<T extends DWEntity>(String key, Iterable<T> list) =>
-      list.firstWhere(
+  static T? getByKey<T extends DWEntity>(String key, Iterable<T> list) =>
+      list.firstWhereOrNull(
         (element) => element.key == key,
-        orElse: () => null,
       );
 }
 

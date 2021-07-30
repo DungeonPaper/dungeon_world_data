@@ -1,23 +1,23 @@
 import 'dw_entity.dart';
 
 class Tag<T> extends DWEntity {
-  static Map<String, String /*!*/ > tagInfoCache = {};
+  static Map<String, String > tagInfoCache = {};
 
   /// Tag or feature name
-  String /*!*/ name;
+  String name;
 
   /// Value, if applicable
-  T value;
+  T? value;
 
-  String description;
+  String? description;
 
   Tag(this.name, [this.value, this.description]) : super(key: name) {
     if (description != null &&
-        description.isNotEmpty &&
+        description!.isNotEmpty &&
         !tagInfoCache.containsKey(key)) {
-      tagInfoCache[key] = description;
+      tagInfoCache[key] = description!;
     } else if (description == null ||
-        description.isEmpty && tagInfoCache.containsKey(key)) {
+        description!.isEmpty && tagInfoCache.containsKey(key)) {
       description = tagInfoCache[key];
     }
   }
@@ -39,16 +39,16 @@ class Tag<T> extends DWEntity {
       var amountThenName = RegExp('([0-9]+)\\s(.*)');
       if (amountThenName.hasMatch(obj)) {
         var match = amountThenName.allMatches(obj).toList().first;
-        var name = match.group(2);
-        var value = int.tryParse(match.group(1));
+        var name = match.group(2)!;
+        var value = int.tryParse(match.group(1)!);
         return Tag(name, value as dynamic);
       }
       var mapLike = RegExp('\\{(.*):\\s?([+-]?[0-9]+)\\}');
 
       if (mapLike.hasMatch(obj)) {
         var match = mapLike.allMatches(obj).toList().first;
-        var name = match.group(1);
-        var value = int.tryParse(match.group(2));
+        var name = match.group(1)!;
+        var value = int.tryParse(match.group(2)!);
         return Tag(name, value as dynamic);
       }
     }

@@ -5969,14 +5969,6 @@ void initData() {
       'Bring their word into abundance'
     ],
   ));
-  monsterList.add(Monster(
-    key: '4155de98-1286-46c8-a872-8a2545093d81',
-    name: null,
-    description: null,
-    instinct: null,
-    tags: [],
-    moves: [],
-  ));
   basicMovesList.add(Move(
     key: 'hack_slash',
     name: 'Hack & Slash',

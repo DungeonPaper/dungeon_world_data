@@ -1,27 +1,26 @@
-import 'package:meta/meta.dart';
 import 'dw_entity.dart';
 import 'mappers.dart';
 import 'tag.dart';
 
 class Spell extends DWEntity {
   /// Spell name
-  String/*!*/ name;
+  String name;
 
   /// Spell description
-  String/*!*/ description;
+  String description;
 
   /// Spell level
   String level;
 
   /// Spell tags
-  List<Tag/*!*/> tags;
+  List<Tag> tags;
 
   Spell({
-    String key,
-    @required this.name,
-    @required this.description,
-    @required this.level,
-    @required this.tags,
+    String? key,
+    required this.name,
+    required this.description,
+    required this.level,
+    required this.tags,
   }) : super(key: key ?? DWEntity.generateKey(name));
 
   static Spell fromJSON(Map map) => Spell(
@@ -29,7 +28,7 @@ class Spell extends DWEntity {
         name: map['name'],
         description: map['description'],
         level: map['level'].toString(),
-        tags: listMapper(map['tags'], (i) => Tag.fromJSON(i)),
+        tags: listMapper(map['tags'], (dynamic i) => Tag.fromJSON(i)),
       );
 
   @override

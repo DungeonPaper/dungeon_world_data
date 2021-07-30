@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.0.5-nullsafety
+
+- Improve types
+
 ## v2.0.5+10
 
 - Fix cleric move "Deity" description

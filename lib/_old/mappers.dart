@@ -1,4 +1,4 @@
-import 'package:dungeon_world_data/spell.dart';
+import 'spell.dart';
 import 'alignment.dart';
 import 'equipment.dart';
 import 'gear_choice.dart';

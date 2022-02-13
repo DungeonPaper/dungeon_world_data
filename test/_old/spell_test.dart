@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:dungeon_world_data/dw_data.dart';
+import 'package:dungeon_world_data/_old/dw_data.dart';
 
 void main() {
   group('Spells', () {

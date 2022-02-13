@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:dungeon_world_data/dw_data.dart';
+import 'package:dungeon_world_data/_old/dw_data.dart';
 import 'package:path/path.dart';
 import 'package:quiver/pattern.dart';
 
@@ -8,6 +8,9 @@ void main() async {
   final _scr = Platform.script.path;
   final _dir = join(dirname(_scr), '..', '..');
   Directory.current = Directory(join(dirname(_scr), '..'));
+  print("_dir: $_dir, current: ${Directory.current}");
+
+  return;
 
   print('Node: Building output file');
   final before = {

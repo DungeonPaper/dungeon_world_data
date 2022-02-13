@@ -1,4 +1,4 @@
-import 'package:dungeon_world_data/dw_data.dart';
+import 'package:dungeon_world_data/_old/dw_data.dart';
 
 String dumpClass<T extends DWEntity>(
     String className, T obj, String Function(T) parser,

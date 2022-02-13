@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:dart_style/dart_style.dart';
-import 'package:dungeon_world_data/dw_data.dart';
+import 'package:dungeon_world_data/_old/dw_data.dart';
 import 'package:path/path.dart';
 import 'package:pedantic/pedantic.dart';
 import 'dart_parsers.dart';

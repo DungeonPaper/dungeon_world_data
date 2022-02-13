@@ -1,4 +1,4 @@
-import 'package:dungeon_world_data/tag.dart';
+import 'package:dungeon_world_data/_old/tag.dart';
 import 'dw_entity.dart';
 import 'mappers.dart';
 

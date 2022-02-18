@@ -66,8 +66,7 @@ main() async {
     // Races
     print("Adding ${cls.raceMoves.length} races");
     for (var race in cls.raceMoves) {
-      json['races']!
-          .add(raceMapper(race, cls.key ?? makeKey(cls.name)).toJson());
+      json['races']!.add(raceMapper(race, cls.key ?? makeKey(cls.name)).toJson());
     }
 
     // Classes
@@ -121,12 +120,12 @@ String makeKey(String str) {
 }
 
 Set<Dice> guessDice(String str) {
-  var basicRollPattern = RegExp(r'\broll\+[a-z]{3}\b', caseSensitive: false);
+  var basicRollPattern = RegExp(r'\broll([+-][a-z]+)\b', caseSensitive: false);
   var dicePattern = RegExp(r'\b\dd\d\b', caseSensitive: false);
   var found = <Dice>{};
   var basicRollMatches = basicRollPattern.allMatches(str);
   for (var match in basicRollMatches) {
-    found.add(Dice.d6 * 2);
+    found.add(Dice.fromJson('2d6' + match.group(1)!.toUpperCase()));
   }
   var diceMatches = dicePattern.allMatches(str);
   for (var match in diceMatches) {
@@ -212,10 +211,8 @@ CharacterClass classMapper(old.PlayerClass cls) => CharacterClass(
                       items: [
                         GearOption(
                           amount: o.name.contains(RegExp(r'[0-9]+'))
-                              ? double.tryParse(RegExp(r'[0-9]+')
-                                          .firstMatch(o.name)
-                                          ?.group(0) ??
-                                      "1.0") ??
+                              ? double.tryParse(
+                                      RegExp(r'[0-9]+').firstMatch(o.name)?.group(0) ?? "1.0") ??
                                   1.0
                               : 1.0,
                           item: Item(

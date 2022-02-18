@@ -5,22 +5,35 @@ class Dice {
   Dice({
     required this.amount,
     required this.sides,
-    this.modifier,
-  });
+    this.modifierValue,
+    this.modifierStat,
+    String? modifierSign,
+  }) : modifierSign = modifierSign ??
+            (modifierValue != null
+                ? modifierValue >= 0
+                    ? "+"
+                    : "-"
+                : "+");
 
   final int amount;
   final int sides;
-  final int? modifier;
+  final int? modifierValue;
+  final String? modifierStat;
+  final String modifierSign;
 
   Dice copyWith({
     int? amount,
     int? sides,
-    int? modifier,
+    int? modifierValue,
+    String? modifierSign,
+    String? modifierStat,
   }) =>
       Dice(
         amount: amount ?? this.amount,
         sides: sides ?? this.sides,
-        modifier: modifier ?? this.modifier,
+        modifierSign: modifierSign ?? this.modifierSign,
+        modifierValue: modifierValue ?? this.modifierValue,
+        modifierStat: modifierStat ?? this.modifierStat,
       );
 
   factory Dice.fromRawJson(String str) => Dice.fromJson(json.decode(str));
@@ -33,21 +46,18 @@ class Dice {
   static Dice d20 = Dice(amount: 1, sides: 20);
   static Dice d60 = Dice(amount: 1, sides: 60);
   static Dice d100 = Dice(amount: 1, sides: 100);
+  static final _dicePattern = RegExp(r'(\d+)d([0-9]+)(([+-])([0-9a-z]+))?', caseSensitive: false);
 
   String toRawJson() => toJson();
 
   factory Dice.fromJson(String json) {
-    var parts = json.split("d");
-    var amount = int.tryParse(parts[0]);
-    int? sides;
-    int? modifier;
-    if (parts[1].contains(RegExp(r'[-+]'))) {
-      var idx = parts[1].indexOf(RegExp(r'[^0-9]'));
-      sides = int.tryParse(parts[1].substring(0, idx));
-      modifier = int.tryParse(parts[1].substring(idx));
-    } else {
-      sides = int.tryParse(parts[1]);
-    }
+    var matches = _diceMatches(json);
+    var amount = int.tryParse(matches[0]!);
+    var sides = int.tryParse(matches[1]!);
+    var modifierSign = matches[2];
+    var modifierValue = matches[3] != null ? int.tryParse(matches[3]!) : null;
+    var modifierStat =
+        matches[3] != null && modifierValue == null ? matches[3]!.toUpperCase() : null;
 
     if (sides == null || amount == null) {
       throw Exception("Dice parsing failed");
@@ -56,50 +66,84 @@ class Dice {
     return Dice(
       amount: amount,
       sides: sides,
-      modifier: modifier,
+      modifierValue: modifierSign == '-' ? -(modifierValue ?? 0) : modifierValue,
+      modifierSign: modifierSign,
+      modifierStat: modifierStat,
     );
   }
+
+  Dice copyWithModifierValue(int statValue) =>
+      copyWith(amount: amount, sides: sides, modifierValue: statValue);
 
   @override
   String toString() => "${amount}d$sides$modifierWithSign";
 
   String toJson() => toString();
 
-  String get modifierWithSign => modifier == null
-      ? ""
-      : modifier! > 0
-          ? "+$modifier"
-          : "$modifier";
+  String get modifierWithSign =>
+      hasModifier ? "$modifierSign${modifierValue?.abs() ?? modifierStat}" : "";
 
-  DiceResult roll() => DiceResult.roll(this);
+  bool get hasModifier => (modifierValue != null || modifierStat != null);
+
+  String get modifier => hasModifier ? modifierStat ?? modifierValue!.toString() : "";
+
+  DiceRoll roll() {
+    if (needsModifier) {
+      throw Exception("Dice is being rolled without an actual modifier."
+          "Use `copyWithModifierValue`.\n"
+          "Expected modifier: $modifierWithSign");
+    }
+    var arr = <int>[];
+    for (var i = 0; i < amount; i++) {
+      arr.add(Random().nextInt(sides));
+    }
+    return DiceRoll(dice: this, results: arr);
+  }
+
+  bool get needsModifier => modifierStat != null && modifierValue == null;
 
   operator *(int amount) => copyWith(amount: this.amount * amount);
   operator /(int amount) => copyWith(amount: this.amount ~/ amount);
+
+  static List<String?> _diceMatches(String json) {
+    _assertDicePattern(json);
+    var m = _dicePattern.firstMatch(json)!;
+    return m.groups([1, 2, 4, 5]);
+  }
+
+  static void _assertDicePattern(String dice) {
+    if (!_dicePattern.hasMatch(dice)) {
+      throw Exception("Dice format is invalid, must be {amount}d{sides}([+-]{modifier})"
+          "(e.g. 1d20, 2d6+DEX, 1d8-3)\n"
+          "Received: $dice");
+    }
+  }
 }
 
-class DiceResult {
+class DiceRoll {
   final Dice dice;
   final List<int> results;
 
-  DiceResult({required this.dice, required this.results});
-
-  static List<DiceResult> rollMany(List<Dice> dice) {
-    return dice.map((d) {
-      var arr = <int>[];
-      for (var i = 0; i < d.amount; i++) {
-        arr.add(Random().nextInt(d.sides));
-      }
-      return DiceResult(dice: d, results: arr);
-    }).toList();
+  DiceRoll({required this.dice, required this.results}) {
+    assertDiceModifier();
   }
 
-  int get total =>
-      results.reduce((all, cur) => all + cur) + (dice.modifier ?? 0);
+  static List<DiceRoll> rollMany(List<Dice> dice) => dice.map((d) => roll(d)).toList();
+
+  int get total => results.reduce((all, cur) => all + cur) + (dice.modifierValue ?? 0);
 
   bool get didHitNaturalMax => indexOfNaturalMax >= 0;
   int get indexOfNaturalMax => results.indexOf(dice.sides);
 
-  static DiceResult roll(Dice dice) {
-    return rollMany([dice])[0];
+  static DiceRoll roll(Dice dice) {
+    return dice.roll();
+  }
+
+  void assertDiceModifier() {
+    if (dice.needsModifier) {
+      throw Exception("Dice is being rolled without an actual modifier."
+          "Use `dice.copyWithModifierValue(int modifierValue)`.\n"
+          "Expected modifier: ${dice.modifierWithSign}");
+    }
   }
 }

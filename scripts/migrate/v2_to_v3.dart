@@ -43,6 +43,34 @@ main() async {
   for (var move in old.dungeonWorld.basicMoves) {
     json['moves']!.add(moveMapper(move, MoveCategory.basic).toJson());
   }
+  // Special Moves
+  print("Adding ${old.dungeonWorld.specialMoves.length} special moves");
+  for (var move in old.dungeonWorld.specialMoves) {
+    json['moves']!.add(moveMapper(move, MoveCategory.special).toJson());
+  }
+  // Spells
+  print("Adding ${old.dungeonWorld.spells.length} spells");
+  for (var spell in old.dungeonWorld.spells) {
+    json['spells']!.add(spellMapper(spell).toJson());
+  }
+
+  // Items
+  print("Adding ${old.dungeonWorld.equipment.length} items");
+  for (var equip in old.dungeonWorld.equipment) {
+    json['items']!.add(equipMapper(equip).toJson());
+  }
+
+// Monsters
+  print("Adding ${old.dungeonWorld.monsters.length} monsters");
+  for (var mon in old.dungeonWorld.monsters) {
+    json['monsters']!.add(monsterMapper(mon).toJson());
+  }
+
+// Tags
+  print("Adding ${old.dungeonWorld.tags.length} tags");
+  for (var tag in old.dungeonWorld.tags) {
+    json['tags']!.add(tagMapper(tag).toJson());
+  }
 
   for (var cls in old.dungeonWorld.classes) {
     // Starting moves
@@ -72,33 +100,20 @@ main() async {
     // Classes
     json['classes']!.add(classMapper(cls).toJson());
   }
+
   print("Total ${json['classes']!.length} classes");
 
-  // Spells
-  print("Adding ${old.dungeonWorld.spells.length} spells");
-  for (var spell in old.dungeonWorld.spells) {
-    json['spells']!.add(spellMapper(spell).toJson());
-  }
+  //
 
-  print("Adding ${old.dungeonWorld.equipment.length} items");
-  for (var equip in old.dungeonWorld.equipment) {
-    json['items']!.add(equipMapper(equip).toJson());
-  }
-
-  print("Adding ${old.dungeonWorld.monsters.length} monsters");
-  for (var mon in old.dungeonWorld.monsters) {
-    json['monsters']!.add(monsterMapper(mon).toJson());
-  }
-
-  print("Adding ${old.dungeonWorld.tags.length} tags");
-  for (var tag in old.dungeonWorld.tags) {
-    json['tags']!.add(tagMapper(tag).toJson());
-  }
+  print("Running post-fixes...");
 
   //
   //
-
   await File(_jsonOut).writeAsString(jsonEncode(json));
+  for (final e in json.entries) {
+    await File(path.join(path.dirname(_jsonOut), e.key + ".json"))
+        .writeAsString(jsonEncode(e.value));
+  }
   print("Done");
 }
 
@@ -116,6 +131,8 @@ String makeKey(String str) {
   return fix(str)
       .replaceAll(RegExp('["\']'), "")
       .replaceAll(RegExp(r'[^a-z]+', caseSensitive: false), '_')
+      .replaceFirst(RegExp(r'^_'), '')
+      .replaceFirst(RegExp(r'_$'), '')
       .toLowerCase();
 }
 
@@ -163,6 +180,7 @@ Spell spellMapper(old.Spell spell) => Spell(
       key: makeKey(spell.name),
       meta: null,
       name: fix(spell.name),
+      dice: guessDice(spell.description).toList(),
       tags: [...defaultTags, ...spell.tags.map((t) => tagMapper(t))],
     );
 
@@ -199,41 +217,101 @@ CharacterClass classMapper(old.PlayerClass cls) => CharacterClass(
       bonds: cls.bonds.map(fix).toList(),
       damageDice: Dice.fromJson(cls.damage.toString()),
       description: fix(cls.description),
-      gearChoices: cls.gearChoices
-          .map(
-            (c) => GearChoice(
-              key: c.key ?? uuid(),
-              description: fix(c.label),
-              selections: c.gearOptions
-                  .map(
-                    (o) => GearSelection(
-                      description: o.name + '(TODO: INCOMPLETE)',
-                      items: [
+      gearChoices: cls.gearChoices.map(
+        (c) {
+          return GearChoice(
+            key: c.key ?? uuid(),
+            description: fix(c.label),
+            selections: c.gearOptions.map(
+              (o) {
+                Map<String, dynamic>? found;
+                final generatedKey = makeKey(o.name);
+                final nameWithoutNum = o.name.substring(o.name.indexOf(RegExp(r'[^0-9 ]'))).trim();
+                final numFromName =
+                    double.tryParse(o.name.substring(0, o.name.indexOf(RegExp(r'[^0-9 ]'))).trim());
+                try {
+                  found = tryFindItem(o.key ?? '', generatedKey);
+                } catch (e) {
+                  found = null;
+                }
+                final nameStartsWithNum = o.name.startsWith(RegExp(r'[0-9]+'));
+                final item = found != null
+                    ? Item.fromJson(found)
+                    : Item(
+                        key: makeKey(o.name),
+                        meta: null,
+                        name: fix(o.name),
+                        description: fix(o.name),
+                        tags: [...defaultTags, ...o.tags.map(tagMapper)],
+                      );
+                final isCoinsItem = makeKey(o.name) == 'coins';
+                final splitName = o.name.split(' and ');
+                var foundSplit = false;
+                final splitItems = splitName.length > 1
+                    ? splitName.map((n) {
+                        Map<String, dynamic>? found;
+
+                        try {
+                          found = tryFindItem(n, makeKey(n));
+                          foundSplit = true;
+                        } catch (e) {
+                          found = null;
+                        }
+
+                        final nameWithoutNum = n.substring(n.indexOf(RegExp(r'[^0-9 ]'))).trim();
+                        final nameStartsWithNum = n.startsWith(RegExp(r'[0-9]+'));
+
+                        return GearOption(
+                          key: makeKey(nameStartsWithNum ? nameWithoutNum : n),
+                          amount: nameStartsWithNum
+                              ? double.tryParse(
+                                      RegExp(r'[0-9]+').firstMatch(n)?.group(0) ?? "1.0") ??
+                                  1.0
+                              : 1.0,
+                          item: found != null ? Item.fromJson(found) : item,
+                        );
+                      }).toList()
+                    : [
                         GearOption(
-                          amount: o.name.contains(RegExp(r'[0-9]+'))
+                          key: makeKey(nameStartsWithNum ? nameWithoutNum : o.name),
+                          amount: nameStartsWithNum
                               ? double.tryParse(
                                       RegExp(r'[0-9]+').firstMatch(o.name)?.group(0) ?? "1.0") ??
                                   1.0
                               : 1.0,
-                          item: Item(
-                            key: makeKey(o.name),
-                            meta: null,
-                            name: fix(o.name),
-                            description: fix(o.name),
-                            tags: defaultTags,
-                          ),
+                          item: item,
                         ),
-                      ],
-                      gold: 0,
-                    ),
-                  )
-                  .toList(),
-            ),
-          )
-          .toList(),
+                      ];
+                return GearSelection(
+                  key: generatedKey,
+                  description: o.name +
+                      (found == null && !isCoinsItem && !foundSplit ? '(TODO: INCOMPLETE)' : ''),
+                  options: isCoinsItem ? [] : splitItems,
+                  coins: isCoinsItem ? numFromName ?? 0 : 0,
+                );
+              },
+            ).toList(),
+          );
+        },
+      ).toList(),
       hp: cls.baseHP.toInt(),
       key: makeKey(cls.name),
       load: cls.load.toInt(),
       name: cls.name,
       meta: null,
     );
+
+Map<String, dynamic> tryFindItem(String key, String generatedKey) {
+  final keyStartsWithNum = key.startsWith(RegExp(r'[0-9]+'));
+  final keyWithoutNum =
+      keyStartsWithNum ? key.substring(key.indexOf(RegExp(r'[^0-9 ]'))).trim() : key.trim();
+  final keyWithoutNumSingular =
+      keyWithoutNum.isEmpty ? '' : keyWithoutNum.substring(0, keyWithoutNum.length - 1);
+  return json['items']!.firstWhere(
+    (el) =>
+        el['key'].toLowerCase() == key.toLowerCase() ||
+        el['key'].toLowerCase() == generatedKey.toLowerCase() ||
+        el['key'].toLowerCase() == keyWithoutNum.toLowerCase() ||
+        el['key'].toLowerCase() == keyWithoutNumSingular.toLowerCase(),
+  );
+}

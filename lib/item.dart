@@ -21,6 +21,7 @@ class Item {
     dynamic meta,
     String? key,
     String? name,
+    String? description,
     List<Tag>? tags,
   }) =>
       Item(

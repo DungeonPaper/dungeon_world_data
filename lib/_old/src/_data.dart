@@ -161,11 +161,7 @@ void initData() {
     name: 'Ragged Bow',
     pluralName: 'Ragged Bows',
     description: null,
-    tags: [
-      Tag.fromJSON('near'),
-      Tag.fromJSON('{coins: 15}'),
-      Tag.fromJSON('{weight: 2}')
-    ],
+    tags: [Tag.fromJSON('near'), Tag.fromJSON('{coins: 15}'), Tag.fromJSON('{weight: 2}')],
   ));
   equipmentList.add(Equipment(
     key: 'fine_bow',
@@ -184,11 +180,7 @@ void initData() {
     name: "hunter's bow",
     pluralName: "hunter's bows",
     description: null,
-    tags: [
-      Tag.fromJSON('near'),
-      Tag.fromJSON('far'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('near'), Tag.fromJSON('far'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'crossbow',
@@ -208,44 +200,28 @@ void initData() {
     name: 'Bundle of Arrows',
     pluralName: 'Bundle of Arrowss',
     description: null,
-    tags: [
-      Tag.fromJSON('{ammo: 3}'),
-      Tag.fromJSON('{coins: 1}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('{ammo: 3}'), Tag.fromJSON('{coins: 1}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'elven_arrows',
     name: 'Elven Arrows',
     pluralName: 'Elven Arrowss',
     description: null,
-    tags: [
-      Tag.fromJSON('{ammo: 4}'),
-      Tag.fromJSON('{coins: 20}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('{ammo: 4}'), Tag.fromJSON('{coins: 20}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'club',
     name: 'Club',
     pluralName: 'Clubs',
     description: null,
-    tags: [
-      Tag.fromJSON('close'),
-      Tag.fromJSON('{coins: 1}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('close'), Tag.fromJSON('{coins: 1}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'shillelagh',
     name: 'Shillelagh',
     pluralName: 'Shillelaghs',
     description: null,
-    tags: [
-      Tag.fromJSON('close'),
-      Tag.fromJSON('{coins: 1}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('close'), Tag.fromJSON('{coins: 1}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'staff',
@@ -264,22 +240,14 @@ void initData() {
     name: 'Dagger',
     pluralName: 'Daggers',
     description: null,
-    tags: [
-      Tag.fromJSON('hand'),
-      Tag.fromJSON('{coins: 2}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('hand'), Tag.fromJSON('{coins: 2}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'shiv',
     name: 'Shiv',
     pluralName: 'Shivs',
     description: null,
-    tags: [
-      Tag.fromJSON('hand'),
-      Tag.fromJSON('{coins: 2}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('hand'), Tag.fromJSON('{coins: 2}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'throwing_dagger',
@@ -298,44 +266,28 @@ void initData() {
     name: 'Short Sword',
     pluralName: 'Short Swords',
     description: null,
-    tags: [
-      Tag.fromJSON('close'),
-      Tag.fromJSON('{coins: 8}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('close'), Tag.fromJSON('{coins: 8}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'axe',
     name: 'Axe',
     pluralName: 'Axes',
     description: null,
-    tags: [
-      Tag.fromJSON('close'),
-      Tag.fromJSON('{coins: 8}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('close'), Tag.fromJSON('{coins: 8}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'warhammer',
     name: 'Warhammer',
     pluralName: 'Warhammers',
     description: null,
-    tags: [
-      Tag.fromJSON('close'),
-      Tag.fromJSON('{coins: 8}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('close'), Tag.fromJSON('{coins: 8}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'mace',
     name: 'Mace',
     pluralName: 'Maces',
     description: null,
-    tags: [
-      Tag.fromJSON('close'),
-      Tag.fromJSON('{coins: 8}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('close'), Tag.fromJSON('{coins: 8}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'spear',
@@ -453,11 +405,7 @@ void initData() {
     name: 'Scale Armor',
     pluralName: 'Scale Armors',
     description: null,
-    tags: [
-      Tag.fromJSON('{armor: 2}'),
-      Tag.fromJSON('worn'),
-      Tag.fromJSON('{weight: 3}')
-    ],
+    tags: [Tag.fromJSON('{armor: 2}'), Tag.fromJSON('worn'), Tag.fromJSON('{weight: 3}')],
   ));
   equipmentList.add(Equipment(
     key: 'scale_mail',
@@ -490,11 +438,7 @@ void initData() {
     name: 'Shield',
     pluralName: 'Shields',
     description: null,
-    tags: [
-      Tag.fromJSON('{armor: +1}'),
-      Tag.fromJSON('{coins: 15}'),
-      Tag.fromJSON('{weight: 2}')
-    ],
+    tags: [Tag.fromJSON('{armor: +1}'), Tag.fromJSON('{coins: 15}'), Tag.fromJSON('{weight: 2}')],
   ));
   equipmentList.add(Equipment(
     key: 'leather_armor',
@@ -528,11 +472,7 @@ void initData() {
     pluralName: 'Adventuring Gears',
     description:
         'Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.',
-    tags: [
-      Tag.fromJSON('{uses: 5}'),
-      Tag.fromJSON('{coins: 20}'),
-      Tag.fromJSON('{weight: 1}')
-    ],
+    tags: [Tag.fromJSON('{uses: 5}'), Tag.fromJSON('{coins: 20}'), Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
     key: 'bandages',
@@ -582,11 +522,7 @@ void initData() {
     pluralName: 'bags of books',
     description:
         'When your bag of books contains just the right book for the subject you’re spouting lore on, consult the book, mark off a use, and take +1 to your roll.',
-    tags: [
-      Tag.fromJSON('{uses: 5}'),
-      Tag.fromJSON('{coins: 10}'),
-      Tag.fromJSON('{weight: 2}')
-    ],
+    tags: [Tag.fromJSON('{uses: 5}'), Tag.fromJSON('{coins: 10}'), Tag.fromJSON('{weight: 2}')],
   ));
   equipmentList.add(Equipment(
     key: 'spellbook',
@@ -600,8 +536,7 @@ void initData() {
     key: 'antitoxin',
     name: 'Antitoxin',
     pluralName: 'Antitoxins',
-    description:
-        'When you drink antitoxin, you’re cured of one poison affecting you.',
+    description: 'When you drink antitoxin, you’re cured of one poison affecting you.',
     tags: [Tag.fromJSON('{coins: 10}'), Tag.fromJSON('{weight: 0}')],
   ));
   equipmentList.add(Equipment(
@@ -646,8 +581,7 @@ void initData() {
     key: 'elven_bread',
     name: 'Elven Bread',
     pluralName: 'Elven Breads',
-    description:
-        'Only the greatest of elf-friends are treated to this rare delicacy.',
+    description: 'Only the greatest of elf-friends are treated to this rare delicacy.',
     tags: [
       Tag.fromJSON('ration'),
       Tag.fromJSON('{uses: 7}'),
@@ -661,11 +595,7 @@ void initData() {
     pluralName: 'Halfling Pipeleafs',
     description:
         'When you share halfling pipeleaf with someone, expend two uses and take +1 forward to Parley with them.',
-    tags: [
-      Tag.fromJSON('{uses: 6}'),
-      Tag.fromJSON('{coins: 5}'),
-      Tag.fromJSON('{weight: 0}')
-    ],
+    tags: [Tag.fromJSON('{uses: 6}'), Tag.fromJSON('{coins: 5}'), Tag.fromJSON('{weight: 0}')],
   ));
   equipmentList.add(Equipment(
     key: 'oil_of_tagit',
@@ -780,11 +710,7 @@ void initData() {
     pluralName: 'The Carcosan Spires',
     description:
         'None know from whence this spear of twisted white coral comes. Those who bear it too long find their minds full of alien dreams and begin to hear the strange thoughts of the Others. None are impervious. Used against any “natural” target (men, goblins, owlbears and the like) the Spire acts as a mere mortal spear. Its true purpose is to do harm to those things whose strange natures protect them against mundane weapons. Used thus, the Spire can wound foes otherwise invulnerable to harm. The wielder will recognize these twisted foes on sight—the Spire knows its own.',
-    tags: [
-      Tag.fromJSON('reach'),
-      Tag.fromJSON('thrown'),
-      Tag.fromJSON('{weight: 3}')
-    ],
+    tags: [Tag.fromJSON('reach'), Tag.fromJSON('thrown'), Tag.fromJSON('{weight: 3}')],
   ));
   equipmentList.add(Equipment(
     key: 'cloak_of_silent_stars',
@@ -1032,11 +958,7 @@ void initData() {
     pluralName: 'Vorpal Swords',
     description:
         'Snicker-snack and all that. Sharp as anything, this simple-seeming sword means to separate one thing from another—the limb from the body or folk from their lives. When you deal damage with the Vorpal Sword, your enemy must choose something (an item, an advantage, a limb) and lose it, permanently.',
-    tags: [
-      Tag.fromJSON('close'),
-      Tag.fromJSON('{piercing: 3}'),
-      Tag.fromJSON('{weight: 2}')
-    ],
+    tags: [Tag.fromJSON('close'), Tag.fromJSON('{piercing: 3}'), Tag.fromJSON('{weight: 2}')],
   ));
   playerClassList.add(PlayerClass(
     key: 'bard',
@@ -1100,8 +1022,7 @@ void initData() {
       'chaotic': Alignment(
         key: 'chaotic',
         name: 'Chaotic',
-        description:
-            'Spur others to significant and unplanned decisive action.',
+        description: 'Spur others to significant and unplanned decisive action.',
       )
     },
     raceMoves: [
@@ -1191,8 +1112,7 @@ void initData() {
       Move(
         key: 'a_little_help_from_my_friends',
         name: 'A Little Help From My Friends',
-        description:
-            'When you successfully aid someone you take +1 forward as well.',
+        description: 'When you successfully aid someone you take +1 forward as well.',
         explanation: null,
         classes: ['bard'],
       ),
@@ -1214,8 +1134,7 @@ void initData() {
       Move(
         key: 'bamboozle',
         name: 'Bamboozle',
-        description:
-            'When you Parley with someone, on a 7+ you also take +1 forward with them.',
+        description: 'When you Parley with someone, on a 7+ you also take +1 forward with them.',
         explanation: null,
         classes: ['bard'],
       ),
@@ -1385,11 +1304,7 @@ void initData() {
           GearOption(
             key: 'ragged_bow',
             name: 'Ragged Bow ',
-            tags: [
-              Tag.fromJSON('near'),
-              Tag.fromJSON('{coins: 15}'),
-              Tag.fromJSON('{weight: 2}')
-            ],
+            tags: [Tag.fromJSON('near'), Tag.fromJSON('{coins: 15}'), Tag.fromJSON('{weight: 2}')],
           )
         ],
       ),
@@ -1489,14 +1404,12 @@ void initData() {
       'lawful': Alignment(
         key: 'lawful',
         name: 'Lawful',
-        description:
-            'Endanger yourself following the precepts of your church or god.',
+        description: 'Endanger yourself following the precepts of your church or god.',
       ),
       'evil': Alignment(
         key: 'evil',
         name: 'Evil',
-        description:
-            'Harm another to prove the superiority of your church or god.',
+        description: 'Harm another to prove the superiority of your church or god.',
       )
     },
     raceMoves: [
@@ -1563,16 +1476,14 @@ void initData() {
       Move(
         key: 'chosen_one',
         name: 'Chosen One',
-        description:
-            'Choose one spell. You are granted that spell as if it was one level lower.',
+        description: 'Choose one spell. You are granted that spell as if it was one level lower.',
         explanation: null,
         classes: ['cleric'],
       ),
       Move(
         key: 'invigorate',
         name: 'Invigorate',
-        description:
-            'When you heal someone they take +2 forward to their damage.',
+        description: 'When you heal someone they take +2 forward to their damage.',
         explanation: null,
         classes: ['cleric'],
       ),
@@ -1587,8 +1498,7 @@ void initData() {
       Move(
         key: 'serenity',
         name: 'Serenity',
-        description:
-            'When you Cast a Spell you ignore the first -1 penalty from ongoing spells.',
+        description: 'When you Cast a Spell you ignore the first -1 penalty from ongoing spells.',
         explanation: null,
         classes: ['cleric'],
       ),
@@ -1771,20 +1681,12 @@ void initData() {
           GearOption(
             key: 'warhammer',
             name: 'Warhammer ',
-            tags: [
-              Tag.fromJSON('close'),
-              Tag.fromJSON('{coins: 8}'),
-              Tag.fromJSON('{weight: 1}')
-            ],
+            tags: [Tag.fromJSON('close'), Tag.fromJSON('{coins: 8}'), Tag.fromJSON('{weight: 1}')],
           ),
           GearOption(
             key: 'mace',
             name: 'Mace ',
-            tags: [
-              Tag.fromJSON('close'),
-              Tag.fromJSON('{coins: 8}'),
-              Tag.fromJSON('{weight: 1}')
-            ],
+            tags: [Tag.fromJSON('close'), Tag.fromJSON('{coins: 8}'), Tag.fromJSON('{weight: 1}')],
           ),
           GearOption(
             key: 'staff',
@@ -2045,8 +1947,7 @@ void initData() {
       Move(
         key: 'embracing_no_form',
         name: 'Embracing No Form',
-        description:
-            'When you shapeshift, roll 1d4 and add that total to your hold.',
+        description: 'When you shapeshift, roll 1d4 and add that total to your hold.',
         explanation: null,
         classes: ['druid'],
       ),
@@ -2139,11 +2040,7 @@ void initData() {
           GearOption(
             key: 'shillelagh',
             name: 'Shillelagh ',
-            tags: [
-              Tag.fromJSON('close'),
-              Tag.fromJSON('{coins: 1}'),
-              Tag.fromJSON('{weight: 1}')
-            ],
+            tags: [Tag.fromJSON('close'), Tag.fromJSON('{coins: 1}'), Tag.fromJSON('{weight: 1}')],
           ),
           GearOption(
             key: 'staff',
@@ -2310,8 +2207,7 @@ void initData() {
       Move(
         key: 'halfling',
         name: 'Halfling',
-        description:
-            'When you Defy Danger and use your small size to your advantage, take +1.',
+        description: 'When you Defy Danger and use your small size to your advantage, take +1.',
         explanation: null,
         classes: ['fighter'],
       ),
@@ -2485,8 +2381,7 @@ void initData() {
       Move(
         key: 'eye_for_weaponry',
         name: 'Eye for Weaponry',
-        description:
-            'When you look over an enemy’s weaponry, ask the GM how much damage they do.',
+        description: 'When you look over an enemy’s weaponry, ask the GM how much damage they do.',
         explanation: null,
         classes: ['fighter'],
       ),
@@ -2518,11 +2413,7 @@ void initData() {
           GearOption(
             key: 'scale_armor',
             name: 'Scale Armor ',
-            tags: [
-              Tag.fromJSON('{armor: 2}'),
-              Tag.fromJSON('worn'),
-              Tag.fromJSON('{weight: 3}')
-            ],
+            tags: [Tag.fromJSON('{armor: 2}'), Tag.fromJSON('worn'), Tag.fromJSON('{weight: 3}')],
           )
         ],
       ),
@@ -2683,8 +2574,7 @@ void initData() {
       Move(
         key: 'charge',
         name: 'Charge!',
-        description:
-            'When you lead the charge into combat, those you lead take +1 forward.',
+        description: 'When you lead the charge into combat, those you lead take +1 forward.',
         explanation: null,
         classes: ['paladin'],
       ),
@@ -2922,8 +2812,7 @@ void initData() {
       Move(
         key: 'human',
         name: 'Human',
-        description:
-            'When you Make Camp in a dungeon or city, you don’t need to consume a ration.',
+        description: 'When you Make Camp in a dungeon or city, you don’t need to consume a ration.',
         explanation: null,
         classes: ['ranger'],
       )
@@ -2981,8 +2870,7 @@ void initData() {
       Move(
         key: 'familiar_prey',
         name: 'Familiar Prey',
-        description:
-            'When you Spout Lore about a monster you use WIS instead of INT.',
+        description: 'When you Spout Lore about a monster you use WIS instead of INT.',
         explanation: null,
         classes: ['ranger'],
       ),
@@ -3044,8 +2932,7 @@ void initData() {
       Move(
         key: 'a_safe_place',
         name: 'A Safe Place',
-        description:
-            'When you set the watch for the night, everyone takes +1 to Take Watch.',
+        description: 'When you set the watch for the night, everyone takes +1 to Take Watch.',
         explanation: null,
         classes: ['ranger'],
       ),
@@ -3054,8 +2941,7 @@ void initData() {
       Move(
         key: 'wild_speech',
         name: 'Wild Speech',
-        description:
-            'You can speak with and understand any non-magical, non-planar creature.',
+        description: 'You can speak with and understand any non-magical, non-planar creature.',
         explanation: null,
         classes: ['ranger'],
       ),
@@ -3078,8 +2964,7 @@ void initData() {
       Move(
         key: 'smaug_s_belly',
         name: 'Smaug’s Belly',
-        description:
-            'When you know your target’s weakest point your arrows have 2 piercing.',
+        description: 'When you know your target’s weakest point your arrows have 2 piercing.',
         explanation: null,
         classes: ['ranger'],
       ),
@@ -3132,21 +3017,13 @@ void initData() {
         gearOptions: [
           GearOption(
             key: 'hunter_s_bow',
-            name: "Hunter's bow ",
-            tags: [
-              Tag.fromJSON('near'),
-              Tag.fromJSON('far'),
-              Tag.fromJSON('{weight: 1}')
-            ],
+            name: "Hunter's bow and short sword",
+            tags: [Tag.fromJSON('near'), Tag.fromJSON('far'), Tag.fromJSON('{weight: 1}')],
           ),
           GearOption(
             key: 'hunter_s_bow',
-            name: "Hunter's bow ",
-            tags: [
-              Tag.fromJSON('near'),
-              Tag.fromJSON('far'),
-              Tag.fromJSON('{weight: 1}')
-            ],
+            name: "Hunter's bow and spear",
+            tags: [Tag.fromJSON('near'), Tag.fromJSON('far'), Tag.fromJSON('{weight: 1}')],
           )
         ],
       ),
@@ -3308,8 +3185,7 @@ void initData() {
       Move(
         key: 'cautious',
         name: 'Cautious',
-        description:
-            'When you use Trap Expert you always get +1 hold, even on a 6-.',
+        description: 'When you use Trap Expert you always get +1 hold, even on a 6-.',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3332,8 +3208,7 @@ void initData() {
       Move(
         key: 'poison_master',
         name: 'Poison Master',
-        description:
-            'After you’ve used a poison once it’s no longer dangerous for you to use.',
+        description: 'After you’ve used a poison once it’s no longer dangerous for you to use.',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3397,8 +3272,7 @@ void initData() {
       Move(
         key: 'serious_underdog',
         name: 'Serious Underdog',
-        description:
-            'You have +1 armor. When you’re outnumbered, you have +2 armor instead.',
+        description: 'You have +1 armor. When you’re outnumbered, you have +2 armor instead.',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3452,11 +3326,7 @@ void initData() {
           GearOption(
             key: 'dagger',
             name: 'Dagger ',
-            tags: [
-              Tag.fromJSON('hand'),
-              Tag.fromJSON('{coins: 2}'),
-              Tag.fromJSON('{weight: 1}')
-            ],
+            tags: [Tag.fromJSON('hand'), Tag.fromJSON('{coins: 2}'), Tag.fromJSON('{weight: 1}')],
           ),
           GearOption(
             key: 'rapier',
@@ -3487,11 +3357,7 @@ void initData() {
           GearOption(
             key: 'ragged_bow',
             name: 'Ragged Bow ',
-            tags: [
-              Tag.fromJSON('near'),
-              Tag.fromJSON('{coins: 15}'),
-              Tag.fromJSON('{weight: 2}')
-            ],
+            tags: [Tag.fromJSON('near'), Tag.fromJSON('{coins: 15}'), Tag.fromJSON('{weight: 2}')],
           )
         ],
       ),
@@ -3578,16 +3444,14 @@ void initData() {
       Move(
         key: 'elf',
         name: 'Elf',
-        description:
-            'Magic is as natural as breath to you. Detect Magic is a cantrip for you.',
+        description: 'Magic is as natural as breath to you. Detect Magic is a cantrip for you.',
         explanation: null,
         classes: ['wizard'],
       ),
       Move(
         key: 'human',
         name: 'Human',
-        description:
-            'Choose one Cleric spell. You can cast it as if it was a Wizard spell.',
+        description: 'Choose one Cleric spell. You can cast it as if it was a Wizard spell.',
         explanation: null,
         classes: ['wizard'],
       )
@@ -3638,8 +3502,7 @@ void initData() {
       Move(
         key: 'prodigy',
         name: 'Prodigy',
-        description:
-            'Choose a spell. You prepare that spell as if it were one level lower.',
+        description: 'Choose a spell. You prepare that spell as if it were one level lower.',
         explanation: null,
         classes: ['wizard'],
       ),
@@ -3654,8 +3517,7 @@ void initData() {
       Move(
         key: 'fount_of_knowledge',
         name: 'Fount of Knowledge',
-        description:
-            'When you Spout Lore about something no one else has any clue about, take +1.',
+        description: 'When you Spout Lore about something no one else has any clue about, take +1.',
         explanation: null,
         classes: ['wizard'],
       ),
@@ -3670,8 +3532,7 @@ void initData() {
       Move(
         key: 'expanded_spellbook',
         name: 'Expanded Spellbook',
-        description:
-            'Add a new spell from the spell list of any class to your spellbook.',
+        description: 'Add a new spell from the spell list of any class to your spellbook.',
         explanation: null,
         classes: ['wizard'],
       ),
@@ -3841,11 +3702,7 @@ void initData() {
           GearOption(
             key: 'dagger',
             name: 'Dagger ',
-            tags: [
-              Tag.fromJSON('hand'),
-              Tag.fromJSON('{coins: 2}'),
-              Tag.fromJSON('{weight: 1}')
-            ],
+            tags: [Tag.fromJSON('hand'), Tag.fromJSON('{coins: 2}'), Tag.fromJSON('{weight: 1}')],
           ),
           GearOption(
             key: 'staff',
@@ -3893,11 +3750,7 @@ void initData() {
         '“Scum of the earth, they are. A troupe of armored men and women come sauntering into town, brandishing what, for all intents and purposes, is enough magical and mundane power to level the whole place. Bringing with them bags and bags of loot, still dripping blood from whatever poor sod they had to kill to get it. An economical fiasco waiting to happen, if you ask me. The whole system becomes completely uprooted. Dangerous, unpredictable murder-hobos. Oh, wait, you’re an adventurer? I take it all back.”',
     instinct: 'To adventure or die trying',
     tags: [Tag.fromJSON('horde'), Tag.fromJSON('intelligent')],
-    moves: [
-      'Go on a fool’s errand',
-      'Act impulsively',
-      'Share tales of past exploits'
-    ],
+    moves: ['Go on a fool’s errand', 'Act impulsively', 'Share tales of past exploits'],
   ));
   monsterList.add(Monster(
     key: 'bandit',
@@ -3905,11 +3758,7 @@ void initData() {
     description:
         'Desperation is the watchword of banditry. When times are tough, what else is there to do but scavenge a weapon and take up with a clan of nasty men and women? Highway robbery, poaching, scams and cons and murder most foul but we’ve all got to eat so who can blame them? Then again, there’s evil in the hearts of some and who’s to say that desperation isn’t a need  to sate one’s baser lusts? Anyway—it’s this or starve, sometimes.',
     instinct: 'To rob',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['Steal something', 'Demand tribute'],
   ));
   monsterList.add(Monster(
@@ -3917,11 +3766,7 @@ void initData() {
     name: 'Bandit King',
     description: 'Better to rule in hell than serve in heaven.',
     instinct: 'To lead',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['Make a demand', 'Extort', 'Topple power'],
   ));
   monsterList.add(Monster(
@@ -3939,11 +3784,7 @@ void initData() {
     description:
         'Noble protector or merely drunken lout, it often makes no difference to these sorts. Falling shy of a noble knight, the proud town guard is an ancient profession nonetheless. These folks of the constabulary often dress in the colors of their lord (when you can see it under the mud) and, depending on the richness of that lord, might even have a decent weapon and some armor that fits. Those are the lucky ones. Even so, someone has to be there to keep an eye on the gate when the Black Riders have been spotted in the woods. Too many of us owe our lives to these souls—remember that the next time one is drunkenly insulting your mother, hmm?',
     instinct: 'To do as ordered',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['Uphold the law', 'Make a profit'],
   ));
   monsterList.add(Monster(
@@ -3968,10 +3809,7 @@ void initData() {
         'Not all those who wield the arcane arts are adventuring wizards. Nor necromancers in mausoleums or sorcerers of ancient bloodline. Some are just old men and women, smart enough to have discovered a trick or two. It might make them a bit batty to come by that knowledge, but if you’ve a curse to break or a love to prove, might be that a hedge wizard will help you, if you can find his rotten hut in the swamp and pay the price he asks.',
     instinct: 'To learn',
     tags: [Tag.fromJSON('magical')],
-    moves: [
-      'Cast almost the right spell (for a price)',
-      'Make deals beyond their ken'
-    ],
+    moves: ['Cast almost the right spell (for a price)', 'Make deals beyond their ken'],
   ));
   monsterList.add(Monster(
     key: 'high_priest',
@@ -3980,11 +3818,7 @@ void initData() {
         'Respected by all who gaze upon them, the high priests and abbesses of Dungeon World are treated with a sort of reverence. Whether they pay homage to Ur-thuu-hak, God of Swords, or whisper quiet prayers to Namiah, precious daughter of peace, they know a thing or two that you and I won’t ever know. The gods speak to them as a hawker-of-wares might speak to us in the marketplace. For this, for the bearing-of-secrets and the knowing-of-things, we give them a wide berth as they pass in their shining robes.',
     instinct: 'To lead',
     tags: [],
-    moves: [
-      'Set down divine law',
-      'Reveal divine secrets',
-      'Commission divine undertakings'
-    ],
+    moves: ['Set down divine law', 'Reveal divine secrets', 'Commission divine undertakings'],
   ));
   monsterList.add(Monster(
     key: 'hunter',
@@ -4042,11 +3876,7 @@ void initData() {
     description:
         'In the countryside they’d be called outlaw and driven off or killed. The city, though, is full of places to hide. Damp basements to pore over maps and to plan and plot against a corrupt system. Like rats, they gnaw away at order, either to supplant it anew or just erode the whole thing. The line between change and chaos is a fine one—some rebels walk that thin line and others just want to see it all torched. Disguise, a knife in the dark or a thrown torch at the right moment are all tools of the rebel. The burning brand of anarchy is a common fear amongst the nobles of Dungeon World. These men and women are why.',
     instinct: 'To upset order',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['Die for a cause', 'Inspire others'],
   ));
   monsterList.add(Monster(
@@ -4055,11 +3885,7 @@ void initData() {
     description:
         'For a commoner with a strong arm, sometimes it’s this or be a bandit. It’s wear the colors and don ill-fitting armor and march into the unknown with a thousand other scared men and women conscripted to fight the wars of our time. They could be hiding out in the woods instead, living off poached elk and dodging the king’s guard. Better to risk one’s life in service to a cause. To bravely toss one’s lot in with one’s fellows and hope to come out the other side still in one piece. Besides, the nobles need strong men and women. What is it they say? A handful of soldiers beats a mouthful of arguments.',
     instinct: 'To fight',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['March into battle', 'Fight as one'],
   ));
   monsterList.add(Monster(
@@ -4078,10 +3904,7 @@ void initData() {
         'It’s said that if you see a tinker on the road and you don’t offer him a swig of ale or some of your food that he’ll leave a curse of bad luck behind. A tinker is a funny thing. These strange folk often travel the roads between towns with their oddment carts and favorite mules. With a ratty dog and always a story to tell. Sometimes the mail, too, if you’re lucky and live in a place where Queen’s Post won’t go. If you’re kind, maybe they’ll sell you a rose that never wilts or a clock that chimes with the sound of faerie laughter. Or maybe they’re just antisocial peddlers. You never know, right?',
     instinct: 'To create',
     tags: [],
-    moves: [
-      'Offer an oddity at a price',
-      'Spin tales of great danger and reward in far-off lands'
-    ],
+    moves: ['Offer an oddity at a price', 'Spin tales of great danger and reward in far-off lands'],
   ));
   monsterList.add(Monster(
     key: 'aboleth',
@@ -4089,11 +3912,7 @@ void initData() {
     description:
         'Deep below the surface of the world, in freshwater seas untouched by the sun, dwell the aboleth. Fish the size of whales, with strange growths of gelatinous feelers used to probe the lightless shores. They’re served by slaves: blind albino victims of any race unfortunate enough to stumble on them, drained of thought and life by the powers of the aboleth’s alien mind. In the depths they plot against each other, fishy cultists building and digging upward towards the surface until someday, they’ll breach it. For now, they sleep and dream and guide their pallid minions to do their bidding.',
     instinct: 'To command',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('huge'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('huge'), Tag.fromJSON('intelligent')],
     moves: ['Invade a mind', 'Turn minions on them', 'Put a plan in motion'],
   ));
   monsterList.add(Monster(
@@ -4108,11 +3927,7 @@ void initData() {
       Tag.fromJSON('magical'),
       Tag.fromJSON('divine')
     ],
-    moves: [
-      'Set a disaster in motion',
-      'Breathe forth the elements',
-      'Act with perfect foresight'
-    ],
+    moves: ['Set a disaster in motion', 'Breathe forth the elements', 'Act with perfect foresight'],
   ));
   monsterList.add(Monster(
     key: 'chaos_spawn',
@@ -4129,11 +3944,7 @@ void initData() {
     description:
         'Your worst seafood nightmare come to life. A vicious sort of half-man half-crawdad, cursed with primal intelligence and blessed with a pair of razor-sharp claws. Strange things lurk in the stinking pools in caverns best forgotten and the chuul is one of them. If you spot one, your best hope is a heavy mace to crack its shell and maybe a little garlic butter. Mmmm.',
     instinct: 'To split',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('cautious')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('large'), Tag.fromJSON('cautious')],
     moves: ['Split something in two with mighty claws', 'Retreat into water'],
   ));
   monsterList.add(Monster(
@@ -4142,11 +3953,7 @@ void initData() {
     description:
         'It was not so simple a thing as a war over religion or territory. No disagreement of queens led to the great sundering of the elves. It was sadness. It was the very diminishing of the world by the lesser races. The glory of all the elves had built was cracking and turning to glass. Some, then, chose to separate themselves from the world; wracked with tears they turned their backs on men and dwarves. There were others, though, that were overcome with something new. A feeling no elf had felt before. Spite. Hatred filled these elves and twisted them and they turned on their weaker cousins. Some still remain after the great exodus below. Some hide amongst us with spider-poisoned blades, meting out that strangest of punishments: elven vengeance.',
     instinct: 'To spite the surface races',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['Poison them', 'Unleash an ancient spell', 'Call reinforcements'],
   ));
   monsterList.add(Monster(
@@ -4155,11 +3962,7 @@ void initData() {
     description:
         'The deep elves lost the sweetness and gentle peace of their bright cousins ages ago, but they did not abandon grace. They move with a swiftness and beauty that would bring a tear to any warrior’s eye. In the dark, they’ve practiced. A cruelty has infested their swordsmanship—a wickedness comes to the fore. Barbed blades and whips replace the shining pennant-spears of elven battles on the surface. The swordmasters of the deep elf clans do not merely seek to kill, but to punish with every stroke of their blades. Wickedness and pain are their currency.',
     instinct: 'To punish unbelievers',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['Inflict pain beyond measure', 'Use the dark to advantage'],
   ));
   monsterList.add(Monster(
@@ -4193,11 +3996,7 @@ void initData() {
       Tag.fromJSON('cautious'),
       Tag.fromJSON('hoarder')
     ],
-    moves: [
-      'Bend an element to its will',
-      'Demand tribute',
-      'Act with disdain'
-    ],
+    moves: ['Bend an element to its will', 'Demand tribute', 'Act with disdain'],
   ));
   monsterList.add(Monster(
     key: 'gray_render',
@@ -4248,11 +4047,7 @@ void initData() {
       Tag.fromJSON('hoarder'),
       Tag.fromJSON('magical')
     ],
-    moves: [
-      'Send a follower to their death',
-      'Use old magic',
-      'Offer a deal or bargain'
-    ],
+    moves: ['Send a follower to their death', 'Use old magic', 'Offer a deal or bargain'],
   ));
   monsterList.add(Monster(
     key: 'salamander',
@@ -4275,16 +4070,8 @@ void initData() {
     description:
         'A seasoned caravan guard learns to listen for the calls of a scout or sentry with a keen ear. A few extra seconds after the alarm is raised can mean life or death. Different cries mean different responses, too—a call of “orcs!” means draw your sword and steady for blood but a call of “bandits!” says you might be able to bargain. One alarm from the scouts that always, always means it’s time to pack up, whip your horse and run for the hills? “LAND SHARK!”',
     instinct: 'To devour',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('huge'),
-      Tag.fromJSON('construct')
-    ],
-    moves: [
-      'Drag prey into rough tunnels',
-      'Burst from the earth',
-      'Swallow whole'
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('huge'), Tag.fromJSON('construct')],
+    moves: ['Drag prey into rough tunnels', 'Burst from the earth', 'Swallow whole'],
   ));
   monsterList.add(Monster(
     key: 'chimera',
@@ -4292,11 +4079,7 @@ void initData() {
     description:
         'Well-known and categorized, the chimera is a perfected creature. From the codices of the Mage’s Guild to the famous pages of Cullaina’s Creature Compendium, there’s no confusion about what chimera means. Two parts lioness, one part serpent, head of a she-goat, and all the vicious magic one can muster. The actual ritual might vary, as might a detail or two—more creative sorcerers switch the flame breath for acid, perhaps. Used as a guardian, an assassin or merely an instrument of chaos unchained, it matters little. The chimera is the worst sort of abomination: an intentional affront to all natural life.',
     instinct: 'To do as commanded',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('construct')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('large'), Tag.fromJSON('construct')],
     moves: ['Belch forth flame', 'Run them over', 'Poison them'],
   ));
   monsterList.add(Monster(
@@ -4311,10 +4094,7 @@ void initData() {
       Tag.fromJSON('intelligent'),
       Tag.fromJSON('organized')
     ],
-    moves: [
-      'Fill a mind with foreign thoughts',
-      'Take control of a beast’s mind'
-    ],
+    moves: ['Fill a mind with foreign thoughts', 'Take control of a beast’s mind'],
   ));
   monsterList.add(Monster(
     key: 'digester',
@@ -4322,11 +4102,7 @@ void initData() {
     description:
         'It’s okay, magical experimentation is a messy science. For every beautiful pegasus there’s a half-done creature that wasn’t quite right. We understand. The goblin-elephant you thought was such a great idea. The Gelatinous Drake. Just examples. No judgement here. Anyway, we’ve got something for that. We call it the Digester. Yes, just like it sounds. Strange looking, I know, and the smell isn’t the best, but this thing—it’ll eat magic like Svenloff the Stout drinks ale. Next time one of these unfortunate accidents occurs, just point the Digester at it and all your troubles drain away. Just keep an eye on it. Damn thing ate my wand last week.',
     instinct: 'To digest',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('construct')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('large'), Tag.fromJSON('construct')],
     moves: ['Eat away at something', 'Draw sustenance'],
   ));
   monsterList.add(Monster(
@@ -4335,11 +4111,7 @@ void initData() {
     description:
         'Things go missing. A sock, a silver spoon, your dead mother’s bones. We blame the maid, or bad luck, or just a moment of stupid forgetfulness and we move on. We never get to see the real cause of these problems. The spidery thing with human hands and eyes as blue as the deep Ethereal plane from whence the creature comes. We never see the nest it makes of astral silver webbing and stolen objects arranged in some mad pattern. We never watch it assemble its collection of halfling finger-bones, stolen from the hands of the sleeping. We’re lucky, that way.',
     instinct: 'To steal',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('devious'),
-      Tag.fromJSON('planar')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('devious'), Tag.fromJSON('planar')],
     moves: [
       'Take something important to its planar lair',
       'Retreat to the Ethereal plane',
@@ -4352,11 +4124,7 @@ void initData() {
     description:
         'What could possibly be better than an idiotic angry hill giant? One with two heads. Fantastic idea, really. Grade A stuff.',
     instinct: 'To smash',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('construct')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('large'), Tag.fromJSON('construct')],
     moves: ['Attack two enemies at once', 'Defend its creator'],
   ));
   monsterList.add(Monster(
@@ -4366,11 +4134,7 @@ void initData() {
         'The pounding of the jungle drums calls to it. The slab of meat on the sacrificial stone to lure in the great ape. Girallon, they call it—a name from the long-forgotten tongue of the kings who bred the beast. Taller than a building, some say. Cloaked in ivory fur with tusks as long as scimitars. Four arms? Six? The rumors are hard to verify. Every year it is the same: some explorer visits the jungle villages seeking the ape and returns, never quite the same, never with a trophy. The pounding of the drums goes on.',
     instinct: 'To rule',
     tags: [Tag.fromJSON('solitary'), Tag.fromJSON('huge')],
-    moves: [
-      'Answer the call of sacrifice',
-      'Drive them from the jungle',
-      'Throw someone'
-    ],
+    moves: ['Answer the call of sacrifice', 'Drive them from the jungle', 'Throw someone'],
   ));
   monsterList.add(Monster(
     key: 'iron_golem',
@@ -4378,15 +4142,8 @@ void initData() {
     description:
         'A staple of the enchanter’s art. Every golemist and mechano-thaumaturge in the kingdoms knows this. Iron is a misnomer, though. These guardians are crafted of any metal, really: steel, copper, or even gold, in some small cases. As much an art as a science, the crafting of a fine golem is as respected in the Kingdoms as a bridge newly built or a castle erected in the mountains. Unceasing watchdog, stalwart defender, the iron golem lives to serve, following its orders eternally. Any enchanter worth his salt can craft one, if he can afford the materials. If not…',
     instinct: 'To serve',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('construct')
-    ],
-    moves: [
-      'Follow orders implacably',
-      'Use a special tool or adaptation, built-in'
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('large'), Tag.fromJSON('construct')],
+    moves: ['Follow orders implacably', 'Use a special tool or adaptation, built-in'],
   ));
   monsterList.add(Monster(
     key: 'flesh_golem',
@@ -4404,10 +4161,7 @@ void initData() {
         '”A cephalo-what? No, boy. Not “a kraken” but “the kraken.” I don’t know what nonsense they taught you at that school you say you’re from, but here, we know to respect the Hungerer. Right, that’s what we call it, The Hungerer in the Deep to be more proper. Ain’t no god, though we’ve got those, too. It’s a squid! A mighty squid with tentacles thicker ‘round than a barrel and eyes the size of the full moon. Smart, too, the Hungerer. Knows just when to strike—when you’re all too drunk or too tired or run out of clean water, that’s when he gets you. No, I ain’t ever seen him. I’m alive, aren’t I?”',
     instinct: 'To rule the ocean',
     tags: [Tag.fromJSON('solitary'), Tag.fromJSON('huge')],
-    moves: [
-      'Drag a person or ship to a watery grave',
-      'Wrap them in tentacles'
-    ],
+    moves: ['Drag a person or ship to a watery grave', 'Wrap them in tentacles'],
   ));
   monsterList.add(Monster(
     key: 'manticore',
@@ -4415,11 +4169,7 @@ void initData() {
     description:
         'If the chimera is the first step down a dark path, the manticore is a door that can’t be closed once it’s been opened. A lion, a scorpion, the wings of a drake. All difficult to obtain but not impossible and just animals, anyway. The last component, the hissing hateful face of the beast, is the ingredient that makes a manticore so cruel. Young or old, man or woman, it matters not but that they are human, living and breathing, married to the creature with twisted magic. All sense of who they are is lost, and maybe that’s a blessing, but the beast is born from human suffering. No wonder, then, that they’re all so eager to kill.',
     instinct: 'To kill',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('construct')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('large'), Tag.fromJSON('construct')],
     moves: ['Poison them', 'Rip something apart'],
   ));
   monsterList.add(Monster(
@@ -4455,11 +4205,7 @@ void initData() {
     description:
         'Dwarf-made elemental garbage muncher. Shaped like a trash bin with a radius of arms to feed excess rock and stone into its gaping maw. They eat stone and excrete light and heat. Perfect for operating a mine or digging out a quarry. Once one gets lost in the sewers below a city, though, or in the foundation of a castle? You’re in deep trouble. They’ll eat and eat until you’ve got nothing left but to collapse the place down on it and move somewhere else. Ask Burrin, Son of Fjornnvald, exile from his clan. I bet he could tell you a story about a xorn.',
     instinct: 'To eat',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('construct')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('large'), Tag.fromJSON('construct')],
     moves: ['Consume stone', 'Give off a burst of light and heat'],
   ));
   monsterList.add(Monster(
@@ -4468,11 +4214,7 @@ void initData() {
     description:
         'With good cause, they say that these creatures (like all insects, really) are claimed by the powers of Law. They are order made flesh—a perfectly stratified society in which every larva, hatchling and adult knows its place in the great hive. The formian is some strange intersection of men and ants. (Though there are winged tribes that look like wasps out in the Western Desert, I’ve heard. And some with great sawtooth arms like mantids in the forests of the east.) Tall, with a hard shell and a harder mind, these particular formians are the bottom caste. They work the hills and honeycombs with single-minded joy that can be known only by such an alien mind.',
     instinct: 'To follow orders',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('organized'),
-      Tag.fromJSON('cautious')
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('organized'), Tag.fromJSON('cautious')],
     moves: ['Raise the alarm', 'Create value for the hive', 'Assimilate'],
   ));
   monsterList.add(Monster(
@@ -4481,11 +4223,7 @@ void initData() {
     description:
         'It takes two hands to rule an empire: one to wield the scepter and one to crack the whip. These ant-folk are that whip. Lucky for them, with two extra arms, that’s a lot of whip to crack. They oversee the vast swarms of worker drones that set to build the mighty caverns and ziggurats that dot the places that formians can be found. One in a hundred, these brutes stand two or three feet taller than their pale, near-mindless kin and have a sharper, crueler wit to match. They’ll often ignore the soft races (as we’re known) if we don’t interfere in a project, but get in the way of The Great Work and expect nothing less than their full attention. You don’t want their full attention.',
     instinct: 'To command',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('organized'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('organized'), Tag.fromJSON('intelligent')],
     moves: ['Order drones into battle', 'Set great numbers in motion'],
   ));
   monsterList.add(Monster(
@@ -4494,16 +4232,8 @@ void initData() {
     description:
         'Whether in the form of a legionnaire, part of the formian standing army, or as a praetorian guard to the queen, every formian hive contains a great number of these most dangerous insectoids. Darker in carapace, often scarred with furrows and the ceremonial markings that set them apart from their drones, the formian centurions are their fighting force and rightly so. Born, bred and living for the singular purpose of killing the enemies of their hive, they fight with one mind and a hundred swords. Thus far, the powers of Law have seen fit to spare mankind a great war with these creatures, but we’ve seen them in skirmish—descending sometimes on border towns with their wings flickering in the heat or spilling up from a sandy mound to wipe clean a newly-dug mine. Theirs is an orderly bloodshed, committed with no pleasure but the completion of a goal.',
     instinct: 'To fight as ordered',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
-    moves: [
-      'Advance as one',
-      'Summon reinforcements',
-      'Give a life for the hive'
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
+    moves: ['Advance as one', 'Summon reinforcements', 'Give a life for the hive'],
   ));
   monsterList.add(Monster(
     key: 'formian_queen',
@@ -4530,11 +4260,7 @@ void initData() {
     description:
         'Once they scent your blood, you can’t escape. Not without intervention from the gods, or the duke’s rangers at least. The desert scrub is a dangerous place to go exploring on your own and if you fall and break your leg or eat the wrong cactus, well, you’ll be lucky if you die of thirst before the gnolls find you. They prefer their prey alive, see—cracking bones and the screams of the dying lend a sort of succulence to a meal. Sickening creatures, no? They’ll hunt you, slow and steady, as you die. If you hear laughter in the desert wind, well, best pray Death comes to take you before they do.',
     instinct: 'To prey on weakness',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('organized'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('organized'), Tag.fromJSON('intelligent')],
     moves: ['Doggedly track prey', 'Strike at a moment of weakness'],
   ));
   monsterList.add(Monster(
@@ -4557,11 +4283,7 @@ void initData() {
     description:
         'Every pack has its top dog. Bigger, maybe—that’d be the simplest way. Often, though, with these lank and filthy mutts, it’s not about size or sharp teeth but about cruelty. About a willingness to kill your brothers and eat them while the pack watches. Willingness to desecrate the pack in a way that cows them to you. If they’re that awful to each other—to their living kin—think about how they must view us. It’s hard to be mere meat in a land of carnivores.',
     instinct: 'To drive the pack',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['Demand obedience', 'Send the pack to hunt'],
   ));
   monsterList.add(Monster(
@@ -4570,11 +4292,7 @@ void initData() {
     description:
         'The orcish horde is a savage, bloodthirsty, and hateful collection of tribes. There are myths and stories that tell of the origin of their rage—a demon curse, a homeland destroyed, elven magic gone wrong—but the truth has been lost to time. Every able orc, be it man or woman, child or elder, swears fealty to the warchief and their tribe and bears the jagged blade of a bloodwarrior. Men are trained to fight and kill—orcs are born to it.',
     instinct: 'To fight',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['Fight with abandon', 'Revel in destruction'],
   ));
   monsterList.add(Monster(
@@ -4614,11 +4332,7 @@ void initData() {
       Tag.fromJSON('intelligent'),
       Tag.fromJSON('organized')
     ],
-    moves: [
-      'Rend flesh with divine magic',
-      'Take an eye',
-      'Make a sacrifice and grow in power'
-    ],
+    moves: ['Rend flesh with divine magic', 'Take an eye', 'Make a sacrifice and grow in power'],
   ));
   monsterList.add(Monster(
     key: 'orc_shaman',
@@ -4626,11 +4340,7 @@ void initData() {
     description:
         'The orcs are as old a race as any. They cast bones in the dirt and called to the gods in the trees and stone as the elves built their first cities. They have waged wars, conquered kingdoms, and fallen into corruption in the aeons it took for men to crawl from their caves and dwarves to first see the light of the sun. Fitting, then, that the old ways still hold. They summon the powers of the world to work, to fight and to protect their people, as they have since the first nights.',
     instinct: 'To strengthen orc-kind',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: [
       'Give protection of earth',
       'Give power of fire',
@@ -4672,11 +4382,7 @@ void initData() {
     description:
         'There are chiefs and there are leaders of the tribes among the orcs. There are those who rise to seize power and fall under the machinations of their foes. There is but one Warchief. One orc in all the horde who stands above the rest, bearing the blessings of the One-Eyes and the Shamans both. But one who walks with the elements under Night. But one who bears the Iron Sword of Ages and carries the ancient grudge against the civil races on his shoulders. The Warchief is to be respected, to be obeyed and above all else, to be feared. All glory to the Warchief.',
     instinct: 'To lead',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
     moves: ['Start a war', 'Make a show of power', 'Enrage the tribes'],
   ));
   monsterList.add(Monster(
@@ -4717,11 +4423,7 @@ void initData() {
     description:
         'The triton are not a militant race by nature. They shy away from battle except when the sahuagin attack, and then they only defend themselves and retreat into the depths where their foes can’t follow. This trend begins to change. As the tidecallers come to rally their people, some triton men and women take up arms. They call these generals “sub-mariners” and build for them armor of shells and hardened glass. They swim in formation, wielding pikes and harpoons and attack the crews of ships that wander too far from port. Watch for their pennants of kelp on the horizon and the conch-cry of a call to battle and keep, if you can, your boats near shore.',
     instinct: 'To wage war',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('organized'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('organized'), Tag.fromJSON('intelligent')],
     moves: ['Lead tritons to battle', 'Pull them beneath the waves'],
   ));
   monsterList.add(Monster(
@@ -4730,11 +4432,7 @@ void initData() {
     description:
         'The triton ruling houses were chosen, they say, at the dawn of time. Granted lordship over all the races of the sea by some now-forgotten god. These bloodlines continue, passing rulership from father to daughter and mother to son through the ages. Each is allowed to rule their city in whatever way they choose—some alone or with their spouses, others in council of brothers and sisters. In ages past, they were known for their sagacity and bloodlines of even-temper were respected above all else. The tidecallers prophecy is changing that: nobles are expected to be strong, not wise. The nobles have begun to respond, and it is feared by some that the ancient blood is changing forever. It may be too late to turn back. Time and tide wait for none.',
     instinct: 'To lead',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('organized'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('organized'), Tag.fromJSON('intelligent')],
     moves: ['Stir tritons to war', 'Call reinforcements'],
   ));
   monsterList.add(Monster(
@@ -4743,11 +4441,7 @@ void initData() {
     description:
         'Among the animals there exists a clear division ‘tween hunter and hunted. All it takes is a glance to know—by fangs and glowing eyes or claws or venomous sting—which of the creatures of this world are meant to kill and which stand to be killed. Such a split, if you have the eyes to see it, cuts the world of leaves and flowers in twain, as well. Druids in their forest circles know it. Rangers, too, might spot such a plant before it’s too late. Lay folk, though, they wander where they oughtn’t—paths into the deep woods covered in creeping vines and with a snap, these hungry ropes snap tight, dragging their meaty prey into the underbrush. Mind your feet, traveller.',
     instinct: 'To grow',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('stealthy'),
-      Tag.fromJSON('amorphous')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('stealthy'), Tag.fromJSON('amorphous')],
     moves: ['Shoot forth new growth', 'Attack the unwary'],
   ));
   monsterList.add(Monster(
@@ -4780,11 +4474,7 @@ void initData() {
       Tag.fromJSON('organized'),
       Tag.fromJSON('intelligent')
     ],
-    moves: [
-      'Overrun them',
-      'Fire a perfect bullseye',
-      'Move with unrelenting speed'
-    ],
+    moves: ['Overrun them', 'Fire a perfect bullseye', 'Move with unrelenting speed'],
   ));
   monsterList.add(Monster(
     key: 'chaos_ooze',
@@ -4798,10 +4488,7 @@ void initData() {
       Tag.fromJSON('terrifying'),
       Tag.fromJSON('amorphous')
     ],
-    moves: [
-      'Cause a change in appearance or substance',
-      'Briefly bridge the planes'
-    ],
+    moves: ['Cause a change in appearance or substance', 'Briefly bridge the planes'],
   ));
   monsterList.add(Monster(
     key: 'cockatrice',
@@ -4809,11 +4496,7 @@ void initData() {
     description:
         '“I ain’t ever seen such a thing, sir. Rodrick thought it a chicken, maybe. Poor Rodrick. I figured it to be a lizard of a sort, though he was right—it had a beak and gray feathers like a chicken. Right, well, see, we found it in the woods, in a nest at the foot of a tree while we were out with the sow. Looking for mushrooms, sir. I told Rodrick we were—yes, sir, right sir, the bird—see, it was glaring at Rodrick and he tried to scare it off with a stick to steal the eggs but the thing pecked his hand. Quick it was, too. I tried to get him away but he just got slower and slower and…yes, as you see him now, sir. All frozen up like when we left the dog out overnight in winter two years back. Poor, stupid Rodrick. Weren’t no bird nor lizard, were it, sir?”',
     instinct: 'To defend the nest',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('small'),
-      Tag.fromJSON('hoarder')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('small'), Tag.fromJSON('hoarder')],
     moves: ['Start a slow transformation to stone'],
   ));
   monsterList.add(Monster(
@@ -4842,11 +4525,7 @@ void initData() {
       Tag.fromJSON('organized'),
       Tag.fromJSON('intelligent')
     ],
-    moves: [
-      'Attack from the sky',
-      'Pull someone into the air',
-      'Call on ancient oaths'
-    ],
+    moves: ['Attack from the sky', 'Pull someone into the air', 'Call on ancient oaths'],
   ));
   monsterList.add(Monster(
     key: 'elvish_warrior',
@@ -4854,16 +4533,8 @@ void initData() {
     description:
         '”As with all things they undertake, the elves approach war as an art. I saw them fight, once. The Battle of Astrid’s Veil. Yes, I am that old, boy, now hush. A warrior-maiden, she was clad in plate that shone like the winter sky. White hair streaming and a pennant of ocean blue tied to her spear. She seemed to glide between the trees the way an angel might, striking out and bathing her blade in blood that steamed in the cold air. I never felt so small before. I trained with the master-at-arms of Battlemoore, you know. I’ve held a sword longer than you’ve been alive, boy, and in that one moment I knew that my skill meant nothing. Thank the gods the elves were with us then. A more beautiful and terrible thing I have never seen.”',
     instinct: 'To seek perfection',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('intelligent'),
-      Tag.fromJSON('organized')
-    ],
-    moves: [
-      'Strike at a weak point',
-      'Set ancient plans in motion',
-      'Use the woods to advantage'
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('intelligent'), Tag.fromJSON('organized')],
+    moves: ['Strike at a weak point', 'Set ancient plans in motion', 'Use the woods to advantage'],
   ));
   monsterList.add(Monster(
     key: 'elvish_high_arcanist',
@@ -4885,16 +4556,8 @@ void initData() {
     description:
         'On first glance, one might mistake the griffin for another magical mistake like the manticore or the chimera. It looks the part, doesn’t it? These creatures have the regal haughtiness of a lion and the arrogant bearing of an eagle, but they temper those with the unshakeable loyalty of both. To earn the friendship of a griffin is to have an ally all your living days. Truly a gift, that. If you’re ever lucky enough to meet one be respectful and deferential above all else. It may not seem it but they can perceive the subtlest slights and will answer them with a sharp beak and talons.',
     instinct: 'To serve allies',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('organized')
-    ],
-    moves: [
-      'Judge someone’s worthiness',
-      'Carry an ally aloft',
-      'Strike from above'
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('large'), Tag.fromJSON('organized')],
+    moves: ['Judge someone’s worthiness', 'Carry an ally aloft', 'Strike from above'],
   ));
   monsterList.add(Monster(
     key: 'hill_giant',
@@ -4916,11 +4579,7 @@ void initData() {
     description:
         'A tale, then. Somewhere in the not-so-long history of the mannish race there was a divide. In days when men were merely dwellers-in-the-mud with no magic to call their own, they split in two: one camp left their caves and the dark forests and built the first city to honor the gods. The others, a wild and savage lot, retreated into darkness. They grew, there. In the deep woods a grim loathing for their softer kin gave them strength. They found dark gods of their own, there in the woods and hills. Ages passed and they bred tall and strong and full of hate. We have forged steel and they match it with their savagery. We may have forgotten our common roots, but somewhere, deep down, the ogres remember.',
     instinct: 'To return the world to darker days',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('large'), Tag.fromJSON('intelligent')],
     moves: ['Destroy something', 'Fly into a rage', 'Take something by force'],
   ));
   monsterList.add(Monster(
@@ -4953,8 +4612,7 @@ void initData() {
   monsterList.add(Monster(
     key: 'sprite',
     name: 'Sprite',
-    description:
-        'I’d classify them elementals, except that “being annoying” isn’t an element.',
+    description: 'I’d classify them elementals, except that “being annoying” isn’t an element.',
     instinct: 'To play tricks',
     tags: [
       Tag.fromJSON('horde'),
@@ -4982,11 +4640,7 @@ void initData() {
       Tag.fromJSON('intelligent'),
       Tag.fromJSON('amorphous')
     ],
-    moves: [
-      'Move with implacable strength',
-      'Set down roots',
-      'Spread old magic'
-    ],
+    moves: ['Move with implacable strength', 'Set down roots', 'Spread old magic'],
   ));
   monsterList.add(Monster(
     key: 'werewolf',
@@ -5030,11 +4684,7 @@ void initData() {
     description:
         'Come away from an encounter with one of these vengeful spirits merely deaf and count yourself lucky for the rest of your peaceful, silent days. Often mistaken at first glance for a ghost or wandering spirit, the banshee reveals a far more deadly talent for sonic assault when angered. And her anger comes easy. A victim of betrayal (often by a loved one) the banshee makes known her displeasure with a roar or scream that can putrefy flesh and rend the senses. If you can help her get her vengeance, they say she might grant rewards. Whether the affection of a spurned spirit is a thing you’d want, well, that’s another question.',
     instinct: 'To get revenge',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('magical'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('magical'), Tag.fromJSON('intelligent')],
     moves: [
       'Drown out all other sound with a ceaseless scream',
       'Unleash a skull-splitting noise',
@@ -5079,11 +4729,7 @@ void initData() {
     description:
         'Every culture tells the story the same way. You live, you love or you hate, you win or you lose, you die somehow you’re not too fond of and here you are, ghostly and full of disappointment and what have you. Some people take it upon themselves, brave and kindly folks, to seek out the dead and help them pass to their rightful rest. You can find them, most times, down at the tavern drinking away the terrors they’ve seen or babbling to themselves in the madhouse. Death takes a toll on the living, no matter how you come by it.',
     instinct: 'To haunt',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('devious'),
-      Tag.fromJSON('terrifying')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('devious'), Tag.fromJSON('terrifying')],
     moves: [
       'Reveal the terrifying nature of death',
       'Haunt a place of importance',
@@ -5134,11 +4780,7 @@ void initData() {
     description:
         'There are cultures who revere the dead. They do not bury them in the cold earth and mourn their passing. These people spend weeks preparing the sacred corpse for its eternal rest. Temples, pyramids, and great vaults of stone are built to house them and are populated with slaves, pets and gold. The better to live in luxury beyond the Black Gates, no? Do not be tempted by these vaults—oh, I know that greedy look! Heed my warnings or risk a terrible fate, for the honored dead do not wish to be disturbed. Thievery will only raise their ire—don’t say I did not warn you!',
     instinct: 'To enjoy eternal rest',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('divine'),
-      Tag.fromJSON('hoarder')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('divine'), Tag.fromJSON('hoarder')],
     moves: ['Curse them', 'Wrap them up', 'Rise again'],
   ));
   monsterList.add(Monster(
@@ -5170,11 +4812,7 @@ void initData() {
     description:
         '“Aswang-hound and hopping whip-tail! Sent by vampires on their two, twisted legs, these ugly things look like the head of a rat or a crocodile, maybe, furry though and sharp of tooth. They have withered wings, but cannot use them and long, whipping tails, spurred with poison tips. Stupid, vengeful and mischievous they cause all kinds of chaos when let out of the strange clay jars in which they’re born. Only a vampire could love such a wretched thing.”',
     instinct: 'To disturb',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('construct')
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('large'), Tag.fromJSON('construct')],
     moves: ['Poison them', 'Do a vampire’s bidding'],
   ));
   monsterList.add(Monster(
@@ -5196,10 +4834,7 @@ void initData() {
         'For some folk, when they pass, Death himself cannot release their grip on the places they love most. A priest whose devotion to the temple is greater than that of his god. A banking guild official who cannot bear to part with his vault. A drunk and his favorite tavern. All make excellent spectres. They act not out of the usual hunger that drives the undead, but jealousy. Jealousy that anyone else might come to love their home as much as they do and drive them out. These places belong to them and these invisible spirits will kill before they’ll let anyone send them to their rest.',
     instinct: 'To drive life from a place',
     tags: [Tag.fromJSON('solitary'), Tag.fromJSON('hoarder')],
-    moves: [
-      'Turn their haunt against a creature',
-      'Bring the environment to life'
-    ],
+    moves: ['Turn their haunt against a creature', 'Bring the environment to life'],
   ));
   monsterList.add(Monster(
     key: 'vampire',
@@ -5221,11 +4856,7 @@ void initData() {
     description:
         'Like the nightwing, the wight-wolf is a creature not spawned in our world. Somehow slipping the seals of the Black Gates of Death, these spirits take the shape of massive hounds or shadowy wolves and hunt the living for sport. They travel in packs, led by a mighty alpha, but bear a kind of intelligence unknown to true canines. Their wild hunts draw the attention of intelligent undead—liches, vampires and the like—who will sometimes make pacts with the alpha and serve a grim purpose together. Listen for the baying of the hounds of Death and pray that they do not howl for you.',
     instinct: 'To hunt',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('organized'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('organized'), Tag.fromJSON('intelligent')],
     moves: ['Encircle prey', 'Summon the pack'],
   ));
   monsterList.add(Monster(
@@ -5271,10 +4902,7 @@ void initData() {
         'How do you kill a pile of goo? A great, squishy pile of goo that also happens to want to dissolve you and slurp you up? That is a good question to which I have no answer. Do let us know when you find out.',
     instinct: 'To dissolve',
     tags: [Tag.fromJSON('solitary'), Tag.fromJSON('amorphous')],
-    moves: [
-      'Eat away metal, flesh, or wood',
-      'Ooze into a troubling place: food, armor, stomach'
-    ],
+    moves: ['Eat away metal, flesh, or wood', 'Ooze into a troubling place: food, armor, stomach'],
   ));
   monsterList.add(Monster(
     key: 'coutal',
@@ -5307,11 +4935,7 @@ void initData() {
     description:
         'Their natural form, if you ever see it, is hideous. Like a creature who stopped growing part-way, before it decided it was elf or man or dwarf. Then again, maybe that’s how you get to be the way a doppelgänger is—without form, without shape to call their own, maybe all they really seek is a place to fit in. If you go out into the world, when you come back home, make sure your friends are who you think they are. They might, instead, be a doppelgänger and your friend might be dead at the bottom of a well somewhere. Then again, depending on your friends, that might be an improvement.',
     instinct: 'To infiltrate',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('devious'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('devious'), Tag.fromJSON('intelligent')],
     moves: [
       'Assume the shape of a person whose flesh it’s tasted',
       'Use another’s identity to advantage',
@@ -5324,11 +4948,7 @@ void initData() {
     description:
         'Bakunawa has a brother. Where she is quick to anger and hungry for gold, he is slow and sturdy. She is a knife and he is a shield. A great turtle that lies in the muck and mire for ages as they pass, mud piled upon his back—sometimes trees and shrubs. Sometimes a whole misguided clan of goblins will build their huts and cook their ratty meals on the shell of the dragon turtle. His snapping jaws may be glacier-slow, but they can rend a castle wall. Careful where you tread.',
     instinct: 'To resist change',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('huge'),
-      Tag.fromJSON('cautious')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('huge'), Tag.fromJSON('cautious')],
     moves: [
       'Move forward implacably',
       'Bring its full bulk to bear',
@@ -5361,10 +4981,7 @@ void initData() {
         'Ugly, wrinkled bird-folk, these. Once, maybe, in some ancient past, they were a race of angelic men from on high, but now they eat rats that they fish from the murk with talon-feet and devour with needle-teeth. They understand the tongues of men and dwarves but speak in little more than gibbering tongues, mimicking the words they hear with mocking laughter. It’s a chilling thing to see a beast so close to man or bird but not quite either one.',
     instinct: 'To lash out',
     tags: [Tag.fromJSON('horde')],
-    moves: [
-      'Attack from the air',
-      'Carry out the bidding of a more powerful creature'
-    ],
+    moves: ['Attack from the air', 'Carry out the bidding of a more powerful creature'],
   ));
   monsterList.add(Monster(
     key: 'fire_eels',
@@ -5373,10 +4990,7 @@ void initData() {
         'These strange creatures are no bigger or smarter than their mundane kin. They have the same vicious nature. Over their relations they have one advantage—an oily secretion that oozes from their skin. It makes them hard to catch. On top of that, with a twist of their body they can ignite the stuff, leaving pools of burning oil atop the surface of the water and roasting prey and predator alike. I hear the slimy things make good ingredients for fire-resistant gear, but you have to get your hands on one, first.',
     instinct: 'To ignite',
     tags: [Tag.fromJSON('horde'), Tag.fromJSON('tiny')],
-    moves: [
-      'Catch someone or something on fire (even underwater)',
-      'Consume burning prey'
-    ],
+    moves: ['Catch someone or something on fire (even underwater)', 'Consume burning prey'],
   ));
   monsterList.add(Monster(
     key: 'frogman',
@@ -5384,11 +4998,7 @@ void initData() {
     description:
         'Croak croak croak. Little warty munchkins. Some wizard or godling’s idea of a bad joke, these creatures are. They stand as men, dress in scavenged cloth and hold court in their froggy villages. They speak a rumbling pidgin form of the tongue of man and are constantly at war with their neighbors. They’re greedy and stupid but clever enough when they need to defend themselves. Some say, too, their priests have a remarkable skill at healing. Or maybe they’re just really, really hard to kill.',
     instinct: 'To wage war',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('small'),
-      Tag.fromJSON('intelligent')
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('small'), Tag.fromJSON('intelligent')],
     moves: ['Launch an amphibious assault', 'Heal at a prodigious rate'],
   ));
   monsterList.add(Monster(
@@ -5398,10 +5008,7 @@ void initData() {
         'A bit like a dragon, wingless though it may be. Heads, nine in number at birth, spring from a muscled trunk and weave a sinuous pattern in the air. A hydra is to be feared—a scaled terror of the marsh. The older ones, though, they have more heads, for every failed attempt to murder it just makes it stronger. Cut off a head and two more grow in its place. Only a strike, true and strong, to the heart can end a hydra’s life. Not time or tide or any other thing but this.',
     instinct: 'To grow',
     tags: [Tag.fromJSON('solitary'), Tag.fromJSON('large')],
-    moves: [
-      'Attack many enemies at once',
-      'Regenerate a body part (especially a head)'
-    ],
+    moves: ['Attack many enemies at once', 'Regenerate a body part (especially a head)'],
   ));
   monsterList.add(Monster(
     key: 'kobold',
@@ -5416,11 +5023,7 @@ void initData() {
       Tag.fromJSON('intelligent'),
       Tag.fromJSON('organized')
     ],
-    moves: [
-      'Lay a trap',
-      'Call on dragons or draconic allies',
-      'Retreat and regroup'
-    ],
+    moves: ['Lay a trap', 'Call on dragons or draconic allies', 'Retreat and regroup'],
   ));
   monsterList.add(Monster(
     key: 'lizardman',
@@ -5461,11 +5064,7 @@ void initData() {
         'The shape and craft of men wedded to the hunger and the endless teeth of a shark. Voracious and filled only with hate, these creatures will not stop until all life has been consumed. They cannot be reasoned with, they cannot be controlled or sated. They are hunger and bloodlust, driven up from the depths of the sea to ravage coastal towns and swallow island villages.',
     instinct: 'To spill blood',
     tags: [Tag.fromJSON('horde'), Tag.fromJSON('intelligent')],
-    moves: [
-      'Bite off a limb',
-      'Hurl a poisoned spear',
-      'Frenzy at the sight of blood'
-    ],
+    moves: ['Bite off a limb', 'Hurl a poisoned spear', 'Frenzy at the sight of blood'],
   ));
   monsterList.add(Monster(
     key: 'sauropod',
@@ -5473,11 +5072,7 @@ void initData() {
     description:
         'Great lumbering beasts, they live in places long since forgotten by the thinking races of the world. Gentle if unprovoked, but mighty if their ire is raised, they trample smaller creatures with the care we might give to crushing an ant beneath our boots. If you see one, drift by and gaze in awe, but do not wake the giant.',
     instinct: 'To endure',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('huge'),
-      Tag.fromJSON('cautious')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('huge'), Tag.fromJSON('cautious')],
     moves: ['Stampede', 'Knock something down', 'Unleash a deafening bellow'],
   ));
   monsterList.add(Monster(
@@ -5486,11 +5081,7 @@ void initData() {
     description:
         'Some elementals are conjured up in sacred circles etched in chalk. Most, in fact. There’s a sort of science to it. Others, though, aren’t so orderly—they don’t fall under the carefully controlled assignments of fire, air, water, or earth. Some are a natural confluence of vine and mire and fungus. They do not think the way a man might think. They cannot be understood as one might understand an elf. They simply are. Spirits of the swamp. Shamblers in the mud.',
     instinct: 'To preserve and create swamps',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('magical')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('large'), Tag.fromJSON('magical')],
     moves: [
       'Call on the swamp itself for aid',
       'Meld into the swamp',
@@ -5515,11 +5106,7 @@ void initData() {
     description:
         'Spot a lantern floating in the darkness, lost traveler in the swamp. Hope—a beacon of shimmering light. You call out to it, but there’s no answer. It begins to fade and so you follow, sloshing through the muck, tiring at the chase, hoping you’re being led to safety. Such a sad tale that always ends in doom. These creatures are a mystery—some say they’re ghosts, others beacons of faerie light. Nobody knows the truth. They are cruel, however. All can agree on that.',
     instinct: 'To misguide',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('tiny'),
-      Tag.fromJSON('magical')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('tiny'), Tag.fromJSON('magical')],
     moves: ['Lead someone astray', 'Clear a path to the worst place possible'],
   ));
   monsterList.add(Monster(
@@ -5550,15 +5137,8 @@ void initData() {
     description:
         'Some say these things descended from the family of a cruel wizard who forced them to live out their lives underground. They say his experiments led him to fear the sun and ages passed while he descended into unlife, dragging his folk along with him. These things resemble men, in a way. Head, four limbs and all that. Only their skin is wet and rubbery and their arms long and fingers grasping. They hate all life that bears the stink of the sun’s touch, as one might expect. Jealousy, long-instilled, is hard to shake.',
     instinct: 'To deny light',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('stealthy'),
-      Tag.fromJSON('intelligent')
-    ],
-    moves: [
-      'Hold someone, wringing the breath from them',
-      'Fling a held creature'
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('stealthy'), Tag.fromJSON('intelligent')],
+    moves: ['Hold someone, wringing the breath from them', 'Fling a held creature'],
   ));
   monsterList.add(Monster(
     key: 'cloaker',
@@ -5594,11 +5174,7 @@ void initData() {
         'Scarabaeus pyractomena! What a delightful creature—see how its carapace glitters in the light of our torches? Not too close now, they’re temperamental, you see. The fire in their belly isn’t just metaphorical, no. Watch as I goad the beast. Aha! A spout of flame! Unexpected, isn’t it? One of these creatures alone, if it comes up from below, can be a hellish nuisance to a farmstead or village. A whole swarm? There’s a reason they call it a conflagration of fire beetles.',
     instinct: 'To enflame',
     tags: [Tag.fromJSON('horde'), Tag.fromJSON('small')],
-    moves: [
-      'Undermine the ground',
-      'Burst from the earth',
-      'Spray forth flames'
-    ],
+    moves: ['Undermine the ground', 'Burst from the earth', 'Spray forth flames'],
   ));
   monsterList.add(Monster(
     key: 'gargoyle',
@@ -5606,16 +5182,8 @@ void initData() {
     description:
         'It’s a sad thing, really. Guardians bred by magi of the past with no more castles to guard. Their ancestors’ sacred task bred into their blood leads them to find a place—ruins mostly, but sometimes a cave or hill or mountain cliff—and guard it as though their masters yet lived below. They’re notoriously good at finding valuables buried below the earth, though. Find one of these winged reptiles and you’ll find yourself a treasure nearby. Just be careful, they’re hard to spot and tend to move in packs.',
     instinct: 'To guard',
-    tags: [
-      Tag.fromJSON('horde'),
-      Tag.fromJSON('stealthy'),
-      Tag.fromJSON('hoarder')
-    ],
-    moves: [
-      'Attack with the element of surprise',
-      'Take to the air',
-      'Blend into stonework'
-    ],
+    tags: [Tag.fromJSON('horde'), Tag.fromJSON('stealthy'), Tag.fromJSON('hoarder')],
+    moves: ['Attack with the element of surprise', 'Take to the air', 'Blend into stonework'],
   ));
   monsterList.add(Monster(
     key: 'gelatinous_cube',
@@ -5643,11 +5211,7 @@ void initData() {
       Tag.fromJSON('intelligent'),
       Tag.fromJSON('organized')
     ],
-    moves: [
-      'Charge!',
-      'Call more goblins',
-      'Retreat and return with (many) more'
-    ],
+    moves: ['Charge!', 'Call more goblins', 'Retreat and return with (many) more'],
   ));
   monsterList.add(Monster(
     key: 'goblin_orkaster',
@@ -5729,17 +5293,12 @@ void initData() {
         'They live in your skin. Or your organ meat. Or your eyeballs. They grow there and then, in a bloody and horrific display, burrow their way out. Disgusting.',
     instinct: 'To infect',
     tags: [Tag.fromJSON('horde'), Tag.fromJSON('tiny')],
-    moves: [
-      'Burrow under flesh',
-      'Lay eggs',
-      'Burst forth from an infected creature'
-    ],
+    moves: ['Burrow under flesh', 'Lay eggs', 'Burst forth from an infected creature'],
   ));
   monsterList.add(Monster(
     key: 'spiderlord',
     name: 'Spiderlord',
-    description:
-        'Even spiders have their gods, whispered to in webs with little praying arms.',
+    description: 'Even spiders have their gods, whispered to in webs with little praying arms.',
     instinct: 'To weave webs (literal and metaphorical)',
     tags: [
       Tag.fromJSON('solitary'),
@@ -5771,11 +5330,7 @@ void initData() {
       Tag.fromJSON('intelligent'),
       Tag.fromJSON('organized')
     ],
-    moves: [
-      'Deliver visions and prophecy',
-      'Stir mortals to action',
-      'Expose sin and injustice'
-    ],
+    moves: ['Deliver visions and prophecy', 'Stir mortals to action', 'Expose sin and injustice'],
   ));
   monsterList.add(Monster(
     key: 'barbed_devil',
@@ -5838,15 +5393,8 @@ void initData() {
     description:
         '“Stop rubbing that lamp, you idiot. I do not care what you have read, it will not grant you wishes. I brought you here to show you something real, something true. See this mural? It shows the ancient city. The true city that came before. They called it Majilis and it was made of brass by the spirits. They had golem servants and human lovers and, in that day, it was said you could trade them a year of your life for a favor. We are not here to gather treasure this night, fool, we are here to learn. The djinn still sometimes come to these places, and you must understand their history if you are to know how to behave. They are powerful and wicked and proud and you must know them if you hope to survive a summoning. Now, bring the lamp here and we will light it, it grows dark and these ruins are dangerous at night.”',
     instinct: 'To burn eternally',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('large'),
-      Tag.fromJSON('magical')
-    ],
-    moves: [
-      'Grant power for a price',
-      'Summon the forces of the City of Brass'
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('large'), Tag.fromJSON('magical')],
+    moves: ['Grant power for a price', 'Summon the forces of the City of Brass'],
   ));
   monsterList.add(Monster(
     key: 'hell_hound',
@@ -5854,11 +5402,7 @@ void initData() {
     description:
         'When one reneges on a deal, does not the debtor come for payment? Does the owed party not send someone to collect what is due? So too with the Powers Below. They only want what is theirs. A howling pack of shadows, flame and jagged bone, driven by the hunting horn. They will not cease, they cannot be evaded.',
     instinct: 'To pursue',
-    tags: [
-      Tag.fromJSON('group'),
-      Tag.fromJSON('planar'),
-      Tag.fromJSON('organized')
-    ],
+    tags: [Tag.fromJSON('group'), Tag.fromJSON('planar'), Tag.fromJSON('organized')],
     moves: [
       'Follow despite all obstacles',
       'Spew fire',
@@ -5893,11 +5437,7 @@ void initData() {
       Tag.fromJSON('amorphous'),
       Tag.fromJSON('planar'),
     ],
-    moves: [
-      'End a spell or effect',
-      'Enforce a law of nature or man',
-      'Give a glimpse of destiny'
-    ],
+    moves: ['End a spell or effect', 'Enforce a law of nature or man', 'Give a glimpse of destiny'],
   ));
   monsterList.add(Monster(
     key: 'larvae',
@@ -5943,11 +5483,7 @@ void initData() {
     description:
         'The Tarrasque. Legendary unstoppable juggernaut—eater of cities and swallower of ships, horses, and knights. A creature unseen in an age but about whom all kinds of stories are told. One thread of truth weaves through these stories. It cannot be killed. No blade can pierce its stony shell nor spell penetrate the shield it somehow bears. Stories say, though, that the will of one pure soul can send it to slumber, though what that means and, by the gods, where such a thing might be found, pray we do not ever need to learn. It slumbers. Somewhere in the periphery of the planar edge, it sleeps for now.',
     instinct: 'To consume',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('huge'),
-      Tag.fromJSON('planar')
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('huge'), Tag.fromJSON('planar')],
     moves: [
       'Swallow a person, group, or place whole',
       'Release a remnant of a long-eaten place from its gullet'
@@ -5959,15 +5495,8 @@ void initData() {
     description:
         'All of mortal magic is just words. Spells are prayers, rote formula, runes cast, or songs sung. Letters, words, sentences, and syntax strung together in a language that the whole world itself might understand. By way of words we can make our fellows cry or exult, can paint pictures and whisper desire to the gods. No little wonder, then, that in all that power is intent. That every word we utter, if repeated and meaning or emotion given to it, can spark a kind of unintentional summoning. Word daemons are called by accident, appear at random and are often short-lived, but come to attend a particular word. Capricious, unpredictable and dangerous, yes—but possibly useful, depending on the word.',
     instinct: 'To further their word',
-    tags: [
-      Tag.fromJSON('solitary'),
-      Tag.fromJSON('planar'),
-      Tag.fromJSON('magical')
-    ],
-    moves: [
-      'Cast a spell related to their word',
-      'Bring their word into abundance'
-    ],
+    tags: [Tag.fromJSON('solitary'), Tag.fromJSON('planar'), Tag.fromJSON('magical')],
+    moves: ['Cast a spell related to their word', 'Bring their word into abundance'],
   ));
   basicMovesList.add(Move(
     key: 'hack_slash',

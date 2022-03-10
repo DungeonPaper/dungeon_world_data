@@ -6,6 +6,7 @@ import 'tag.dart';
 enum MoveCategory {
   starting,
   basic,
+  special,
   advanced1,
   advanced2,
   other,
@@ -67,11 +68,10 @@ class Move {
         name: json["name"],
         description: json["description"],
         explanation: json["explanation"],
-        dice: List<Dice>.from(json["dice"].map((x) => x.toJson())),
+        dice: List<Dice>.from(json["dice"].map((x) => Dice.fromJson(x))),
         classKeys: List<String>.from(json["classKeys"].map((x) => x)),
         tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
-        category: MoveCategory.values
-            .firstWhere((element) => element.name == json["category"]),
+        category: MoveCategory.values.firstWhere((element) => element.name == json["category"]),
       );
 
   Map<String, dynamic> toJson() => {

@@ -2,6 +2,10 @@ import 'dart:convert';
 
 import 'gear_selection.dart';
 
+/// This is the top level choice - provides one or more options to choose from.
+///
+/// For example, "choose a gift from your parents" which gives either "your father's sword" or
+/// "your mother's mace"
 class GearChoice {
   GearChoice({
     required this.key,
@@ -24,16 +28,15 @@ class GearChoice {
         selections: selections ?? this.selections,
       );
 
-  factory GearChoice.fromRawJson(String str) =>
-      GearChoice.fromJson(json.decode(str));
+  factory GearChoice.fromRawJson(String str) => GearChoice.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory GearChoice.fromJson(Map<String, dynamic> json) => GearChoice(
         key: json["key"],
         description: json["description"],
-        selections: List<GearSelection>.from(
-            json["selections"].map((x) => GearSelection.fromJson(x))),
+        selections:
+            List<GearSelection>.from(json["selections"].map((x) => GearSelection.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {

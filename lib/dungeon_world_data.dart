@@ -6,6 +6,7 @@ export 'dice.dart';
 export 'gear_choice.dart';
 export 'gear_selection.dart';
 export 'item.dart';
+export 'monster.dart';
 export 'move.dart';
 export 'race.dart';
 export 'spell.dart';

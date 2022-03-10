@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'dice.dart';
 import 'tag.dart';
 
 class Spell {
@@ -10,6 +11,7 @@ class Spell {
     required this.description,
     required this.explanation,
     required this.classKeys,
+    required this.dice,
     required this.tags,
   });
 
@@ -19,6 +21,7 @@ class Spell {
   final String description;
   final String explanation;
   final List<String> classKeys;
+  final List<Dice> dice;
   final List<Tag> tags;
 
   Spell copyWith({
@@ -28,6 +31,7 @@ class Spell {
     String? description,
     String? explanation,
     List<String>? classKeys,
+    List<Dice>? dice,
     List<Tag>? tags,
   }) =>
       Spell(
@@ -38,6 +42,7 @@ class Spell {
         explanation: explanation ?? this.explanation,
         classKeys: classKeys ?? this.classKeys,
         tags: tags ?? this.tags,
+        dice: dice ?? this.dice,
       );
 
   factory Spell.fromRawJson(String str) => Spell.fromJson(json.decode(str));
@@ -52,6 +57,7 @@ class Spell {
         explanation: json["explanation"],
         classKeys: List<String>.from(json["classKeys"].map((x) => x)),
         tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
+        dice: List<Dice>.from(json["dice"].map((x) => Dice.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -62,5 +68,6 @@ class Spell {
         "explanation": explanation,
         "classKeys": List<dynamic>.from(classKeys.map((x) => x)),
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
+        "dice": List<dynamic>.from(dice.map((x) => x.toJson())),
       };
 }

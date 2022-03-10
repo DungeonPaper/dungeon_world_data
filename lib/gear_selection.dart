@@ -1,45 +1,53 @@
 import 'dart:convert';
 
 import 'gear_option.dart';
-import 'item.dart';
 
+/// One possible selection of many, which is a "bundle" of items and coins. Contains multiple
+/// options, each of which is an item and amount, and total coins.
+///
+/// All of these should be added at once when making a selection. This is the final level of
+/// selection, the inner options are all given to the player.
 class GearSelection {
   GearSelection({
+    required this.key,
     required this.description,
-    required this.items,
-    required this.gold,
+    required this.options,
+    required this.coins,
   });
 
+  final String key;
   final String description;
-  final List<GearOption> items;
-  final int gold;
+  final List<GearOption> options;
+  final double coins;
 
   GearSelection copyWith({
+    String? key,
     String? description,
-    List<GearOption>? items,
-    int? gold,
+    List<GearOption>? options,
+    double? coins,
   }) =>
       GearSelection(
+        key: key ?? this.key,
         description: description ?? this.description,
-        items: items ?? this.items,
-        gold: gold ?? this.gold,
+        options: options ?? this.options,
+        coins: coins ?? this.coins,
       );
 
-  factory GearSelection.fromRawJson(String str) =>
-      GearSelection.fromJson(json.decode(str));
+  factory GearSelection.fromRawJson(String str) => GearSelection.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory GearSelection.fromJson(Map<String, dynamic> json) => GearSelection(
+        key: json["key"],
         description: json["description"],
-        items: List<GearOption>.from(
-            json["items"].map((x) => GearOption.fromJson(x))),
-        gold: json["gold"],
+        options: List<GearOption>.from(json["options"].map((x) => GearOption.fromJson(x))),
+        coins: json["coins"]?.toDouble(),
       );
 
   Map<String, dynamic> toJson() => {
+        "key": key,
         "description": description,
-        "items": List<dynamic>.from(items.map((x) => x.toJson())),
-        "gold": gold,
+        "options": List<dynamic>.from(options.map((x) => x.toJson())),
+        "coins": coins,
       };
 }

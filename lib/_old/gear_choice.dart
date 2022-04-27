@@ -25,8 +25,7 @@ class GearChoice extends DWEntity {
   Map toJSON() => {
         'key': key,
         'label': label,
-        'list': listMapper<GearOption, dynamic, GearOption>(
-            gearOptions, (i) => i.toJSON()),
+        'list': listMapper<GearOption, dynamic, GearOption>(gearOptions, (i) => i.toJSON()),
       };
 
   @override
@@ -57,9 +56,8 @@ class GearOption extends DWEntity {
     final num openParen = str.indexOf('(');
     final num? closeParen = str.indexOf(')');
     final name = str.substring(0, openParen > -1 ? openParen : null);
-    final rawTags = openParen > -1 && closeParen! > -1
-        ? str.substring(openParen + 1, closeParen)
-        : '';
+    final rawTags =
+        openParen > -1 && closeParen! > -1 ? str.substring(openParen + 1, closeParen) : '';
     final tags = rawTags.isNotEmpty
         ? rawTags.split(',').map((tag) => Tag.fromJSON(tag.trim())).toList()
         : [];

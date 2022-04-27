@@ -11,6 +11,12 @@
       "program": "${file}"
     },
     {
+      "name": "Migrate v2 -> v3",
+      "type": "dart",
+      "request": "launch",
+      "program": "scripts/migrate/v2_to_v3.dart"
+    },
+    {
       "name": "All Tests",
       "type": "dart",
       "request": "launch",

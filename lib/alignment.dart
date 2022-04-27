@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-class AlignmentValue {
-  AlignmentValue({
+class Alignment {
+  Alignment({
     required this.key,
     required this.description,
   });
@@ -9,21 +9,20 @@ class AlignmentValue {
   final String key;
   final String description;
 
-  AlignmentValue copyWith({
+  Alignment copyWith({
     String? key,
     String? description,
   }) =>
-      AlignmentValue(
+      Alignment(
         key: key ?? this.key,
         description: description ?? this.description,
       );
 
-  factory AlignmentValue.fromRawJson(String str) =>
-      AlignmentValue.fromJson(json.decode(str));
+  factory Alignment.fromRawJson(String str) => Alignment.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory AlignmentValue.fromJson(Map<String, dynamic> json) => AlignmentValue(
+  factory Alignment.fromJson(Map<String, dynamic> json) => Alignment(
         key: json["key"],
         description: json["description"],
       );
@@ -64,13 +63,11 @@ class AlignmentValues {
         chaotic: chaotic ?? this.chaotic,
       );
 
-  factory AlignmentValues.fromRawJson(String str) =>
-      AlignmentValues.fromJson(json.decode(str));
+  factory AlignmentValues.fromRawJson(String str) => AlignmentValues.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory AlignmentValues.fromJson(Map<String, dynamic> json) =>
-      AlignmentValues(
+  factory AlignmentValues.fromJson(Map<String, dynamic> json) => AlignmentValues(
         good: json["good"],
         evil: json["evil"],
         lawful: json["lawful"],

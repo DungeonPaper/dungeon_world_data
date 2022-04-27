@@ -5,12 +5,12 @@ import 'package:dungeon_world_data/_old/dw_data.dart' as old;
 import 'package:dungeon_world_data/_utils/uuid.dart';
 import 'package:dungeon_world_data/dungeon_world_data.dart';
 import 'package:dungeon_world_data/gear_option.dart';
-import 'package:dungeon_world_data/monster.dart';
 import 'package:path/path.dart' as path;
 
 final _jsonOut = path.join(
   path.dirname(Platform.script.path),
-  'dump.json',
+  'dumps',
+  'all.json',
 );
 
 Map<String, String> strFixMap = {
@@ -21,20 +21,26 @@ Map<String, String> strFixMap = {
   "”": "\"",
 };
 
-final json = <String, List<Map<String, dynamic>>>{
-  'moves': [],
-  'races': [],
-  'classes': [],
-  'spells': [],
-  'items': [],
-  'monsters': [],
-  'tags': [],
+final json = <String, dynamic>{
+  'moves': <Map<String, dynamic>>[],
+  'races': <Map<String, dynamic>>[],
+  'classes': <Map<String, dynamic>>[],
+  'spells': <Map<String, dynamic>>[],
+  'items': <Map<String, dynamic>>[],
+  'monsters': <Map<String, dynamic>>[],
+  'tags': <Map<String, dynamic>>[],
+  'names': <String, Map<String, List<String>>>{},
 };
 
 final defaultTags = <Tag>[
-  Tag(name: "language", value: "EN"),
-  Tag(name: "source", value: "repo"),
+  // Tag(name: "language", value: "EN"),
+  // Tag(name: "source", value: "repo"),
 ];
+
+final defaultMeta = {
+  'language': 'EN',
+  'createdBy': '__repo__',
+};
 
 main() async {
   print("Starting...");
@@ -60,13 +66,13 @@ main() async {
     json['items']!.add(equipMapper(equip).toJson());
   }
 
-// Monsters
+  // Monsters
   print("Adding ${old.dungeonWorld.monsters.length} monsters");
   for (var mon in old.dungeonWorld.monsters) {
     json['monsters']!.add(monsterMapper(mon).toJson());
   }
 
-// Tags
+  // Tags
   print("Adding ${old.dungeonWorld.tags.length} tags");
   for (var tag in old.dungeonWorld.tags) {
     json['tags']!.add(tagMapper(tag).toJson());
@@ -99,6 +105,10 @@ main() async {
 
     // Classes
     json['classes']!.add(classMapper(cls).toJson());
+
+    print("Adding ${cls.names.values.fold<int>(0, (t, c) => t + c.length)} ${cls.key} names");
+    final Map<String, List<String>> names = (json['names'][cls.key] ??= <String, List<String>>{});
+    names.addAll(cls.names);
   }
 
   print("Total ${json['classes']!.length} classes");
@@ -158,7 +168,7 @@ Move moveMapper(old.Move move, MoveCategory category) => Move(
       dice: guessDice(fix(move.description)).toList(),
       explanation: fix(move.explanation ?? ""),
       key: makeKey(move.name),
-      meta: null,
+      meta: defaultMeta,
       name: fix(move.name),
       tags: defaultTags,
     );
@@ -168,7 +178,7 @@ Race raceMapper(old.Move move, String classKey) => Race(
       description: fix(move.description),
       explanation: fix(move.explanation ?? ""),
       key: makeKey(move.name),
-      meta: null,
+      meta: defaultMeta,
       name: fix(move.name),
       tags: defaultTags,
     );
@@ -178,7 +188,7 @@ Spell spellMapper(old.Spell spell) => Spell(
       description: fix(spell.description),
       explanation: "",
       key: makeKey(spell.name),
-      meta: null,
+      meta: defaultMeta,
       name: fix(spell.name),
       dice: guessDice(spell.description).toList(),
       tags: [...defaultTags, ...spell.tags.map((t) => tagMapper(t))],
@@ -190,7 +200,7 @@ Tag tagMapper(old.Tag t) => Tag.fromJson(t.toJSON().runtimeType == String
 
 Item equipMapper(old.Equipment equip) => Item(
       key: makeKey(equip.name),
-      meta: null,
+      meta: defaultMeta,
       name: fix(equip.name),
       description: fix(equip.description),
       tags: equip.tags.map((t) => tagMapper(t)).toList(),
@@ -200,7 +210,7 @@ Monster monsterMapper(old.Monster move) => Monster(
       instinct: fix(move.instinct),
       description: fix(move.description),
       key: makeKey(move.name),
-      meta: null,
+      meta: defaultMeta,
       name: fix(move.name),
       tags: defaultTags,
       moves: move.moves,
@@ -239,7 +249,7 @@ CharacterClass classMapper(old.PlayerClass cls) => CharacterClass(
                     ? Item.fromJson(found)
                     : Item(
                         key: makeKey(o.name),
-                        meta: null,
+                        meta: defaultMeta,
                         name: fix(o.name),
                         description: fix(o.name),
                         tags: [...defaultTags, ...o.tags.map(tagMapper)],
@@ -282,10 +292,11 @@ CharacterClass classMapper(old.PlayerClass cls) => CharacterClass(
                           item: item,
                         ),
                       ];
+                var incomplete = found == null && !isCoinsItem && !foundSplit;
+
                 return GearSelection(
                   key: generatedKey,
-                  description: o.name +
-                      (found == null && !isCoinsItem && !foundSplit ? '(TODO: INCOMPLETE)' : ''),
+                  description: o.name + (incomplete ? '(TODO: INCOMPLETE)' : ''),
                   options: isCoinsItem ? [] : splitItems,
                   coins: isCoinsItem ? numFromName ?? 0 : 0,
                 );
@@ -298,8 +309,17 @@ CharacterClass classMapper(old.PlayerClass cls) => CharacterClass(
       key: makeKey(cls.name),
       load: cls.load.toInt(),
       name: cls.name,
-      meta: null,
+      meta: defaultMeta,
     );
+
+final incompleteGearMap = {
+  'your_fathers_mandolin_repaired': 'fathers_mandolin',
+  'a_fine_lute_a_gift_from_a_noble': 'fine_lute',
+  'the_pipes_with_which_you_courted_your_first_love': 'memorable_pipes',
+  'a_stolen_horn': 'stolen_horn',
+  'a_fiddle_never_before_played': 'unplayed_fiddle',
+  'a_songbook_in_a_forgotten_tongue': 'forgotten_songbook',
+};
 
 Map<String, dynamic> tryFindItem(String key, String generatedKey) {
   final keyStartsWithNum = key.startsWith(RegExp(r'[0-9]+'));
@@ -309,6 +329,7 @@ Map<String, dynamic> tryFindItem(String key, String generatedKey) {
       keyWithoutNum.isEmpty ? '' : keyWithoutNum.substring(0, keyWithoutNum.length - 1);
   return json['items']!.firstWhere(
     (el) =>
+        el['key'].toLowerCase() == incompleteGearMap[key] ||
         el['key'].toLowerCase() == key.toLowerCase() ||
         el['key'].toLowerCase() == generatedKey.toLowerCase() ||
         el['key'].toLowerCase() == keyWithoutNum.toLowerCase() ||

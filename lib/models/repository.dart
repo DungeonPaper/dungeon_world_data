@@ -12,7 +12,7 @@ class Repository {
   String get currentLocale => _currentLocale;
   final Set<String> _locales = {};
 
-  final Map<String, RepositoryItem<AlignmentValue>> _alignments = {};
+  final Map<String, RepositoryItem<Alignment>> _alignments = {};
   final Map<String, RepositoryItem<CharacterClass>> _classes = {};
   final Map<String, RepositoryItem<Item>> _items = {};
   final Map<String, RepositoryItem<Monster>> _monsters = {};
@@ -25,7 +25,7 @@ class Repository {
     required String currentLocale,
   }) : _currentLocale = currentLocale;
 
-  RepositoryItem<AlignmentValue> get alignments => _withCurrentLocale(_alignments);
+  RepositoryItem<Alignment> get alignments => _withCurrentLocale(_alignments);
   RepositoryItem<CharacterClass> get classes => _withCurrentLocale(_classes);
   RepositoryItem<Item> get items => _withCurrentLocale(_items);
   RepositoryItem<Monster> get monsters => _withCurrentLocale(_monsters);
@@ -57,8 +57,8 @@ class Repository {
   void loadItems<T>(String locale, Map<String, T> items) {
     registerLocale(locale);
     switch (T) {
-      case AlignmentValue:
-        _alignments[locale]!.addItems(items.cast<String, AlignmentValue>());
+      case Alignment:
+        _alignments[locale]!.addItems(items.cast<String, Alignment>());
         break;
       case CharacterClass:
         _classes[locale]!.addItems(items.cast<String, CharacterClass>());

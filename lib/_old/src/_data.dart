@@ -157,6 +157,42 @@ void initData() {
     'When making your own magic items keep in mind that these items are magical. Simple modifiers, like+1 damage, are the realm of the mundane—magic items should provide more interesting bonuses.',
   ));
   equipmentList.add(Equipment(
+    key: 'fathers_mandolin',
+    name: "Father's Mandolin",
+    description: "Your father's mandolin, repaired.",
+    tags: [Tag.fromJSON('{weight:0}')],
+  ));
+  equipmentList.add(Equipment(
+    key: 'fine_lute',
+    name: 'Fine Lute',
+    description: 'A fine lute, a gift from a noble.',
+    tags: [Tag.fromJSON('{weight:0}')],
+  ));
+  equipmentList.add(Equipment(
+    key: 'memorable_pipes',
+    name: 'Memorable Pipes',
+    description: 'The pipes with which you courted your first love',
+    tags: [Tag.fromJSON('{weight:0}')],
+  ));
+  equipmentList.add(Equipment(
+    key: 'stolen_horn',
+    name: 'Stolen Horn',
+    description: 'A stolen horn',
+    tags: [Tag.fromJSON('{weight:0}')],
+  ));
+  equipmentList.add(Equipment(
+    key: 'unplayed_fiddle',
+    name: 'Unplayed Fiddle',
+    description: 'A fiddle, never before played.',
+    tags: [Tag.fromJSON('{weight:0}')],
+  ));
+  equipmentList.add(Equipment(
+    key: 'forgotten_songbook',
+    name: 'Forgotten Songbook',
+    description: 'A songbook in a forgotten tongue.',
+    tags: [Tag.fromJSON('{weight:0}')],
+  ));
+  equipmentList.add(Equipment(
     key: 'ragged_bow',
     name: 'Ragged Bow',
     pluralName: 'Ragged Bows',
@@ -176,7 +212,7 @@ void initData() {
     ],
   ));
   equipmentList.add(Equipment(
-    key: 'hunter_s_bow',
+    key: 'hunters_bow',
     name: "hunter's bow",
     pluralName: "hunter's bows",
     description: null,
@@ -327,6 +363,18 @@ void initData() {
     ],
   ));
   equipmentList.add(Equipment(
+    key: 'two_handed_sword',
+    name: 'Two Handed Sword',
+    pluralName: 'Two Handed Swords',
+    description: null,
+    tags: [
+      Tag.fromJSON('close'),
+      Tag.fromJSON('{damage: +1}'),
+      Tag.fromJSON('{coins: 15}'),
+      Tag.fromJSON('{weight: 2}')
+    ],
+  ));
+  equipmentList.add(Equipment(
     key: 'battle_axe',
     name: 'Battle Axe',
     pluralName: 'Battle Axes',
@@ -441,6 +489,12 @@ void initData() {
     tags: [Tag.fromJSON('{armor: +1}'), Tag.fromJSON('{coins: 15}'), Tag.fromJSON('{weight: 2}')],
   ));
   equipmentList.add(Equipment(
+    key: 'ostentatious_clothes',
+    name: 'Ostentatious clothes',
+    description: 'Clothes that are vulgar or pretentious, designed to impress attract notice.',
+    tags: [Tag.fromJSON('{weight: 0}')],
+  ));
+  equipmentList.add(Equipment(
     key: 'leather_armor',
     name: 'Leather Armor',
     pluralName: 'Leather Armors',
@@ -541,7 +595,7 @@ void initData() {
   ));
   equipmentList.add(Equipment(
     key: 'dungeon_rations',
-    name: 'dungeon rations',
+    name: 'Dungeon Rations',
     pluralName: 'dungeon rations',
     description: 'Not tasty, but not bad either.',
     tags: [
@@ -685,7 +739,7 @@ void initData() {
     name: 'Bag of Holding',
     pluralName: 'Bag of Holdings',
     description:
-        'A bag of holding is larger on the inside than the outside, it can contain an infinite number of items, and its weight never increases. When you try to retrieve an item from a bag of holding, roll+WIS. ✴On a 10+, it’s right there. ✴On a 7-9, choose one:\nYou get the exact item, but it takes a while\n\nYou get a similar item of the GM’s choice, but it only takes a moment\nNo matter how many items it contains, a bag of holding is always 0 weight.',
+        'A bag of holding is larger on the inside than the outside, it can contain an infinite number of items, and its weight never increases. When you try to retrieve an item from a bag of holding, roll+WIS. \n* On a 10+, it’s right there. \n* On a 7-9, choose one:\nYou get the exact item, but it takes a while\n\nYou get a similar item of the GM’s choice, but it only takes a moment\nNo matter how many items it contains, a bag of holding is always 0 weight.',
     tags: [Tag.fromJSON('{weight: 0}')],
   ));
   equipmentList.add(Equipment(
@@ -693,7 +747,7 @@ void initData() {
     name: 'The Burning Wheel',
     pluralName: 'The Burning Wheels',
     description:
-        'An ancient wooden wheel, as might appear on a war-wagon, banded with steel. On a glance, it appears to be nothing special—many spokes are shattered and the thing seems mundane. Under the scrutiny of magic or the eyes of an expert, its true nature is revealed: the Burning Wheel is a gift from the God of Fire and burns with his authority.\nWhen you hold The Burning Wheel and speak a god’s name, roll+CON. ✴On a 7+, the god you name takes notice and grants you an audience. An audience with a god is not without a price: on a 10+, you choose one of your stats and reduce it to the next lowest modifier (for example, a 14 is +1, so it would be reduced to 12, a +0). ✴On a 7–9, the GM chooses which stat to reduce.\nOnce used, the Burning Wheel ignites and burns with brilliant light. It does not confer any protection from those flames, nor does it provide any bonus to swimming.',
+        'An ancient wooden wheel, as might appear on a war-wagon, banded with steel. On a glance, it appears to be nothing special—many spokes are shattered and the thing seems mundane. Under the scrutiny of magic or the eyes of an expert, its true nature is revealed: the Burning Wheel is a gift from the God of Fire and burns with his authority.\nWhen you hold The Burning Wheel and speak a god’s name, roll+CON. \n* On a 7+, the god you name takes notice and grants you an audience. An audience with a god is not without a price: on a 10+, you choose one of your stats and reduce it to the next lowest modifier (for example, a 14 is +1, so it would be reduced to 12, a +0). \n* On a 7–9, the GM chooses which stat to reduce.\nOnce used, the Burning Wheel ignites and burns with brilliant light. It does not confer any protection from those flames, nor does it provide any bonus to swimming.',
     tags: [Tag.fromJSON('{weight: 2}')],
   ));
   equipmentList.add(Equipment(
@@ -773,7 +827,7 @@ void initData() {
     name: 'Farsight Stone',
     pluralName: 'Farsight Stones',
     description:
-        'Swirling clouds fill this smoky orb and those in its presence often hear strange whispers. In ancient times, it was part of a network of such stones, used to communicate and surveil across great distances. When you gaze into the stone, name a location and roll+WIS. ✴On a 10+, you see a clear vision of the location and can maintain it as long as you concentrate on the orb. ✴On a 7–9, you still see the vision, but you draw the attention of some other thing (an angel, a demon, or the holder of another Farsight stone) that uses the stone to surveil you, as well.',
+        'Swirling clouds fill this smoky orb and those in its presence often hear strange whispers. In ancient times, it was part of a network of such stones, used to communicate and surveil across great distances. When you gaze into the stone, name a location and roll+WIS. \n* On a 10+, you see a clear vision of the location and can maintain it as long as you concentrate on the orb. \n* On a 7–9, you still see the vision, but you draw the attention of some other thing (an angel, a demon, or the holder of another Farsight stone) that uses the stone to surveil you, as well.',
     tags: [Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
@@ -781,7 +835,7 @@ void initData() {
     name: 'The Fiasco Codex',
     pluralName: 'The Fiasco Codexs',
     description:
-        'A thick tome, said to be penned in the blood of poor fools and robber-barons by some demon prince possessed of dark humor, this tome details tales and stories of those whose ambition overwhelmed their reason. Reading from this tome teaches one the value of clear-headedness but leaves a sense of dread behind. When you read from the Fiasco Codex, Roll+WIS. ✴On a 10+, ask two of the questions below. ✴On a 7–9, ask one.\nWhat is my greatest opportunity, right now?\n\nWho can I betray to gain an advantage?\n\nWho is an ally I should not trust?\nThe codex gives up its answers only once to each reader and takes 2 to 3 hours to read.',
+        'A thick tome, said to be penned in the blood of poor fools and robber-barons by some demon prince possessed of dark humor, this tome details tales and stories of those whose ambition overwhelmed their reason. Reading from this tome teaches one the value of clear-headedness but leaves a sense of dread behind. When you read from the Fiasco Codex, Roll+WIS. \n* On a 10+, ask two of the questions below. \n* On a 7–9, ask one.\nWhat is my greatest opportunity, right now?\n\nWho can I betray to gain an advantage?\n\nWho is an ally I should not trust?\nThe codex gives up its answers only once to each reader and takes 2 to 3 hours to read.',
     tags: [Tag.fromJSON('{weight: 0}')],
   ));
   equipmentList.add(Equipment(
@@ -797,7 +851,7 @@ void initData() {
     name: 'Folly Held Aloft, The Wax Wings, A Huge Mistake',
     pluralName: 'Folly Held Aloft, The Wax Wings, A Huge Mistakes',
     description:
-        'Who hasn’t always wanted to soar the pretty blue sky? In an attempt to grant the wishes of land-bound folk, these great magical wings were created. Known by many names and crafted by as many mages, they commonly take the shape of the wings of whatever local birds hold affection. Worn by means of a harness or, in some dire cases, a surgical procedure.\nWhen you take to the air with these magical wings, roll+DEX. ✴On a 10+, your flight is controlled and you may stay aloft as long as you like. ✴On a 7–9, you make it aloft but your flight is short or erratic and unpredictable, your choice. ✴On a 6-, you make it aloft, but the coming-down part and everything between is up to the GM.',
+        'Who hasn’t always wanted to soar the pretty blue sky? In an attempt to grant the wishes of land-bound folk, these great magical wings were created. Known by many names and crafted by as many mages, they commonly take the shape of the wings of whatever local birds hold affection. Worn by means of a harness or, in some dire cases, a surgical procedure.\nWhen you take to the air with these magical wings, roll+DEX. \n* On a 10+, your flight is controlled and you may stay aloft as long as you like. \n* On a 7–9, you make it aloft but your flight is short or erratic and unpredictable, your choice. \n* On a 6-, you make it aloft, but the coming-down part and everything between is up to the GM.',
     tags: [Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
@@ -829,7 +883,7 @@ void initData() {
     name: 'The Ku’meh Maneuver',
     pluralName: 'The Ku’meh Maneuvers',
     description:
-        'A great, leathery tome worn shiny by the hands of a hundred great generals, this book is often passed from warrior to warrior, from father to son along the great battle lines that have divided Dungeon World’s past. Anyone reading it may, upon finishing for the first time, roll+INT. ✴On a 10+, hold 3. ✴On a 7-9, hold 1. You may spend your hold to advise a companion on some matter of strategic or tactical significance. This advice allows you to, at any time, regardless of distance, roll to aid them on any one roll. On a miss, the GM can hold 1 and spend it to apply -2 to any roll of yours or the poor sap who listened to your advice.',
+        'A great, leathery tome worn shiny by the hands of a hundred great generals, this book is often passed from warrior to warrior, from father to son along the great battle lines that have divided Dungeon World’s past. Anyone reading it may, upon finishing for the first time, roll+INT. \n* On a 10+, hold 3. \n* On a 7-9, hold 1. You may spend your hold to advise a companion on some matter of strategic or tactical significance. This advice allows you to, at any time, regardless of distance, roll to aid them on any one roll. On a miss, the GM can hold 1 and spend it to apply -2 to any roll of yours or the poor sap who listened to your advice.',
     tags: [Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
@@ -877,7 +931,7 @@ void initData() {
     name: 'Sacred Herbs',
     pluralName: 'Sacred Herbss',
     description:
-        'The sacred herbs, collected and prepared by an order of lost wizard-monks, can be found in bundles with two or three uses to them. Kept dry, they last indefinitely. When smoked in a pipe or consumed in an incense burner and the thick, blue smoke inhaled, these herbs will grant you strange visions of faraway places and distant times. If you focus your will on a particular person, place or thing, the herbs will respond: roll+WIS. ✴On a 10+, the vision is clear and useful—yielding some valid information. ✴On a 7–9, the vision is about the thing desired, but is unclear, fraught with metaphor or somehow difficult to understand. ✴On a miss, the GM will ask you, “What is it you fear most?” You must answer honestly, of course.',
+        'The sacred herbs, collected and prepared by an order of lost wizard-monks, can be found in bundles with two or three uses to them. Kept dry, they last indefinitely. When smoked in a pipe or consumed in an incense burner and the thick, blue smoke inhaled, these herbs will grant you strange visions of faraway places and distant times. If you focus your will on a particular person, place or thing, the herbs will respond: roll+WIS. \n* On a 10+, the vision is clear and useful—yielding some valid information. \n* On a 7–9, the vision is about the thing desired, but is unclear, fraught with metaphor or somehow difficult to understand. \n* On a miss, the GM will ask you, “What is it you fear most?” You must answer honestly, of course.',
     tags: [Tag.fromJSON('{weight: 0}')],
   ));
   equipmentList.add(Equipment(
@@ -901,7 +955,7 @@ void initData() {
     name: 'Teleportation Room',
     pluralName: 'Teleportation Rooms',
     description:
-        'James Ninefingers, eccentric genius mage, created these room-sized magical apparati. A stone chamber etched with runes and scribblings, glowing with a faint blue light. When you enter and say aloud the name of a location, roll+INT. ✴On a 10+, you arrive exactly where you’d intended. ✴On a 7–9, the GM chooses a safe location nearby. ✴On a miss, you end up someplace. Maybe it’s nearby? It’s definitely not safe. Strange things sometimes happen to those who bend time and space with these devices.',
+        'James Ninefingers, eccentric genius mage, created these room-sized magical apparati. A stone chamber etched with runes and scribblings, glowing with a faint blue light. When you enter and say aloud the name of a location, roll+INT. \n* On a 10+, you arrive exactly where you’d intended. \n* On a 7–9, the GM chooses a safe location nearby. \n* On a miss, you end up someplace. Maybe it’s nearby? It’s definitely not safe. Strange things sometimes happen to those who bend time and space with these devices.',
     tags: [Tag.fromJSON('slow')],
   ));
   equipmentList.add(Equipment(
@@ -1230,11 +1284,27 @@ void initData() {
     spells: [],
     gearChoices: [
       GearChoice(
+        key: '5becbb00-f57a-4655-b955-b291e1bcaeb4',
+        label: 'You have dungeon rations (5 uses, 1 weight)',
+        gearOptions: [
+          GearOption(
+            key: 'dungeon_rations',
+            name: 'Dungeon Rations',
+            tags: [
+              Tag.fromJSON('ration'),
+              Tag.fromJSON('{uses: 5}'),
+              Tag.fromJSON('{coins: 3}'),
+              Tag.fromJSON('{weight: 1}'),
+            ],
+          ),
+        ],
+      ),
+      GearChoice(
         key: '58883c28-13ec-46a2-8454-a09436cb6e79',
         label: 'Choose one instrument, all are 0 weight for you',
         gearOptions: [
           GearOption(
-            key: 'your_father_s_mandolin_repaired',
+            key: 'your_fathers_mandolin_repaired',
             name: "Your father's mandolin, repaired",
             tags: [],
           ),
@@ -6073,7 +6143,7 @@ void initData() {
     key: 'take_watch',
     name: 'Take Watch',
     description:
-        'When you’re on watch and something approaches the camp roll+Wis. ✴On a 10+, you’re able to wake the camp and prepare a response, everyone in the camp takes +1 forward. ✴On a 7–9, you react just a moment too late; your companions in camp are awake but haven’t had time to prepare. They have weapons and armor but little else. ✴On a miss, whatever lurks outside the campfire’s light has the drop on you.',
+        'When you’re on watch and something approaches the camp roll+Wis. \n* On a 10+, you’re able to wake the camp and prepare a response, everyone in the camp takes +1 forward. \n* On a 7–9, you react just a moment too late; your companions in camp are awake but haven’t had time to prepare. They have weapons and armor but little else. \n* On a miss, whatever lurks outside the campfire’s light has the drop on you.',
     explanation: null,
     classes: [],
   ));
@@ -6089,7 +6159,7 @@ void initData() {
     key: 'supply',
     name: 'Supply',
     description:
-        'When you go to **buy something with gold on hand**, if it’s something readily available in the settlement you’re in, you can buy it at market price. If it’s something special, beyond what’s usually available here, or non-mundane, roll+Cha. ✴On a 10+, you find what you’re looking for at a fair price. ✴On a 7–9, you’ll have to pay more or settle for something that’s not exactly what you wanted, but close. The GM will tell you what your options are.',
+        'When you go to **buy something with gold on hand**, if it’s something readily available in the settlement you’re in, you can buy it at market price. If it’s something special, beyond what’s usually available here, or non-mundane, roll+Cha. \n* On a 10+, you find what you’re looking for at a fair price. \n* On a 7–9, you’ll have to pay more or settle for something that’s not exactly what you wanted, but close. The GM will tell you what your options are.',
     explanation: null,
     classes: [],
   ));
@@ -6097,7 +6167,7 @@ void initData() {
     key: 'undertake_a_perilous_journey',
     name: 'Undertake a Perilous Journey',
     description:
-        'When you travel through hostile territory, choose one member of the party to act as trailblazer, one to scout ahead, and one to be quartermaster. Each character with a job to do rolls+Wis. ✴On a 10+:\n\n - the quartermaster reduces the number of rations required by one\n - the trailblazer reduces the amount of time it takes to reach your destination (the GM will say by how much)\n - the scout will spot any trouble quick enough to let you get the drop on it\n\n✴On a 7–9, each role performs their job as expected: the normal number of rations are consumed, the journey takes about as long as expected, no one gets the drop on you but you don’t get the drop on them either.',
+        'When you travel through hostile territory, choose one member of the party to act as trailblazer, one to scout ahead, and one to be quartermaster. Each character with a job to do rolls+Wis. \n* On a 10+:\n\n - the quartermaster reduces the number of rations required by one\n - the trailblazer reduces the amount of time it takes to reach your destination (the GM will say by how much)\n - the scout will spot any trouble quick enough to let you get the drop on it\n\n\n* On a 7–9, each role performs their job as expected: the normal number of rations are consumed, the journey takes about as long as expected, no one gets the drop on you but you don’t get the drop on them either.',
     explanation:
         'You can’t assign more than one job to a character. If you don’t have enough party members, or choose not to assign a job, treat that job as if it had been assigned and the responsible player had rolled a 6.\n\nDistances in Dungeon World are measured in rations. A ration is the amount of supplies used up in a day. Journeys take more rations when they are long or when travel is slow.\n\nA perilous journey is the whole way between two locations. You don’t roll for one day’s journey and then make camp only to roll for the next day’s journey, too. Make one roll for the entire trip.\n\nThis move only applies when you know where you’re going. Setting off to explore is not a perilous journey. It’s wandering around looking for cool things to discover. Use up rations as you camp and the GM will give you details about the world as you discover them.',
     classes: [],
@@ -6114,7 +6184,7 @@ void initData() {
     key: 'carouse',
     name: 'Carouse',
     description:
-        'When you return triumphant and throw a big party, spend 100 coins and roll +1 for every extra 100 coins spent. ✴On a 10+, choose 3. ✴On a 7–9, choose 1. ✴On a miss, you still choose one, but things get really out of hand (the GM will say how).\n\n - You befriend a useful NPC.\n - You hear rumors of an opportunity.\n - You gain useful information.\n - You are not entangled, ensorcelled, or tricked.\n\nYou can only carouse when you return triumphant. That’s what draws the crowd of revelers to surround adventurers as they celebrate their latest haul. If you don’t proclaim your success or your failure, then who would want to party with you anyway?',
+        'When you return triumphant and throw a big party, spend 100 coins and roll +1 for every extra 100 coins spent. \n* On a 10+, choose 3. \n* On a 7–9, choose 1. \n* On a miss, you still choose one, but things get really out of hand (the GM will say how).\n\n - You befriend a useful NPC.\n - You hear rumors of an opportunity.\n - You gain useful information.\n - You are not entangled, ensorcelled, or tricked.\n\nYou can only carouse when you return triumphant. That’s what draws the crowd of revelers to surround adventurers as they celebrate their latest haul. If you don’t proclaim your success or your failure, then who would want to party with you anyway?',
     explanation: null,
     classes: [],
   ));
@@ -6122,7 +6192,7 @@ void initData() {
     key: 'recruit',
     name: 'Recruit',
     description:
-        'When you put out word that you’re looking to hire help, roll:\n\n - +1 if you make it known that your pay is generous\n - +1 if you make it known what you’re setting out to do\n - +1 if you make it known that they’ll get a share of whatever you find\n - +1 if you have a useful reputation around these parts\n\n✴On a 10+, you’ve got your pick of a number of skilled applicants, your choice who you hire, no penalty for not taking them along. ✴On a 7–9, you’ll have to settle for someone close to what you want or turn them away. ✴On a miss someone influential and ill-suited declares they’d like to come along (a foolhardy youth, a loose-cannon, or a veiled enemy, for example), bring them and take the consequences or turn them away. If you turn away applicants you take -1 forward to recruit.',
+        'When you put out word that you’re looking to hire help, roll:\n\n - +1 if you make it known that your pay is generous\n - +1 if you make it known what you’re setting out to do\n - +1 if you make it known that they’ll get a share of whatever you find\n - +1 if you have a useful reputation around these parts\n\n\n* On a 10+, you’ve got your pick of a number of skilled applicants, your choice who you hire, no penalty for not taking them along. \n* On a 7–9, you’ll have to settle for someone close to what you want or turn them away. \n* On a miss someone influential and ill-suited declares they’d like to come along (a foolhardy youth, a loose-cannon, or a veiled enemy, for example), bring them and take the consequences or turn them away. If you turn away applicants you take -1 forward to recruit.',
     explanation: null,
     classes: [],
   ));
@@ -6146,7 +6216,7 @@ void initData() {
     key: 'outstanding_warrants',
     name: 'Outstanding Warrants',
     description:
-        'When you return to a civilized place in which you’ve caused trouble before, roll+Cha. ✴On a 10+, word has spread of your deeds and everyone recognizes you. ✴On a 7–9, as above, and the GM chooses a complication:\n\n - The local constabulary has a warrant out for your arrest.\n - Someone has put a price on your head.\n - Someone important to you has been put in a bad spot as a result of your actions',
+        'When you return to a civilized place in which you’ve caused trouble before, roll+Cha. \n* On a 10+, word has spread of your deeds and everyone recognizes you. \n* On a 7–9, as above, and the GM chooses a complication:\n\n - The local constabulary has a warrant out for your arrest.\n - Someone has put a price on your head.\n - Someone important to you has been put in a bad spot as a result of your actions',
     explanation:
         'This move is only for places where you’ve caused trouble, not every patch of civilization you enter. Being publicly caught up in someone else’s trouble still triggers this move.\n\nCivilization generally means the villages, towns and cities of humans, elves, dwarves, and halflings but it can also apply to any relatively  lawful establishment of monstrous species, such as orcs or goblins. If the PCs have stayed in a place as part of the community, it counts as civilization.',
     classes: [],

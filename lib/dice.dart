@@ -83,9 +83,10 @@ class Dice {
   String get modifierWithSign =>
       hasModifier ? "$modifierSign${modifierValue?.abs() ?? modifierStat}" : "";
 
-  bool get hasModifier => (modifierValue != null || modifierStat != null);
+  bool get hasModifier => ((modifierValue != null && modifierValue != 0) || modifierStat != null);
 
-  String get modifier => hasModifier ? modifierStat ?? modifierValue!.toString() : "";
+  String get modifier =>
+      hasModifier ? modifierStat ?? (modifierValue != 0 ? modifierValue : '')!.toString() : "";
 
   DiceRoll roll() {
     if (needsModifier) {
@@ -95,7 +96,7 @@ class Dice {
     }
     var arr = <int>[];
     for (var i = 0; i < amount; i++) {
-      arr.add(Random().nextInt(sides));
+      arr.add(Random().nextInt(sides - 1) + 1);
     }
     return DiceRoll(dice: this, results: arr);
   }
@@ -104,6 +105,9 @@ class Dice {
 
   operator *(int amount) => copyWith(amount: this.amount * amount);
   operator /(int amount) => copyWith(amount: this.amount ~/ amount);
+
+  static List<Dice> flatten(List<Dice> dice) =>
+      dice.fold([], (all, cur) => [...all, ...List.filled(cur.amount, cur / cur.amount)]);
 
   static List<String?> _diceMatches(String json) {
     _assertDicePattern(json);
@@ -130,14 +134,12 @@ class DiceRoll {
 
   static List<DiceRoll> rollMany(List<Dice> dice) => dice.map((d) => roll(d)).toList();
 
+  static DiceRoll roll(Dice dice) => dice.roll();
+
   int get total => results.reduce((all, cur) => all + cur) + (dice.modifierValue ?? 0);
 
   bool get didHitNaturalMax => indexOfNaturalMax >= 0;
   int get indexOfNaturalMax => results.indexOf(dice.sides);
-
-  static DiceRoll roll(Dice dice) {
-    return dice.roll();
-  }
 
   void assertDiceModifier() {
     if (dice.needsModifier) {

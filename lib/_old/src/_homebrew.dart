@@ -64,8 +64,7 @@ void initHomebrew() {
       'neutral': Alignment(
         key: 'neutral',
         name: 'Neutral',
-        description:
-            'Exchange a sacrifice, freely given, for a service rendered.',
+        description: 'Exchange a sacrifice, freely given, for a service rendered.',
       )
     },
     raceMoves: [
@@ -79,8 +78,7 @@ void initHomebrew() {
       Move(
         key: 'human',
         name: 'Human',
-        description:
-            'When you Make Camp next to a large, open flame, regain all of your HP.',
+        description: 'When you Make Camp next to a large, open flame, regain all of your HP.',
         explanation: null,
         classes: ['immolator'],
       )
@@ -90,7 +88,7 @@ void initHomebrew() {
         key: 'burning_brand',
         name: 'Burning Brand',
         description:
-            'When you conjure a weapon of pure flame, roll+CON. On a 10+ choose two of the following tags, on a 7-9 choose one. You may treat your INT as your STR or DEX in regards to making attacks with this weapon. The weapon always begins with the fiery, touch, dangerous, and 3 uses tags. Each attack with the weapon consumes one use.\n\n\n\n- hand\n\n- thrown, near\n\n- +1 damage\n\n- remove the dangerous tag',
+            'When you conjure a weapon of pure flame, roll+CON.\n* On a 10+ choose two of the following tags, on a 7-9 choose one. You may treat your INT as your STR or DEX in regards to making attacks with this weapon. The weapon always begins with the fiery, touch, dangerous, and 3 uses tags. Each attack with the weapon consumes one use.\n\n\n\n- hand\n\n- thrown, near\n\n- +1 damage\n\n- remove the dangerous tag',
         explanation: null,
         classes: ['immolator'],
       ),
@@ -106,7 +104,7 @@ void initHomebrew() {
         key: 'zuko_style',
         name: 'Zuko Style',
         description:
-            'When you bend a flame to your will, roll+WIS. On a 10+ it does as you command, taking the shape and movement you desire for as long as it has fuel on which to burn. On a 7-9 the effect is short-lived, lasting only a moment.',
+            'When you bend a flame to your will, roll+WIS.\n* On a 10+ it does as you command, taking the shape and movement you desire for as long as it has fuel on which to burn.\n* On a 7-9 the effect is short-lived, lasting only a moment.',
         explanation: null,
         classes: ['immolator'],
       ),
@@ -132,7 +130,7 @@ void initHomebrew() {
         key: 'lore_of_flame',
         name: 'Lore of Flame',
         description:
-            'When you **stare into a source of fire, looking for answers**, roll+WIS On a hit, the GM will tell you something new and interesting about the current situation. On a 10+, the GM will give you good detail. On a 7–9, the GM will give you an impression. If you already know all there is to know, the GM will tell you that.',
+            'When you **stare into a source of fire, looking for answers**, roll+WIS On a hit, the GM will tell you something new and interesting about the current situation.\n* On a 10+, the GM will give you good detail.\n* On a 7–9, the GM will give you an impression. If you already know all there is to know, the GM will tell you that.',
         explanation: null,
         classes: ['immolator'],
       ),
@@ -148,7 +146,7 @@ void initHomebrew() {
         key: 'burns_half_as_long',
         name: 'Burns Half As Long',
         description:
-            'You gain this move when you gain Burns Twice as Bright.\n\n\n\nWhen you sacrifice a victory to the flames of fate, treat any roll of 10+ as a miss.',
+            'You gain this move when you gain Burns Twice as Bright.\n\nWhen you sacrifice a victory to the flames of fate, treat any roll of 10+ as a miss.',
         explanation: null,
         classes: ['immolator'],
       ),
@@ -164,7 +162,7 @@ void initHomebrew() {
         key: 'firebrand',
         name: 'Firebrand',
         description:
-            'When you **introduce a new idea to an NPC**, roll+CHA. On a 10+ They believe the idea to be their own and take to it with fervor On a 7-9, Their passion fades after a day or two. On a miss, they respond negatively, speaking out against the idea.',
+            'When you **introduce a new idea to an NPC**, roll+CHA.\n* On a 10+ They believe the idea to be their own and take to it with fervor On a 7-9, Their passion fades after a day or two. On a miss, they respond negatively, speaking out against the idea.',
         explanation: null,
         classes: ['immolator'],
       ),
@@ -180,7 +178,7 @@ void initHomebrew() {
         key: 'moth_to_the_flame',
         name: 'Moth To The Flame',
         description:
-            'When you tempt a weak mind with your inner fire, roll+WIS. On a 10+ their will is suppressed, they’ll follow you and do as you desire, so long as nothing startles or surprises them. On a 7-9, the effect is only strong enough to distract or confuse them. On a miss, they become agitated and upset, your fire having sparked their hidden desires.',
+            'When you tempt a weak mind with your inner fire, roll+WIS.\n* On a 10+ their will is suppressed, they’ll follow you and do as you desire, so long as nothing startles or surprises them.\n* On a 7-9, the effect is only strong enough to distract or confuse them. On a miss, they become agitated and upset, your fire having sparked their hidden desires.',
         explanation: null,
         classes: ['immolator'],
       ),
@@ -196,7 +194,7 @@ void initHomebrew() {
         key: 'the_enkindler',
         name: 'The Enkindler',
         description:
-            'When you bolster the courage of others roll+CHA. On a 10+ they shake off all fear and doubt, becoming brave in an instant. On a 7-9, this effect is fleeting, they realize its superficiality and resort to cowardice after a moment or two. On a miss, they’re cowed or terrified by your presence.',
+            'When you bolster the courage of others roll+CHA.\n* On a 10+ they shake off all fear and doubt, becoming brave in an instant.\n* On a 7-9, this effect is fleeting, they realize its superficiality and resort to cowardice after a moment or two. On a miss, they’re cowed or terrified by your presence.',
         explanation: null,
         classes: ['immolator'],
       ),
@@ -204,7 +202,7 @@ void initHomebrew() {
         key: 'sick_burn',
         name: 'Sick Burn',
         description:
-            'When you insult an NPC, roll + CHA. On a 10+ you leave them no room to react, they bear your insult and the scorn of all who hear it. On a 7-9 you cross a line, they will have their revenge, someday. On a miss you’ve gone too far, they blow up here and now.',
+            'When you insult an NPC, roll + CHA.\n* On a 10+ you leave them no room to react, they bear your insult and the scorn of all who hear it.\n* On a 7-9 you cross a line, they will have their revenge, someday. On a miss you’ve gone too far, they blow up here and now.',
         explanation: null,
         classes: ['immolator'],
       ),
@@ -222,7 +220,7 @@ void initHomebrew() {
         key: 'burning_ring_of_fire',
         name: 'Burning Ring Of Fire',
         description:
-            'When you **fuse a willing person’s soul to yours**, roll+CHA. On a hit you are bound together, able to sense each other at any distance, as well as sharing your emotional state. On a 7-9, the connection is unstable and dangerous, when you take a debility, so do they (and vice versa). On a miss, the branding is rejected and you both erase any Bonds you have to each other. You may write new Bonds with them at the End of Session as usual. This fusion, once performed, cannot be undone by mortal means.',
+            'When you **fuse a willing person’s soul to yours**, roll+CHA. On a hit you are bound together, able to sense each other at any distance, as well as sharing your emotional state.\n* On a 7-9, the connection is unstable and dangerous, when you take a debility, so do they (and vice versa). On a miss, the branding is rejected and you both erase any Bonds you have to each other. You may write new Bonds with them at the End of Session as usual. This fusion, once performed, cannot be undone by mortal means.',
         explanation: null,
         classes: ['immolator'],
       ),
@@ -238,7 +236,7 @@ void initHomebrew() {
         key: 'watch_the_world_burn',
         name: 'Watch the World Burn',
         description:
-            'When you **open a channel to the burning planes and call a firestorm**, tell the GM what you’re sacrificing and roll+WIS. The sky opens up and fire pours like rain from it within an area about equal to a small village. Everyone and everything in the area takes damage as appropriate. On a 10+ you can extinguish the storm with a little effort. On a 7-9 the fires rage out of your control, spreading and gusting where they are carried by wind and weather. On a miss, something cruel, intelligent and hungry comes with the storm.',
+            'When you **open a channel to the burning planes and call a firestorm**, tell the GM what you’re sacrificing and roll+WIS. The sky opens up and fire pours like rain from it within an area about equal to a small village. Everyone and everything in the area takes damage as appropriate.\n* On a 10+ you can extinguish the storm with a little effort.\n* On a 7-9 the fires rage out of your control, spreading and gusting where they are carried by wind and weather. On a miss, something cruel, intelligent and hungry comes with the storm.',
         explanation: null,
         classes: ['immolator'],
       )
@@ -356,8 +354,7 @@ void initHomebrew() {
       Move(
         key: 'musclebound',
         name: 'Musclebound',
-        description:
-            'While you wield a weapon it gains the forceful and messy tags.',
+        description: 'While you wield a weapon it gains the forceful and messy tags.',
         explanation: null,
         classes: ['barbarian'],
       ),
@@ -413,7 +410,7 @@ void initHomebrew() {
         key: 'what_is_best_in_life',
         name: 'What Is Best In Life',
         description:
-            'At the end of a session, if during this session you have crushed your enemies, seen them driven before you, or have heard the lamentations of their kinfolk mark XP.',
+            'At the end of a session, if during this session you have crushed your enemies, seen them driven before you, or have heard the lamentations of their kinfolk, mark XP.',
         explanation: null,
         classes: ['barbarian'],
       ),
@@ -503,7 +500,7 @@ void initHomebrew() {
         key: 'war_cry',
         name: 'War Cry',
         description:
-            'When you enter battle with a show of force (a shout, a rallying cry, a battle dance) roll+Cha.\n\n* On a 10+ both,\n	* On a 7–9 one or the other.\n	* Your allies are rallied and take +1 forward\n	* Your enemies feel fear and act accordingly (avoiding you, hiding, attacking with fear driven abandon)',
+            'When you enter battle with a show of force (a shout, a rallying cry, a battle dance) roll+Cha.\n\n* On a 10+ both,\n* On a 7–9 one or the other.\n\t* Your allies are rallied and take +1 forward\n\t* Your enemies feel fear and act accordingly (avoiding you, hiding, attacking with fear driven abandon)',
         explanation: null,
         classes: ['barbarian'],
       ),
@@ -551,9 +548,39 @@ void initHomebrew() {
     spells: [],
     gearChoices: [
       GearChoice(
-        key: 'dbb50c21-6f20-44d5-8c4f-68bc77e7bc77',
+        key: '7b819c33-10da-41ae-b31e-fa48c39b4cdd',
         label:
-            'Your Load is 8+Str. You carry dungeon rations (5 uses, 1 weight), a dagger (hand, 1 weight) some token of where you’ve traveled or where you’re from, and your choice of weapon:',
+            'You carry dungeon rations (5 uses, 1 weight), a dagger (hand, 1 weight) some token of where you’ve traveled or where you’re from',
+        gearOptions: [
+          GearOption(
+            key: 'dungeon_rations',
+            name: 'Dungeon Rations',
+            tags: [
+              Tag.fromJSON('{uses: 5}'),
+              Tag.fromJSON('{weight: 1}'),
+            ],
+          ),
+          GearOption(
+            key: 'dagger',
+            name: 'Dagger',
+            tags: [
+              Tag.fromJSON('{hand}'),
+              Tag.fromJSON('{weight: 1}'),
+            ],
+          ),
+          GearOption(
+            key: 'token',
+            name: 'Token',
+            tags: [
+              Tag.fromJSON('{hand}'),
+              Tag.fromJSON('{weight: 1}'),
+            ],
+          ),
+        ],
+      ),
+      GearChoice(
+        key: 'dbb50c21-6f20-44d5-8c4f-68bc77e7bc77',
+        label: 'Choose a weapon:',
         gearOptions: [
           GearOption(
             key: 'axe',
@@ -563,11 +590,7 @@ void initHomebrew() {
           GearOption(
             key: 'two_handed_sword',
             name: 'Two handed sword',
-            tags: [
-              Tag.fromJSON('close'),
-              Tag.fromJSON('{weight:2}'),
-              Tag.fromJSON('{damage:1}')
-            ],
+            tags: [Tag.fromJSON('close'), Tag.fromJSON('{weight:2}'), Tag.fromJSON('{damage:1}')],
           )
         ],
       ),

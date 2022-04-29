@@ -17,6 +17,7 @@ Map<String, String> strFixMap = {
   "—": "-",
   "–": "-",
   "’": "'",
+  "’": "'",
   "“": "\"",
   "”": "\"",
 };
@@ -108,7 +109,7 @@ main() async {
 
     print("Adding ${cls.names.values.fold<int>(0, (t, c) => t + c.length)} ${cls.key} names");
     final Map<String, List<String>> names = (json['names'][cls.key] ??= <String, List<String>>{});
-    names.addAll(cls.names);
+    names.addAll(cls.names.map((key, value) => MapEntry(key, value.map(fix).toList())));
   }
 
   print("Total ${json['classes']!.length} classes");
@@ -184,7 +185,7 @@ Race raceMapper(old.Move move, String classKey) => Race(
     );
 
 Spell spellMapper(old.Spell spell) => Spell(
-      classKeys: [],
+      classKeys: spell.classKeys,
       description: fix(spell.description),
       explanation: "",
       key: makeKey(spell.name),
@@ -192,6 +193,7 @@ Spell spellMapper(old.Spell spell) => Spell(
       name: fix(spell.name),
       dice: guessDice(spell.description).toList(),
       tags: [...defaultTags, ...spell.tags.map((t) => tagMapper(t))],
+      level: spell.level,
     );
 
 Tag tagMapper(old.Tag t) => Tag.fromJson(t.toJSON().runtimeType == String
@@ -213,7 +215,7 @@ Monster monsterMapper(old.Monster move) => Monster(
       meta: defaultMeta,
       name: fix(move.name),
       tags: defaultTags,
-      moves: move.moves,
+      moves: move.moves.map(fix).toList(),
     );
 
 CharacterClass classMapper(old.PlayerClass cls) => CharacterClass(

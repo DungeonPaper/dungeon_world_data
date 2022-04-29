@@ -10,6 +10,7 @@ class Spell {
     required this.name,
     required this.description,
     required this.explanation,
+    required this.level,
     required this.classKeys,
     required this.dice,
     required this.tags,
@@ -20,6 +21,7 @@ class Spell {
   final String name;
   final String description;
   final String explanation;
+  final String level;
   final List<String> classKeys;
   final List<Dice> dice;
   final List<Tag> tags;
@@ -30,6 +32,7 @@ class Spell {
     String? name,
     String? description,
     String? explanation,
+    String? level,
     List<String>? classKeys,
     List<Dice>? dice,
     List<Tag>? tags,
@@ -40,6 +43,7 @@ class Spell {
         name: name ?? this.name,
         description: description ?? this.description,
         explanation: explanation ?? this.explanation,
+        level: level ?? this.level,
         classKeys: classKeys ?? this.classKeys,
         tags: tags ?? this.tags,
         dice: dice ?? this.dice,
@@ -55,6 +59,7 @@ class Spell {
         name: json["name"],
         description: json["description"],
         explanation: json["explanation"],
+        level: json["level"],
         classKeys: List<String>.from(json["classKeys"].map((x) => x)),
         tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
         dice: List<Dice>.from(json["dice"].map((x) => Dice.fromJson(x))),
@@ -66,6 +71,7 @@ class Spell {
         "name": name,
         "description": description,
         "explanation": explanation,
+        "level": level,
         "classKeys": List<dynamic>.from(classKeys.map((x) => x)),
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
         "dice": List<dynamic>.from(dice.map((x) => x.toJson())),

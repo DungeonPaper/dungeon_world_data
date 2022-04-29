@@ -739,7 +739,7 @@ void initData() {
     name: 'Bag of Holding',
     pluralName: 'Bag of Holdings',
     description:
-        'A bag of holding is larger on the inside than the outside, it can contain an infinite number of items, and its weight never increases. When you try to retrieve an item from a bag of holding, roll+WIS. \n* On a 10+, it’s right there. \n* On a 7-9, choose one:\nYou get the exact item, but it takes a while\n\nYou get a similar item of the GM’s choice, but it only takes a moment\nNo matter how many items it contains, a bag of holding is always 0 weight.',
+        'A bag of holding is larger on the inside than the outside, it can contain an infinite number of items, and its weight never increases. When you try to retrieve an item from a bag of holding, roll+WIS.\n* On a 10+, it’s right there.\n* On a 7-9, choose one:\nYou get the exact item, but it takes a while\n\nYou get a similar item of the GM’s choice, but it only takes a moment\nNo matter how many items it contains, a bag of holding is always 0 weight.',
     tags: [Tag.fromJSON('{weight: 0}')],
   ));
   equipmentList.add(Equipment(
@@ -747,7 +747,7 @@ void initData() {
     name: 'The Burning Wheel',
     pluralName: 'The Burning Wheels',
     description:
-        'An ancient wooden wheel, as might appear on a war-wagon, banded with steel. On a glance, it appears to be nothing special—many spokes are shattered and the thing seems mundane. Under the scrutiny of magic or the eyes of an expert, its true nature is revealed: the Burning Wheel is a gift from the God of Fire and burns with his authority.\nWhen you hold The Burning Wheel and speak a god’s name, roll+CON. \n* On a 7+, the god you name takes notice and grants you an audience. An audience with a god is not without a price: on a 10+, you choose one of your stats and reduce it to the next lowest modifier (for example, a 14 is +1, so it would be reduced to 12, a +0). \n* On a 7–9, the GM chooses which stat to reduce.\nOnce used, the Burning Wheel ignites and burns with brilliant light. It does not confer any protection from those flames, nor does it provide any bonus to swimming.',
+        'An ancient wooden wheel, as might appear on a war-wagon, banded with steel. On a glance, it appears to be nothing special—many spokes are shattered and the thing seems mundane. Under the scrutiny of magic or the eyes of an expert, its true nature is revealed: the Burning Wheel is a gift from the God of Fire and burns with his authority.\nWhen you hold The Burning Wheel and speak a god’s name, roll+CON.\n* On a 7+, the god you name takes notice and grants you an audience. An audience with a god is not without a price: on a 10+, you choose one of your stats and reduce it to the next lowest modifier (for example, a 14 is +1, so it would be reduced to 12, a +0).\n* On a 7–9, the GM chooses which stat to reduce.\nOnce used, the Burning Wheel ignites and burns with brilliant light. It does not confer any protection from those flames, nor does it provide any bonus to swimming.',
     tags: [Tag.fromJSON('{weight: 2}')],
   ));
   equipmentList.add(Equipment(
@@ -827,7 +827,7 @@ void initData() {
     name: 'Farsight Stone',
     pluralName: 'Farsight Stones',
     description:
-        'Swirling clouds fill this smoky orb and those in its presence often hear strange whispers. In ancient times, it was part of a network of such stones, used to communicate and surveil across great distances. When you gaze into the stone, name a location and roll+WIS. \n* On a 10+, you see a clear vision of the location and can maintain it as long as you concentrate on the orb. \n* On a 7–9, you still see the vision, but you draw the attention of some other thing (an angel, a demon, or the holder of another Farsight stone) that uses the stone to surveil you, as well.',
+        'Swirling clouds fill this smoky orb and those in its presence often hear strange whispers. In ancient times, it was part of a network of such stones, used to communicate and surveil across great distances. When you gaze into the stone, name a location and roll+WIS.\n* On a 10+, you see a clear vision of the location and can maintain it as long as you concentrate on the orb.\n* On a 7–9, you still see the vision, but you draw the attention of some other thing (an angel, a demon, or the holder of another Farsight stone) that uses the stone to surveil you, as well.',
     tags: [Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
@@ -835,7 +835,7 @@ void initData() {
     name: 'The Fiasco Codex',
     pluralName: 'The Fiasco Codexs',
     description:
-        'A thick tome, said to be penned in the blood of poor fools and robber-barons by some demon prince possessed of dark humor, this tome details tales and stories of those whose ambition overwhelmed their reason. Reading from this tome teaches one the value of clear-headedness but leaves a sense of dread behind. When you read from the Fiasco Codex, Roll+WIS. \n* On a 10+, ask two of the questions below. \n* On a 7–9, ask one.\nWhat is my greatest opportunity, right now?\n\nWho can I betray to gain an advantage?\n\nWho is an ally I should not trust?\nThe codex gives up its answers only once to each reader and takes 2 to 3 hours to read.',
+        'A thick tome, said to be penned in the blood of poor fools and robber-barons by some demon prince possessed of dark humor, this tome details tales and stories of those whose ambition overwhelmed their reason. Reading from this tome teaches one the value of clear-headedness but leaves a sense of dread behind. When you read from the Fiasco Codex, Roll+WIS.\n* On a 10+, ask two of the questions below.\n* On a 7–9, ask one.\nWhat is my greatest opportunity, right now?\n\nWho can I betray to gain an advantage?\n\nWho is an ally I should not trust?\nThe codex gives up its answers only once to each reader and takes 2 to 3 hours to read.',
     tags: [Tag.fromJSON('{weight: 0}')],
   ));
   equipmentList.add(Equipment(
@@ -851,7 +851,7 @@ void initData() {
     name: 'Folly Held Aloft, The Wax Wings, A Huge Mistake',
     pluralName: 'Folly Held Aloft, The Wax Wings, A Huge Mistakes',
     description:
-        'Who hasn’t always wanted to soar the pretty blue sky? In an attempt to grant the wishes of land-bound folk, these great magical wings were created. Known by many names and crafted by as many mages, they commonly take the shape of the wings of whatever local birds hold affection. Worn by means of a harness or, in some dire cases, a surgical procedure.\nWhen you take to the air with these magical wings, roll+DEX. \n* On a 10+, your flight is controlled and you may stay aloft as long as you like. \n* On a 7–9, you make it aloft but your flight is short or erratic and unpredictable, your choice. \n* On a 6-, you make it aloft, but the coming-down part and everything between is up to the GM.',
+        'Who hasn’t always wanted to soar the pretty blue sky? In an attempt to grant the wishes of land-bound folk, these great magical wings were created. Known by many names and crafted by as many mages, they commonly take the shape of the wings of whatever local birds hold affection. Worn by means of a harness or, in some dire cases, a surgical procedure.\nWhen you take to the air with these magical wings, roll+DEX.\n* On a 10+, your flight is controlled and you may stay aloft as long as you like.\n* On a 7–9, you make it aloft but your flight is short or erratic and unpredictable, your choice.\n* On a 6-, you make it aloft, but the coming-down part and everything between is up to the GM.',
     tags: [Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
@@ -883,7 +883,7 @@ void initData() {
     name: 'The Ku’meh Maneuver',
     pluralName: 'The Ku’meh Maneuvers',
     description:
-        'A great, leathery tome worn shiny by the hands of a hundred great generals, this book is often passed from warrior to warrior, from father to son along the great battle lines that have divided Dungeon World’s past. Anyone reading it may, upon finishing for the first time, roll+INT. \n* On a 10+, hold 3. \n* On a 7-9, hold 1. You may spend your hold to advise a companion on some matter of strategic or tactical significance. This advice allows you to, at any time, regardless of distance, roll to aid them on any one roll. On a miss, the GM can hold 1 and spend it to apply -2 to any roll of yours or the poor sap who listened to your advice.',
+        'A great, leathery tome worn shiny by the hands of a hundred great generals, this book is often passed from warrior to warrior, from father to son along the great battle lines that have divided Dungeon World’s past. Anyone reading it may, upon finishing for the first time, roll+INT.\n* On a 10+, hold 3.\n* On a 7-9, hold 1. You may spend your hold to advise a companion on some matter of strategic or tactical significance. This advice allows you to, at any time, regardless of distance, roll to aid them on any one roll. On a miss, the GM can hold 1 and spend it to apply -2 to any roll of yours or the poor sap who listened to your advice.',
     tags: [Tag.fromJSON('{weight: 1}')],
   ));
   equipmentList.add(Equipment(
@@ -931,7 +931,7 @@ void initData() {
     name: 'Sacred Herbs',
     pluralName: 'Sacred Herbss',
     description:
-        'The sacred herbs, collected and prepared by an order of lost wizard-monks, can be found in bundles with two or three uses to them. Kept dry, they last indefinitely. When smoked in a pipe or consumed in an incense burner and the thick, blue smoke inhaled, these herbs will grant you strange visions of faraway places and distant times. If you focus your will on a particular person, place or thing, the herbs will respond: roll+WIS. \n* On a 10+, the vision is clear and useful—yielding some valid information. \n* On a 7–9, the vision is about the thing desired, but is unclear, fraught with metaphor or somehow difficult to understand. \n* On a miss, the GM will ask you, “What is it you fear most?” You must answer honestly, of course.',
+        'The sacred herbs, collected and prepared by an order of lost wizard-monks, can be found in bundles with two or three uses to them. Kept dry, they last indefinitely. When smoked in a pipe or consumed in an incense burner and the thick, blue smoke inhaled, these herbs will grant you strange visions of faraway places and distant times. If you focus your will on a particular person, place or thing, the herbs will respond: roll+WIS.\n* On a 10+, the vision is clear and useful—yielding some valid information.\n* On a 7–9, the vision is about the thing desired, but is unclear, fraught with metaphor or somehow difficult to understand.\n* On a miss, the GM will ask you, “What is it you fear most?” You must answer honestly, of course.',
     tags: [Tag.fromJSON('{weight: 0}')],
   ));
   equipmentList.add(Equipment(
@@ -955,7 +955,7 @@ void initData() {
     name: 'Teleportation Room',
     pluralName: 'Teleportation Rooms',
     description:
-        'James Ninefingers, eccentric genius mage, created these room-sized magical apparati. A stone chamber etched with runes and scribblings, glowing with a faint blue light. When you enter and say aloud the name of a location, roll+INT. \n* On a 10+, you arrive exactly where you’d intended. \n* On a 7–9, the GM chooses a safe location nearby. \n* On a miss, you end up someplace. Maybe it’s nearby? It’s definitely not safe. Strange things sometimes happen to those who bend time and space with these devices.',
+        'James Ninefingers, eccentric genius mage, created these room-sized magical apparati. A stone chamber etched with runes and scribblings, glowing with a faint blue light. When you enter and say aloud the name of a location, roll+INT.\n* On a 10+, you arrive exactly where you’d intended.\n* On a 7–9, the GM chooses a safe location nearby.\n* On a miss, you end up someplace. Maybe it’s nearby? It’s definitely not safe. Strange things sometimes happen to those who bend time and space with these devices.',
     tags: [Tag.fromJSON('slow')],
   ));
   equipmentList.add(Equipment(
@@ -1102,7 +1102,7 @@ void initData() {
         key: 'arcane_art',
         name: 'Arcane Art',
         description:
-            'When you **weave a performance into a basic spell**, choose an ally and an effect:\n\n - Heal 1d8 damage\n - +1d4 forward to damage\n - Their mind is shaken clear of one enchantment\n - The next time someone successfully assists the target with aid, they get +2 instead of +1\n\nThen roll+Cha.\n\n - On a 10+, the ally gets the selected effect.\n - On a 7-9, your spell still works, but you draw unwanted attention or your magic reverberates to other targets affecting them as well, GM’s choice',
+            'When you **weave a performance into a basic spell**, choose an ally and an effect:\n\n* Heal 1d8 damage\n* +1d4 forward to damage\n* Their mind is shaken clear of one enchantment\n* The next time someone successfully assists the target with aid, they get +2 instead of +1\n\nThen roll+Cha.\n\n* On a 10+, the ally gets the selected effect.\n* On a 7-9, your spell still works, but you draw unwanted attention or your magic reverberates to other targets affecting them as well, GM’s choice',
         explanation: null,
         classes: ['bard'],
       ),
@@ -1110,7 +1110,7 @@ void initData() {
         key: 'bardic_lore',
         name: 'Bardic Lore',
         description:
-            'Choose an area of expertise:\n\n - Spells and Magicks\n - The Dead and Undead\n - Grand Histories of the Known World\n - A Bestiary of Creatures Unusual\n - The Planar Spheres\n - Legends of Heroes Past\n - Gods and Their Servants\n\nWhen you **first encounter an important creature, location, or item (your call) covered by your bardic lore** you can ask the GM any one question about it; the GM will answer truthfully. The GM may then ask you what tale, song, or legend you heard that information in.',
+            'Choose an area of expertise:\n\n* Spells and Magicks\n* The Dead and Undead\n* Grand Histories of the Known World\n* A Bestiary of Creatures Unusual\n* The Planar Spheres\n* Legends of Heroes Past\n* Gods and Their Servants\n\nWhen you **first encounter an important creature, location, or item (your call) covered by your bardic lore** you can ask the GM any one question about it; the GM will answer truthfully. The GM may then ask you what tale, song, or legend you heard that information in.',
         explanation: null,
         classes: ['bard'],
       ),
@@ -1118,7 +1118,7 @@ void initData() {
         key: 'charming_and_open',
         name: 'Charming and Open',
         description:
-            'When you **speak frankly with someone**, you can ask their player a question from the list below. They must answer it truthfully, then they may ask you a question from the list (which you must answer truthfully).\n\n - Whom do you serve?\n - What do you wish I would do?\n - How can I get you to __________?\n - What are you really feeling right now?\n - What do you most desire?',
+            'When you **speak frankly with someone**, you can ask their player a question from the list below. They must answer it truthfully, then they may ask you a question from the list (which you must answer truthfully).\n\n* Whom do you serve?\n* What do you wish I would do?\n* How can I get you to __________?\n* What are you really feeling right now?\n* What do you most desire?',
         explanation: null,
         classes: ['bard'],
       ),
@@ -1151,7 +1151,7 @@ void initData() {
         key: 'it_goes_to_eleven',
         name: 'It Goes To Eleven',
         description:
-            'When you unleash a crazed performance (a righteous lute solo or mighy brass blast, maybe) choose a target who can hear you and roll+CHA. \n\n * On a 10+ the target attacks their nearest ally in range. \n * On a 7-9 they attack their nearest ally, but you also draw their attention and ire.',
+            'When you unleash a crazed performance (a righteous lute solo or mighy brass blast, maybe) choose a target who can hear you and roll+CHA.\n\n * On a 10+ the target attacks their nearest ally in range.\n * On a 7-9 they attack their nearest ally, but you also draw their attention and ire.',
         explanation: null,
         classes: ['bard'],
       ),
@@ -1159,7 +1159,7 @@ void initData() {
         key: 'metal_hurlant',
         name: 'Metal Hurlant',
         description:
-            'When you shout with great force or play a shattering note choose a target and roll+CON. \n\n * On a 10+ the target takes 1d10 damage and is deafened for a few minutes. \n * On a 7-9 you still damage your target, but it’s out of control: the GM will choose an additional target nearby.',
+            'When you shout with great force or play a shattering note choose a target and roll+CON.\n\n * On a 10+ the target takes 1d10 damage and is deafened for a few minutes.\n * On a 7-9 you still damage your target, but it’s out of control: the GM will choose an additional target nearby.',
         explanation: null,
         classes: ['bard'],
       ),
@@ -1505,7 +1505,7 @@ void initData() {
         key: 'deity',
         name: 'Deity',
         description:
-            'You serve and worship some deity or power which grants you spells. Give your god a name (maybe Helferth, Sucellus, Zorica or Krugon the Bleak) and choose your deity’s domain:\n\n - Healing and Restoration\n - Bloody Conquest\n - Civilization\n - Knowledge and Hidden Things\n - The Downtrodden and Forgotten\n - What Lies Beneath\n\nChoose one precept of your religion:\n\n - Your religion preaches the sanctity of suffering, add Petition: Suffering\n - Your religion is cultish and insular, add Petition: Gaining Secrets\n - Your religion has important sacrificial rites, add Petition: Offering\n - Your religion believes in trial by combat, add Petition: Personal Victory',
+            'You serve and worship some deity or power which grants you spells. Give your god a name (maybe Helferth, Sucellus, Zorica or Krugon the Bleak) and choose your deity’s domain:\n\n* Healing and Restoration\n* Bloody Conquest\n* Civilization\n* Knowledge and Hidden Things\n* The Downtrodden and Forgotten\n* What Lies Beneath\n\nChoose one precept of your religion:\n\n* Your religion preaches the sanctity of suffering, add Petition: Suffering\n* Your religion is cultish and insular, add Petition: Gaining Secrets\n* Your religion has important sacrificial rites, add Petition: Offering\n* Your religion believes in trial by combat, add Petition: Personal Victory',
         explanation: null,
         classes: ['cleric'],
       ),
@@ -1521,7 +1521,7 @@ void initData() {
         key: 'turn_undead',
         name: 'Turn Undead',
         description:
-            'When you hold your holy symbol aloft and call on your deity for protection, roll+Wis. On a 7+, so long as you continue to pray and brandish your holy symbol, no undead may come within reach of you. On a 10+, you also momentarily daze intelligent undead and cause mindless undead to flee. Aggression breaks the effects and they are able to act as normal. Intelligent undead may still find ways to harry you from afar. They’re clever like that.',
+            'When you hold your holy symbol aloft and call on your deity for protection, roll+Wis.\n* On a 7+, so long as you continue to pray and brandish your holy symbol, no undead may come within reach of you.\n* On a 10+, you also momentarily daze intelligent undead and cause mindless undead to flee. Aggression breaks the effects and they are able to act as normal. Intelligent undead may still find ways to harry you from afar. They’re clever like that.',
         explanation: null,
         classes: ['cleric'],
       ),
@@ -1529,7 +1529,7 @@ void initData() {
         key: 'commune',
         name: 'Commune',
         description:
-            'When you spend uninterrupted time (an hour or so) in quiet communion with your deity, you:\n\n - Lose any spells already granted to you.\n - Are granted new spells of your choice whose total levels don’t exceed your own level+1, and none of which is a higher level than your own level.\n - Prepare all of your rotes, which never count against your limit.',
+            'When you spend uninterrupted time (an hour or so) in quiet communion with your deity, you:\n\n* Lose any spells already granted to you.\n* Are granted new spells of your choice whose total levels don’t exceed your own level+1, and none of which is a higher level than your own level.\n* Prepare all of your rotes, which never count against your limit.',
         explanation: null,
         classes: ['cleric'],
       ),
@@ -1537,7 +1537,7 @@ void initData() {
         key: 'cast_a_spell',
         name: 'Cast a Spell',
         description:
-            'When you unleash a spell granted to you by your deity, roll+Wis. On a 10+, the spell is successfully cast and your deity does not revoke the spell, so you may cast it again. On a 7–9, the spell is cast, but choose one:\n\n - You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n - Your casting distances you from your deity—take -1 ongoing to cast a spell until the next time you commune.\n - After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.',
+            'When you unleash a spell granted to you by your deity, roll+Wis.\n* On a 10+, the spell is successfully cast and your deity does not revoke the spell, so you may cast it again.\n* On a 7–9, the spell is cast, but choose one:\n\n* You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n* Your casting distances you from your deity—take -1 ongoing to cast a spell until the next time you commune.\n* After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.',
         explanation: null,
         classes: ['cleric', 'wizard'],
       )
@@ -1600,7 +1600,7 @@ void initData() {
         key: 'empower',
         name: 'Empower',
         description:
-            'When you Cast a Spell, on a 10+ you have the option of choosing from the 7–9 list. If you do, you may choose one of these effects as well:\n\n - The spell’s effects are doubled\n - The spell’s targets are doubled',
+            'When you Cast a Spell, on a 10+ you have the option of choosing from the 7–9 list. If you do, you may choose one of these effects as well:\n\n* The spell’s effects are doubled\n* The spell’s targets are doubled',
         explanation: null,
         classes: ['cleric'],
       ),
@@ -1695,7 +1695,7 @@ void initData() {
         key: 'greater_empower',
         name: 'Greater Empower',
         description:
-            'When you cast a spell, on a 10–11 you have the option of choosing from the 7–9 list. If you do, you may choose one of these effects as well. On a 12+ you get to choose one of these effects for free.\n\n - The spell’s effects are doubled\n - The spell’s targets are doubled',
+            'When you cast a spell, on a 10–11 you have the option of choosing from the 7–9 list. If you do, you may choose one of these effects as well.\n* On a 12+ you get to choose one of these effects for free.\n\n* The spell’s effects are doubled\n* The spell’s targets are doubled',
         explanation: null,
         classes: ['cleric'],
       ),
@@ -1716,6 +1716,7 @@ void initData() {
             'Name a city, town, encampment, or other place where people live. As long as this spell is active that place is beset by a plague appropriate to your deity’s domains (locusts, death of the first born, etc.) While this spell is ongoing you take -1 to cast a spell.',
         level: '9',
         tags: [Tag.fromJSON('ongoing')],
+        classKeys: ['cleric'],
       )
     ],
     gearChoices: [
@@ -1896,7 +1897,7 @@ void initData() {
         key: 'born_of_the_soil',
         name: 'Born of the Soil',
         description:
-            'You learned your magic in a place whose spirits are strong and ancient and they’ve marked you as one of their own. No matter where you go, they live within you and allow you to take their shape. Choose one of the following. It is the land to which you are attuned—when shapeshifting you may take the shape of any animal who might live in your Land.\n\n - The Great Forests\n - The Whispering Plains\n - The Vast Desert\n - The Stinking Mire\n - The River Delta\n - The Depths of the Earth\n - The Sapphire Islands\n - The Open Sea\n - The Towering Mountains\n - The Frozen North\n - The Blasted Wasteland\nChose a tell—a physical attribute that marks you as born of the soil—that reflects the spirit of your land. It may be an animal feature like antlers or leopard’s spots or something more general: hair like leaves or eyes of glittering crystal. Your tell remains no matter what shape you take.',
+            'You learned your magic in a place whose spirits are strong and ancient and they’ve marked you as one of their own. No matter where you go, they live within you and allow you to take their shape. Choose one of the following. It is the land to which you are attuned—when shapeshifting you may take the shape of any animal who might live in your Land.\n\n* The Great Forests\n* The Whispering Plains\n* The Vast Desert\n* The Stinking Mire\n* The River Delta\n* The Depths of the Earth\n* The Sapphire Islands\n* The Open Sea\n* The Towering Mountains\n* The Frozen North\n* The Blasted Wasteland\nChose a tell—a physical attribute that marks you as born of the soil—that reflects the spirit of your land. It may be an animal feature like antlers or leopard’s spots or something more general: hair like leaves or eyes of glittering crystal. Your tell remains no matter what shape you take.',
         explanation: null,
         classes: ['druid'],
       ),
@@ -1920,7 +1921,7 @@ void initData() {
         key: 'shapeshifter',
         name: 'Shapeshifter',
         description:
-            'When you call upon the spirits to change your shape, roll+Wis. On a 10+ hold 3. On a 7–9 hold 2. On a miss hold 1 in addition to whatever the GM says.\nYou may take on the physical form of any species whose essence you have studied or who lives in your land: you and your possessions meld into a perfect copy of the species’ form. You have any innate abilities and weaknesses of the form: claws, wings, gills, breathing water instead of air. You still use your normal stats but some moves may be harder to trigger—a housecat will find it hard to do battle with an ogre. The GM will also tell you one or more moves associated with your new form. Spend 1 hold to make that move. Once you’re out of hold, you return to your natural form. At any time, you may spend all your hold and revert to your natural form.',
+            'When you call upon the spirits to change your shape, roll+Wis.\n* On a 10+ hold 3.\n* On a 7–9 hold 2. On a miss hold 1 in addition to whatever the GM says.\nYou may take on the physical form of any species whose essence you have studied or who lives in your land: you and your possessions meld into a perfect copy of the species’ form. You have any innate abilities and weaknesses of the form: claws, wings, gills, breathing water instead of air. You still use your normal stats but some moves may be harder to trigger—a housecat will find it hard to do battle with an ogre. The GM will also tell you one or more moves associated with your new form. Spend 1 hold to make that move. Once you’re out of hold, you return to your natural form. At any time, you may spend all your hold and revert to your natural form.',
         explanation: null,
         classes: ['druid'],
       ),
@@ -1953,7 +1954,7 @@ void initData() {
         key: 'communion_of_whispers',
         name: 'Communion of Whispers',
         description:
-            'When you spend time in a place, making note of its resident spirits and calling on the spirits of the land, roll+Wis. You will be granted a vision of significance to you, your allies, and the spirits around you. On a 10+ the vision will be clear and helpful to you. On a 7–9 the vision is unclear, its meaning murky. On a miss, the vision is upsetting, frightening, or traumatizing. The GM will describe it. Take -1 forward.',
+            'When you spend time in a place, making note of its resident spirits and calling on the spirits of the land, roll+Wis. You will be granted a vision of significance to you, your allies, and the spirits around you.\n* On a 10+ the vision will be clear and helpful to you.\n* On a 7–9 the vision is unclear, its meaning murky. On a miss, the vision is upsetting, frightening, or traumatizing. The GM will describe it. Take -1 forward.',
         explanation: null,
         classes: ['druid'],
       ),
@@ -2000,7 +2001,7 @@ void initData() {
         key: 'elemental_mastery',
         name: 'Elemental Mastery',
         description:
-            'When you call on the primal spirits of fire, water, earth or air to perform a task for you roll+Wis. On a 10+ choose two. On a 7–9 choose one. On a miss, some catastrophe occurs as a result of your calling.\n\n - The effect you desire comes to pass\n - You avoid paying nature’s price \n - You retain control',
+            'When you call on the primal spirits of fire, water, earth or air to perform a task for you roll+Wis.\n* On a 10+ choose two.\n* On a 7–9 choose one. On a miss, some catastrophe occurs as a result of your calling.\n\n* The effect you desire comes to pass\n* You avoid paying nature’s price\n* You retain control',
         explanation: null,
         classes: ['druid'],
       ),
@@ -2295,7 +2296,7 @@ void initData() {
         key: 'bend_bars_lift_gates',
         name: 'Bend Bars, Lift Gates',
         description:
-            'When you use pure strength to destroy an inanimate obstacle, roll+Str. On a 10+, choose 3. On a 7-9 choose 2.\n\n - It doesn’t take a very long time\n - Nothing of value is damaged\n - It doesn’t make an inordinate amount of noise\n - You can fix the thing again without a lot of effort',
+            'When you use pure strength to destroy an inanimate obstacle, roll+Str.\n* On a 10+, choose 3.\n* On a 7-9 choose 2.\n\n* It doesn’t take a very long time\n* Nothing of value is damaged\n* It doesn’t make an inordinate amount of noise\n* You can fix the thing again without a lot of effort',
         explanation: null,
         classes: ['fighter'],
       ),
@@ -2310,7 +2311,7 @@ void initData() {
         key: 'signature_weapon',
         name: 'Signature Weapon',
         description:
-            'This is your weapon. There are many like it, but this one is yours. Your weapon is your best friend. It is your life. You master it as you master your life. Your weapon, without you, is useless. Without your weapon, you are useless. You must wield your weapon true.\nChoose a base description, all are 2 weight:\n\n - Sword\n - Axe\n - Hammer\n - Spear\n - Flail\n - Fists\nChoose the range that best fits your weapon:\n\n - Hand\n - Close\n - Reach\nChoose two enhancements:\n\n - Hooks and spikes. +1 damage, but +1 weight.\n - Sharp. +2 piercing.\n - Perfectly weighted. Add precise.\n - Serrated edges. +1 damage.\n - Glows in the presence of one type of creature, your choice.\n - Huge. Add messy and forceful.\n - Versatile. Choose an additional range.\n - Well-crafted. -1 weight.\nChoose a look:\n\n - Ancient\n - Unblemished\n - Ornate\n - Blood-stained\n - Sinister',
+            'This is your weapon. There are many like it, but this one is yours. Your weapon is your best friend. It is your life. You master it as you master your life. Your weapon, without you, is useless. Without your weapon, you are useless. You must wield your weapon true.\nChoose a base description, all are 2 weight:\n\n* Sword\n* Axe\n* Hammer\n* Spear\n* Flail\n* Fists\nChoose the range that best fits your weapon:\n\n* Hand\n* Close\n* Reach\nChoose two enhancements:\n\n* Hooks and spikes. +1 damage, but +1 weight.\n* Sharp. +2 piercing.\n* Perfectly weighted. Add precise.\n* Serrated edges. +1 damage.\n* Glows in the presence of one type of creature, your choice.\n* Huge. Add messy and forceful.\n* Versatile. Choose an additional range.\n* Well-crafted. -1 weight.\nChoose a look:\n\n* Ancient\n* Unblemished\n* Ornate\n* Blood-stained\n* Sinister',
         explanation: null,
         classes: ['fighter'],
       )
@@ -2327,7 +2328,7 @@ void initData() {
         key: 'heirloom',
         name: 'Heirloom',
         description:
-            'When you consult the spirits that reside within your signature weapon, they will give you an insight relating to the current situation, and might ask you some questions in return, roll+CHA. On a 10+, the GM will give you good detail. On a 7-9, the GM will give you an impression.',
+            'When you consult the spirits that reside within your signature weapon, they will give you an insight relating to the current situation, and might ask you some questions in return, roll+CHA.\n* On a 10+, the GM will give you good detail.\n* On a 7-9, the GM will give you an impression.',
         explanation: null,
         classes: ['fighter'],
       ),
@@ -2413,7 +2414,7 @@ void initData() {
         key: 'evil_eye',
         name: 'Evil Eye',
         description:
-            'When you enter combat, roll+CHA. On a 10+, hold 2. On a 7-9, hold 1. Spend your hold to make eye contact with an NPC present, who freezes or flinches and can’t act until you break it off. On a 6-, your enemies immediately identify you as their biggest threat.',
+            'When you enter combat, roll+CHA.\n* On a 10+, hold 2.\n* On a 7-9, hold 1. Spend your hold to make eye contact with an NPC present, who freezes or flinches and can’t act until you break it off.\n* On a 6-, your enemies immediately identify you as their biggest threat.',
         explanation: null,
         classes: ['fighter'],
       ),
@@ -2444,7 +2445,7 @@ void initData() {
         key: 'through_death_s_eyes',
         name: 'Through Death’s Eyes',
         description:
-            'When you go into battle, roll+WIS. On a 10+, name someone who will live and someone who will die. On a 7-9, name someone who will live or someone who will die. Name NPCs, not player characters. The GM will make your vision come true, if it’s even remotely possible. On a 6- you see your own death and consequently take -1 ongoing throughout the battle.',
+            'When you go into battle, roll+WIS.\n* On a 10+, name someone who will live and someone who will die.\n* On a 7-9, name someone who will live or someone who will die. Name NPCs, not player characters. The GM will make your vision come true, if it’s even remotely possible.\n* On a 6- you see your own death and consequently take -1 ongoing throughout the battle.',
         explanation: null,
         classes: ['fighter'],
       ),
@@ -2523,7 +2524,7 @@ void initData() {
     key: 'paladin',
     name: 'Paladin',
     description:
-        'Hell awaits. An eternity of torment in fire or ice or whatever best suits the sins of the damned throngs of Dungeon World. All that stands between the pits of that grim torture and salvation is you. Holy man, armored war machine, templar of the Good and the Light, right? The cleric may say his prayers at night to the gods, dwelling in their heavens. The fighter may wield his sharp sword in the name of “good” but you know. Only you.\n\nEyes, hands, and sweet killing blow of the gods, you are. Yours is the gift of righteousness and virtue. Of justice. Vision, too. A purity of intent that your companions do not have.\n\nSo guide these fools, paladin. Take up your holy cause and bring salvation to the wastrel world. \n\nVae victis, right?',
+        'Hell awaits. An eternity of torment in fire or ice or whatever best suits the sins of the damned throngs of Dungeon World. All that stands between the pits of that grim torture and salvation is you. Holy man, armored war machine, templar of the Good and the Light, right? The cleric may say his prayers at night to the gods, dwelling in their heavens. The fighter may wield his sharp sword in the name of “good” but you know. Only you.\n\nEyes, hands, and sweet killing blow of the gods, you are. Yours is the gift of righteousness and virtue. Of justice. Vision, too. A purity of intent that your companions do not have.\n\nSo guide these fools, paladin. Take up your holy cause and bring salvation to the wastrel world.\n\nVae victis, right?',
     load: 12,
     baseHP: 10,
     damage: Dice.parse('1d10'),
@@ -2581,7 +2582,7 @@ void initData() {
         key: 'lay_on_hands',
         name: 'Lay on Hands',
         description:
-            'When you touch someone, skin to skin, and pray for their well-being , roll+CHA. On a 10+ you heal 1d8 damage or remove one disease. On a 7–9, they are healed, but the damage or disease is transferred to you.',
+            'When you touch someone, skin to skin, and pray for their well-being , roll+CHA.\n* On a 10+ you heal 1d8 damage or remove one disease.\n* On a 7–9, they are healed, but the damage or disease is transferred to you.',
         explanation: null,
         classes: ['paladin'],
       ),
@@ -2596,7 +2597,7 @@ void initData() {
         key: 'i_am_the_law',
         name: 'I Am the Law',
         description:
-            'When you give an NPC an order based on your divine authority, roll+Cha. On a 7+, they choose one:\n\n - Do what you say\n - Back away cautiously, then flee\n - Attack you\nOn a 10+, you also take +1 forward against them. On a miss, they do as they please and you take -1 forward against them.',
+            'When you give an NPC an order based on your divine authority, roll+Cha.\n* On a 7+, they choose one:\n\n* Do what you say\n* Back away cautiously, then flee\n* Attack you\nOn a 10+, you also take +1 forward against them. On a miss, they do as they please and you take -1 forward against them.',
         explanation: null,
         classes: ['paladin'],
       ),
@@ -2604,7 +2605,7 @@ void initData() {
         key: 'quest',
         name: 'Quest',
         description:
-            'When you dedicate yourself to a mission through prayer and ritual cleansing, state what you set out to do:\n\n - Slay __________, a great blight on the land\n - Defend __________ from the iniquities that beset them\n - Discover the truth of __________\nThen choose up to two boons:\n\n - An unwavering sense of direction to __________.\n - Invulnerability to __________ (e.g., edged weapons, fire, enchantment, etc.)\n - A mark of divine authority\n - Senses that pierce lies\n - A voice that transcends language\n - A freedom from hunger, thirst, and sleep\nThe GM will then tell you what vow or vows is required of you to maintain your blessing:\n\n - Honor (forbidden: cowardly tactics and tricks)\n - Temperance (forbidden: gluttony in food, drink, and pleasure of the flesh)\n - Piety (required: observance of daily holy services)\n - Valor (forbidden: suffering an evil creature to live)\n - Truth (forbidden: lies)\n - Hospitality (required: comfort to those in need, no matter who they are)',
+            'When you dedicate yourself to a mission through prayer and ritual cleansing, state what you set out to do:\n\n* Slay __________, a great blight on the land\n* Defend __________ from the iniquities that beset them\n* Discover the truth of __________\nThen choose up to two boons:\n\n* An unwavering sense of direction to __________.\n* Invulnerability to __________ (e.g., edged weapons, fire, enchantment, etc.)\n* A mark of divine authority\n* Senses that pierce lies\n* A voice that transcends language\n* A freedom from hunger, thirst, and sleep\nThe GM will then tell you what vow or vows is required of you to maintain your blessing:\n\n* Honor (forbidden: cowardly tactics and tricks)\n* Temperance (forbidden: gluttony in food, drink, and pleasure of the flesh)\n* Piety (required: observance of daily holy services)\n* Valor (forbidden: suffering an evil creature to live)\n* Truth (forbidden: lies)\n* Hospitality (required: comfort to those in need, no matter who they are)',
         explanation: null,
         classes: ['paladin'],
       )
@@ -2892,7 +2893,7 @@ void initData() {
         key: 'hunt_and_track',
         name: 'Hunt and Track',
         description:
-            'When you follow a trail of clues left behind by passing creatures, roll+WIS. On a 7+, you follow the creature’s trail until there’s a significant change in its direction or mode of travel. On a 10+, you also choose 1:\n\n - Gain a useful bit of information about your quarry, the GM will tell you what\n - Determine what caused the trail to end',
+            'When you follow a trail of clues left behind by passing creatures, roll+WIS.\n* On a 7+, you follow the creature’s trail until there’s a significant change in its direction or mode of travel.\n* On a 10+, you also choose 1:\n\n* Gain a useful bit of information about your quarry, the GM will tell you what\n* Determine what caused the trail to end',
         explanation: null,
         classes: ['ranger'],
       ),
@@ -2900,7 +2901,7 @@ void initData() {
         key: 'called_shot',
         name: 'Called Shot',
         description:
-            'When you attack a defenseless or surprised enemy at range, you can choose to deal your damage or name your target and roll+DEX.\n\n - Head 10+: As 7–9, plus your damage 7-9: They do nothing but stand and drool for a few moments.\n - Arms 10+: As 7-9, plus your damage 7-9: They drop anything they’re holding.\n - Legs 10+: As 7-9, plus your damage 7-9: They’re hobbled and slow moving.',
+            'When you attack a defenseless or surprised enemy at range, you can choose to deal your damage or name your target and roll+DEX.\n\n* Head 10+: As 7–9, plus your damage 7-9: They do nothing but stand and drool for a few moments.\n* Arms 10+: As 7-9, plus your damage 7-9: They drop anything they’re holding.\n* Legs 10+: As 7-9, plus your damage 7-9: They’re hobbled and slow moving.',
         explanation: null,
         classes: ['ranger'],
       ),
@@ -2908,7 +2909,7 @@ void initData() {
         key: 'animal_companion',
         name: 'Animal Companion',
         description:
-            'You have a supernatural connection with a loyal animal. You can’t talk to it per se but it always acts as you wish it to. Name your animal companion and choose a species:\nWolf, cougar, bear, eagle, dog, hawk, cat, owl, pigeon, rat, mule\nChoose a base:\n\n - Ferocity +2, Cunning +1, 1 Armor, Instinct +1\n - Ferocity +2, Cunning +2, 0 Armor, Instinct +1\n - Ferocity +1, Cunning +2, 1 Armor, Instinct +1\n - Ferocity +3, Cunning +1, 1 Armor, Instinct +2\nChoose as many strengths as its ferocity:\nFast, burly, huge, calm, adaptable, quick reflexes, tireless, camouflage, ferocious, intimidating, keen senses, stealthy\nYour animal companion is trained to fight humanoids. Choose as many additional trainings as its cunning:\nHunt, search, scout, guard, fight monsters, perform, labor, travel\nChoose as many weaknesses as its instinct:\nFlighty, savage, slow, broken, frightening, forgetful, stubborn, lame',
+            'You have a supernatural connection with a loyal animal. You can’t talk to it per se but it always acts as you wish it to. Name your animal companion and choose a species:\nWolf, cougar, bear, eagle, dog, hawk, cat, owl, pigeon, rat, mule\nChoose a base:\n\n* Ferocity +2, Cunning +1, 1 Armor, Instinct +1\n* Ferocity +2, Cunning +2, 0 Armor, Instinct +1\n* Ferocity +1, Cunning +2, 1 Armor, Instinct +1\n* Ferocity +3, Cunning +1, 1 Armor, Instinct +2\nChoose as many strengths as its ferocity:\nFast, burly, huge, calm, adaptable, quick reflexes, tireless, camouflage, ferocious, intimidating, keen senses, stealthy\nYour animal companion is trained to fight humanoids. Choose as many additional trainings as its cunning:\nHunt, search, scout, guard, fight monsters, perform, labor, travel\nChoose as many weaknesses as its instinct:\nFlighty, savage, slow, broken, frightening, forgetful, stubborn, lame',
         explanation: null,
         classes: ['ranger'],
       ),
@@ -2916,7 +2917,7 @@ void initData() {
         key: 'command',
         name: 'Command',
         description:
-            'When you work with your animal companion on something it’s trained in…\n\n - …and you attack the same target, add its ferocity to your damage\n - …and you track, add its cunning to your roll\n - …and you take damage, add its armor to your armor\n - …and you Discern Realities, add its cunning to your roll\n - …and you parley, add its cunning to your roll\n - …and someone interferes with you, add its instinct to their roll',
+            'When you work with your animal companion on something it’s trained in…\n\n* …and you attack the same target, add its ferocity to your damage\n* …and you track, add its cunning to your roll\n* …and you take damage, add its armor to your armor\n* …and you Discern Realities, add its cunning to your roll\n* …and you parley, add its cunning to your roll\n* …and someone interferes with you, add its instinct to their roll',
         explanation: null,
         classes: ['ranger'],
       )
@@ -3019,7 +3020,7 @@ void initData() {
         key: 'hunter_s_prey',
         name: 'Hunter’s Prey',
         description:
-            'When you Spout Lore about a monster you use WIS instead of INT. On a 12+, in addition to the normal effects, you get to ask the GM any one question about the subject.',
+            'When you Spout Lore about a monster you use WIS instead of INT.\n* On a 12+, in addition to the normal effects, you get to ask the GM any one question about the subject.',
         explanation: null,
         classes: ['ranger'],
       ),
@@ -3206,7 +3207,7 @@ void initData() {
         key: 'trap_expert',
         name: 'Trap Expert',
         description:
-            'When you spend a moment to survey a dangerous area, roll+DEX. On a 10+, hold 3. On a 7–9, hold 1. Spend your hold as you walk through the area to ask these questions:\n\n - Is there a trap here and if so, what activates it?\n - What does the trap do when activated?\n - What else is hidden here?',
+            'When you spend a moment to survey a dangerous area, roll+DEX.\n* On a 10+, hold 3.\n* On a 7–9, hold 1. Spend your hold as you walk through the area to ask these questions:\n\n* Is there a trap here and if so, what activates it?\n* What does the trap do when activated?\n* What else is hidden here?',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3214,7 +3215,7 @@ void initData() {
         key: 'tricks_of_the_trade',
         name: 'Tricks of the Trade',
         description:
-            'When you pick locks or pockets or disable traps, roll+DEX. On a 10+, you do it, no problem. On a 7–9, you still do it, but the GM will offer you two options between suspicion, danger, or cost.',
+            'When you pick locks or pockets or disable traps, roll+DEX.\n* On a 10+, you do it, no problem.\n* On a 7–9, you still do it, but the GM will offer you two options between suspicion, danger, or cost.',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3222,7 +3223,7 @@ void initData() {
         key: 'backstab',
         name: 'Backstab',
         description:
-            'When you attack a surprised or defenseless enemy with a melee weapon, you can choose to deal your damage or roll+DEX. On a 10+ choose two. On a 7–9 choose one.\n\n - You don’t get into melee with them\n - You deal your damage+1d6\n - You create an advantage, +1 forward to you or an ally acting on it\n - Reduce their armor by 1 until they repair it',
+            'When you attack a surprised or defenseless enemy with a melee weapon, you can choose to deal your damage or roll+DEX.\n* On a 10+ choose two.\n* On a 7–9 choose one.\n\n* You don’t get into melee with them\n* You deal your damage+1d6\n* You create an advantage, +1 forward to you or an ally acting on it\n* Reduce their armor by 1 until they repair it',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3238,7 +3239,7 @@ void initData() {
         key: 'poisoner',
         name: 'Poisoner',
         description:
-            'You’ve mastered the care and use of a poison. Choose a poison from the list below; that poison is no longer dangerous for you to use. You also start with three uses of the poison you choose. Whenever you have time to gather materials and a safe place to brew you can make three uses of the poison you choose for free. Note that some poisons are applied, meaning you have to carefully apply it to the target or something they eat or drink. Touch poisons just need to touch the target, they can even be used on the blade of a weapon.\n\n - Oil of Tagit (applied): The target falls into a light sleep\n - Bloodweed (touch): The target deals -1d4 damage ongoing until cured\n - Goldenroot (applied): The target treats the next creature they see as a trusted ally, until proved otherwise\n - Serpent’s Tears (touch): Anyone dealing damage to the target rolls twice and takes the better result.',
+            'You’ve mastered the care and use of a poison. Choose a poison from the list below; that poison is no longer dangerous for you to use. You also start with three uses of the poison you choose. Whenever you have time to gather materials and a safe place to brew you can make three uses of the poison you choose for free. Note that some poisons are applied, meaning you have to carefully apply it to the target or something they eat or drink. Touch poisons just need to touch the target, they can even be used on the blade of a weapon.\n\n* Oil of Tagit (applied): The target falls into a light sleep\n* Bloodweed (touch): The target deals -1d4 damage ongoing until cured\n* Goldenroot (applied): The target treats the next creature they see as a trusted ally, until proved otherwise\n* Serpent’s Tears (touch): Anyone dealing damage to the target rolls twice and takes the better result.',
         explanation: null,
         classes: ['thief'],
       )
@@ -3309,7 +3310,7 @@ void initData() {
         key: 'connections',
         name: 'Connections',
         description:
-            'When you put out word to the criminal underbelly about something you want or need, roll+CHA. On a 10+, someone has it, just for you. On a 7–9, you’ll have to settle for something close or it comes with strings attached, your call.',
+            'When you put out word to the criminal underbelly about something you want or need, roll+CHA.\n* On a 10+, someone has it, just for you.\n* On a 7–9, you’ll have to settle for something close or it comes with strings attached, your call.',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3327,7 +3328,7 @@ void initData() {
         key: 'extremely_cautious',
         name: 'Extremely Cautious',
         description:
-            'When you use Trap Expert you always get +1 hold, even on a 6-. On a 12+ you get 3 hold and the next time you come near a trap the GM will immediately tell you what it does, what triggers it, who set it, and how you can use it to your advantage.',
+            'When you use Trap Expert you always get +1 hold, even on a 6-.\n* On a 12+ you get 3 hold and the next time you come near a trap the GM will immediately tell you what it does, what triggers it, who set it, and how you can use it to your advantage.',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3335,7 +3336,7 @@ void initData() {
         key: 'alchemist',
         name: 'Alchemist',
         description:
-            'When you have you have time to gather materials and a safe place to brew you can create three doses of any poison you’ve used before. Alternately you can describe the effects of a poison you’d like to create. The GM will tell you that you can create it, but with one or more caveats:\n\n - It will only work under specific circumstances\n - The best you can manage is a weaker version\n - It’ll take a while to take effect\n - It’ll have obvious side effects',
+            'When you have you have time to gather materials and a safe place to brew you can create three doses of any poison you’ve used before. Alternately you can describe the effects of a poison you’d like to create. The GM will tell you that you can create it, but with one or more caveats:\n\n* It will only work under specific circumstances\n* The best you can manage is a weaker version\n* It’ll take a while to take effect\n* It’ll have obvious side effects',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3366,7 +3367,7 @@ void initData() {
         key: 'escape_route',
         name: 'Escape Route',
         description:
-            'When you’re in too deep and need a way out, name your escape route and roll+DEX. On a 10+ you’re gone. On a 7–9 you can stay or go, but if you go it costs you: leave something behind or take something with you, the GM will tell you what.',
+            'When you’re in too deep and need a way out, name your escape route and roll+DEX.\n* On a 10+ you’re gone.\n* On a 7–9 you can stay or go, but if you go it costs you: leave something behind or take something with you, the GM will tell you what.',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3382,7 +3383,7 @@ void initData() {
         key: 'heist',
         name: 'Heist',
         description:
-            'When you take time to make a plan to steal something, name the thing you want to steal and ask the GM these questions. When acting on the answers you and your allies take +1 forward.\n\n - Who will notice it’s missing?\n - What’s its most powerful defense?\n - Who will come after it?\n - Who else wants it?',
+            'When you take time to make a plan to steal something, name the thing you want to steal and ask the GM these questions. When acting on the answers you and your allies take +1 forward.\n\n* Who will notice it’s missing?\n* What’s its most powerful defense?\n* Who will come after it?\n* Who else wants it?',
         explanation: null,
         classes: ['thief'],
       ),
@@ -3539,7 +3540,7 @@ void initData() {
         key: 'prepare_spells',
         name: 'Prepare Spells',
         description:
-            'When you spend uninterrupted time (an hour or so) in quiet contemplation of your spellbook, you:\nLose any spells you already have prepared\n\nPrepare new spells of your choice from your spellbook whose total levels don’t exceed your own level+1.\n\nPrepare your cantrips which never count against your limit.\n - Lose any spells you already have prepared\n - Prepare new spells of your choice from your spellbook whose total levels don’t exceed your own level+1.\n - Prepare your cantrips which never count against your limit.',
+            'When you spend uninterrupted time (an hour or so) in quiet contemplation of your spellbook, you:\nLose any spells you already have prepared\n\nPrepare new spells of your choice from your spellbook whose total levels don’t exceed your own level+1.\n\nPrepare your cantrips which never count against your limit.\n* Lose any spells you already have prepared\n* Prepare new spells of your choice from your spellbook whose total levels don’t exceed your own level+1.\n* Prepare your cantrips which never count against your limit.',
         explanation: null,
         classes: ['wizard'],
       ),
@@ -3555,7 +3556,7 @@ void initData() {
         key: 'ritual',
         name: 'Ritual',
         description:
-            'When you draw on a place of power to create a magical effect, tell the GM what you’re trying to achieve. Ritual effects are always possible, but the GM will give you one to four of the following conditions:\nIt’s going to take days/weeks/months\n\nFirst you must __________\n\nYou’ll need help from __________\n\nIt will require a lot of money\n\nThe best you can do is a lesser version, unreliable and limited\n\nYou and your allies will risk danger from __________\n\nYou’ll have to disenchant __________ to do it\n - It’s going to take days/weeks/months\n - First you must __________\n - You’ll need help from __________\n - It will require a lot of money\n - The best you can do is a lesser version, unreliable and limited\n - You and your allies will risk danger from __________\n - You’ll have to disenchant __________ to do it',
+            'When you draw on a place of power to create a magical effect, tell the GM what you’re trying to achieve. Ritual effects are always possible, but the GM will give you one to four of the following conditions:\nIt’s going to take days/weeks/months\n\nFirst you must __________\n\nYou’ll need help from __________\n\nIt will require a lot of money\n\nThe best you can do is a lesser version, unreliable and limited\n\nYou and your allies will risk danger from __________\n\nYou’ll have to disenchant __________ to do it\n* It’s going to take days/weeks/months\n* First you must __________\n* You’ll need help from __________\n* It will require a lot of money\n* The best you can do is a lesser version, unreliable and limited\n* You and your allies will risk danger from __________\n* You’ll have to disenchant __________ to do it',
         explanation: null,
         classes: ['wizard'],
       ),
@@ -3563,7 +3564,7 @@ void initData() {
         key: 'cast_a_spell',
         name: 'Cast a Spell',
         description:
-            'When you unleash a spell granted to you by your deity, roll+Wis. On a 10+, the spell is successfully cast and your deity does not revoke the spell, so you may cast it again. On a 7–9, the spell is cast, but choose one:\n\n - You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n - Your casting distances you from your deity—take -1 ongoing to cast a spell until the next time you commune.\n - After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.',
+            'When you unleash a spell granted to you by your deity, roll+Wis.\n* On a 10+, the spell is successfully cast and your deity does not revoke the spell, so you may cast it again.\n* On a 7–9, the spell is cast, but choose one:\n\n* You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n* Your casting distances you from your deity—take -1 ongoing to cast a spell until the next time you commune.\n* After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.',
         explanation: null,
         classes: ['cleric', 'wizard'],
       )
@@ -3580,7 +3581,7 @@ void initData() {
         key: 'empowered_magic',
         name: 'Empowered Magic',
         description:
-            'When you Cast a Spell, on a 10+ you have the option of choosing from the 7-9 list. If you do, you may choose one of these as well:\nThe spell’s effects are maximized\n\nThe spell’s targets are doubled\n - The spell’s effects are maximized\n - The spell’s targets are doubled',
+            'When you Cast a Spell, on a 10+ you have the option of choosing from the 7-9 list. If you do, you may choose one of these as well:\nThe spell’s effects are maximized\n\nThe spell’s targets are doubled\n* The spell’s effects are maximized\n* The spell’s targets are doubled',
         explanation: null,
         classes: ['wizard'],
       ),
@@ -3634,7 +3635,7 @@ void initData() {
         key: 'counterspell',
         name: 'Counterspell',
         description:
-            'When you attempt to counter an arcane spell that will otherwise affect you, stake one of your prepared spells on the defense and roll+Int. On a 10+, the spell is countered and has no effect on you. On a 7-9, the spell is countered and you forget the spell you staked. Your counterspell protects only you; if the countered spell has other targets they get its effects.',
+            'When you attempt to counter an arcane spell that will otherwise affect you, stake one of your prepared spells on the defense and roll+Int.\n* On a 10+, the spell is countered and has no effect on you.\n* On a 7-9, the spell is countered and you forget the spell you staked. Your counterspell protects only you; if the countered spell has other targets they get its effects.',
         explanation: null,
         classes: ['wizard'],
       ),
@@ -3660,7 +3661,7 @@ void initData() {
         key: 'greater_empowered_magic',
         name: 'Greater Empowered Magic',
         description:
-            'When you Cast a Spell, on a 10-11 you have the option of choosing from the 7-9 list. If you do, you may choose one of these effects as well. On a 12+ you get to choose one of these effects for free:\nThe spell’s effects are doubled\n\nThe spell’s targets are doubled\n - The spell’s effects are doubled\n - The spell’s targets are doubled',
+            'When you Cast a Spell, on a 10-11 you have the option of choosing from the 7-9 list. If you do, you may choose one of these effects as well.\n* On a 12+ you get to choose one of these effects for free:\nThe spell’s effects are doubled\n\nThe spell’s targets are doubled\n* The spell’s effects are doubled\n* The spell’s targets are doubled',
         explanation: null,
         classes: ['wizard'],
       ),
@@ -3676,7 +3677,7 @@ void initData() {
         key: 'highly_logical',
         name: 'Highly Logical',
         description:
-            'When you use strict deduction to analyze your surroundings, you can Discern Realities with Int instead of Wis. On a 12+ you get to ask the GM any three questions, not limited by the list.',
+            'When you use strict deduction to analyze your surroundings, you can Discern Realities with Int instead of Wis.\n* On a 12+ you get to ask the GM any three questions, not limited by the list.',
         explanation: null,
         classes: ['wizard'],
       ),
@@ -3737,6 +3738,7 @@ void initData() {
             'You teleport a creature to your presence. Name a creature or give a short description of a type of creature. If you named a creature, that creature appears before you. If you described a type of creature, a creature of that type appears before you.',
         level: '9',
         tags: [Tag.fromJSON('summoning')],
+        classKeys: ['wizard'],
       )
     ],
     gearChoices: [
@@ -5572,7 +5574,7 @@ void initData() {
     key: 'hack_slash',
     name: 'Hack & Slash',
     description:
-        'When you **attack an enemy in melee**, roll+Str. On a 10+ you deal your damage to the enemy and avoid their attack. At your option, you may choose to do +1d6 damage but expose yourself to the enemy’s attack. On a 7–9, you deal your damage to the enemy and the enemy makes an attack against you.',
+        'When you **attack an enemy in melee**, roll+Str.\n* On a 10+ you deal your damage to the enemy and avoid their attack. At your option, you may choose to do +1d6 damage but expose yourself to the enemy’s attack.\n* On a 7–9, you deal your damage to the enemy and the enemy makes an attack against you.',
     explanation: null,
     classes: [],
   ));
@@ -5580,7 +5582,7 @@ void initData() {
     key: 'defy_danger',
     name: 'Defy Danger',
     description:
-        'When you act despite an imminent threat or suffer a calamity, say how you deal with it and roll. If you do it...\n\n * by powering through, +Str \n * by getting out of the way or acting fast, +Dex\n * by enduring, +Con\n * with quick thinking, +Int\n * through mental fortitude, +Wis\n * sing charm and social grace, +Cha\n\nOn a 10+, you do what you set out to, the threat doesn’t come to bear. On a 7–9, you stumble, hesitate, or flinch: the GM will offer you a worse outcome, hard bargain, or ugly choice.',
+        'When you act despite an imminent threat or suffer a calamity, say how you deal with it and roll. If you do it...\n\n * by powering through, +Str\n * by getting out of the way or acting fast, +Dex\n * by enduring, +Con\n * with quick thinking, +Int\n * through mental fortitude, +Wis\n * sing charm and social grace, +Cha\n\nOn a 10+, you do what you set out to, the threat doesn’t come to bear.\n* On a 7–9, you stumble, hesitate, or flinch: the GM will offer you a worse outcome, hard bargain, or ugly choice.',
     explanation: null,
     classes: [],
   ));
@@ -5588,7 +5590,7 @@ void initData() {
     key: 'defend',
     name: 'Defend',
     description:
-        'When you stand in defense of a person, item, or location under attack, roll+Con. On a 10+, hold 3. On a 7–9, hold 1. So long as you stand in defense, when you or the thing you defend is attacked you may spend hold, 1 for 1, to choose an option:\n\n * Redirect an attack from the thing you defend to yourself\n * Halve the attack’s effect or damage\n * Open up the attacker to an ally giving that ally +1 forward against the attacker\n * Deal damage to the attacker equal to your level',
+        'When you stand in defense of a person, item, or location under attack, roll+Con.\n* On a 10+, hold 3.\n* On a 7–9, hold 1. So long as you stand in defense, when you or the thing you defend is attacked you may spend hold, 1 for 1, to choose an option:\n\n * Redirect an attack from the thing you defend to yourself\n * Halve the attack’s effect or damage\n * Open up the attacker to an ally giving that ally +1 forward against the attacker\n * Deal damage to the attacker equal to your level',
     explanation:
         'Defending something means standing nearby and focusing on preventing attacks against that thing or stopping anyone from getting near it. When you’re no longer nearby or you stop devoting your attention to incoming attacks then you lose any hold you might have had.\n\nYou can only spend hold when someone makes an attack on you or the thing you’re defending. The choices you can make depend on the attacker and the type of attack. In particular, you can’t deal damage to an attacker who you can’t reach with your weapon.\n\nAn attack is any action you can interfere with that has harmful effects. Swords and arrows are attacks, of course, but so are spells, grabs, and charges.\n\nIf the attack doesn’t deal damage then halving it means the attacker gets some of what they want but not all of it. It’s up to you and the GM to work out what that means depending on the circumstances. If you’re defending the Gem Eye of Oro-Uht and an orc tries to grab it from its pedestal then half effect might mean that the gem gets knocked to the floor but the orc doesn’t get his hands on it, yet. Or maybe the orc gets a hold of it but so do you—now you’re both fighting over it, tooth and nail. If you and the GM can’t agree on a halved effect you can’t choose that option.\n\nDefending yourself is certainly an option. It amounts to giving up on making attacks and just trying to keep yourself safe.\n\n*GM: Avon, you begin weaving the spell to push the necromancer’s ghost back through the gates but the zombies are bearing down on you.\n\nLux: Don’t worry, squishy Avon, I will save you. While Avon casts his spell, I swear to protect him—I slam my hammer on my shield and yell “If you want to stop him, you’ll have to come through me.” I’d like to defend Avon.\n\nGM: And with such gusto, too. Roll+Con.\n\nLux: I get an 11, three hold, right?\n\nAvon: Better get ready to use it, Lux. I got an 8 on my spellcasting roll—I choose to put myself in danger.\n\nGM: Of course you do. The zombies are drawn by the magical disturbance, lurching toward you on the attack. Suddenly, you’re swarmed by them, they’re everywhere! What do you do?\n\nAvon: Squeak helplessly?\n\nLux: I’m on it. I spend a point of my hold to redirect the attack to me—I shove Avon aside and let the full fury of my goodness spill out in waves, angering the undead. To be safe, I’m going to whip my hammer in an arc and deal my damage. I might as well use it all up and reduce the damage by half. My god protects us!\n\nGM: So, Hadrian, you’ve been defending Durga while she heals Willem, but now Willem is better. What do you do?\n\nDurga: I leap forward to drive back the troglodytes!\n\nHadrian: I want to tangle with this crocodilian.\n\nGM: Okay, Durga, the trogs come at you with their clubs.\n\nHadrian: No way, I still have hold left over, I want to spend it to redirect that attack to myself.\n\nGM: You two are spread out, now. How are you going to do that if you’re 20 yards away? You lost your hold when you attacked the croc, my friend.\n\nHadrian: Yeah, I guess I’m not “standing in defense” anymore. Forget it, you’re on your own, Durga!*',
     classes: [],
@@ -5597,7 +5599,7 @@ void initData() {
     key: 'volley',
     name: 'Volley',
     description:
-        'When you take aim and **shoot at an enemy at range**, roll+Dex. On a 10+ you have a clear shot—deal your damage. On a 7–9, choose one (whichever you choose you deal your damage):\n\n * You have to move to get the shot placing you in danger of the GM’s choice\n * You have to take what you can get: -1d6 damage\n * You have to take several shots, reducing your ammo by one.',
+        'When you take aim and **shoot at an enemy at range**, roll+Dex.\n* On a 10+ you have a clear shot—deal your damage.\n* On a 7–9, choose one (whichever you choose you deal your damage):\n\n * You have to move to get the shot placing you in danger of the GM’s choice\n * You have to take what you can get: -1d6 damage\n * You have to take several shots, reducing your ammo by one.',
     explanation: null,
     classes: [],
   ));
@@ -5605,7 +5607,7 @@ void initData() {
     key: 'discern_realities',
     name: 'Discern Realities',
     description:
-        'When you **closely study a situation or person**, roll+Wis. On a 10+ ask the GM three questions from the list below. On a 7–9 ask only one. Take +1 forward when acting on the answers.\n\n * What happened here recently?\n * What is about to happen?\n * What should I be on the lookout for?\n * What here is useful or valuable to me?\n * Who’s really in control here?\n * What here is not what it appears to be?',
+        'When you **closely study a situation or person**, roll+Wis.\n* On a 10+ ask the GM three questions from the list below.\n* On a 7–9 ask only one. Take +1 forward when acting on the answers.\n\n * What happened here recently?\n * What is about to happen?\n * What should I be on the lookout for?\n * What here is useful or valuable to me?\n * Who’s really in control here?\n * What here is not what it appears to be?',
     explanation: null,
     classes: [],
   ));
@@ -5613,7 +5615,7 @@ void initData() {
     key: 'parley',
     name: 'Parley',
     description:
-        'When you **have leverage on a GM character and manipulate them**, roll+Cha. Leverage is something they need or want. On a hit they ask you for something and do it if you make them a promise first. On a 7–9, they need some concrete assurance of your promise, right now.',
+        'When you **have leverage on a GM character and manipulate them**, roll+Cha. Leverage is something they need or want. On a hit they ask you for something and do it if you make them a promise first.\n* On a 7–9, they need some concrete assurance of your promise, right now.',
     explanation: null,
     classes: [],
   ));
@@ -5621,7 +5623,7 @@ void initData() {
     key: 'spout_lore',
     name: 'Spout Lore',
     description:
-        'When you **consult your accumulated knowledge about something**, roll+Int. On a 10+ the GM will tell you something interesting and useful about the subject relevant to your situation. On a 7–9 the GM will only tell you something interesting—it’s on you to make it useful. The GM might ask you “How do you know this?” Tell them the truth, now.',
+        'When you **consult your accumulated knowledge about something**, roll+Int.\n* On a 10+ the GM will tell you something interesting and useful about the subject relevant to your situation.\n* On a 7–9 the GM will only tell you something interesting—it’s on you to make it useful. The GM might ask you “How do you know this?” Tell them the truth, now.',
     explanation: null,
     classes: [],
   ));
@@ -5629,7 +5631,7 @@ void initData() {
     key: 'aid_or_interfere',
     name: 'Aid or Interfere',
     description:
-        'When you **help or hinder someone you have a Bond with**, roll+Bond with them. On a hit they take +1 or -2, your choice. On a 7–9 you also expose yourself to danger, retribution, or cost.',
+        'When you **help or hinder someone you have a Bond with**, roll+Bond with them. On a hit they take +1 or -2, your choice.\n* On a 7–9 you also expose yourself to danger, retribution, or cost.',
     explanation:
         'Any time you feel like two players should be rolling against each other, the defender should be interfering with the attacker. This doesn’t always mean sabotaging them. It can mean anything from arguing against a parley to just being a shifty person who’s hard to discern. It’s about getting in the way of another players’ success.\n\nAlways ask the person aiding or interfering how they are doing it. As long as they can answer that, they trigger the move. Sometimes, as the GM, you’ll have to ask if interference is happening. Your players might not always notice they’re interfering with each other.\n\nAid is a little more obvious. If a player can explain how they’re helping with a move and it makes sense, let them roll to aid.\n\nNo matter how many people aid or interfere with a given roll, the target only gets the +1 or -2 once. Even if a whole party of adventurers aid in attacking an ogre, the one who makes the final attack only gets +1.\n\n\n*GM: Ozruk, you stand alone and bloodied before a pack of angry hellhounds. Behind you cowers the Prince of Lescia, weeping in terror.\n\nOzruk: I stand firm and lift my shield. Despite certain doom, I will do my duty and defend the princeling.\n\nAronwe: I emerge from the shadows and draw my sword! “Doom is not so certain, dwarf!” I stand beside him. I want to help him defend. “Though I do not know you well, I have seen you in battle, Ozruk. If we are to die today, we die as brothers!” I don’t have any bonds with him but I want to try anyway.\n\nGM: Touching, really. Okay, roll+0 and if you succeed, Ozruk, take +1 to your defend attempt. Here we go!*',
     classes: [],
@@ -5641,6 +5643,7 @@ void initData() {
         'An item you touch glows with arcane light, about as bright as a torch. It gives off no heat or sound and requires no fuel, but it is otherwise like a mundane torch. You have complete control of the color of the flame. The spell lasts as long as it is in your presence.',
     level: 'cantrip',
     tags: [],
+    classKeys: ['cleric', 'wizard'],
   ));
   spellList.add(Spell(
     key: 'sanctify',
@@ -5649,6 +5652,7 @@ void initData() {
         'Food or water you hold in your hands while you cast this spell is consecrated by your deity. In addition to now being holy or unholy, the affected substance is purified of any mundane spoilage.',
     level: 'rote',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'guidance',
@@ -5657,6 +5661,7 @@ void initData() {
         'The symbol of your deity appears before you and gestures towards the direction or course of action your deity would have you take then disappears. The message is through gesture only; your communication through this spell is severely limited.',
     level: 'rote',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'bless',
@@ -5665,6 +5670,7 @@ void initData() {
         'Your deity smiles upon a combatant of your choice. They take +1 ongoing so long as battle continues and they stand and fight. While this spell is ongoing you take -1 to cast a spell.',
     level: '1',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'cure_light_wounds',
@@ -5673,6 +5679,7 @@ void initData() {
         'At your touch wounds scab and bones cease to ache. Heal an ally you touch of 1d8 damage.',
     level: '1',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'detect_alignment',
@@ -5681,6 +5688,7 @@ void initData() {
         'When you cast this spell choose an alignment: Good, Evil, Lawful, or Chaotic. One of your senses is briefly able to detect that alignment. The GM will tell you what here is of that alignment.',
     level: '1',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'cause_fear',
@@ -5689,6 +5697,7 @@ void initData() {
         'Choose a target you can see and a nearby object. The target is afraid of the object so long as you maintain the spell. Their reaction is up to them: flee, panic, beg, fight. While this spell is ongoing you take -1 to cast a spell. You cannot target entities with less than animal intelligence (magical constructs, undead, automatons, and the like).',
     level: '1',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'magic_weapon',
@@ -5697,6 +5706,7 @@ void initData() {
         'The weapon you hold while casting does +1d4 damage until you dismiss this spell. While this spell is ongoing you take -1 to cast a spell.',
     level: '1',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'sanctuary',
@@ -5705,6 +5715,7 @@ void initData() {
         'As you cast this spell, you walk the perimeter of an area, consecrating it to your deity. As long as you stay within that area you are alerted whenever someone acts with malice within the sanctuary (including entering with harmful intent). Anyone who receives healing within a sanctuary heals +1d4 HP.',
     level: '1',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'speak_with_dead',
@@ -5713,14 +5724,16 @@ void initData() {
         'A corpse converses with you briefly. It will answer any three questions you pose to it to the best of the knowledge it had in life and the knowledge it gained in death.',
     level: '1',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'animate_dead',
     name: 'Animate Dead',
     description:
-        'You invoke a hungry spirit to possess a recently-dead body and serve you. This creates a zombie that follows your orders to the best of its limited abilities. Treat the zombie as a character, but with access to only the basic moves. It has a +1 modifier for all stats and 1 HP. The zombie also gets your choice of 1d4 of these traits:\n\n - It’s talented. Give one stat a +2 modifier.\n - It’s durable. It has +2 HP for each level you have.\n - It has a functioning brain and can complete complex tasks.\n - It does not appear obviously dead, at least for a day or two.\nThe zombie lasts until it is destroyed by taking damage in excess of its HP, or until you end the spell. While this spell is ongoing you take -1 to cast a spell.',
+        'You invoke a hungry spirit to possess a recently-dead body and serve you. This creates a zombie that follows your orders to the best of its limited abilities. Treat the zombie as a character, but with access to only the basic moves. It has a +1 modifier for all stats and 1 HP. The zombie also gets your choice of 1d4 of these traits:\n\n* It’s talented. Give one stat a +2 modifier.\n* It’s durable. It has +2 HP for each level you have.\n* It has a functioning brain and can complete complex tasks.\n* It does not appear obviously dead, at least for a day or two.\nThe zombie lasts until it is destroyed by taking damage in excess of its HP, or until you end the spell. While this spell is ongoing you take -1 to cast a spell.',
     level: '3',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'cure_moderate_wounds',
@@ -5729,6 +5742,7 @@ void initData() {
         'You staunch bleeding and set bones through magic. Heal an ally you touch of 2d8 damage.',
     level: '3',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'darkness',
@@ -5737,14 +5751,16 @@ void initData() {
         'Choose an area you can see: it’s filled with supernatural darkness and shadow. While this spell is ongoing you take -1 to cast a spell.',
     level: '3',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'resurrection',
     name: 'Resurrection',
     description:
-        'Tell the GM you would like to resurrect a corpse whose soul has not yet fully departed this world. Resurrection is always possible, but the GM will give you one or more (possibly all) of these conditions to fulfill:\n\n - It’s going to take days/weeks/months\n - You must get help from ____\n - It will require a lot of money\n - You must sacrifice ____ to do it\nThe GM may, depending on the circumstances, allow you to resurrect the corpse now, with the understanding that the conditions must be met before it’s permanent, or require you to meet the conditions before the corpse is resurrected.',
+        'Tell the GM you would like to resurrect a corpse whose soul has not yet fully departed this world. Resurrection is always possible, but the GM will give you one or more (possibly all) of these conditions to fulfill:\n\n* It’s going to take days/weeks/months\n* You must get help from ____\n* It will require a lot of money\n* You must sacrifice ____ to do it\nThe GM may, depending on the circumstances, allow you to resurrect the corpse now, with the understanding that the conditions must be met before it’s permanent, or require you to meet the conditions before the corpse is resurrected.',
     level: '3',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'hold_person',
@@ -5753,6 +5769,7 @@ void initData() {
         'Choose a person you can see. Until you cast a spell or leave their presence they cannot act except to speak. This effect ends immediately if the target takes damage from any source.',
     level: '3',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'revelation',
@@ -5761,6 +5778,7 @@ void initData() {
         'Your deity answers your prayers with a moment of perfect understanding. The GM will shed light on the current situation. When acting on the information, you take +1 forward.',
     level: '5',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'cure_critical_wounds',
@@ -5768,6 +5786,7 @@ void initData() {
     description: 'Heal an ally you touch of 3d8 damage.',
     level: '5',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'divination',
@@ -5776,6 +5795,7 @@ void initData() {
         'Name a person, place, or thing you want to learn about. Your deity grants you visions of the target, as clear as if you were there.',
     level: '5',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'contagion',
@@ -5784,6 +5804,7 @@ void initData() {
         'Choose a creature you can see. Until you end this spell, the target suffers from a disease of your choice. While this spell is ongoing you take -1 to cast a spell.',
     level: '5',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'words_of_the_unspeaking',
@@ -5792,6 +5813,7 @@ void initData() {
         'With a touch you speak to the spirits within things. The non-living object you touch answers three questions you pose, as best it can.',
     level: '5',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'true_seeing',
@@ -5800,6 +5822,7 @@ void initData() {
         'You see all things as they truly are. This effect persists until you tell a lie or dismiss the spell. While this spell is ongoing you take -1 to cast a spell.',
     level: '7',
     tags: [Tag.fromJSON('divination'), Tag.fromJSON('ongoing')],
+    classKeys: ['cleric', 'wizard'],
   ));
   spellList.add(Spell(
     key: 'trap_soul',
@@ -5808,6 +5831,7 @@ void initData() {
         'You trap the soul of a dying creature within a gem. The trapped creature is aware of its imprisonment but can still be manipulated through spells, parley, and other effects. All moves against the trapped creature are at +1. You can free the soul at any time but it can never be recaptured once freed.',
     level: '5',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'word_of_recall',
@@ -5816,6 +5840,7 @@ void initData() {
         'Choose a word. The first time after casting this spell that you speak the chosen word, you and any allies touching you when you cast the spell are immediately returned to the exact spot where you cast the spell. You can only maintain a single location; casting Word of Recall again before speaking the word replaces the earlier spell.',
     level: '7',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'heal',
@@ -5824,6 +5849,7 @@ void initData() {
         'Touch an ally and you may heal their damage a number of points up to your maximum HP.',
     level: '7',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'harm',
@@ -5832,6 +5858,7 @@ void initData() {
         'Touch an enemy and strike them with divine wrath—deal 2d8 damage to them and 1d6 damage to yourself. This damage ignores armor.',
     level: '7',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'sever',
@@ -5840,6 +5867,7 @@ void initData() {
         'Choose an appendage on the target such as an arm, tentacle, or wing. The appendage is magically severed from their body, causing no damage but considerable pain. Missing an appendage may, for example, keep a winged creature from flying, or a bull from goring you on its horns. While this spell is ongoing you take -1 to cast a spell.',
     level: '7',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'mark_of_death',
@@ -5848,6 +5876,7 @@ void initData() {
         'Choose a creature whose true name you know. This spell creates permanent runes on a target surface that will kill that creature, should they read them.',
     level: '7',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'control_weather',
@@ -5856,6 +5885,7 @@ void initData() {
         'Pray for rain—or sun, wind, or snow. Within a day or so, your god will answer. The weather will change according to your will and last a handful of days.',
     level: '7',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'storm_of_vengeance',
@@ -5864,6 +5894,7 @@ void initData() {
         'Your deity brings the unnatural weather of your choice to pass. Rain of blood or acid, clouds of souls, wind that can carry away buildings, or any other weather you can imagine: ask and it shall come.',
     level: '9',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'repair',
@@ -5872,6 +5903,7 @@ void initData() {
         'Choose one event in the target’s past. All effects of that event, including damage, poison, disease, and magical effects, are ended and repaired. HP and diseases are healed, poisons are neutralized, magical effects are ended.',
     level: '9',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'divine_presence',
@@ -5880,6 +5912,7 @@ void initData() {
         'Every creature must ask your leave to enter your presence, and you must give permission aloud for them to enter. Any creature without your leave takes an extra 1d10 damage whenever they take damage in your presence. While this spell is ongoing you take -1 to cast a spell.',
     level: '9',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'consume_unlife',
@@ -5888,6 +5921,7 @@ void initData() {
         'The mindless undead creature you touch is destroyed and you steal its death energy to heal yourself or the next ally you touch. The amount of damage healed is equal to the HP that the creature had remaining before you destroyed it.',
     level: '9',
     tags: [],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'plague',
@@ -5896,6 +5930,7 @@ void initData() {
         'Name a city, town, encampment, or other place where people live. As long as this spell is active that place is beset by a plague appropriate to your deity’s domains (locusts, death of the first born, etc.) While this spell is ongoing you take -1 to cast a spell.',
     level: '9',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['cleric'],
   ));
   spellList.add(Spell(
     key: 'prestidigitation',
@@ -5904,6 +5939,7 @@ void initData() {
         'You perform minor tricks of true magic. If you touch an item as part of the casting you can make cosmetic changes to it: clean it, soil it, cool it, warm it, flavor it, or change its color. If you cast the spell without touching an item you can instead create minor illusions no bigger than yourself. Prestidigitation illusions are crude and clearly illusions—they won’t fool anyone, but they might entertain them.',
     level: 'cantrip',
     tags: [],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'unseen_servant',
@@ -5912,6 +5948,7 @@ void initData() {
         'You conjure a simple invisible construct that can do nothing but carry items. It has Load 3 and carries anything you hand to it. It cannot pick up items on its own and can only carry those you give to it. Items carried by an unseen servant appear to float in the air a few paces behind you. An unseen servant that takes damage or leaves your presence is immediately dispelled, dropping any items it carried. Otherwise the unseen servant serves you until you end the spell.',
     level: 'cantrip',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'contact_spirits',
@@ -5920,6 +5957,7 @@ void initData() {
         'Name the spirit you wish to contact (or leave it to the GM). You pull that creature through the planes, just close enough to speak to you. It is bound to answer any one question you ask to the best of its ability.',
     level: '1',
     tags: [Tag.fromJSON('summoning')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'detect_magic',
@@ -5928,6 +5966,7 @@ void initData() {
         'One of your senses is briefly attuned to magic. The GM will tell you what here is magical.',
     level: '1',
     tags: [Tag.fromJSON('divination')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'telepathy',
@@ -5936,6 +5975,7 @@ void initData() {
         'You form a telepathic bond with a single person you touch, enabling you to converse with that person through your thoughts. You can only have one telepathic bond at a time.',
     level: '1',
     tags: [Tag.fromJSON('divination'), Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'charm_person',
@@ -5944,6 +5984,7 @@ void initData() {
         'The person (not beast or monster) you touch while casting this spell counts you as a friend until they take damage or you prove otherwise.',
     level: '1',
     tags: [Tag.fromJSON('enchantment'), Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'invisibility',
@@ -5952,6 +5993,7 @@ void initData() {
         'Touch an ally: nobody can see them. They’re invisible! The spell persists until the target attacks or you dismiss the effect. While the spell is ongoing you can’t cast a spell.',
     level: '1',
     tags: [Tag.fromJSON('illusion'), Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'magic_missile',
@@ -5960,6 +6002,7 @@ void initData() {
         'Projectiles of pure magic spring from your fingers. Deal 2d4 damage to one target.',
     level: '1',
     tags: [Tag.fromJSON('evocation')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'alarm',
@@ -5968,6 +6011,7 @@ void initData() {
         'Walk a wide circle as you cast this spell. Until you prepare spells again your magic will alert you if a creature crosses that circle. Even if you are asleep, the spell will shake you from your slumber.',
     level: '1',
     tags: [],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'dispel_magic',
@@ -5976,14 +6020,17 @@ void initData() {
         'Choose a spell or magic effect in your presence: this spell rips it apart. Lesser spells are ended, powerful magic is just reduced or dampened so long as you are nearby.',
     level: '3',
     tags: [],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'visions_through_time',
     name: 'Visions Through Time',
     description:
-        'Cast this spell and gaze into a reflective surface to see into the depths of time. The GM will reveal the details of a grim portent to you—a bleak event that will come to pass without your intervention. They��ll tell you something useful about how you can interfere with the grim portent’s dark outcomes. Rare is the portent that claims “You’ll live happily ever after.” Sorry.',
+        'Cast this spell and gaze into a reflective surface to see into the depths of time. The GM will reveal the details of a grim portent to you—a bleak event that will come to pass without your intervention. They'
+        'll tell you something useful about how you can interfere with the grim portent’s dark outcomes. Rare is the portent that claims “You’ll live happily ever after.” Sorry.',
     level: '3',
     tags: [Tag.fromJSON('divination')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'fireball',
@@ -5992,6 +6039,7 @@ void initData() {
         'You evoke a mighty ball of flame that envelops your target and everyone nearby, inflicting 2d6 damage which ignores armor.',
     level: '3',
     tags: [Tag.fromJSON('evocation')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'mimic',
@@ -6000,14 +6048,16 @@ void initData() {
         'You take the form of someone you touch while casting this spell. Your physical characteristics match theirs exactly but your behavior may not. This change persists until you take damage or choose to return to your own form. While this spell is ongoing you lose access to all your wizard moves.',
     level: '3',
     tags: [Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'mirror_image',
     name: 'Mirror Image',
     description:
-        'You create an illusory image of yourself. When you are attacked, roll a d6. On a 4, 5, or 6 the attack hits the illusion instead, the image then dissipates and the spell ends.',
+        'You create an illusory image of yourself. When you are attacked, roll a d6.\n* On a 4, 5, or 6 the attack hits the illusion instead, the image then dissipates and the spell ends.',
     level: '3',
     tags: [Tag.fromJSON('illusion')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'sleep',
@@ -6016,6 +6066,7 @@ void initData() {
         '1d4 enemies you can see of the GM’s choice fall asleep. Only creatures capable of sleeping are affected. They awake as normal: loud noises, jolts, pain.',
     level: '3',
     tags: [Tag.fromJSON('enchantment')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'cage',
@@ -6024,6 +6075,7 @@ void initData() {
         'The target is held in a cage of magical force. Nothing can get in or out of the cage. The cage remains until you cast another spell or dismiss it. While the spell is ongoing, the caged creature can hear your thoughts and you cannot leave sight of the cage.',
     level: '5',
     tags: [Tag.fromJSON('evocation'), Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'contact_other_plane',
@@ -6032,30 +6084,34 @@ void initData() {
         'You send a request to another plane. Specify who or what you’d like to contact by location, type of creature, name, or title. You open a two-way communication with that creature. Your communication can be cut off at any time by you or the creature you contacted.',
     level: '5',
     tags: [Tag.fromJSON('divination')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'polymorph',
     name: 'Polymorph',
     description:
-        'Your touch reshapes a creature entirely, they stay in the form you craft until you cast a spell. Describe the new shape you craft, including any stat changes, significant adaptations, or major weaknesses. The GM will then tell you one or more of these:\n - The form will be unstable and temporary\n - The creature’s mind will be altered as well\n - The form has an unintended benefit or weakness',
+        'Your touch reshapes a creature entirely, they stay in the form you craft until you cast a spell. Describe the new shape you craft, including any stat changes, significant adaptations, or major weaknesses. The GM will then tell you one or more of these:\n* The form will be unstable and temporary\n* The creature’s mind will be altered as well\n* The form has an unintended benefit or weakness',
     level: '5',
     tags: [Tag.fromJSON('enchantment')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'summon_monster',
     name: 'Summon Monster',
     description:
-        'A monster appears and aids you as best it can. Treat it as your character, but with access to only the basic moves. It has +1 modifier for all stats, 1 HP, and uses your damage dice. The monster also gets your choice of 1d6 of these traits:\n - It has +2 instead of +1 to one stat\n - It’s not reckless\n - It does 1d8 damage\n - Its bond to your plane is strong: +2 HP for each level you have\n - It has some useful adaptation\nThe GM will tell you the type of monster you get based on the traits you select. The creature remains on this plane until it dies or you dismiss it. While the spell is ongoing you take -1 to cast a spell.',
+        'A monster appears and aids you as best it can. Treat it as your character, but with access to only the basic moves. It has +1 modifier for all stats, 1 HP, and uses your damage dice. The monster also gets your choice of 1d6 of these traits:\n* It has +2 instead of +1 to one stat\n* It’s not reckless\n* It does 1d8 damage\n* Its bond to your plane is strong: +2 HP for each level you have\n* It has some useful adaptation\nThe GM will tell you the type of monster you get based on the traits you select. The creature remains on this plane until it dies or you dismiss it. While the spell is ongoing you take -1 to cast a spell.',
     level: '5',
     tags: [Tag.fromJSON('summoning'), Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'dominate',
     name: 'Dominate',
     description:
-        'Your touch pushes your mind into someone else’s. You gain 1d4 hold. Spend one hold to make the target take one of these actions:\n - Speak a few words of your choice\n - Give you something they hold\n - Make a concerted attack on a target of your choice\n - Truthfully answer one question\n\nIf you run out of hold the spell ends. If the target takes damage you lose 1 hold. While the spell is ongoing you cannot cast a spell.',
+        'Your touch pushes your mind into someone else’s. You gain 1d4 hold. Spend one hold to make the target take one of these actions:\n* Speak a few words of your choice\n* Give you something they hold\n* Make a concerted attack on a target of your choice\n* Truthfully answer one question\n\nIf you run out of hold the spell ends. If the target takes damage you lose 1 hold. While the spell is ongoing you cannot cast a spell.',
     level: '7',
     tags: [Tag.fromJSON('enchantment'), Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'shadow_walk',
@@ -6064,6 +6120,7 @@ void initData() {
         'The shadows you target with this spell become a portal for you and your allies. Name a location, describing it with a number of words up to your level. Stepping through the portal deposits you and any allies present when you cast the spell at the location you described. The portal may only be used once by each ally.',
     level: '7',
     tags: [Tag.fromJSON('illusion')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'contingency',
@@ -6072,6 +6129,7 @@ void initData() {
         'Choose a 5th level or lower spell you know. Describe a trigger condition using a number of words equal to your level. The chosen spell is held until you choose to unleash it or the trigger condition is met, whichever happens first. You don’t have to roll for the held spell, it just takes effect. You may only have a single contingent spell held at a time; if you cast Contingency while you have a held spell, the new held spell replaces the old one.',
     level: '7',
     tags: [Tag.fromJSON('evocation')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'cloudkill',
@@ -6080,6 +6138,7 @@ void initData() {
         'A cloud of fog drifts into this realm from beyond the Black Gates of Death, filling the immediate area. Whenever a creature in the area takes damage it takes an additional, separate 1d6 damage which ignores armor. This spell persists so long as you can see the affected area, or until you dismiss it.',
     level: '7',
     tags: [Tag.fromJSON('summoning'), Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'antipathy',
@@ -6088,6 +6147,7 @@ void initData() {
         'Choose a target and describe a type of creature or an alignment. Creatures of the specified type or alignment cannot come within sight of the target. If a creature of the specified type does find itself within sight of the target, it immediately flees. This effect continues until you leave the target’s presence or you dismiss the spell. While the spell is ongoing you take -1 to cast a spell.',
     level: '9',
     tags: [Tag.fromJSON('enchantment'), Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'alert',
@@ -6096,6 +6156,7 @@ void initData() {
         'Describe an event. The GM will tell you when that event occurs, no matter where you are or how far away the event is. If you choose, you can view the location of the event as though you were there in person. You can only have one Alert active at a time.',
     level: '9',
     tags: [Tag.fromJSON('divination')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'soul_gem',
@@ -6104,6 +6165,7 @@ void initData() {
         'You trap the soul of a dying creature within a gem. The trapped creature is aware of its imprisonment but can still be manipulated through spells, parley, and other effects. All moves against the trapped creature are at +1. You can free the soul at any time but it can never be recaptured once freed.',
     level: '9',
     tags: [],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'shelter',
@@ -6112,6 +6174,7 @@ void initData() {
         'You create a structure out of pure magical power. It can be as large as a castle or as small as a hut, but is impervious to all non-magical damage. The structure endures until you leave it or you end the spell.',
     level: '9',
     tags: [Tag.fromJSON('evocation'), Tag.fromJSON('ongoing')],
+    classKeys: ['wizard'],
   ));
   spellList.add(Spell(
     key: 'perfect_summons',
@@ -6120,6 +6183,7 @@ void initData() {
         'You teleport a creature to your presence. Name a creature or give a short description of a type of creature. If you named a creature, that creature appears before you. If you described a type of creature, a creature of that type appears before you.',
     level: '9',
     tags: [Tag.fromJSON('summoning')],
+    classKeys: ['wizard'],
   ));
   specialMovesList.add(Move(
     key: 'encumbrance',
@@ -6143,7 +6207,7 @@ void initData() {
     key: 'take_watch',
     name: 'Take Watch',
     description:
-        'When you’re on watch and something approaches the camp roll+Wis. \n* On a 10+, you’re able to wake the camp and prepare a response, everyone in the camp takes +1 forward. \n* On a 7–9, you react just a moment too late; your companions in camp are awake but haven’t had time to prepare. They have weapons and armor but little else. \n* On a miss, whatever lurks outside the campfire’s light has the drop on you.',
+        'When you’re on watch and something approaches the camp roll+Wis.\n* On a 10+, you’re able to wake the camp and prepare a response, everyone in the camp takes +1 forward.\n* On a 7–9, you react just a moment too late; your companions in camp are awake but haven’t had time to prepare. They have weapons and armor but little else.\n* On a miss, whatever lurks outside the campfire’s light has the drop on you.',
     explanation: null,
     classes: [],
   ));
@@ -6159,7 +6223,7 @@ void initData() {
     key: 'supply',
     name: 'Supply',
     description:
-        'When you go to **buy something with gold on hand**, if it’s something readily available in the settlement you’re in, you can buy it at market price. If it’s something special, beyond what’s usually available here, or non-mundane, roll+Cha. \n* On a 10+, you find what you’re looking for at a fair price. \n* On a 7–9, you’ll have to pay more or settle for something that’s not exactly what you wanted, but close. The GM will tell you what your options are.',
+        'When you go to **buy something with gold on hand**, if it’s something readily available in the settlement you’re in, you can buy it at market price. If it’s something special, beyond what’s usually available here, or non-mundane, roll+Cha.\n* On a 10+, you find what you’re looking for at a fair price.\n* On a 7–9, you’ll have to pay more or settle for something that’s not exactly what you wanted, but close. The GM will tell you what your options are.',
     explanation: null,
     classes: [],
   ));
@@ -6167,7 +6231,7 @@ void initData() {
     key: 'undertake_a_perilous_journey',
     name: 'Undertake a Perilous Journey',
     description:
-        'When you travel through hostile territory, choose one member of the party to act as trailblazer, one to scout ahead, and one to be quartermaster. Each character with a job to do rolls+Wis. \n* On a 10+:\n\n - the quartermaster reduces the number of rations required by one\n - the trailblazer reduces the amount of time it takes to reach your destination (the GM will say by how much)\n - the scout will spot any trouble quick enough to let you get the drop on it\n\n\n* On a 7–9, each role performs their job as expected: the normal number of rations are consumed, the journey takes about as long as expected, no one gets the drop on you but you don’t get the drop on them either.',
+        'When you travel through hostile territory, choose one member of the party to act as trailblazer, one to scout ahead, and one to be quartermaster. Each character with a job to do rolls+Wis.\n* On a 10+:\n\n* the quartermaster reduces the number of rations required by one\n* the trailblazer reduces the amount of time it takes to reach your destination (the GM will say by how much)\n* the scout will spot any trouble quick enough to let you get the drop on it\n\n\n* On a 7–9, each role performs their job as expected: the normal number of rations are consumed, the journey takes about as long as expected, no one gets the drop on you but you don’t get the drop on them either.',
     explanation:
         'You can’t assign more than one job to a character. If you don’t have enough party members, or choose not to assign a job, treat that job as if it had been assigned and the responsible player had rolled a 6.\n\nDistances in Dungeon World are measured in rations. A ration is the amount of supplies used up in a day. Journeys take more rations when they are long or when travel is slow.\n\nA perilous journey is the whole way between two locations. You don’t roll for one day’s journey and then make camp only to roll for the next day’s journey, too. Make one roll for the entire trip.\n\nThis move only applies when you know where you’re going. Setting off to explore is not a perilous journey. It’s wandering around looking for cool things to discover. Use up rations as you camp and the GM will give you details about the world as you discover them.',
     classes: [],
@@ -6184,7 +6248,7 @@ void initData() {
     key: 'carouse',
     name: 'Carouse',
     description:
-        'When you return triumphant and throw a big party, spend 100 coins and roll +1 for every extra 100 coins spent. \n* On a 10+, choose 3. \n* On a 7–9, choose 1. \n* On a miss, you still choose one, but things get really out of hand (the GM will say how).\n\n - You befriend a useful NPC.\n - You hear rumors of an opportunity.\n - You gain useful information.\n - You are not entangled, ensorcelled, or tricked.\n\nYou can only carouse when you return triumphant. That’s what draws the crowd of revelers to surround adventurers as they celebrate their latest haul. If you don’t proclaim your success or your failure, then who would want to party with you anyway?',
+        'When you return triumphant and throw a big party, spend 100 coins and roll +1 for every extra 100 coins spent.\n* On a 10+, choose 3.\n* On a 7–9, choose 1.\n* On a miss, you still choose one, but things get really out of hand (the GM will say how).\n\n* You befriend a useful NPC.\n* You hear rumors of an opportunity.\n* You gain useful information.\n* You are not entangled, ensorcelled, or tricked.\n\nYou can only carouse when you return triumphant. That’s what draws the crowd of revelers to surround adventurers as they celebrate their latest haul. If you don’t proclaim your success or your failure, then who would want to party with you anyway?',
     explanation: null,
     classes: [],
   ));
@@ -6192,7 +6256,7 @@ void initData() {
     key: 'recruit',
     name: 'Recruit',
     description:
-        'When you put out word that you’re looking to hire help, roll:\n\n - +1 if you make it known that your pay is generous\n - +1 if you make it known what you’re setting out to do\n - +1 if you make it known that they’ll get a share of whatever you find\n - +1 if you have a useful reputation around these parts\n\n\n* On a 10+, you’ve got your pick of a number of skilled applicants, your choice who you hire, no penalty for not taking them along. \n* On a 7–9, you’ll have to settle for someone close to what you want or turn them away. \n* On a miss someone influential and ill-suited declares they’d like to come along (a foolhardy youth, a loose-cannon, or a veiled enemy, for example), bring them and take the consequences or turn them away. If you turn away applicants you take -1 forward to recruit.',
+        'When you put out word that you’re looking to hire help, roll:\n\n* +1 if you make it known that your pay is generous\n* +1 if you make it known what you’re setting out to do\n* +1 if you make it known that they’ll get a share of whatever you find\n* +1 if you have a useful reputation around these parts\n\n\n* On a 10+, you’ve got your pick of a number of skilled applicants, your choice who you hire, no penalty for not taking them along.\n* On a 7–9, you’ll have to settle for someone close to what you want or turn them away.\n* On a miss someone influential and ill-suited declares they’d like to come along (a foolhardy youth, a loose-cannon, or a veiled enemy, for example), bring them and take the consequences or turn them away. If you turn away applicants you take -1 forward to recruit.',
     explanation: null,
     classes: [],
   ));
@@ -6200,7 +6264,7 @@ void initData() {
     key: 'end_of_session',
     name: 'End of Session',
     description:
-        'When you **reach the end of a session**, choose one of your bonds that you feel is resolved (completely explored, no longer relevant, or otherwise). Ask the player of the character you have the bond with if they agree. If they do, mark XP and write a new bond with whomever you wish.\n\nOnce bonds have been updated look at your alignment. If you fulfilled that alignment at least once this session, mark XP. Then answer these three questions as a group:\n\n - Did we learn something new and important about the world?\n - Did we overcome a notable monster or enemy?\n - Did we loot a memorable treasure?\n\nFor each “yes” answer everyone marks XP.',
+        'When you **reach the end of a session**, choose one of your bonds that you feel is resolved (completely explored, no longer relevant, or otherwise). Ask the player of the character you have the bond with if they agree. If they do, mark XP and write a new bond with whomever you wish.\n\nOnce bonds have been updated look at your alignment. If you fulfilled that alignment at least once this session, mark XP. Then answer these three questions as a group:\n\n* Did we learn something new and important about the world?\n* Did we overcome a notable monster or enemy?\n* Did we loot a memorable treasure?\n\nFor each “yes” answer everyone marks XP.',
     explanation: null,
     classes: [],
   ));
@@ -6208,7 +6272,7 @@ void initData() {
     key: 'level',
     name: 'Level',
     description:
-        'When you **have downtime (hours or days) and XP equal to (or greater than) your current level+7**, you can reflect on your experiences and hone your skills.\n\n - Subtract your current level+7 from your XP.\n - Increase your level by 1.\n - Choose a new advanced move from your class.\n - If you are the wizard, you also get to add a new spell to your spellbook.\n - Choose one of your stats and increase it by 1 (this may change your modifier). Changing your Constitution increases your maximum and current HP. Ability scores can’t go higher than 18.',
+        'When you **have downtime (hours or days) and XP equal to (or greater than) your current level+7**, you can reflect on your experiences and hone your skills.\n\n* Subtract your current level+7 from your XP.\n* Increase your level by 1.\n* Choose a new advanced move from your class.\n* If you are the wizard, you also get to add a new spell to your spellbook.\n* Choose one of your stats and increase it by 1 (this may change your modifier). Changing your Constitution increases your maximum and current HP. Ability scores can’t go higher than 18.',
     explanation: null,
     classes: [],
   ));
@@ -6216,7 +6280,7 @@ void initData() {
     key: 'outstanding_warrants',
     name: 'Outstanding Warrants',
     description:
-        'When you return to a civilized place in which you’ve caused trouble before, roll+Cha. \n* On a 10+, word has spread of your deeds and everyone recognizes you. \n* On a 7–9, as above, and the GM chooses a complication:\n\n - The local constabulary has a warrant out for your arrest.\n - Someone has put a price on your head.\n - Someone important to you has been put in a bad spot as a result of your actions',
+        'When you return to a civilized place in which you’ve caused trouble before, roll+Cha.\n* On a 10+, word has spread of your deeds and everyone recognizes you.\n* On a 7–9, as above, and the GM chooses a complication:\n\n* The local constabulary has a warrant out for your arrest.\n* Someone has put a price on your head.\n* Someone important to you has been put in a bad spot as a result of your actions',
     explanation:
         'This move is only for places where you’ve caused trouble, not every patch of civilization you enter. Being publicly caught up in someone else’s trouble still triggers this move.\n\nCivilization generally means the villages, towns and cities of humans, elves, dwarves, and halflings but it can also apply to any relatively  lawful establishment of monstrous species, such as orcs or goblins. If the PCs have stayed in a place as part of the community, it counts as civilization.',
     classes: [],
@@ -6225,9 +6289,9 @@ void initData() {
     key: 'last_breath',
     name: 'Last Breath',
     description:
-        'When you’re dying you catch a glimpse of what lies beyond the Black Gates of Death’s Kingdom (the GM will describe it). Then roll (just roll, +nothing—yeah, Death doesn’t care how tough or cool you are). On a 10+ you’ve cheated death— you’re in a bad spot but you’re still alive. On a 7–9 Death will offer you a bargain. Take it and stabilize or refuse and pass beyond the Black Gates into whatever fate awaits you. On a miss, your fate is sealed. You’re marked as Death’s own and you’ll cross the threshold soon. The GM will tell you when.',
+        'When you’re dying you catch a glimpse of what lies beyond the Black Gates of Death’s Kingdom (the GM will describe it). Then roll (just roll, +nothing—yeah, Death doesn’t care how tough or cool you are).\n* On a 10+ you’ve cheated death— you’re in a bad spot but you’re still alive.\n* On a 7–9 Death will offer you a bargain. Take it and stabilize or refuse and pass beyond the Black Gates into whatever fate awaits you. On a miss, your fate is sealed. You’re marked as Death’s own and you’ll cross the threshold soon. The GM will tell you when.',
     explanation:
-        'The Last Breath is that moment standing between life and death. Time stands still as Death appears to claim the living for his own. Even those who do not pass beyond the Black Gates catch a glimpse of the other side and what might await them—friends and enemies past, rewards or punishment for acts in life or other, stranger vistas. All are changed in some way by this moment—even those who escape.\n\nThere are three outcomes to this move. On a 10+, the Character has cheated Death in some meaningful way. He’s escaped with something that, by rights, isn’t his anymore. Death is powerless to stop this, but he remembers this slight. On a 7–9, the GM should offer a real choice with significant consequence. Think about the behaviors of the character and the things you’ve learned about him in play. Death knows and sees all and tailors his bargains accordingly. This is a trade, remember. Offer something that will be a challenge to play out but will lead the game in fun new direction. On a miss, death is inevitable. The most obvious approach is to say “Death takes you across the threshold, into his bleak kingdom.” and move on. However, sometimes Death comes slowly. You might say “you have a week to live” or “you can feel the cold hand of Death on you…” and leave it at that, for now. The player may want to give in and accept death at this point—that’s okay. Let them create a new character as normal. The key thing to remember is that a brush with death, succeed or fail, is a significant moment that should always lead to change.\n\n\n*GM: Sparrow, as the knife blade disappears into your guts, the world fades away and you stand before the Black Gates of Death. Among the throngs of suffering souls, you spot Lord Hwyn, that sickly cur. It looks like all his ill deals caught up with him at last. He spots you across the bleak gulf and you feel the chill of his hunger in your very soul. Take your Last Breath.\n\nSparrow: Heavy. I got a 9.\n\nGM: Death appears to you, wisps of black cloth dancing around his shadowy form. A pale hand touches your face. You hear his voice in your mind. “Come to me so soon, pretty Sparrow? You follow a river of souls, sent here by your blade. I do so love you for them. I’ll return you to the world, but you must make me a promise. In shadow you dwell, so shadow you shall become. Shun the light of day forever or find a quick trip back to my company. What do you say, little thief?”\n\nSparrow: (gulp)*',
+        'The Last Breath is that moment standing between life and death. Time stands still as Death appears to claim the living for his own. Even those who do not pass beyond the Black Gates catch a glimpse of the other side and what might await them—friends and enemies past, rewards or punishment for acts in life or other, stranger vistas. All are changed in some way by this moment—even those who escape.\n\nThere are three outcomes to this move.\n* On a 10+, the Character has cheated Death in some meaningful way. He’s escaped with something that, by rights, isn’t his anymore. Death is powerless to stop this, but he remembers this slight.\n* On a 7–9, the GM should offer a real choice with significant consequence. Think about the behaviors of the character and the things you’ve learned about him in play. Death knows and sees all and tailors his bargains accordingly. This is a trade, remember. Offer something that will be a challenge to play out but will lead the game in fun new direction. On a miss, death is inevitable. The most obvious approach is to say “Death takes you across the threshold, into his bleak kingdom.” and move on. However, sometimes Death comes slowly. You might say “you have a week to live” or “you can feel the cold hand of Death on you…” and leave it at that, for now. The player may want to give in and accept death at this point—that’s okay. Let them create a new character as normal. The key thing to remember is that a brush with death, succeed or fail, is a significant moment that should always lead to change.\n\n\n*GM: Sparrow, as the knife blade disappears into your guts, the world fades away and you stand before the Black Gates of Death. Among the throngs of suffering souls, you spot Lord Hwyn, that sickly cur. It looks like all his ill deals caught up with him at last. He spots you across the bleak gulf and you feel the chill of his hunger in your very soul. Take your Last Breath.\n\nSparrow: Heavy. I got a 9.\n\nGM: Death appears to you, wisps of black cloth dancing around his shadowy form. A pale hand touches your face. You hear his voice in your mind. “Come to me so soon, pretty Sparrow? You follow a river of souls, sent here by your blade. I do so love you for them. I’ll return you to the world, but you must make me a promise. In shadow you dwell, so shadow you shall become. Shun the light of day forever or find a quick trip back to my company. What do you say, little thief?”\n\nSparrow: (gulp)*',
     classes: [],
   ));
 }

@@ -11,3 +11,7 @@ export 'move.dart';
 export 'race.dart';
 export 'spell.dart';
 export 'tag.dart';
+
+import 'repository.dart';
+
+final dungeonWorldData = loadRepository();

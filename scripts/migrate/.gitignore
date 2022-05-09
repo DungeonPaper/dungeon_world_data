@@ -1,2 +1,2 @@
-*.json
-_old
+dumps/
+dart_dumps/

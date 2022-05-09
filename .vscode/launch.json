@@ -17,6 +17,12 @@
       "program": "scripts/migrate/v2_to_v3.dart"
     },
     {
+      "name": "Migrate v3 json -> dart",
+      "type": "dart",
+      "request": "launch",
+      "program": "scripts/migrate/json_to_dart.dart"
+    },
+    {
       "name": "All Tests",
       "type": "dart",
       "request": "launch",

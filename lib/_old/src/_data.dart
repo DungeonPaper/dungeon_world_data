@@ -157,6 +157,12 @@ void initData() {
     'When making your own magic items keep in mind that these items are magical. Simple modifiers, like+1 damage, are the realm of the mundane—magic items should provide more interesting bonuses.',
   ));
   equipmentList.add(Equipment(
+    key: 'token_of_origin',
+    name: "Token Of Origin",
+    description: "A token of where you’ve traveled or where you’re from.",
+    tags: [Tag.fromJSON('{weight:0}')],
+  ));
+  equipmentList.add(Equipment(
     key: 'fathers_mandolin',
     name: "Father's Mandolin",
     description: "Your father's mandolin, repaired.",
@@ -1286,6 +1292,7 @@ void initData() {
       GearChoice(
         key: '5becbb00-f57a-4655-b955-b291e1bcaeb4',
         label: 'You have dungeon rations (5 uses, 1 weight)',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'dungeon_rations',
@@ -1302,6 +1309,7 @@ void initData() {
       GearChoice(
         key: '58883c28-13ec-46a2-8454-a09436cb6e79',
         label: 'Choose one instrument, all are 0 weight for you',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'your_fathers_mandolin_repaired',
@@ -1338,6 +1346,7 @@ void initData() {
       GearChoice(
         key: 'df39287d-9732-4949-a7ab-5d23edc9be5d',
         label: 'Choose your clothing',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'leather_armor',
@@ -1359,6 +1368,7 @@ void initData() {
       GearChoice(
         key: 'e8aac246-f06e-4588-a70d-bbd19595fe79',
         label: 'Choose your armament',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'dueling_rapier',
@@ -1381,6 +1391,7 @@ void initData() {
       GearChoice(
         key: '06654a6a-5a5e-4e3e-90bc-159e7028f836',
         label: 'Choose one',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'adventuring_gear',
@@ -1723,6 +1734,7 @@ void initData() {
       GearChoice(
         key: '74014bad-3ec2-42b8-a1ea-d2b9f5f89c93',
         label: 'Choose your defenses',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'chainmail',
@@ -1748,6 +1760,7 @@ void initData() {
       GearChoice(
         key: 'b8ea287f-05b8-4777-85a7-0c9e63f99471',
         label: 'Choose your armament',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'warhammer',
@@ -1774,6 +1787,7 @@ void initData() {
       GearChoice(
         key: 'eb157805-8285-45ae-ba2f-b896b48246c9',
         label: 'Choose one',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'adventuring_gear',
@@ -2091,6 +2105,7 @@ void initData() {
       GearChoice(
         key: '75b38f75-98d7-4103-aa42-c382383630df',
         label: 'Choose your defenses',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'hide_armor',
@@ -2107,6 +2122,7 @@ void initData() {
       GearChoice(
         key: 'a6443bba-30b1-4315-9f12-f07e3b1a3b90',
         label: 'Choose your armament:',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'shillelagh',
@@ -2139,6 +2155,7 @@ void initData() {
       GearChoice(
         key: '12dad8e0-d3db-46b6-a612-0b72a1fed7bd',
         label: 'Choose one:',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'adventuring_gear',
@@ -2470,6 +2487,7 @@ void initData() {
       GearChoice(
         key: 'd417bac1-dd58-4a6a-993a-dc97c52e9cf9',
         label: 'Choose your defenses',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'chainmail',
@@ -2491,6 +2509,7 @@ void initData() {
       GearChoice(
         key: '7007f593-73e1-4d08-8b0f-07ed25fe3a78',
         label: 'Choose two',
+        maxSelections: 2,
         gearOptions: [
           GearOption(
             key: 'healing_potions',
@@ -2769,6 +2788,7 @@ void initData() {
       GearChoice(
         key: '51e69ccb-5bdb-4e29-8c4e-1152830b9d12',
         label: 'Choose your weapon',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'halberd',
@@ -2796,6 +2816,7 @@ void initData() {
       GearChoice(
         key: '6caea328-67ae-40b7-849b-3a0c568e7ad2',
         label: 'Choose one',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'adventuring_gear',
@@ -3085,6 +3106,7 @@ void initData() {
       GearChoice(
         key: 'b81a5df6-2a18-4880-a664-6b07b34f2219',
         label: 'Choose your armament',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'hunter_s_bow',
@@ -3101,6 +3123,7 @@ void initData() {
       GearChoice(
         key: 'de3671f1-07c4-486c-8c0f-b0cef5f89056',
         label: 'Choose one',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'adventuring_gear',
@@ -3393,6 +3416,7 @@ void initData() {
       GearChoice(
         key: '96787798-9785-4e9a-b07e-4126ad86b100',
         label: 'Choose your arms',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'dagger',
@@ -3414,6 +3438,7 @@ void initData() {
       GearChoice(
         key: 'c4aa2c48-7e1a-4ae0-bfd4-7ad60840f802',
         label: 'Choose a ranged weapon',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'throwing_daggers',
@@ -3435,6 +3460,7 @@ void initData() {
       GearChoice(
         key: '9158bdba-2040-4f00-80c3-5ad4b7dfb179',
         label: 'Choose one',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'adventuring_gear',
@@ -3745,6 +3771,7 @@ void initData() {
       GearChoice(
         key: 'f0807b81-5678-4553-8548-0788992acf10',
         label: 'Choose your defenses',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'leather_armor',
@@ -3770,6 +3797,7 @@ void initData() {
       GearChoice(
         key: '8031df0e-da42-4aa4-af08-cecb72bcd1ae',
         label: 'Choose your weapon',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'dagger',
@@ -3791,6 +3819,7 @@ void initData() {
       GearChoice(
         key: 'e60a4196-26f4-4ee5-9b8e-a5f87f20f234',
         label: 'Choose one',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'healing_potion',

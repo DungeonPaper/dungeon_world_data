@@ -17,20 +17,19 @@ Map<String, String> strFixMap = {
   "—": "-",
   "–": "-",
   "’": "'",
-  "’": "'",
   "“": "\"",
   "”": "\"",
 };
 
 final json = <String, dynamic>{
-  'moves': <Map<String, dynamic>>[],
-  'races': <Map<String, dynamic>>[],
-  'classes': <Map<String, dynamic>>[],
-  'spells': <Map<String, dynamic>>[],
-  'items': <Map<String, dynamic>>[],
-  'monsters': <Map<String, dynamic>>[],
-  'tags': <Map<String, dynamic>>[],
-  'names': <String, Map<String, List<String>>>{},
+  'Moves': <Map<String, dynamic>>[],
+  'Races': <Map<String, dynamic>>[],
+  'Classes': <Map<String, dynamic>>[],
+  'Spells': <Map<String, dynamic>>[],
+  'Items': <Map<String, dynamic>>[],
+  'Monsters': <Map<String, dynamic>>[],
+  'Tags': <Map<String, dynamic>>[],
+  'Names': <String, Map<String, List<String>>>{},
 };
 
 final defaultTags = <Tag>[
@@ -48,71 +47,71 @@ main() async {
   // Basic moves
   print("Adding ${old.dungeonWorld.basicMoves.length} basic moves");
   for (var move in old.dungeonWorld.basicMoves) {
-    json['moves']!.add(moveMapper(move, MoveCategory.basic).toJson());
+    json['Moves']!.add(moveMapper(move, MoveCategory.basic).toJson());
   }
   // Special Moves
   print("Adding ${old.dungeonWorld.specialMoves.length} special moves");
   for (var move in old.dungeonWorld.specialMoves) {
-    json['moves']!.add(moveMapper(move, MoveCategory.special).toJson());
+    json['Moves']!.add(moveMapper(move, MoveCategory.special).toJson());
   }
   // Spells
   print("Adding ${old.dungeonWorld.spells.length} spells");
   for (var spell in old.dungeonWorld.spells) {
-    json['spells']!.add(spellMapper(spell).toJson());
+    json['Spells']!.add(spellMapper(spell).toJson());
   }
 
   // Items
   print("Adding ${old.dungeonWorld.equipment.length} items");
   for (var equip in old.dungeonWorld.equipment) {
-    json['items']!.add(equipMapper(equip).toJson());
+    json['Items']!.add(equipMapper(equip).toJson());
   }
 
   // Monsters
   print("Adding ${old.dungeonWorld.monsters.length} monsters");
   for (var mon in old.dungeonWorld.monsters) {
-    json['monsters']!.add(monsterMapper(mon).toJson());
+    json['Monsters']!.add(monsterMapper(mon).toJson());
   }
 
   // Tags
   print("Adding ${old.dungeonWorld.tags.length} tags");
   for (var tag in old.dungeonWorld.tags) {
-    json['tags']!.add(tagMapper(tag).toJson());
+    json['Tags']!.add(tagMapper(tag).toJson());
   }
 
   for (var cls in old.dungeonWorld.classes) {
     // Starting moves
     print("Adding ${cls.startingMoves.length} starting moves");
     for (var move in cls.startingMoves) {
-      json['moves']!.add(moveMapper(move, MoveCategory.starting).toJson());
+      json['Moves']!.add(moveMapper(move, MoveCategory.starting).toJson());
     }
 
     // Advanced Moves 1
     print("Adding ${cls.advancedMoves1.length} advanced1 moves");
     for (var move in cls.advancedMoves1) {
-      json['moves']!.add(moveMapper(move, MoveCategory.advanced1).toJson());
+      json['Moves']!.add(moveMapper(move, MoveCategory.advanced1).toJson());
     }
 
     // Advanced Moves 1
     print("Adding ${cls.advancedMoves2.length} advanced2 moves");
     for (var move in cls.advancedMoves2) {
-      json['moves']!.add(moveMapper(move, MoveCategory.advanced2).toJson());
+      json['Moves']!.add(moveMapper(move, MoveCategory.advanced2).toJson());
     }
 
     // Races
     print("Adding ${cls.raceMoves.length} races");
     for (var race in cls.raceMoves) {
-      json['races']!.add(raceMapper(race, cls.key ?? makeKey(cls.name)).toJson());
+      json['Races']!.add(raceMapper(race, cls.key ?? makeKey(cls.name)).toJson());
     }
 
     // Classes
-    json['classes']!.add(classMapper(cls).toJson());
+    json['Classes']!.add(classMapper(cls).toJson());
 
     print("Adding ${cls.names.values.fold<int>(0, (t, c) => t + c.length)} ${cls.key} names");
-    final Map<String, List<String>> names = (json['names'][cls.key] ??= <String, List<String>>{});
+    final Map<String, List<String>> names = (json['Names'][cls.key] ??= <String, List<String>>{});
     names.addAll(cls.names.map((key, value) => MapEntry(key, value.map(fix).toList())));
   }
 
-  print("Total ${json['classes']!.length} classes");
+  print("Total ${json['Classes']!.length} classes");
 
   //
 
@@ -122,7 +121,7 @@ main() async {
   //
   await File(_jsonOut).writeAsString(jsonEncode(json));
   for (final e in json.entries) {
-    await File(path.join(path.dirname(_jsonOut), e.key + ".json"))
+    await File(path.join(path.dirname(_jsonOut), e.key.toLowerCase() + ".json"))
         .writeAsString(jsonEncode(e.value));
   }
   print("Done");
@@ -196,9 +195,11 @@ Spell spellMapper(old.Spell spell) => Spell(
       level: spell.level,
     );
 
-Tag tagMapper(old.Tag t) => Tag.fromJson(t.toJSON().runtimeType == String
-    ? {"name": t.toJSON()}
-    : {"name": t.name, "value": t.value, "description": fix(t.description)});
+Tag tagMapper(old.Tag t) => Tag.fromJson({
+      "name": t.name[0].toUpperCase() + t.name.substring(1),
+      "value": t.value,
+      "description": fix(t.description)
+    });
 
 Item equipMapper(old.Equipment equip) => Item(
       key: makeKey(equip.name),
@@ -234,6 +235,8 @@ CharacterClass classMapper(old.PlayerClass cls) => CharacterClass(
           return GearChoice(
             key: c.key ?? uuid(),
             description: fix(c.label),
+            preselect: c.preselect,
+            maxSelections: c.maxSelections,
             selections: c.gearOptions.map(
               (o) {
                 Map<String, dynamic>? found;
@@ -329,7 +332,7 @@ Map<String, dynamic> tryFindItem(String key, String generatedKey) {
       keyStartsWithNum ? key.substring(key.indexOf(RegExp(r'[^0-9 ]'))).trim() : key.trim();
   final keyWithoutNumSingular =
       keyWithoutNum.isEmpty ? '' : keyWithoutNum.substring(0, keyWithoutNum.length - 1);
-  return json['items']!.firstWhere(
+  return json['Items']!.firstWhere(
     (el) =>
         el['key'].toLowerCase() == incompleteGearMap[key] ||
         el['key'].toLowerCase() == key.toLowerCase() ||

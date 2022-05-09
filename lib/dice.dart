@@ -72,8 +72,12 @@ class Dice {
     );
   }
 
-  Dice copyWithModifierValue(int statValue) =>
-      copyWith(amount: amount, sides: sides, modifierValue: statValue);
+  Dice copyWithModifierValue(int statValue) => copyWith(
+        amount: amount,
+        sides: sides,
+        modifierValue: statValue,
+        modifierSign: statValue >= 0 ? '+' : '-',
+      );
 
   @override
   String toString() => "${amount}d$sides$modifierWithSign";
@@ -103,6 +107,8 @@ class Dice {
 
   bool get needsModifier => modifierStat != null && modifierValue == null;
 
+  operator +(int amount) => copyWith(amount: this.amount + amount);
+  operator -(int amount) => copyWith(amount: this.amount - amount);
   operator *(int amount) => copyWith(amount: this.amount * amount);
   operator /(int amount) => copyWith(amount: this.amount ~/ amount);
 

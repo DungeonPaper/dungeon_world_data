@@ -9,16 +9,25 @@ class GearChoice extends DWEntity {
   /// The list of options to choose from. `label` should specify how many to choose.
   List<GearOption> gearOptions;
 
+  // [start, end] as indexes, [-1] for all, [] (default) for none
+  List<int> preselect;
+
+  int? maxSelections;
+
   GearChoice({
     String? key,
     required this.label,
     required this.gearOptions,
+    this.preselect = const [],
+    this.maxSelections,
   }) : super(key: key);
 
   factory GearChoice.fromJSON(Map map) => GearChoice(
         key: map['key'],
         label: map['label'],
         gearOptions: gearOptionMapper(map['list']),
+        preselect: map['preselect'] ?? [],
+        maxSelections: map['maxSelections'],
       );
 
   @override
@@ -26,7 +35,15 @@ class GearChoice extends DWEntity {
         'key': key,
         'label': label,
         'list': listMapper<GearOption, dynamic, GearOption>(gearOptions, (i) => i.toJSON()),
+        'preselect': preselect,
+        'maxSelections': maxSelections,
       };
+
+  List<GearOption> get preselectedGearOptions => preselect.isEmpty
+      ? []
+      : preselect.first == -1
+          ? gearOptions
+          : gearOptions.sublist(preselect.first, preselect.last);
 
   @override
   GearChoice copy() => GearChoice.fromJSON(toJSON());

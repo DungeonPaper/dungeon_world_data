@@ -247,6 +247,7 @@ void initHomebrew() {
         key: '76316345-ccad-43e2-b0f4-fc0e51fbf50b',
         label:
             'You carry no weapon and need no armor but the flames the burn within you. Choose two:',
+        maxSelections: 2,
         gearOptions: [
           GearOption(
             key: 'dungeon_rations',
@@ -551,6 +552,7 @@ void initHomebrew() {
         key: '7b819c33-10da-41ae-b31e-fa48c39b4cdd',
         label:
             'You carry dungeon rations (5 uses, 1 weight), a dagger (hand, 1 weight) some token of where you’ve traveled or where you’re from',
+        preselect: [-1],
         gearOptions: [
           GearOption(
             key: 'dungeon_rations',
@@ -569,18 +571,16 @@ void initHomebrew() {
             ],
           ),
           GearOption(
-            key: 'token',
-            name: 'Token',
-            tags: [
-              Tag.fromJSON('{hand}'),
-              Tag.fromJSON('{weight: 1}'),
-            ],
+            key: 'token_of_origin',
+            name: 'Token Of Origin',
+            tags: [],
           ),
         ],
       ),
       GearChoice(
         key: 'dbb50c21-6f20-44d5-8c4f-68bc77e7bc77',
         label: 'Choose a weapon:',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'axe',
@@ -597,6 +597,7 @@ void initHomebrew() {
       GearChoice(
         key: 'fe326cb4-fa3f-4e16-830a-216280ef039d',
         label: 'Choose one:',
+        maxSelections: 1,
         gearOptions: [
           GearOption(
             key: 'adventuring_gear_and_dungeon_rations',
@@ -607,7 +608,7 @@ void initHomebrew() {
             key: 'chainmail',
             name: 'Chainmail',
             tags: [Tag.fromJSON('{weight:1}'), Tag.fromJSON('{armor:1}')],
-          )
+          ),
         ],
       )
     ],

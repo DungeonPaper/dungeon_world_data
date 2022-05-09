@@ -1,11 +1,10 @@
 name: dungeon_world_data
 homepage: https://github.com/DungeonPaper/dungeon_world_data
-description: Data dump of Dungeon World classes, moves, equipment, and more.
-  Also mirrored as NPM package.
-version: 2.0.5-nullsafety
+description: Data dump of Dungeon World classes, moves, equipment, and more. Also mirrored as NPM package.
+version: 3.0.0
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   collection: ^1.15.0-nullsafety.4

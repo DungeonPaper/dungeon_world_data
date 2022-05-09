@@ -51,8 +51,8 @@ class Monster {
         name: json["name"],
         description: json["description"],
         instinct: json["instinct"],
-        tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
-        moves: json["moves"].map((x) => x),
+        tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))).toList(),
+        moves: json["moves"] ?? [],
       );
 
   Map<String, dynamic> toJson() => {

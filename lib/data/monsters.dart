@@ -19,11 +19,7 @@ List<Monster> getMonsterList() => [
             "\"Scum of the earth, they are. A troupe of armored men and women come sauntering into town, brandishing what, for all intents and purposes, is enough magical and mundane power to level the whole place. Bringing with them bags and bags of loot, still dripping blood from whatever poor sod they had to kill to get it. An economical fiasco waiting to happen, if you ask me. The whole system becomes completely uprooted. Dangerous, unpredictable murder-hobos. Oh, wait, you're an adventurer? I take it all back.\"",
         "instinct": "To adventure or die trying",
         "tags": [],
-        "moves": [
-          "Go on a fool's errand",
-          "Act impulsively",
-          "Share tales of past exploits"
-        ]
+        "moves": ["Go on a fool's errand", "Act impulsively", "Share tales of past exploits"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -82,10 +78,7 @@ List<Monster> getMonsterList() => [
             "Not all those who wield the arcane arts are adventuring wizards. Nor necromancers in mausoleums or sorcerers of ancient bloodline. Some are just old men and women, smart enough to have discovered a trick or two. It might make them a bit batty to come by that knowledge, but if you've a curse to break or a love to prove, might be that a hedge wizard will help you, if you can find his rotten hut in the swamp and pay the price he asks.",
         "instinct": "To learn",
         "tags": [],
-        "moves": [
-          "Cast almost the right spell (for a price)",
-          "Make deals beyond their ken"
-        ]
+        "moves": ["Cast almost the right spell (for a price)", "Make deals beyond their ken"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -95,11 +88,7 @@ List<Monster> getMonsterList() => [
             "Respected by all who gaze upon them, the high priests and abbesses of Dungeon World are treated with a sort of reverence. Whether they pay homage to Ur-thuu-hak, God of Swords, or whisper quiet prayers to Namiah, precious daughter of peace, they know a thing or two that you and I won't ever know. The gods speak to them as a hawker-of-wares might speak to us in the marketplace. For this, for the bearing-of-secrets and the knowing-of-things, we give them a wide berth as they pass in their shining robes.",
         "instinct": "To lead",
         "tags": [],
-        "moves": [
-          "Set down divine law",
-          "Reveal divine secrets",
-          "Commission divine undertakings"
-        ]
+        "moves": ["Set down divine law", "Reveal divine secrets", "Commission divine undertakings"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -202,11 +191,7 @@ List<Monster> getMonsterList() => [
             "Deep below the surface of the world, in freshwater seas untouched by the sun, dwell the aboleth. Fish the size of whales, with strange growths of gelatinous feelers used to probe the lightless shores. They're served by slaves: blind albino victims of any race unfortunate enough to stumble on them, drained of thought and life by the powers of the aboleth's alien mind. In the depths they plot against each other, fishy cultists building and digging upward towards the surface until someday, they'll breach it. For now, they sleep and dream and guide their pallid minions to do their bidding.",
         "instinct": "To command",
         "tags": [],
-        "moves": [
-          "Invade a mind",
-          "Turn minions on them",
-          "Put a plan in motion"
-        ]
+        "moves": ["Invade a mind", "Turn minions on them", "Put a plan in motion"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -240,10 +225,7 @@ List<Monster> getMonsterList() => [
             "Your worst seafood nightmare come to life. A vicious sort of half-man half-crawdad, cursed with primal intelligence and blessed with a pair of razor-sharp claws. Strange things lurk in the stinking pools in caverns best forgotten and the chuul is one of them. If you spot one, your best hope is a heavy mace to crack its shell and maybe a little garlic butter. Mmmm.",
         "instinct": "To split",
         "tags": [],
-        "moves": [
-          "Split something in two with mighty claws",
-          "Retreat into water"
-        ]
+        "moves": ["Split something in two with mighty claws", "Retreat into water"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -253,11 +235,7 @@ List<Monster> getMonsterList() => [
             "It was not so simple a thing as a war over religion or territory. No disagreement of queens led to the great sundering of the elves. It was sadness. It was the very diminishing of the world by the lesser races. The glory of all the elves had built was cracking and turning to glass. Some, then, chose to separate themselves from the world; wracked with tears they turned their backs on men and dwarves. There were others, though, that were overcome with something new. A feeling no elf had felt before. Spite. Hatred filled these elves and twisted them and they turned on their weaker cousins. Some still remain after the great exodus below. Some hide amongst us with spider-poisoned blades, meting out that strangest of punishments: elven vengeance.",
         "instinct": "To spite the surface races",
         "tags": [],
-        "moves": [
-          "Poison them",
-          "Unleash an ancient spell",
-          "Call reinforcements"
-        ]
+        "moves": ["Poison them", "Unleash an ancient spell", "Call reinforcements"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -291,11 +269,7 @@ List<Monster> getMonsterList() => [
             "They are the greatest and most terrible things this world will ever have to offer.",
         "instinct": "To rule",
         "tags": [],
-        "moves": [
-          "Bend an element to its will",
-          "Demand tribute",
-          "Act with disdain"
-        ]
+        "moves": ["Bend an element to its will", "Demand tribute", "Act with disdain"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -339,11 +313,7 @@ List<Monster> getMonsterList() => [
             "Ambitious and territorial above nearly all else, the naga are very rarely found without a well-formed and insidious cult of followers. You'll see it in many mountain towns-a snake sigil scrawled on a tavern wall or a local church burned to the ground. People going missing in the mines. Men and women wearing the mark of the serpent. At the core of it all lies a naga: an old race now fallen into obscurity, still preening with the head of a man over its coiled, serpent body. Variations of these creatures exist depending on their bloodline and original purpose, but they are all master manipulators and magical forces to be reckoned with.",
         "instinct": "To lead",
         "tags": [],
-        "moves": [
-          "Send a follower to their death",
-          "Use old magic",
-          "Offer a deal or bargain"
-        ]
+        "moves": ["Send a follower to their death", "Use old magic", "Offer a deal or bargain"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -363,11 +333,7 @@ List<Monster> getMonsterList() => [
             "A seasoned caravan guard learns to listen for the calls of a scout or sentry with a keen ear. A few extra seconds after the alarm is raised can mean life or death. Different cries mean different responses, too-a call of \"orcs!\" means draw your sword and steady for blood but a call of \"bandits!\" says you might be able to bargain. One alarm from the scouts that always, always means it's time to pack up, whip your horse and run for the hills? \"LAND SHARK!\"",
         "instinct": "To devour",
         "tags": [],
-        "moves": [
-          "Drag prey into rough tunnels",
-          "Burst from the earth",
-          "Swallow whole"
-        ]
+        "moves": ["Drag prey into rough tunnels", "Burst from the earth", "Swallow whole"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -387,10 +353,7 @@ List<Monster> getMonsterList() => [
             "It's typical to think that all the malignant arcane monsters made in this world are birthed by wizards, sorcerers, and their ilk. That the colleges and towers of Dungeon World are womb to every bleak experiment. There are mistakes made in the depths of the earth, too. These ones, the derro, are the mistakes of a long-forgotten dwarven alchemist. The derro don't forget, though. Twisted and hateful, the derro can be spotted by their swollen skulls, brain-matter grown too large. They do not speak except in thoughts to one another and plot in the silent dark to extract sweetest revenge-that of the created on the creator.",
         "instinct": "To replace dwarves",
         "tags": [],
-        "moves": [
-          "Fill a mind with foreign thoughts",
-          "Take control of a beast's mind"
-        ]
+        "moves": ["Fill a mind with foreign thoughts", "Take control of a beast's mind"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -434,11 +397,7 @@ List<Monster> getMonsterList() => [
             "The pounding of the jungle drums calls to it. The slab of meat on the sacrificial stone to lure in the great ape. Girallon, they call it-a name from the long-forgotten tongue of the kings who bred the beast. Taller than a building, some say. Cloaked in ivory fur with tusks as long as scimitars. Four arms? Six? The rumors are hard to verify. Every year it is the same: some explorer visits the jungle villages seeking the ape and returns, never quite the same, never with a trophy. The pounding of the drums goes on.",
         "instinct": "To rule",
         "tags": [],
-        "moves": [
-          "Answer the call of sacrifice",
-          "Drive them from the jungle",
-          "Throw someone"
-        ]
+        "moves": ["Answer the call of sacrifice", "Drive them from the jungle", "Throw someone"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -448,10 +407,7 @@ List<Monster> getMonsterList() => [
             "A staple of the enchanter's art. Every golemist and mechano-thaumaturge in the kingdoms knows this. Iron is a misnomer, though. These guardians are crafted of any metal, really: steel, copper, or even gold, in some small cases. As much an art as a science, the crafting of a fine golem is as respected in the Kingdoms as a bridge newly built or a castle erected in the mountains. Unceasing watchdog, stalwart defender, the iron golem lives to serve, following its orders eternally. Any enchanter worth his salt can craft one, if he can afford the materials. If not…",
         "instinct": "To serve",
         "tags": [],
-        "moves": [
-          "Follow orders implacably",
-          "Use a special tool or adaptation, built-in"
-        ]
+        "moves": ["Follow orders implacably", "Use a special tool or adaptation, built-in"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -471,10 +427,7 @@ List<Monster> getMonsterList() => [
             "\"A cephalo-what? No, boy. Not \"a kraken\" but \"the kraken.\" I don't know what nonsense they taught you at that school you say you're from, but here, we know to respect the Hungerer. Right, that's what we call it, The Hungerer in the Deep to be more proper. Ain't no god, though we've got those, too. It's a squid! A mighty squid with tentacles thicker ‘round than a barrel and eyes the size of the full moon. Smart, too, the Hungerer. Knows just when to strike-when you're all too drunk or too tired or run out of clean water, that's when he gets you. No, I ain't ever seen him. I'm alive, aren't I?\"",
         "instinct": "To rule the ocean",
         "tags": [],
-        "moves": [
-          "Drag a person or ship to a watery grave",
-          "Wrap them in tentacles"
-        ]
+        "moves": ["Drag a person or ship to a watery grave", "Wrap them in tentacles"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -554,11 +507,7 @@ List<Monster> getMonsterList() => [
             "Whether in the form of a legionnaire, part of the formian standing army, or as a praetorian guard to the queen, every formian hive contains a great number of these most dangerous insectoids. Darker in carapace, often scarred with furrows and the ceremonial markings that set them apart from their drones, the formian centurions are their fighting force and rightly so. Born, bred and living for the singular purpose of killing the enemies of their hive, they fight with one mind and a hundred swords. Thus far, the powers of Law have seen fit to spare mankind a great war with these creatures, but we've seen them in skirmish-descending sometimes on border towns with their wings flickering in the heat or spilling up from a sandy mound to wipe clean a newly-dug mine. Theirs is an orderly bloodshed, committed with no pleasure but the completion of a goal.",
         "instinct": "To fight as ordered",
         "tags": [],
-        "moves": [
-          "Advance as one",
-          "Summon reinforcements",
-          "Give a life for the hive"
-        ]
+        "moves": ["Advance as one", "Summon reinforcements", "Give a life for the hive"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -681,11 +630,7 @@ List<Monster> getMonsterList() => [
             "Not every attack by orcs is torches and screaming and enslavement. Among those who follow He of Riven Sight, poison and murder-in-the-dark are considered sacred arts. Enter the shadowhunter. Orcs cloaked in Night's magic who slip into camps, towns and temples and end the lives of those within. Do not be so distracted by the howling of the berserkers that you don't notice the knife at your back.",
         "instinct": "To kill in darkness",
         "tags": [],
-        "moves": [
-          "Poison them",
-          "Melt into the shadows",
-          "Cloak them in darkness"
-        ]
+        "moves": ["Poison them", "Melt into the shadows", "Cloak them in darkness"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -773,11 +718,7 @@ List<Monster> getMonsterList() => [
             "\"It will be a gathering of clans unseen in this age. Call Stormhoof and Brightspear. Summon Whitemane and Ironflanks. Sound the horn and we shall begin our meeting-we shall speak the words and bind our people together. Too long have the men cut the ancient trees for their ships. The elves are weak and cowardly, friend to these mannish slime. It will be a cleansing fire from the darkest woods. Raise the red banner of war! Today we strike back against these apes and retake what is ours!\"",
         "instinct": "To rage",
         "tags": [],
-        "moves": [
-          "Overrun them",
-          "Fire a perfect bullseye",
-          "Move with unrelenting speed"
-        ]
+        "moves": ["Overrun them", "Fire a perfect bullseye", "Move with unrelenting speed"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -787,10 +728,7 @@ List<Monster> getMonsterList() => [
             "The barrier between Dungeon World and the elemental planes is not, as you might hope, a wall of stone. It's much more porous. Places where the civil races do not often tread can sometimes, how to put this, spring a leak. Like a dam come just a little loose. Bits and pieces of the chaos spill out. Sometimes, they'll congeal like an egg on a pan-that's where we get the material for many of the Guild's magical trinkets. Useful, right? Sometimes, though, it squirms and squishes around a bit and stays that way, warping all it touches into some other, strange form. Chaos begets chaos, and it grows.",
         "instinct": "To change",
         "tags": [],
-        "moves": [
-          "Cause a change in appearance or substance",
-          "Briefly bridge the planes"
-        ]
+        "moves": ["Cause a change in appearance or substance", "Briefly bridge the planes"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -810,11 +748,7 @@ List<Monster> getMonsterList() => [
             "More beautiful by far than any man or woman born in the civil realms. To gaze upon one is to fall in love. Deep and punishing, too. Thing is, they don't love-not the fleshy folk who often find them, anyway. Their love is a primal thing, married to the woods-to a great oak that serves as home and mother and sacred place to them. It's a curse to see one, too, they'll never love you back. No matter what you do. No matter how you pledge yourself to them, they'll always spurn you. If ever their oak comes to harm, you've not only the dryad's wrath to contend with, but in every nearby village there's a score of men with a secret longing in their heart, ready to murder you where you sleep for just a smile from such a creature.",
         "instinct": "To love nature passionately",
         "tags": [],
-        "moves": [
-          "Entice a mortal",
-          "Merge into a tree",
-          "Turn nature against them"
-        ]
+        "moves": ["Entice a mortal", "Merge into a tree", "Turn nature against them"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -824,11 +758,7 @@ List<Monster> getMonsterList() => [
             "Some the size of horses. Bigger, even-the kings and queens of the eagles. Their cry pierces the mountain sky and woe to those who fall under the shadow of their mighty wings. The ancient wizards forged a pact with them in the primordial days. Men would take the plains and valleys and leave the mountaintops to the eagle lords. These sacred pacts should be honored, lest they set their talons into you. Lucky are the elves, for the makers of their treaties yet live and when danger comes to elvish lands, the eagle lords often serve as spies and mounts for them. Long-lived and proud, some might be willing to trade their ancient secrets for the right price, too.",
         "instinct": "To rule the heights",
         "tags": [],
-        "moves": [
-          "Attack from the sky",
-          "Pull someone into the air",
-          "Call on ancient oaths"
-        ]
+        "moves": ["Attack from the sky", "Pull someone into the air", "Call on ancient oaths"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -852,10 +782,7 @@ List<Monster> getMonsterList() => [
             "True elvish magic isn't like the spells of men. Mannish wizardry is all rotes and formulas. They cheat to find the arcane secrets that resound all around them. They are deaf to the arcane symphony that sings in the woods. Elvish magic requires a fine ear to hear that symphony and the voice with which to sing. To harmonize with what is already resounding. Men bind the forces of magic to their will; Elves simply pluck the strings and hum along. The High Arcanists, in a way, have become more and less than any elf. The beat of their blood is the throbbing of all magic in this world.",
         "instinct": "To unleash power",
         "tags": [],
-        "moves": [
-          "Work the magic that nature demands",
-          "Cast forth the elements"
-        ]
+        "moves": ["Work the magic that nature demands", "Cast forth the elements"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -865,11 +792,7 @@ List<Monster> getMonsterList() => [
             "On first glance, one might mistake the griffin for another magical mistake like the manticore or the chimera. It looks the part, doesn't it? These creatures have the regal haughtiness of a lion and the arrogant bearing of an eagle, but they temper those with the unshakeable loyalty of both. To earn the friendship of a griffin is to have an ally all your living days. Truly a gift, that. If you're ever lucky enough to meet one be respectful and deferential above all else. It may not seem it but they can perceive the subtlest slights and will answer them with a sharp beak and talons.",
         "instinct": "To serve allies",
         "tags": [],
-        "moves": [
-          "Judge someone's worthiness",
-          "Carry an ally aloft",
-          "Strike from above"
-        ]
+        "moves": ["Judge someone's worthiness", "Carry an ally aloft", "Strike from above"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -889,11 +812,7 @@ List<Monster> getMonsterList() => [
             "A tale, then. Somewhere in the not-so-long history of the mannish race there was a divide. In days when men were merely dwellers-in-the-mud with no magic to call their own, they split in two: one camp left their caves and the dark forests and built the first city to honor the gods. The others, a wild and savage lot, retreated into darkness. They grew, there. In the deep woods a grim loathing for their softer kin gave them strength. They found dark gods of their own, there in the woods and hills. Ages passed and they bred tall and strong and full of hate. We have forged steel and they match it with their savagery. We may have forgotten our common roots, but somewhere, deep down, the ogres remember.",
         "instinct": "To return the world to darker days",
         "tags": [],
-        "moves": [
-          "Destroy something",
-          "Fly into a rage",
-          "Take something by force"
-        ]
+        "moves": ["Destroy something", "Fly into a rage", "Take something by force"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -941,11 +860,7 @@ List<Monster> getMonsterList() => [
             "Old and tall and thick of bark\nwalk amidst the tree-lined dark\nStrong and slow and forest-born,\ntreants anger quick, we warn\nif to woods with axe ye go\nknow the treants be thy foe",
         "instinct": "To protect nature",
         "tags": [],
-        "moves": [
-          "Move with implacable strength",
-          "Set down roots",
-          "Spread old magic"
-        ]
+        "moves": ["Move with implacable strength", "Set down roots", "Spread old magic"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1134,10 +1049,7 @@ List<Monster> getMonsterList() => [
             "For some folk, when they pass, Death himself cannot release their grip on the places they love most. A priest whose devotion to the temple is greater than that of his god. A banking guild official who cannot bear to part with his vault. A drunk and his favorite tavern. All make excellent spectres. They act not out of the usual hunger that drives the undead, but jealousy. Jealousy that anyone else might come to love their home as much as they do and drive them out. These places belong to them and these invisible spirits will kill before they'll let anyone send them to their rest.",
         "instinct": "To drive life from a place",
         "tags": [],
-        "moves": [
-          "Turn their haunt against a creature",
-          "Bring the environment to life"
-        ]
+        "moves": ["Turn their haunt against a creature", "Bring the environment to life"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1147,11 +1059,7 @@ List<Monster> getMonsterList() => [
             "We fear them, because they call to us. So much like us, or how we hope to be: beautiful, passionate, and powerful. They are drawn to us for what they cannot be: warm, kind, and alive. These tormented souls can only hope, at most, to pass their dreadful curse along. Every time they feed they run the risk of passing along their torture to another and in each one lives the twisted seed of its creator. Vampires beget vampires. Suffering begets suffering. Do not be drawn in by their seduction or you may be given their gift-a crown of shadows and the chains of eternal undying grief.",
         "instinct": "To manipulate",
         "tags": [],
-        "moves": [
-          "Charm someone",
-          "Feed on their blood",
-          "Retreat to plan again"
-        ]
+        "moves": ["Charm someone", "Feed on their blood", "Retreat to plan again"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1184,11 +1092,7 @@ List<Monster> getMonsterList() => [
             "Dragon-Turtle's sister is a mighty serpent queen. Ten yards of scales and muscle, they say she wakes with a hunger when the sun disappears from the sky. She is attracted by bright light in the darkness and like any snake, the Bakunawa is sneaky. She will seek first to beguile and mislead and will only strike out with violence when no other option is available. When she does, though, her jaws are strong enough to crack the hull of any swamp-boat and certainly enough to slice through a steel breastplate or two. Give the greedy snake your treasures and she might just leave you alone.",
         "instinct": "To devour",
         "tags": [],
-        "moves": [
-          "Lure prey with lies and illusions",
-          "Lash out at light",
-          "Devour"
-        ]
+        "moves": ["Lure prey with lies and illusions", "Lash out at light", "Devour"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1198,10 +1102,7 @@ List<Monster> getMonsterList() => [
             "\"Few have seen a basilisk and lived to tell the tale. Get it? Seen a basilisk? Little bit of basilisk humor there. Sorry, I know you're looking for something helpful, sirs. Serious stuff, I understand. The basilisk, even without its ability to turn your flesh to stone with a gaze, is a dangerous creature. A bit like a frog, bulbous eyes and six muscled legs built for leaping. A bit like an alligator, with snapping jaws and sawing teeth. Covered in stony scales and very hard to kill. Best avoided, if possible.\"",
         "instinct": "To create new statuary",
         "tags": [],
-        "moves": [
-          "Turn flesh to stone with a gaze",
-          "Retreat into a maze of stone"
-        ]
+        "moves": ["Turn flesh to stone with a gaze", "Retreat into a maze of stone"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1234,8 +1135,7 @@ List<Monster> getMonsterList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "crocodilian",
         "name": "Crocodilian",
-        "description":
-            "It's a really, really big crocodile. Seriously. So big.",
+        "description": "It's a really, really big crocodile. Seriously. So big.",
         "instinct": "To eat",
         "tags": [],
         "moves": [
@@ -1246,7 +1146,7 @@ List<Monster> getMonsterList() => [
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
-        "key": "doppelg_nger",
+        "key": "doppelganger",
         "name": "Doppelgänger",
         "description":
             "Their natural form, if you ever see it, is hideous. Like a creature who stopped growing part-way, before it decided it was elf or man or dwarf. Then again, maybe that's how you get to be the way a doppelgänger is-without form, without shape to call their own, maybe all they really seek is a place to fit in. If you go out into the world, when you come back home, make sure your friends are who you think they are. They might, instead, be a doppelgänger and your friend might be dead at the bottom of a well somewhere. Then again, depending on your friends, that might be an improvement.",
@@ -1294,10 +1194,7 @@ List<Monster> getMonsterList() => [
             "Ugly, wrinkled bird-folk, these. Once, maybe, in some ancient past, they were a race of angelic men from on high, but now they eat rats that they fish from the murk with talon-feet and devour with needle-teeth. They understand the tongues of men and dwarves but speak in little more than gibbering tongues, mimicking the words they hear with mocking laughter. It's a chilling thing to see a beast so close to man or bird but not quite either one.",
         "instinct": "To lash out",
         "tags": [],
-        "moves": [
-          "Attack from the air",
-          "Carry out the bidding of a more powerful creature"
-        ]
+        "moves": ["Attack from the air", "Carry out the bidding of a more powerful creature"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1307,10 +1204,7 @@ List<Monster> getMonsterList() => [
             "These strange creatures are no bigger or smarter than their mundane kin. They have the same vicious nature. Over their relations they have one advantage-an oily secretion that oozes from their skin. It makes them hard to catch. On top of that, with a twist of their body they can ignite the stuff, leaving pools of burning oil atop the surface of the water and roasting prey and predator alike. I hear the slimy things make good ingredients for fire-resistant gear, but you have to get your hands on one, first.",
         "instinct": "To ignite",
         "tags": [],
-        "moves": [
-          "Catch someone or something on fire (even underwater)",
-          "Consume burning prey"
-        ]
+        "moves": ["Catch someone or something on fire (even underwater)", "Consume burning prey"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1330,10 +1224,7 @@ List<Monster> getMonsterList() => [
             "A bit like a dragon, wingless though it may be. Heads, nine in number at birth, spring from a muscled trunk and weave a sinuous pattern in the air. A hydra is to be feared-a scaled terror of the marsh. The older ones, though, they have more heads, for every failed attempt to murder it just makes it stronger. Cut off a head and two more grow in its place. Only a strike, true and strong, to the heart can end a hydra's life. Not time or tide or any other thing but this.",
         "instinct": "To grow",
         "tags": [],
-        "moves": [
-          "Attack many enemies at once",
-          "Regenerate a body part (especially a head)"
-        ]
+        "moves": ["Attack many enemies at once", "Regenerate a body part (especially a head)"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1343,11 +1234,7 @@ List<Monster> getMonsterList() => [
             "Some are wont to lump these little, rat-like dragon-men in with goblins and orcs, bugbears and hobgoblins. They are smarter and wiser than their kin, however. The kobolds are beholden slaves to dragons and were, in ancient times, their lorekeepers and sorcerer-servants. Their clans, with  names like Ironscale and Whitewing, form around a dragon master and live to serve and do its bidding. Spotting a kobold means more are near-and if more are near then a mighty dragon cannot be far, either.",
         "instinct": "To serve dragons",
         "tags": [],
-        "moves": [
-          "Lay a trap",
-          "Call on dragons or draconic allies",
-          "Retreat and regroup"
-        ]
+        "moves": ["Lay a trap", "Call on dragons or draconic allies", "Retreat and regroup"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1381,11 +1268,7 @@ List<Monster> getMonsterList() => [
             "The shape and craft of men wedded to the hunger and the endless teeth of a shark. Voracious and filled only with hate, these creatures will not stop until all life has been consumed. They cannot be reasoned with, they cannot be controlled or sated. They are hunger and bloodlust, driven up from the depths of the sea to ravage coastal towns and swallow island villages.",
         "instinct": "To spill blood",
         "tags": [],
-        "moves": [
-          "Bite off a limb",
-          "Hurl a poisoned spear",
-          "Frenzy at the sight of blood"
-        ]
+        "moves": ["Bite off a limb", "Hurl a poisoned spear", "Frenzy at the sight of blood"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1395,11 +1278,7 @@ List<Monster> getMonsterList() => [
             "Great lumbering beasts, they live in places long since forgotten by the thinking races of the world. Gentle if unprovoked, but mighty if their ire is raised, they trample smaller creatures with the care we might give to crushing an ant beneath our boots. If you see one, drift by and gaze in awe, but do not wake the giant.",
         "instinct": "To endure",
         "tags": [],
-        "moves": [
-          "Stampede",
-          "Knock something down",
-          "Unleash a deafening bellow"
-        ]
+        "moves": ["Stampede", "Knock something down", "Unleash a deafening bellow"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1436,10 +1315,7 @@ List<Monster> getMonsterList() => [
             "Spot a lantern floating in the darkness, lost traveler in the swamp. Hope-a beacon of shimmering light. You call out to it, but there's no answer. It begins to fade and so you follow, sloshing through the muck, tiring at the chase, hoping you're being led to safety. Such a sad tale that always ends in doom. These creatures are a mystery-some say they're ghosts, others beacons of faerie light. Nobody knows the truth. They are cruel, however. All can agree on that.",
         "instinct": "To misguide",
         "tags": [],
-        "moves": [
-          "Lead someone astray",
-          "Clear a path to the worst place possible"
-        ]
+        "moves": ["Lead someone astray", "Clear a path to the worst place possible"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1473,10 +1349,7 @@ List<Monster> getMonsterList() => [
             "Some say these things descended from the family of a cruel wizard who forced them to live out their lives underground. They say his experiments led him to fear the sun and ages passed while he descended into unlife, dragging his folk along with him. These things resemble men, in a way. Head, four limbs and all that. Only their skin is wet and rubbery and their arms long and fingers grasping. They hate all life that bears the stink of the sun's touch, as one might expect. Jealousy, long-instilled, is hard to shake.",
         "instinct": "To deny light",
         "tags": [],
-        "moves": [
-          "Hold someone, wringing the breath from them",
-          "Fling a held creature"
-        ]
+        "moves": ["Hold someone, wringing the breath from them", "Fling a held creature"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1516,11 +1389,7 @@ List<Monster> getMonsterList() => [
             "Scarabaeus pyractomena! What a delightful creature-see how its carapace glitters in the light of our torches? Not too close now, they're temperamental, you see. The fire in their belly isn't just metaphorical, no. Watch as I goad the beast. Aha! A spout of flame! Unexpected, isn't it? One of these creatures alone, if it comes up from below, can be a hellish nuisance to a farmstead or village. A whole swarm? There's a reason they call it a conflagration of fire beetles.",
         "instinct": "To enflame",
         "tags": [],
-        "moves": [
-          "Undermine the ground",
-          "Burst from the earth",
-          "Spray forth flames"
-        ]
+        "moves": ["Undermine the ground", "Burst from the earth", "Spray forth flames"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1530,11 +1399,7 @@ List<Monster> getMonsterList() => [
             "It's a sad thing, really. Guardians bred by magi of the past with no more castles to guard. Their ancestors' sacred task bred into their blood leads them to find a place-ruins mostly, but sometimes a cave or hill or mountain cliff-and guard it as though their masters yet lived below. They're notoriously good at finding valuables buried below the earth, though. Find one of these winged reptiles and you'll find yourself a treasure nearby. Just be careful, they're hard to spot and tend to move in packs.",
         "instinct": "To guard",
         "tags": [],
-        "moves": [
-          "Attack with the element of surprise",
-          "Take to the air",
-          "Blend into stonework"
-        ]
+        "moves": ["Attack with the element of surprise", "Take to the air", "Blend into stonework"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1554,11 +1419,7 @@ List<Monster> getMonsterList() => [
             "Nobody seems to know where these things came from. Elves say they're the dwarves' fault-dredged up from a hidden place beneath the earth. Dwarves say they're bad elvish children, taken away at birth and raised in the dark. The truth of the matter is that goblins have always been here and they'll be here once all the civilized races have fallen and gone away. Goblins never die out. There's just too damn many of them.",
         "instinct": "To multiply",
         "tags": [],
-        "moves": [
-          "Charge!",
-          "Call more goblins",
-          "Retreat and return with (many) more"
-        ]
+        "moves": ["Charge!", "Call more goblins", "Retreat and return with (many) more"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1591,10 +1452,7 @@ List<Monster> getMonsterList() => [
             "The mating call of the otyugh is a horrible, blaring cry that sounds like a cross between an elephant dying and an over-eager vulture. The otyugh spends much of its time partly submerged in filthy water and prefers eating garbage over any other food. As a result, it often grows fat and strong on the offal of orcs, goblins and other cave-dwelling sub-humans. Get too close, however, and you'll have one of its barbed tentacles dragging you into that soggy, razor-toothed maw. If you get away with your life, best get to a doctor, or your victory may be short lived.",
         "instinct": "To befoul",
         "tags": [],
-        "moves": [
-          "Infect someone with filth fever",
-          "Fling someone or something"
-        ]
+        "moves": ["Infect someone with filth fever", "Fling someone or something"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1634,11 +1492,7 @@ List<Monster> getMonsterList() => [
             "They live in your skin. Or your organ meat. Or your eyeballs. They grow there and then, in a bloody and horrific display, burrow their way out. Disgusting.",
         "instinct": "To infect",
         "tags": [],
-        "moves": [
-          "Burrow under flesh",
-          "Lay eggs",
-          "Burst forth from an infected creature"
-        ]
+        "moves": ["Burrow under flesh", "Lay eggs", "Burst forth from an infected creature"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1692,11 +1546,7 @@ List<Monster> getMonsterList() => [
             "Do you think the phrase \"drag him to hell\" means nothing? It is unfortunately literal, in the case of the chain devil. Appearing differently to each victim, this summoned creature has but a single purpose: to wrap its victim up in binding coils and take it away to a place of torment. Sometimes it will come as a man-shaped mass of rusting iron, hooks and coils of mismatched links. Other times, a roiling tangle of rope or kelp or twisted bloody bedsheets. The results are always the same.",
         "instinct": "To capture",
         "tags": [],
-        "moves": [
-          "Take a captive",
-          "Return to whence it came",
-          "Torture with glee"
-        ]
+        "moves": ["Take a captive", "Return to whence it came", "Torture with glee"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1730,10 +1580,7 @@ List<Monster> getMonsterList() => [
             "\"Stop rubbing that lamp, you idiot. I do not care what you have read, it will not grant you wishes. I brought you here to show you something real, something true. See this mural? It shows the ancient city. The true city that came before. They called it Majilis and it was made of brass by the spirits. They had golem servants and human lovers and, in that day, it was said you could trade them a year of your life for a favor. We are not here to gather treasure this night, fool, we are here to learn. The djinn still sometimes come to these places, and you must understand their history if you are to know how to behave. They are powerful and wicked and proud and you must know them if you hope to survive a summoning. Now, bring the lamp here and we will light it, it grows dark and these ruins are dangerous at night.\"",
         "instinct": "To burn eternally",
         "tags": [],
-        "moves": [
-          "Grant power for a price",
-          "Summon the forces of the City of Brass"
-        ]
+        "moves": ["Grant power for a price", "Summon the forces of the City of Brass"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1781,11 +1628,7 @@ List<Monster> getMonsterList() => [
             "Those who have seen visions of the Planes Below, and survived with their sanity intact, speak of masses of these writhing wretches. Maggots with the faces of men and women, crying out for salvation in a nest of flames. Sometimes, they can be goaded out through a rip in the planar caul and emerge, wriggling and in torment, into our world. Once here, they spread misery and sickness during their mayfly lives before expiring into a slurry of gore. All in all, an enticement to do good deeds in life.",
         "instinct": "To suffer",
         "tags": [],
-        "moves": [
-          "Fill them with despair",
-          "Beg for mercy",
-          "Draw evil attention"
-        ]
+        "moves": ["Fill them with despair", "Beg for mercy", "Draw evil attention"]
       }),
       Monster.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1828,9 +1671,6 @@ List<Monster> getMonsterList() => [
             "All of mortal magic is just words. Spells are prayers, rote formula, runes cast, or songs sung. Letters, words, sentences, and syntax strung together in a language that the whole world itself might understand. By way of words we can make our fellows cry or exult, can paint pictures and whisper desire to the gods. No little wonder, then, that in all that power is intent. That every word we utter, if repeated and meaning or emotion given to it, can spark a kind of unintentional summoning. Word daemons are called by accident, appear at random and are often short-lived, but come to attend a particular word. Capricious, unpredictable and dangerous, yes-but possibly useful, depending on the word.",
         "instinct": "To further their word",
         "tags": [],
-        "moves": [
-          "Cast a spell related to their word",
-          "Bring their word into abundance"
-        ]
+        "moves": ["Cast a spell related to their word", "Bring their word into abundance"]
       })
     ];

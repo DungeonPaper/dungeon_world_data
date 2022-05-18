@@ -2038,7 +2038,7 @@ void initData() {
         classes: ['druid'],
       ),
       Move(
-        key: 'doppelg_nger_s_dance',
+        key: 'doppelganger_s_dance',
         name: 'Doppelgänger’s Dance',
         description:
             'You are able to study the essence of specific individuals to take their exact form, including men, elves, or the like. Suppressing your tell is possible, but if you do, take -1 ongoing until you return to your own form.',
@@ -5032,7 +5032,7 @@ void initData() {
     ],
   ));
   monsterList.add(Monster(
-    key: 'doppelg_nger',
+    key: 'doppelganger',
     name: 'Doppelgänger',
     description:
         'Their natural form, if you ever see it, is hideous. Like a creature who stopped growing part-way, before it decided it was elf or man or dwarf. Then again, maybe that’s how you get to be the way a doppelgänger is—without form, without shape to call their own, maybe all they really seek is a place to fit in. If you go out into the world, when you come back home, make sure your friends are who you think they are. They might, instead, be a doppelgänger and your friend might be dead at the bottom of a well somewhere. Then again, depending on your friends, that might be an improvement.',

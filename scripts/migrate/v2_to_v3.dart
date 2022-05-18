@@ -301,7 +301,7 @@ CharacterClass classMapper(old.PlayerClass cls) => CharacterClass(
 
                 return GearSelection(
                   key: generatedKey,
-                  description: o.name + (incomplete ? '(TODO: INCOMPLETE)' : ''),
+                  description: fix(o.name + (incomplete ? ' (TODO: INCOMPLETE)' : '')),
                   options: isCoinsItem ? [] : splitItems,
                   coins: isCoinsItem ? numFromName ?? 0 : 0,
                 );
@@ -313,7 +313,7 @@ CharacterClass classMapper(old.PlayerClass cls) => CharacterClass(
       hp: cls.baseHP.toInt(),
       key: makeKey(cls.name),
       load: cls.load.toInt(),
-      name: cls.name,
+      name: fix(cls.name),
       meta: defaultMeta,
     );
 

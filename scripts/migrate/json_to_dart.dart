@@ -10,7 +10,10 @@ final _jsonIn = path.join(
 );
 final _dartOut = path.join(
   path.dirname(Platform.script.path),
-  'dart_dumps',
+  '..',
+  '..',
+  'lib',
+  'data',
 );
 
 final clsNameMap = {

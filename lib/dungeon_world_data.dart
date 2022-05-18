@@ -1,6 +1,5 @@
 export 'alignment.dart';
-export 'bond.dart';
-export 'bond.dart';
+export 'session_mark.dart';
 export 'character_class.dart';
 export 'dice.dart';
 export 'gear_choice.dart';

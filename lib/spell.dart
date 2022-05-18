@@ -1,9 +1,10 @@
 import 'dart:convert';
 
+import 'base.dart';
 import 'dice.dart';
 import 'tag.dart';
 
-class Spell {
+class Spell with KeyMixin {
   Spell({
     required this.meta,
     required this.key,
@@ -17,6 +18,8 @@ class Spell {
   });
 
   final dynamic meta;
+
+  @override
   final String key;
   final String name;
   final String description;

@@ -579,7 +579,7 @@ void initHomebrew() {
       ),
       GearChoice(
         key: 'dbb50c21-6f20-44d5-8c4f-68bc77e7bc77',
-        label: 'Choose a weapon:',
+        label: 'Choose a weapon',
         maxSelections: 1,
         gearOptions: [
           GearOption(
@@ -596,7 +596,7 @@ void initHomebrew() {
       ),
       GearChoice(
         key: 'fe326cb4-fa3f-4e16-830a-216280ef039d',
-        label: 'Choose one:',
+        label: 'Choose one',
         maxSelections: 1,
         gearOptions: [
           GearOption(

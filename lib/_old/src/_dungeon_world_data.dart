@@ -18,6 +18,7 @@ part '_base.dart';
 
 part '_homebrew.dart';
 
+// ignore: constant_identifier_names
 const String VERSION = '2.0.0';
 
 class DungeonWorldData {
@@ -70,16 +71,11 @@ class DungeonWorldData {
 
   Map<String, dynamic> toJSON() => {
         'tags': listMapper<Tag, dynamic, Tag>(tags, (t) => t.toJSON()),
-        'basic_moves':
-            listMapper<Move, dynamic, Move>(basicMoves, (t) => t.toJSON()),
-        'special_moves':
-            listMapper<Move, dynamic, Move>(specialMoves, (t) => t.toJSON()),
-        'classes': listMapper<PlayerClass, dynamic, PlayerClass>(
-            classes, (t) => t.toJSON()),
-        'equipment': listMapper<Equipment, dynamic, Equipment>(
-            equipment, (t) => t.toJSON()),
-        'monsters':
-            listMapper<Monster, dynamic, Monster>(monsters, (t) => t.toJSON()),
+        'basic_moves': listMapper<Move, dynamic, Move>(basicMoves, (t) => t.toJSON()),
+        'special_moves': listMapper<Move, dynamic, Move>(specialMoves, (t) => t.toJSON()),
+        'classes': listMapper<PlayerClass, dynamic, PlayerClass>(classes, (t) => t.toJSON()),
+        'equipment': listMapper<Equipment, dynamic, Equipment>(equipment, (t) => t.toJSON()),
+        'monsters': listMapper<Monster, dynamic, Monster>(monsters, (t) => t.toJSON()),
         'spells': listMapper<Spell, dynamic, Spell>(spells, (t) => t.toJSON()),
       };
 

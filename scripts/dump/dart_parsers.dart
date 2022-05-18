@@ -46,7 +46,7 @@ String parseValue<T>(T value) {
     if (val.contains("'")) {
       return '"${val.replaceAll('"', "\\\"")}"';
     } else if (val.contains('"')) {
-      return "'${val.replaceAll("'", "\\\'")}'";
+      return "'${val.replaceAll("'", "\\'")}'";
     }
 
     return "'$val'";

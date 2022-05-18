@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'base.dart';
 import 'dice.dart';
 import 'tag.dart';
 
@@ -12,7 +13,7 @@ enum MoveCategory {
   other,
 }
 
-class Move {
+class Move with KeyMixin {
   Move({
     required this.meta,
     required this.key,
@@ -26,6 +27,8 @@ class Move {
   });
 
   final dynamic meta;
+
+  @override
   final String key;
   final String name;
   final String description;

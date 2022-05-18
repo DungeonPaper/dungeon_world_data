@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'move.dart';
+import 'base.dart';
 import 'tag.dart';
 
-class Monster {
+class Monster with KeyMixin {
   Monster({
     required this.meta,
     required this.key,
@@ -15,6 +15,8 @@ class Monster {
   });
 
   final dynamic meta;
+
+  @override
   final String key;
   final String name;
   final String description;

@@ -27,7 +27,7 @@ abstract class DWEntity {
   int get hashCode => hash2(runtimeType, key);
 
   @override
-  bool operator ==(obj) => obj.hashCode == hashCode;
+  bool operator ==(other) => other.hashCode == hashCode;
 
   /// Returns a JSON representation of this object.
   dynamic toJSON();
@@ -36,8 +36,7 @@ abstract class DWEntity {
   DWEntity copy();
 
   /// Helper method for getting any `DWEntity` by its key.
-  static T? getByKey<T extends DWEntity>(String key, Iterable<T> list) =>
-      list.firstWhereOrNull(
+  static T? getByKey<T extends DWEntity>(String key, Iterable<T> list) => list.firstWhereOrNull(
         (element) => element.key == key,
       );
 }

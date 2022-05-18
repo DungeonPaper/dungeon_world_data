@@ -1292,6 +1292,7 @@ void initData() {
       GearChoice(
         key: '5becbb00-f57a-4655-b955-b291e1bcaeb4',
         label: 'You have dungeon rations (5 uses, 1 weight)',
+        preselect: [-1],
         maxSelections: 1,
         gearOptions: [
           GearOption(
@@ -2121,7 +2122,7 @@ void initData() {
       ),
       GearChoice(
         key: 'a6443bba-30b1-4315-9f12-f07e3b1a3b90',
-        label: 'Choose your armament:',
+        label: 'Choose your armament',
         maxSelections: 1,
         gearOptions: [
           GearOption(
@@ -2154,7 +2155,7 @@ void initData() {
       ),
       GearChoice(
         key: '12dad8e0-d3db-46b6-a612-0b72a1fed7bd',
-        label: 'Choose one:',
+        label: 'Choose one',
         maxSelections: 1,
         gearOptions: [
           GearOption(

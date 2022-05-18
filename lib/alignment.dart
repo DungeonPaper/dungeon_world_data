@@ -1,11 +1,14 @@
 import 'dart:convert';
 
-class Alignment {
+import 'base.dart';
+
+class Alignment with KeyMixin {
   Alignment({
     required this.key,
     required this.description,
   });
 
+  @override
   final String key;
   final String description;
 

@@ -1,6 +1,8 @@
 import 'dart:convert';
 
-class Tag {
+import 'base.dart';
+
+class Tag with KeyMixin {
   Tag({
     required this.name,
     required this.value,
@@ -10,6 +12,9 @@ class Tag {
   final String name;
   final dynamic value;
   final String description;
+
+  @override
+  String get key => name;
 
   Tag copyWith({
     String? name,

@@ -1,10 +1,11 @@
 import 'dart:convert';
 
 import 'alignment.dart';
+import 'base.dart';
 import 'dice.dart';
 import 'gear_choice.dart';
 
-class CharacterClass {
+class CharacterClass with KeyMixin {
   CharacterClass({
     required this.meta,
     required this.name,
@@ -20,6 +21,8 @@ class CharacterClass {
 
   final dynamic meta;
   final String name;
+
+  @override
   final String key;
   final String description;
   final Dice damageDice;
@@ -54,8 +57,7 @@ class CharacterClass {
         gearChoices: gearChoices ?? this.gearChoices,
       );
 
-  factory CharacterClass.fromRawJson(String str) =>
-      CharacterClass.fromJson(json.decode(str));
+  factory CharacterClass.fromRawJson(String str) => CharacterClass.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 

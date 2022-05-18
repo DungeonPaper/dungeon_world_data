@@ -1,12 +1,13 @@
 import 'dart:convert';
 
+import 'base.dart';
 import 'gear_selection.dart';
 
 /// This is the top level choice - provides one or more options to choose from.
 ///
 /// For example, "choose a gift from your parents" which gives either "your father's sword" or
 /// "your mother's mace"
-class GearChoice {
+class GearChoice with KeyMixin {
   GearChoice({
     required this.key,
     required this.description,
@@ -15,6 +16,7 @@ class GearChoice {
     this.maxSelections,
   });
 
+  @override
   final String key;
   final String description;
   final List<GearSelection> selections;

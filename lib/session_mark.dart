@@ -1,40 +1,51 @@
 import 'dart:convert';
 
-class Bond {
-  Bond({
+import 'base.dart';
+
+enum SessionMarkType { bond, flag, other }
+
+class SessionMark with KeyMixin {
+  SessionMark({
     required this.key,
     required this.description,
     required this.completed,
+    required this.type,
   });
 
+  @override
   final String key;
   final String description;
   final bool completed;
+  final SessionMarkType type;
 
-  Bond copyWith({
+  SessionMark copyWith({
     String? key,
     String? description,
     bool? completed,
+    SessionMarkType? type,
   }) =>
-      Bond(
+      SessionMark(
         key: key ?? this.key,
         description: description ?? this.description,
         completed: completed ?? this.completed,
+        type: type ?? this.type,
       );
 
-  factory Bond.fromRawJson(String str) => Bond.fromJson(json.decode(str));
+  factory SessionMark.fromRawJson(String str) => SessionMark.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory Bond.fromJson(Map<String, dynamic> json) => Bond(
+  factory SessionMark.fromJson(Map<String, dynamic> json) => SessionMark(
         key: json["key"],
         completed: json["completed"],
         description: json["description"],
+        type: SessionMarkType.values.firstWhere((e) => e.name == json['type']),
       );
 
   Map<String, dynamic> toJson() => {
         "key": key,
         "description": description,
         "completed": completed,
+        "type": type.name,
       };
 }

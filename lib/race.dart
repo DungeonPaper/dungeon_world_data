@@ -1,8 +1,9 @@
 import 'dart:convert';
 
+import 'base.dart';
 import 'tag.dart';
 
-class Race {
+class Race with KeyMixin {
   Race({
     required this.meta,
     required this.key,
@@ -14,6 +15,8 @@ class Race {
   });
 
   final dynamic meta;
+
+  @override
   final String key;
   final String name;
   final String description;

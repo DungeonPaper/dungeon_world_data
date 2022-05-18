@@ -1,10 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dungeon_world_data/_old/dw_data.dart' as old;
-import 'package:dungeon_world_data/_utils/uuid.dart';
-import 'package:dungeon_world_data/dungeon_world_data.dart';
-import 'package:dungeon_world_data/gear_option.dart';
 import 'package:path/path.dart' as path;
 
 final _jsonIn = path.join(

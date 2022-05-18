@@ -1,15 +1,17 @@
 import 'dart:convert';
 
+import 'base.dart';
 import 'item.dart';
 
 /// Contains an item and amount
-class GearOption {
+class GearOption with KeyMixin {
   GearOption({
     required this.key,
     required this.item,
     required this.amount,
   });
 
+  @override
   final String key;
   final Item item;
   final double amount;

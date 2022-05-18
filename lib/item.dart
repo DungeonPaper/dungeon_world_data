@@ -1,8 +1,9 @@
 import 'dart:convert';
 
+import 'base.dart';
 import 'tag.dart';
 
-class Item {
+class Item with KeyMixin {
   Item({
     required this.meta,
     required this.key,
@@ -12,6 +13,8 @@ class Item {
   });
 
   final dynamic meta;
+
+  @override
   final String key;
   final String name;
   final String description;

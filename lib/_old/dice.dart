@@ -109,14 +109,12 @@ class Dice {
   }
 
   @override
-  bool operator ==(obj) {
-    if (obj is Dice) {
-      return amount == obj.amount &&
-          sides == obj.sides &&
-          modifier == obj.modifier;
+  bool operator ==(dynamic other) {
+    if (other is Dice) {
+      return amount == other.amount && sides == other.sides && modifier == other.modifier;
     }
 
-    return obj.toString() == toString();
+    return other.toString() == toString();
   }
 
   @override
@@ -137,9 +135,9 @@ class Dice {
   /// Roll arbitrary amount of (possibly) different sided dice.
   static List<DiceResult> roll(List<Dice> dice) {
     var results = <DiceResult>[];
-    dice.forEach((die) {
+    for (var die in dice) {
       results.add(die.getRoll());
-    });
+    }
 
     return results;
   }
@@ -162,7 +160,7 @@ class DiceResult {
 
   // More detailed version of `toString`.
   String get toDetailedString =>
-      '$dice${didHitNaturalMax ? '*' : ''} => $total\n  $mappedResults\n  ${didHitNaturalMax ? "Die no. $indexOfNaturalMax hit 20" : "Didn\'t hit 20"}';
+      '$dice${didHitNaturalMax ? '*' : ''} => $total\n  $mappedResults\n  ${didHitNaturalMax ? "Die no. $indexOfNaturalMax hit 20" : "Didn't hit 20"}';
 
   // All results layed out with their respective die.
   String get mappedResults {
@@ -174,8 +172,7 @@ class DiceResult {
   }
 
   /// Total (accumulated) value of result, including modifiers.
-  num get total =>
-      results.reduce((tot, cur) => tot + cur) + (dice.modifier ?? 0);
+  num get total => results.reduce((tot, cur) => tot + cur) + (dice.modifier ?? 0);
 
   // Boolean that represents whether any of the rolled dice hit their natural max value (e.g. 20 for d20)
   bool get didHitNaturalMax => results.any((r) => r == dice.sides);

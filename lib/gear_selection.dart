@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'base.dart';
 import 'gear_option.dart';
 
 /// One possible selection of many, which is a "bundle" of items and coins. Contains multiple
@@ -7,7 +8,7 @@ import 'gear_option.dart';
 ///
 /// All of these should be added at once when making a selection. This is the final level of
 /// selection, the inner options are all given to the player.
-class GearSelection {
+class GearSelection with KeyMixin {
   GearSelection({
     required this.key,
     required this.description,
@@ -15,6 +16,7 @@ class GearSelection {
     required this.coins,
   });
 
+  @override
   final String key;
   final String description;
   final List<GearOption> options;

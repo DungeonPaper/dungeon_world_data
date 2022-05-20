@@ -1,0 +1,12 @@
+{
+  "name": "dw-data",
+  "version": "3.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/chenasraf/dungeon_world_data",
+  "author": "Chen Asraf <contact@casraf.blog>",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "cd ../.. && dart scripts/parsers/dart_to_json.dart"
+  }
+}

@@ -72,25 +72,37 @@ class RepositoryMap<K, V> extends RepositoryItem<Map<K, V>> {
 }
 
 class DungeonWorldRepository extends RepositoryMap<String, dynamic> {
+  final version = '3.0.0';
+
   DungeonWorldRepository([String? initialLocale]) : super(initialLocale);
 
   @override
   create() => <String, Map<String, dynamic>>{
-        'characterClasses': <String, CharacterClass>{},
-        'items': <String, Item>{},
-        'monsters': <String, Monster>{},
-        'moves': <String, Move>{},
-        'races': <String, Race>{},
-        'spells': <String, Spell>{},
-        'tags': <String, Tag>{},
+        'CharacterClasses': <String, CharacterClass>{},
+        'Items': <String, Item>{},
+        'Monsters': <String, Monster>{},
+        'Moves': <String, Move>{},
+        'Races': <String, Race>{},
+        'Spells': <String, Spell>{},
+        'Tags': <String, Tag>{},
       };
 
   Map<String, CharacterClass> get characterClasses =>
-      getItem('characterClasses').cast<String, CharacterClass>();
-  Map<String, Item> get items => getItem('items').cast<String, Item>();
-  Map<String, Monster> get monsters => getItem('monsters').cast<String, Monster>();
-  Map<String, Move> get moves => getItem('moves').cast<String, Move>();
-  Map<String, Race> get races => getItem('races').cast<String, Race>();
-  Map<String, Spell> get spells => getItem('spells').cast<String, Spell>();
-  Map<String, Tag> get tags => getItem('tags').cast<String, Tag>();
+      getItem('CharacterClasses').cast<String, CharacterClass>();
+  Map<String, Item> get items => getItem('Items').cast<String, Item>();
+  Map<String, Monster> get monsters => getItem('Monsters').cast<String, Monster>();
+  Map<String, Move> get moves => getItem('Moves').cast<String, Move>();
+  Map<String, Race> get races => getItem('Races').cast<String, Race>();
+  Map<String, Spell> get spells => getItem('Spells').cast<String, Spell>();
+  Map<String, Tag> get tags => getItem('Tags').cast<String, Tag>();
+
+  Map<String, dynamic> toJson() => {
+        "CharacterClasses": characterClasses.map(((key, value) => MapEntry(key, value.toJson()))),
+        "Items": items.map(((key, value) => MapEntry(key, value.toJson()))),
+        "Monsters": monsters.map(((key, value) => MapEntry(key, value.toJson()))),
+        "Moves": moves.map(((key, value) => MapEntry(key, value.toJson()))),
+        "Races": races.map(((key, value) => MapEntry(key, value.toJson()))),
+        "Spells": spells.map(((key, value) => MapEntry(key, value.toJson()))),
+        "Tags": tags.map(((key, value) => MapEntry(key, value.toJson()))),
+      };
 }

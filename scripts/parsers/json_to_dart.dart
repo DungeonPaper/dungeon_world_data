@@ -25,6 +25,7 @@ final clsNameMap = {
   'Monsters': 'Monster',
   'Tags': 'Tag',
 };
+
 final clsImportMap = {
   'Moves': 'move',
   'Races': 'race',

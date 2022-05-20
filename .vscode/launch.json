@@ -5,22 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Dart - Current File",
+      "name": "Dump json -> dart",
       "type": "dart",
       "request": "launch",
-      "program": "${file}"
+      "program": "scripts/parsers/json_to_dart.dart"
     },
     {
-      "name": "Migrate v2 -> v3",
+      "name": "Dump dart -> json",
       "type": "dart",
       "request": "launch",
-      "program": "scripts/migrate/v2_to_v3.dart"
-    },
-    {
-      "name": "Migrate v3 json -> dart",
-      "type": "dart",
-      "request": "launch",
-      "program": "scripts/migrate/json_to_dart.dart"
+      "program": "scripts/parsers/dart_to_json.dart"
     },
     {
       "name": "All Tests",

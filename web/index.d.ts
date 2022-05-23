@@ -6,7 +6,7 @@ export interface DungeonWorldRepository {
   Monsters: Monsters
   Moves: Moves
   Races: Races
-  Spells: Moves
+  Spells: Spells
   Tags: Tags
 }
 
@@ -18,7 +18,7 @@ export type Monsters = Record<string, Monster>
 
 export type Moves = Record<string, Move>
 
-export type Spells = Record<string, Move>
+export type Spells = Record<string, Spell>
 
 export type Tags = Record<string, Tag>
 
@@ -102,17 +102,27 @@ export interface Monster {
   moves: string[]
 }
 
-export interface Move {
+export interface MoveLike {
   _meta: Meta
   key: string
   name: string
   description: string
   explanation: string
-  dice?: string[]
   classKeys: string[]
   tags: Tag[]
-  category?: MoveCategory
-  level?: string
+}
+
+export interface Move extends MoveLike {
+  dice: string[]
+  category: MoveCategory
+}
+
+export interface Spell extends MoveLike {
+  level: string
+  dice: string[]
+}
+export interface Race extends MoveLike {
+  //
 }
 
 export enum MoveCategory {
@@ -122,5 +132,3 @@ export enum MoveCategory {
   Special = "special",
   Starting = "starting",
 }
-
-export type Race = Move

@@ -4,18 +4,9 @@ import 'dart:io';
 import 'package:dungeon_world_data/dungeon_world_data.dart';
 import 'package:path/path.dart' as path;
 
-final _jsonOut = path.join(
-  path.dirname(Platform.script.path),
-  'dumps',
-  'all.json',
-);
-final _jsonOutCopy = path.join(
-  path.dirname(Platform.script.path),
-  '..',
-  '..',
-  'web',
-  'dw_data.json',
-);
+final _jsonOut = path.join(path.dirname(Platform.script.path), 'dumps', 'all.json');
+final _jsonOutCopy =
+    path.join(path.dirname(Platform.script.path), '..', '..', 'web', 'dw_data.json');
 
 main() async {
   final contents = dungeonWorldData.toJson();
@@ -27,5 +18,6 @@ main() async {
     print("Writing $filePath...");
     await File(filePath).writeAsString(json.encode(e.value));
   }
+
   print("Done");
 }

@@ -5,6 +5,7 @@ import 'base.dart';
 import 'dice.dart';
 import 'gear_choice.dart';
 
+/// Describes a Dungeon World character class
 class CharacterClass with KeyMixin {
   CharacterClass({
     required this.meta,
@@ -19,17 +20,34 @@ class CharacterClass with KeyMixin {
     required this.gearChoices,
   });
 
+  /// Dynamic metadata
   final dynamic meta;
+
+  /// Class name, such as 'Wizard', 'Paladin'
   final String name;
 
   @override
   final String key;
+
+  /// Class description
   final String description;
+
+  /// Dice used for damage calculation
   final Dice damageDice;
+
+  /// CLass's base load, which is added to the character's STR modifier to calculate Max Load
   final int load;
+
+  /// CLass's base HP, which is added to the character's CON modifier to calculate Max HP
   final int hp;
+
+  /// This class's set of alignments along with their descriptions
   final AlignmentValues alignments;
+
+  /// This class's default bonds
   final List<String> bonds;
+
+  /// This class's starting gear options
   final List<GearChoice> gearChoices;
 
   CharacterClass copyWith({

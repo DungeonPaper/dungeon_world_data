@@ -2,22 +2,36 @@ import 'dart:convert';
 
 import 'base.dart';
 
+enum AlignmentType {
+  good,
+  evil,
+  lawful,
+  neutral,
+  chaotic,
+}
+
+/// Describes a character's alignment.
 class Alignment with KeyMixin {
   Alignment({
-    required this.key,
+    required this.type,
     required this.description,
   });
 
+  /// The alignment being described
+  final AlignmentType type;
+
   @override
-  final String key;
+  String get key => type.name;
+
+  /// The alignment's description
   final String description;
 
   Alignment copyWith({
-    String? key,
+    AlignmentType? type,
     String? description,
   }) =>
       Alignment(
-        key: key ?? this.key,
+        type: type ?? this.type,
         description: description ?? this.description,
       );
 
@@ -26,7 +40,7 @@ class Alignment with KeyMixin {
   String toRawJson() => json.encode(toJson());
 
   factory Alignment.fromJson(Map<String, dynamic> json) => Alignment(
-        key: json["key"],
+        type: AlignmentType.values.firstWhere((e) => e == json["key"]),
         description: json["description"],
       );
 

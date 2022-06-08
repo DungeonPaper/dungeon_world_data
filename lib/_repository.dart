@@ -96,7 +96,9 @@ class DungeonWorldRepository extends RepositoryMap<String, dynamic> {
   Map<String, Spell> get spells => getItem('Spells').cast<String, Spell>();
   Map<String, Tag> get tags => getItem('Tags').cast<String, Tag>();
 
-  Map<String, dynamic> toJson() => {
+  Map<String, dynamic> toJson() => toJsonAsMaps();
+
+  Map<String, dynamic> toJsonAsMaps() => {
         "CharacterClasses": characterClasses.map(((key, value) => MapEntry(key, value.toJson()))),
         "Items": items.map(((key, value) => MapEntry(key, value.toJson()))),
         "Monsters": monsters.map(((key, value) => MapEntry(key, value.toJson()))),
@@ -104,5 +106,15 @@ class DungeonWorldRepository extends RepositoryMap<String, dynamic> {
         "Races": races.map(((key, value) => MapEntry(key, value.toJson()))),
         "Spells": spells.map(((key, value) => MapEntry(key, value.toJson()))),
         "Tags": tags.map(((key, value) => MapEntry(key, value.toJson()))),
+      };
+
+  Map<String, dynamic> toJsonAsLists() => {
+        "CharacterClasses": characterClasses.values.map(((value) => value.toJson())).toList(),
+        "Items": items.values.map(((value) => value.toJson())).toList(),
+        "Monsters": monsters.values.map(((value) => value.toJson())).toList(),
+        "Moves": moves.values.map(((value) => value.toJson())).toList(),
+        "Races": races.values.map(((value) => value.toJson())).toList(),
+        "Spells": spells.values.map(((value) => value.toJson())).toList(),
+        "Tags": tags.values.map(((value) => value.toJson())).toList(),
       };
 }

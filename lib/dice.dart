@@ -1,6 +1,10 @@
 import 'dart:convert';
 import 'dart:math';
 
+/// Dice can have sides, an amount and modifiers.
+///
+/// You may also use one of the rolling convenience methods.
+/// For more information about rolls see DiceRoll class
 class Dice {
   Dice({
     required this.amount,
@@ -76,7 +80,7 @@ class Dice {
         amount: amount,
         sides: sides,
         modifierValue: statValue,
-        modifierSign: statValue >= 0 ? '+' : '-',
+        modifierSign: !statValue.isNegative ? '+' : '-',
       );
 
   @override

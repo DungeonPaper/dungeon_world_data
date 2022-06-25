@@ -107,10 +107,4 @@ export interface Race extends MoveLike {
   //
 }
 
-export enum MoveCategory {
-  Basic = "basic",
-  Special = "special",
-  Starting = "starting",
-  Advanced1 = "advanced1",
-  Advanced2 = "advanced2",
-}
+export type MoveCategory = "basic" | "special" | "starting" | "advanced1" | "advanced2"

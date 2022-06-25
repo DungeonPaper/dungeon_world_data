@@ -4,10 +4,10 @@ import 'base.dart';
 
 enum AlignmentType {
   good,
-  evil,
   lawful,
   neutral,
   chaotic,
+  evil,
 }
 
 /// Describes a character's alignment.
@@ -18,6 +18,8 @@ class Alignment with KeyMixin {
   });
 
   /// The alignment being described
+  ///
+  /// See [AlignmentType]
   final AlignmentType type;
 
   @override

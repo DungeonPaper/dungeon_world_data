@@ -55,12 +55,12 @@ class Dice {
   String toRawJson() => toJson();
 
   factory Dice.fromJson(String json) {
-    var matches = _diceMatches(json);
-    var amount = int.tryParse(matches[0]!);
-    var sides = int.tryParse(matches[1]!);
-    var modifierSign = matches[2];
-    var modifierValue = matches[3] != null ? int.tryParse(matches[3]!) : null;
-    var modifierStat =
+    final matches = _diceMatches(json);
+    final amount = int.tryParse(matches[0]!);
+    final sides = int.tryParse(matches[1]!);
+    final modifierSign = matches[2];
+    final modifierValue = matches[3] != null ? int.tryParse(matches[3]!) : null;
+    final modifierStat =
         matches[3] != null && modifierValue == null ? matches[3]!.toUpperCase() : null;
 
     if (sides == null || amount == null) {
@@ -102,9 +102,9 @@ class Dice {
           "Use `copyWithModifierValue`.\n"
           "Expected modifier: $modifierWithSign");
     }
-    var arr = <int>[];
+    final arr = <int>[];
     for (var i = 0; i < amount; i++) {
-      arr.add(Random().nextInt(sides - 1) + 1);
+      arr.add(Random().nextInt(sides) + 1);
     }
     return DiceRoll(dice: this, results: arr);
   }
@@ -121,7 +121,7 @@ class Dice {
 
   static List<String?> _diceMatches(String json) {
     _assertDicePattern(json);
-    var m = _dicePattern.firstMatch(json)!;
+    final m = _dicePattern.firstMatch(json)!;
     return m.groups([1, 2, 4, 5]);
   }
 
@@ -131,6 +131,21 @@ class Dice {
           "(e.g. 1d20, 2d6+DEX, 1d8-3)\n"
           "Received: $dice");
     }
+  }
+
+  static List<Dice> guessFromString(String str) {
+    final basicRollPattern = RegExp(r'\broll([+-][a-z]+)\b', caseSensitive: false);
+    final dicePattern = RegExp(r'\b\dd\d\b', caseSensitive: false);
+    final found = <Dice>[];
+    final basicRollMatches = basicRollPattern.allMatches(str);
+    for (final match in basicRollMatches) {
+      found.add(Dice.fromJson('2d6' + match.group(1)!.toUpperCase()));
+    }
+    final diceMatches = dicePattern.allMatches(str);
+    for (final match in diceMatches) {
+      found.add(Dice.fromJson(match.input.substring(match.start, match.end)));
+    }
+    return found;
   }
 }
 

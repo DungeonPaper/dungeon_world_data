@@ -135,7 +135,7 @@ class Dice {
 
   static List<Dice> guessFromString(String str) {
     final basicRollPattern = RegExp(r'\broll([+-][a-z]+)\b', caseSensitive: false);
-    final dicePattern = RegExp(r'\b\dd\d\b', caseSensitive: false);
+    final dicePattern = RegExp(r'\b\dd\d+\b', caseSensitive: false);
     final found = <Dice>[];
     final basicRollMatches = basicRollPattern.allMatches(str);
     for (final match in basicRollMatches) {

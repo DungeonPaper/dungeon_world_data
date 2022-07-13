@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'base.dart';
 
-enum SessionMarkType { bond, flag, other }
+enum SessionMarkType { bond, flag, endOfSession, other }
 
 class SessionMark with KeyMixin {
   SessionMark({

@@ -53,6 +53,22 @@ class Alignment with KeyMixin {
 
   @override
   String get displayName => description;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Alignment &&
+          runtimeType == other.runtimeType &&
+          type == other.type &&
+          description == other.description;
+
+  @override
+  int get hashCode => Object.hashAll([type, description]);
+
+  String get debugProperties => 'type: $type, description: $description';
+
+  @override
+  String toString() => 'Alignment($debugProperties)';
 }
 
 class AlignmentValues {
@@ -104,4 +120,24 @@ class AlignmentValues {
         "neutral": neutral,
         "chaotic": chaotic,
       };
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AlignmentValues &&
+          runtimeType == other.runtimeType &&
+          good == other.good &&
+          evil == other.evil &&
+          lawful == other.lawful &&
+          neutral == other.neutral &&
+          chaotic == other.chaotic;
+
+  @override
+  int get hashCode => Object.hashAll([good, evil, lawful, neutral, chaotic]);
+
+  String get debugProperties =>
+      'good: $good, evil: $evil, lawful: $lawful, neutral: $neutral, chaotic: $chaotic';
+
+  @override
+  String toString() => 'AlignmentValues($debugProperties)';
 }

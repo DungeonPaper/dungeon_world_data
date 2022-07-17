@@ -84,4 +84,29 @@ class Spell with KeyMixin {
 
   @override
   String get displayName => name;
+
+  @override
+  bool operator ==(Object? other) =>
+      identical(this, other) ||
+      other is Spell &&
+          runtimeType == other.runtimeType &&
+          meta == other.meta &&
+          key == other.key &&
+          name == other.name &&
+          description == other.description &&
+          explanation == other.explanation &&
+          level == other.level &&
+          classKeys == other.classKeys &&
+          dice == other.dice &&
+          tags == other.tags;
+
+  @override
+  int get hashCode =>
+      Object.hashAll([meta, key, name, description, explanation, level, classKeys, dice, tags]);
+
+  String get debugProperties =>
+      '$meta, $key, $name, $description, $explanation, $level, $classKeys, $dice, $tags';
+
+  @override
+  String toString() => 'Spell($debugProperties)';
 }

@@ -51,4 +51,23 @@ class SessionMark with KeyMixin {
 
   @override
   String get displayName => description;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SessionMark &&
+          runtimeType == other.runtimeType &&
+          key == other.key &&
+          description == other.description &&
+          completed == other.completed &&
+          type == other.type;
+
+  @override
+  int get hashCode => Object.hashAll([key, description, completed, type]);
+
+  String get debugProperties =>
+      'key: $key, description: $description, completed: $completed, type: $type';
+
+  @override
+  String toString() => 'SessionMark($debugProperties)';
 }

@@ -147,6 +147,23 @@ class Dice {
     }
     return found;
   }
+
+  @override
+  bool operator ==(Object? other) =>
+      identical(this, other) ||
+      other is Dice &&
+          runtimeType == other.runtimeType &&
+          amount == other.amount &&
+          sides == other.sides &&
+          modifierValue == other.modifierValue &&
+          modifierSign == other.modifierSign &&
+          modifierStat == other.modifierStat;
+
+  @override
+  int get hashCode => Object.hashAll([amount, sides, modifierValue, modifierSign, modifierStat]);
+
+  String get debugProperties =>
+      'amount: $amount, sides: $sides, modifierValue: $modifierValue, modifierSign: $modifierSign, modifierStat: $modifierStat';
 }
 
 class DiceRoll {

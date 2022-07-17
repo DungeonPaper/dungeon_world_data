@@ -43,6 +43,23 @@ class Tag with KeyMixin {
         "description": description,
       };
 
-      @override
-      String get displayName => name;
+  @override
+  String get displayName => name;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Tag &&
+          runtimeType == other.runtimeType &&
+          name == other.name &&
+          value == other.value &&
+          description == other.description;
+
+  @override
+  int get hashCode => Object.hashAll([name, value, description]);
+
+  String get debugProperties => 'name: $name, value: $value, description: $description';
+
+  @override
+  String toString() => 'Tag($debugProperties)';
 }

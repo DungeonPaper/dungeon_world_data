@@ -37,4 +37,16 @@ class EntityReference {
         name: name ?? this.name,
         type: type ?? this.type,
       );
+
+  @override
+  bool operator ==(Object? other) =>
+      other is EntityReference && other.key == key && other.name == name && other.type == type;
+
+  @override
+  int get hashCode => Object.hashAll([key, name, type]);
+
+  String get debugProperties => 'key: $key, name: $name, type: $type';
+
+  @override
+  String toString() => 'EntityReference(key: $key, name: $name, type: $type)';
 }

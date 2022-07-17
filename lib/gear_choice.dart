@@ -67,4 +67,30 @@ class GearChoice with KeyMixin {
 
   @override
   String get displayName => description;
+
+  @override
+  bool operator ==(Object? other) =>
+      identical(this, other) ||
+      other is GearChoice &&
+          runtimeType == other.runtimeType &&
+          key == other.key &&
+          description == other.description &&
+          selections == other.selections &&
+          preselect == other.preselect &&
+          maxSelections == other.maxSelections;
+
+  @override
+  int get hashCode => Object.hashAll([
+        key,
+        description,
+        selections,
+        preselect,
+        maxSelections,
+      ]);
+
+  String get debugProperties =>
+      'key: $key, description: $description, selections: $selections, preselect: $preselect, maxSelections: $maxSelections';
+
+  @override
+  String toString() => 'GearChoice($debugProperties)';
 }

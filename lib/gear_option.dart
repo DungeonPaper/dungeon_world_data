@@ -45,4 +45,21 @@ class GearOption with KeyMixin {
 
   @override
   String get displayName => '${item.name} x$amount';
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is GearOption &&
+          runtimeType == other.runtimeType &&
+          key == other.key &&
+          item == other.item &&
+          amount == other.amount;
+
+  @override
+  int get hashCode => Object.hashAll([key, item, amount]);
+
+  String get debugProperties => 'key: $key, item: ${item.debugProperties}, amount: $amount';
+
+  @override
+  String toString() => 'GearOption($debugProperties)';
 }

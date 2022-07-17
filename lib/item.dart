@@ -55,6 +55,25 @@ class Item with KeyMixin {
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
       };
 
-        @override
-        String get displayName => name;
+  @override
+  String get displayName => name;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Item &&
+          runtimeType == other.runtimeType &&
+          key == other.key &&
+          name == other.name &&
+          description == other.description &&
+          tags == other.tags;
+
+  @override
+  int get hashCode => Object.hashAll([key, name, description, tags]);
+
+  String get debugProperties =>
+      'meta: $meta, key: $key, name: $name, description: $description, tags: $tags';
+
+  @override
+  String toString() => 'Item($debugProperties)';
 }

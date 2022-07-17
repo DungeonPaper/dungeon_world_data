@@ -79,7 +79,6 @@ class Race with KeyMixin {
   @override
   String get displayName => name;
 
-  // == && hashCode
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||

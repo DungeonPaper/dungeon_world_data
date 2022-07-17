@@ -42,4 +42,7 @@ class GearOption with KeyMixin {
         "item": item.toJson(),
         "amount": amount,
       };
+
+  @override
+  String get displayName => '${item.name} x$amount';
 }

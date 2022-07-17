@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'base.dart';
 import 'dice.dart';
+import 'entity_reference.dart';
 import 'tag.dart';
 
 enum MoveCategory {
@@ -34,7 +35,7 @@ class Move with KeyMixin {
   final String description;
   final String explanation;
   final List<Dice> dice;
-  final List<String> classKeys;
+  final List<EntityReference> classKeys;
   final List<Tag> tags;
   final MoveCategory category;
 
@@ -45,7 +46,7 @@ class Move with KeyMixin {
     String? description,
     String? explanation,
     List<Dice>? dice,
-    List<String>? classKeys,
+    List<EntityReference>? classKeys,
     List<Tag>? tags,
     MoveCategory? category,
   }) =>
@@ -72,7 +73,8 @@ class Move with KeyMixin {
         description: json["description"],
         explanation: json["explanation"],
         dice: List<Dice>.from(json["dice"].map((x) => Dice.fromJson(x))),
-        classKeys: List<String>.from(json["classKeys"].map((x) => x)),
+        classKeys:
+            List<EntityReference>.from(json["classKeys"].map((x) => EntityReference.fromJson(x))),
         tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
         category: MoveCategory.values.firstWhere((element) => element.name == json["category"]),
       );
@@ -84,8 +86,11 @@ class Move with KeyMixin {
         "description": description,
         "explanation": explanation,
         "dice": List<String>.from(dice.map((x) => x.toJson())),
-        "classKeys": List<dynamic>.from(classKeys.map((x) => x)),
+        "classKeys": List<dynamic>.from(classKeys.map((x) => x.toJson())),
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
         "category": category.name,
       };
+
+  @override
+  String get displayName => name;
 }

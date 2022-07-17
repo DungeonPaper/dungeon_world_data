@@ -82,29 +82,35 @@ export interface Monster {
   moves: string[]
 }
 
-export interface MoveLike {
+export type MoveLike<FaveKey extends string> = {
+  [key in FaveKey]: boolean
+} & {
   _meta: Meta
   key: string
   name: string
   description: string
   explanation: string
-  classKeys: string[]
+  classKeys: EntityReference[]
   tags: Tag[]
+  dice: string[]
 }
 
-export interface Move extends MoveLike {
-  dice: string[]
+export interface Move extends MoveLike<"favorite"> {
   category: MoveCategory
-  favorited: boolean
 }
 
-export interface Spell extends MoveLike {
+export interface Spell extends MoveLike<"prepared"> {
   level: string
-  dice: string[]
-  prepared: boolean
 }
-export interface Race extends MoveLike {
+
+export interface Race extends MoveLike<"favorite"> {
   //
+}
+
+export interface EntityReference {
+  key: string
+  name: string
+  type: string
 }
 
 export type MoveCategory = "basic" | "special" | "starting" | "advanced1" | "advanced2"

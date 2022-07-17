@@ -52,4 +52,7 @@ class GearSelection with KeyMixin {
         "options": List<dynamic>.from(options.map((x) => x.toJson())),
         "coins": coins,
       };
+
+  @override
+  String get displayName => description;
 }

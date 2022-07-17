@@ -106,4 +106,7 @@ class CharacterClass with KeyMixin {
         "bonds": List<dynamic>.from(bonds.map((x) => x)),
         "gearChoices": List<dynamic>.from(gearChoices.map((x) => x.toJson())),
       };
+
+  @override
+  String get displayName => name;
 }

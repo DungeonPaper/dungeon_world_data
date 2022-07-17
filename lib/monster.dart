@@ -66,4 +66,7 @@ class Monster with KeyMixin {
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
         "moves": moves,
       };
+
+  @override
+  String get displayName => name;
 }

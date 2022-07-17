@@ -64,4 +64,7 @@ class GearChoice with KeyMixin {
       : preselect.first == -1
           ? selections
           : selections.sublist(preselect.first, preselect.last);
+
+  @override
+  String get displayName => description;
 }

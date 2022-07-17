@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "dart",
+      "command": "dart",
+      "cwd": "",
+      "args": [
+        "doc",
+        "."
+      ],
+      "problemMatcher": [],
+      "label": "dart: dart doc .",
+      "detail": ""
+    },
+    {
+      "label": "Auto-fix all fixable problems",
+      "type": "dart",
+      "command": "dart",
+      "detail": "dart fix --apply",
+      "args": [
+        "fix",
+        "--apply"
+      ],
+      "problemMatcher": []
+    },
+  ]
+}

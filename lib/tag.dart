@@ -42,4 +42,7 @@ class Tag with KeyMixin {
         "value": value,
         "description": description,
       };
+
+      @override
+      String get displayName => name;
 }

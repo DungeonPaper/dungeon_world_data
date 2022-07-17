@@ -54,4 +54,7 @@ class Item with KeyMixin {
         "description": description,
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
       };
+
+        @override
+        String get displayName => name;
 }

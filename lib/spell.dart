@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'base.dart';
 import 'dice.dart';
+import 'entity_reference.dart';
 import 'tag.dart';
 
 class Spell with KeyMixin {
@@ -25,7 +26,7 @@ class Spell with KeyMixin {
   final String description;
   final String explanation;
   final String level;
-  final List<String> classKeys;
+  final List<EntityReference> classKeys;
   final List<Dice> dice;
   final List<Tag> tags;
 
@@ -36,7 +37,7 @@ class Spell with KeyMixin {
     String? description,
     String? explanation,
     String? level,
-    List<String>? classKeys,
+    List<EntityReference>? classKeys,
     List<Dice>? dice,
     List<Tag>? tags,
   }) =>
@@ -63,7 +64,8 @@ class Spell with KeyMixin {
         description: json["description"] ?? '',
         explanation: json["explanation"] ?? '',
         level: json["level"] ?? '',
-        classKeys: List<String>.from(json["classKeys"].map((x) => x)),
+        classKeys:
+            List<EntityReference>.from(json["classKeys"].map((x) => EntityReference.fromJson(x))),
         tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
         dice: List<Dice>.from(json["dice"].map((x) => Dice.fromJson(x))),
       );
@@ -75,8 +77,11 @@ class Spell with KeyMixin {
         "description": description,
         "explanation": explanation,
         "level": level,
-        "classKeys": List<dynamic>.from(classKeys.map((x) => x)),
+        "classKeys": List<dynamic>.from(classKeys.map((x) => x.toJson())),
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
         "dice": List<dynamic>.from(dice.map((x) => x.toJson())),
       };
+
+  @override
+  String get displayName => name;
 }

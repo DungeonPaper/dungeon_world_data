@@ -1668,7 +1668,12 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Help an animal or spirit of the wild.",
           "chaotic": "Free someone from literal or figurative bonds."
         },
-        "bonds": [],
+        "bonds": [
+          "I have guided ______________________ before and they owe me for it.",
+          "______________________ is a friend of nature, so I will be their friend as well.",
+          "______________________ has no respect for nature, so I have no respect for them.",
+          "______________________ does not understand life in the wild, so I will teach them.",
+        ],
         "gearChoices": [
           {
             "key": "b81a5df6-2a18-4880-a664-6b07b34f2219",
@@ -1827,7 +1832,7 @@ List<CharacterClass> getCharacterClassList() => [
             "description": "Choose one",
             "selections": [
               {
-                "key": "adventuring_gear",
+                "key": "adventuring_gear_and_dungeon_rations",
                 "description": "Adventuring Gear",
                 "options": [
                   {
@@ -1855,12 +1860,42 @@ List<CharacterClass> getCharacterClassList() => [
                       ]
                     },
                     "amount": 1.0
-                  }
+                  },
+                  {
+                    "key": "dungeon_rations",
+                    "item": {
+                      "_meta": {"language": "EN", "createdBy": "__repo__"},
+                      "key": "dungeon_rations",
+                      "name": "Dungeon Rations",
+                      "description": "Not tasty, but not bad either.",
+                      "tags": [
+                        {
+                          "name": "Ration",
+                          "value": null,
+                          "description": "It's edible, more or less."
+                        },
+                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Coins",
+                          "value": 3,
+                          "description":
+                              "How much it costs to buy, normally. If the cost includes \"-Charisma\" a little negotiation subtracts the haggler's Charisma score (not modifier) from the price."
+                        },
+                        {
+                          "name": "Weight",
+                          "value": 1,
+                          "description":
+                              "Count the listed amount against your load. Something with no listed weight isn't designed to be carried. 100 coins in standard denominations is 1 weight. The same value in gems or fine art may be lighter or heavier."
+                        }
+                      ]
+                    },
+                    "amount": 1.0,
+                  },
                 ],
                 "coins": 0.0
               },
               {
-                "key": "adventuring_gear",
+                "key": "adventuring_gear_and_bundle_of_arrows",
                 "description": "Adventuring Gear",
                 "options": [
                   {
@@ -1888,6 +1923,35 @@ List<CharacterClass> getCharacterClassList() => [
                       ]
                     },
                     "amount": 1.0
+                  },
+                  {
+                    "key": "bundle_of_arrows",
+                    "item": {
+                      "_meta": {"language": "EN", "createdBy": "__repo__"},
+                      "key": "bundle_of_arrows",
+                      "name": "Bundle of Arrows",
+                      "description": "",
+                      "tags": [
+                        {
+                          "name": "Ammo",
+                          "value": 3,
+                          "description":
+                              "It counts as ammunition for appropriate ranged weapons. The number indicated does not represent individual arrows or sling stones, but represents what you have left on hand."
+                        },
+                        {
+                          "name": "Coins",
+                          "value": 1,
+                          "description":
+                              "How much it costs to buy, normally. If the cost includes \"-Charisma\" a little negotiation subtracts the haggler's Charisma score (not modifier) from the price."
+                        },
+                        {
+                          "name": "Weight",
+                          "value": 1,
+                          "description":
+                              "Count the listed amount against your load. Something with no listed weight isn't designed to be carried. 100 coins in standard denominations is 1 weight. The same value in gems or fine art may be lighter or heavier."
+                        }
+                      ]
+                    },
                   }
                 ],
                 "coins": 0.0

@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'base.dart';
+import 'dice.dart';
+import 'entity_reference.dart';
 import 'tag.dart';
 
 class Race with KeyMixin {
@@ -10,6 +12,7 @@ class Race with KeyMixin {
     required this.name,
     required this.description,
     required this.explanation,
+    required this.dice,
     required this.classKeys,
     required this.tags,
   });
@@ -21,8 +24,9 @@ class Race with KeyMixin {
   final String name;
   final String description;
   final String explanation;
-  final List<String> classKeys;
+  final List<EntityReference> classKeys;
   final List<Tag> tags;
+  final List<Dice> dice;
 
   Race copyWith({
     dynamic meta,
@@ -30,8 +34,9 @@ class Race with KeyMixin {
     String? name,
     String? description,
     String? explanation,
-    List<String>? classKeys,
+    List<EntityReference>? classKeys,
     List<Tag>? tags,
+    List<Dice>? dice,
   }) =>
       Race(
         meta: meta ?? this.meta,
@@ -41,6 +46,7 @@ class Race with KeyMixin {
         explanation: explanation ?? this.explanation,
         classKeys: classKeys ?? this.classKeys,
         tags: tags ?? this.tags,
+        dice: dice ?? this.dice,
       );
 
   factory Race.fromRawJson(String str) => Race.fromJson(json.decode(str));
@@ -53,8 +59,10 @@ class Race with KeyMixin {
         name: json["name"],
         description: json["description"],
         explanation: json["explanation"],
-        classKeys: List<String>.from(json["classKeys"].map((x) => x)),
+        classKeys:
+            List<EntityReference>.from(json["classKeys"].map((x) => EntityReference.fromJson(x))),
         tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
+        dice: List<Dice>.from(json["dice"].map((x) => Dice.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -63,7 +71,11 @@ class Race with KeyMixin {
         "name": name,
         "description": description,
         "explanation": explanation,
-        "classKeys": List<dynamic>.from(classKeys.map((x) => x)),
+        "classKeys": List<dynamic>.from(classKeys.map((x) => x.toJson())),
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
+        "dice": List<dynamic>.from(dice.map((x) => x.toJson()))
       };
+
+  @override
+  String get displayName => name;
 }

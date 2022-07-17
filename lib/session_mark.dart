@@ -48,4 +48,7 @@ class SessionMark with KeyMixin {
         "completed": completed,
         "type": type.name,
       };
+
+  @override
+  String get displayName => description;
 }

@@ -50,6 +50,9 @@ class Alignment with KeyMixin {
         "key": key,
         "description": description,
       };
+
+  @override
+  String get displayName => description;
 }
 
 class AlignmentValues {

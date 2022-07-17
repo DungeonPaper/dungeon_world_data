@@ -25,6 +25,7 @@ List<CharacterClass> getCharacterClassList() => [
           "__________ trusted me with a secret.",
           "__________ does not trust me, and for good reason."
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "5becbb00-f57a-4655-b955-b291e1bcaeb4",
@@ -536,6 +537,7 @@ List<CharacterClass> getCharacterClassList() => [
           "__________ is in constant danger, I will keep them safe.",
           "I am working on converting __________ to my faith."
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "74014bad-3ec2-42b8-a1ea-d2b9f5f89c93",
@@ -845,6 +847,7 @@ List<CharacterClass> getCharacterClassList() => [
           "I have showed __________ a secret rite of the Land.",
           "__________ has tasted my blood and I theirs. We are bound by it."
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "75b38f75-98d7-4103-aa42-c382383630df",
@@ -1251,6 +1254,7 @@ List<CharacterClass> getCharacterClassList() => [
           "I worry about the ability of __________ to survive in the dungeon.",
           "__________ is soft, but I will make them hard like me."
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "d417bac1-dd58-4a6a-993a-dc97c52e9cf9",
@@ -1466,6 +1470,7 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "",
           "chaotic": ""
         },
+        "flags": [],
         "bonds": [
           "__________'s misguided behavior endangers their very soul!",
           "__________ has stood by me in battle and can be trusted completely.",
@@ -1668,6 +1673,7 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Help an animal or spirit of the wild.",
           "chaotic": "Free someone from literal or figurative bonds."
         },
+        "flags": [],
         "bonds": [
           "I have guided ______________________ before and they owe me for it.",
           "______________________ is a friend of nature, so I will be their friend as well.",
@@ -1978,6 +1984,7 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Avoid detection or infiltrate a location.",
           "chaotic": "Leap into danger without a plan."
         },
+        "flags": [],
         "bonds": [
           "I stole something from __________.",
           "__________ has my back when things go wrong.",
@@ -2252,6 +2259,7 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Discover something about a magical mystery.",
           "chaotic": ""
         },
+        "flags": [],
         "bonds": [
           "__________ will play an important role in the events to come. I have foreseen it!",
           "__________ is keeping an important secret from me.",
@@ -2517,6 +2525,7 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Exchange a sacrifice, freely given, for a service rendered.",
           "chaotic": "Spread a dangerous new idea"
         },
+        "flags": [],
         "bonds": [
           "__________ has felt the hellish touch of fire, now they know my strength.",
           "I will teach __________ the true meaning of sacrifice.",
@@ -2619,6 +2628,7 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Teach someone the ways of your people.",
           "chaotic": "You eschew a convention of the civilized world."
         },
+        "flags": [],
         "bonds": [
           "______________________ is puny and foolish, but amusing to me.",
           "______________________ 's ways are strange and confusing.",

@@ -17,6 +17,7 @@ class CharacterClass with KeyMixin {
     required this.hp,
     required this.alignments,
     required this.bonds,
+    required this.flags,
     required this.gearChoices,
   });
 
@@ -47,6 +48,9 @@ class CharacterClass with KeyMixin {
   /// This class's default bonds
   final List<String> bonds;
 
+  /// This class's default flags
+  final List<String> flags;
+
   /// This class's starting gear options
   final List<GearChoice> gearChoices;
 
@@ -60,6 +64,7 @@ class CharacterClass with KeyMixin {
     int? hp,
     AlignmentValues? alignments,
     List<String>? bonds,
+    List<String>? flags,
     List<GearChoice>? gearChoices,
   }) =>
       CharacterClass(
@@ -72,6 +77,7 @@ class CharacterClass with KeyMixin {
         hp: hp ?? this.hp,
         alignments: alignments ?? this.alignments,
         bonds: bonds ?? this.bonds,
+        flags: flags ?? this.flags,
         gearChoices: gearChoices ?? this.gearChoices,
       );
 
@@ -88,7 +94,8 @@ class CharacterClass with KeyMixin {
         load: json["load"],
         hp: json["hp"],
         alignments: AlignmentValues.fromJson(json["alignments"]),
-        bonds: List<String>.from(json["bonds"].map((x) => x)),
+        bonds: List<String>.from(json["bonds"]),
+        flags: List<String>.from(json["flags"]),
         gearChoices: List<GearChoice>.from(
           json["gearChoices"].map((x) => GearChoice.fromJson(x)),
         ),
@@ -103,7 +110,8 @@ class CharacterClass with KeyMixin {
         "load": load,
         "hp": hp,
         "alignments": alignments.toJson(),
-        "bonds": List<dynamic>.from(bonds.map((x) => x)),
+        "bonds": List<dynamic>.from(bonds),
+        "flags": List<dynamic>.from(flags),
         "gearChoices": List<dynamic>.from(gearChoices.map((x) => x.toJson())),
       };
 

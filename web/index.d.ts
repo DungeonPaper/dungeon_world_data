@@ -21,6 +21,7 @@ export interface CharacterClass {
   hp: number
   alignments: Alignments
   bonds: string[]
+  flags: string[]
   gearChoices: GearChoice[]
 }
 

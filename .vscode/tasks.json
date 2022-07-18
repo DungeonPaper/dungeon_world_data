@@ -27,11 +27,23 @@
     {
       "label": "npm publish",
       "type": "shell",
-      "command": "yarn build && npm publish -d ../build",
+      "command": "npm publish -d ../build",
+      "dependsOn": [
+        "npm build",
+      ],
       "options": {
         "cwd": "./web/src"
       },
       "problemMatcher": []
-    }
+    },
+    {
+      "label": "npm build",
+      "type": "shell",
+      "command": "yarn build",
+      "options": {
+        "cwd": "./web/src"
+      },
+      "problemMatcher": []
+    },
   ]
 }

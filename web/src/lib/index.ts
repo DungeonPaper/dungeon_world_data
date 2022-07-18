@@ -1,4 +1,4 @@
-import * as _data from "./dw_data.json"
+import _data from "./dw_data.json"
 export * from "./types"
 
 import { DungeonWorldRepository } from "./types"

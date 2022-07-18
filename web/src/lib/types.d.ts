@@ -8,9 +8,6 @@ export interface DungeonWorldRepository {
   Tags: Record<string, Tag>
 }
 
-export const dungeonWorld: DungeonWorldRepository
-export default dungeonWorld
-
 export interface CharacterClass {
   _meta: Meta
   name: string
@@ -28,6 +25,14 @@ export interface CharacterClass {
 export interface Meta {
   language: string
   createdBy: string
+  version: string
+  sharing: MetaSharing | null
+}
+
+interface MetaSharing {
+  sourceKey: string
+  sourceOwner: string
+  sourceVersion: string
 }
 
 export interface Alignments {

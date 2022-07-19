@@ -13,9 +13,12 @@ enum AlignmentType {
 /// Describes a character's alignment.
 class Alignment with KeyMixin {
   Alignment({
+    required this.meta,
     required this.type,
     required this.description,
   });
+
+  final dynamic meta;
 
   /// The alignment being described
   ///
@@ -33,6 +36,7 @@ class Alignment with KeyMixin {
     String? description,
   }) =>
       Alignment(
+        meta: meta,
         type: type ?? this.type,
         description: description ?? this.description,
       );
@@ -42,11 +46,13 @@ class Alignment with KeyMixin {
   String toRawJson() => json.encode(toJson());
 
   factory Alignment.fromJson(Map<String, dynamic> json) => Alignment(
+        meta: json['_meta'],
         type: AlignmentType.values.firstWhere((e) => e == json["key"]),
         description: json["description"],
       );
 
   Map<String, dynamic> toJson() => {
+        "_meta": meta,
         "key": key,
         "description": description,
       };

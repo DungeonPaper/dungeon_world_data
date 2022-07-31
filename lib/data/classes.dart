@@ -1694,7 +1694,7 @@ List<CharacterClass> getCharacterClassList() => [
                     "item": {
                       "_meta": {"language": "EN", "createdBy": "__repo__"},
                       "key": "hunters_bow",
-                      "name": "hunter's bow",
+                      "name": "Hunter's Bow",
                       "description": "",
                       "tags": [
                         {
@@ -1760,7 +1760,7 @@ List<CharacterClass> getCharacterClassList() => [
                     "item": {
                       "_meta": {"language": "EN", "createdBy": "__repo__"},
                       "key": "hunters_bow",
-                      "name": "hunter's bow",
+                      "name": "Hunter's Bow",
                       "description": "",
                       "tags": [
                         {

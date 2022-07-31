@@ -108,8 +108,7 @@ List<Item> getItemList() => [
           {
             "name": "Near",
             "value": null,
-            "description":
-                "It's useful for attacking if you can see the whites of their eyes."
+            "description": "It's useful for attacking if you can see the whites of their eyes."
           },
           {
             "name": "Coins",
@@ -134,14 +133,12 @@ List<Item> getItemList() => [
           {
             "name": "Near",
             "value": null,
-            "description":
-                "It's useful for attacking if you can see the whites of their eyes."
+            "description": "It's useful for attacking if you can see the whites of their eyes."
           },
           {
             "name": "Far",
             "value": null,
-            "description":
-                "It's useful for attacking something in shouting distance."
+            "description": "It's useful for attacking something in shouting distance."
           },
           {
             "name": "Coins",
@@ -160,20 +157,18 @@ List<Item> getItemList() => [
       Item.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "hunters_bow",
-        "name": "hunter's bow",
+        "name": "Hunter's Bow",
         "description": "",
         "tags": [
           {
             "name": "Near",
             "value": null,
-            "description":
-                "It's useful for attacking if you can see the whites of their eyes."
+            "description": "It's useful for attacking if you can see the whites of their eyes."
           },
           {
             "name": "Far",
             "value": null,
-            "description":
-                "It's useful for attacking something in shouting distance."
+            "description": "It's useful for attacking something in shouting distance."
           },
           {
             "name": "Weight",
@@ -192,8 +187,7 @@ List<Item> getItemList() => [
           {
             "name": "Near",
             "value": null,
-            "description":
-                "It's useful for attacking if you can see the whites of their eyes."
+            "description": "It's useful for attacking if you can see the whites of their eyes."
           },
           {
             "name": "Damage",
@@ -282,8 +276,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Coins",
@@ -308,8 +301,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Coins",
@@ -334,8 +326,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Two_handed",
@@ -365,8 +356,7 @@ List<Item> getItemList() => [
           {
             "name": "Hand",
             "value": null,
-            "description":
-                "It's useful for attacking something within your reach, no further."
+            "description": "It's useful for attacking something within your reach, no further."
           },
           {
             "name": "Coins",
@@ -391,8 +381,7 @@ List<Item> getItemList() => [
           {
             "name": "Hand",
             "value": null,
-            "description":
-                "It's useful for attacking something within your reach, no further."
+            "description": "It's useful for attacking something within your reach, no further."
           },
           {
             "name": "Coins",
@@ -423,8 +412,7 @@ List<Item> getItemList() => [
           {
             "name": "Near",
             "value": null,
-            "description":
-                "It's useful for attacking if you can see the whites of their eyes."
+            "description": "It's useful for attacking if you can see the whites of their eyes."
           },
           {
             "name": "Coins",
@@ -449,8 +437,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Coins",
@@ -475,8 +462,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Coins",
@@ -501,8 +487,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Coins",
@@ -527,8 +512,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Coins",
@@ -565,8 +549,7 @@ List<Item> getItemList() => [
           {
             "name": "Near",
             "value": null,
-            "description":
-                "It's useful for attacking if you can see the whites of their eyes."
+            "description": "It's useful for attacking if you can see the whites of their eyes."
           },
           {
             "name": "Coins",
@@ -591,8 +574,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Damage",
@@ -623,8 +605,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Damage",
@@ -655,8 +636,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Damage",
@@ -687,8 +667,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Damage",
@@ -719,8 +698,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Damage",
@@ -788,8 +766,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Precise",
@@ -820,8 +797,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Piercing",
@@ -861,11 +837,7 @@ List<Item> getItemList() => [
             "description":
                 "It protects you and stacks with other armor. Add its value to your total armor."
           },
-          {
-            "name": "Worn",
-            "value": null,
-            "description": "To use it, you have to be wearing it."
-          },
+          {"name": "Worn", "value": null, "description": "To use it, you have to be wearing it."},
           {
             "name": "Coins",
             "value": 10,
@@ -892,11 +864,7 @@ List<Item> getItemList() => [
             "description":
                 "It protects you and stacks with other armor. Add its value to your total armor."
           },
-          {
-            "name": "Worn",
-            "value": null,
-            "description": "To use it, you have to be wearing it."
-          },
+          {"name": "Worn", "value": null, "description": "To use it, you have to be wearing it."},
           {
             "name": "Weight",
             "value": 3,
@@ -917,11 +885,7 @@ List<Item> getItemList() => [
             "description":
                 "It protects you and stacks with other armor. Add its value to your total armor."
           },
-          {
-            "name": "Worn",
-            "value": null,
-            "description": "To use it, you have to be wearing it."
-          },
+          {"name": "Worn", "value": null, "description": "To use it, you have to be wearing it."},
           {
             "name": "Clumsy",
             "value": null,
@@ -954,11 +918,7 @@ List<Item> getItemList() => [
             "description":
                 "It protects you and stacks with other armor. Add its value to your total armor."
           },
-          {
-            "name": "Worn",
-            "value": null,
-            "description": "To use it, you have to be wearing it."
-          },
+          {"name": "Worn", "value": null, "description": "To use it, you have to be wearing it."},
           {
             "name": "Clumsy",
             "value": null,
@@ -1032,11 +992,7 @@ List<Item> getItemList() => [
             "description":
                 "It protects you and stacks with other armor. Add its value to your total armor."
           },
-          {
-            "name": "Worn",
-            "value": null,
-            "description": "To use it, you have to be wearing it."
-          },
+          {"name": "Worn", "value": null, "description": "To use it, you have to be wearing it."},
           {
             "name": "Coins",
             "value": 10,
@@ -1098,11 +1054,7 @@ List<Item> getItemList() => [
         "description":
             "Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.",
         "tags": [
-          {
-            "name": "Uses",
-            "value": 5,
-            "description": "It can only be used n times."
-          },
+          {"name": "Uses", "value": 5, "description": "It can only be used n times."},
           {
             "name": "Coins",
             "value": 20,
@@ -1124,16 +1076,8 @@ List<Item> getItemList() => [
         "description":
             "When you have a few minutes to bandage someone else's wounds, heal them of 4 damage and expend a use.",
         "tags": [
-          {
-            "name": "Uses",
-            "value": 3,
-            "description": "It can only be used n times."
-          },
-          {
-            "name": "Slow",
-            "value": null,
-            "description": "It takes minutes or more to use."
-          },
+          {"name": "Uses", "value": 3, "description": "It can only be used n times."},
+          {"name": "Slow", "value": null, "description": "It takes minutes or more to use."},
           {
             "name": "Coins",
             "value": 5,
@@ -1155,16 +1099,8 @@ List<Item> getItemList() => [
         "description":
             "When you carefully treat someone's wounds with poultices and herbs, heal them of 7 damage and expend a use.",
         "tags": [
-          {
-            "name": "Uses",
-            "value": 2,
-            "description": "It can only be used n times."
-          },
-          {
-            "name": "Slow",
-            "value": null,
-            "description": "It takes minutes or more to use."
-          },
+          {"name": "Uses", "value": 2, "description": "It can only be used n times."},
+          {"name": "Slow", "value": null, "description": "It takes minutes or more to use."},
           {
             "name": "Coins",
             "value": 10,
@@ -1228,11 +1164,7 @@ List<Item> getItemList() => [
         "description":
             "When your bag of books contains just the right book for the subject you're spouting lore on, consult the book, mark off a use, and take +1 to your roll.",
         "tags": [
-          {
-            "name": "Uses",
-            "value": 5,
-            "description": "It can only be used n times."
-          },
+          {"name": "Uses", "value": 5, "description": "It can only be used n times."},
           {
             "name": "Coins",
             "value": 10,
@@ -1266,8 +1198,7 @@ List<Item> getItemList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "antitoxin",
         "name": "Antitoxin",
-        "description":
-            "When you drink antitoxin, you're cured of one poison affecting you.",
+        "description": "When you drink antitoxin, you're cured of one poison affecting you.",
         "tags": [
           {
             "name": "Coins",
@@ -1289,16 +1220,8 @@ List<Item> getItemList() => [
         "name": "Dungeon Rations",
         "description": "Not tasty, but not bad either.",
         "tags": [
-          {
-            "name": "Ration",
-            "value": null,
-            "description": "It's edible, more or less."
-          },
-          {
-            "name": "Uses",
-            "value": 5,
-            "description": "It can only be used n times."
-          },
+          {"name": "Ration", "value": null, "description": "It's edible, more or less."},
+          {"name": "Uses", "value": 5, "description": "It can only be used n times."},
           {
             "name": "Coins",
             "value": 3,
@@ -1319,16 +1242,8 @@ List<Item> getItemList() => [
         "name": "Personal Feast",
         "description": "Ostentatious to say the least.",
         "tags": [
-          {
-            "name": "Ration",
-            "value": null,
-            "description": "It's edible, more or less."
-          },
-          {
-            "name": "Uses",
-            "value": 1,
-            "description": "It can only be used n times."
-          },
+          {"name": "Ration", "value": null, "description": "It's edible, more or less."},
+          {"name": "Uses", "value": 1, "description": "It can only be used n times."},
           {
             "name": "Coins",
             "value": 10,
@@ -1351,16 +1266,8 @@ List<Item> getItemList() => [
             "Dwarves say it tastes like home. Everyone else says it tastes like home, if home is a hog farm, and on fire.",
         "tags": [
           {"name": "Requires Dwarf", "value": null, "description": ""},
-          {
-            "name": "Ration",
-            "value": null,
-            "description": "It's edible, more or less."
-          },
-          {
-            "name": "Uses",
-            "value": 7,
-            "description": "It can only be used n times."
-          },
+          {"name": "Ration", "value": null, "description": "It's edible, more or less."},
+          {"name": "Uses", "value": 7, "description": "It can only be used n times."},
           {
             "name": "Coins",
             "value": 3,
@@ -1379,19 +1286,10 @@ List<Item> getItemList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "elven_bread",
         "name": "Elven Bread",
-        "description":
-            "Only the greatest of elf-friends are treated to this rare delicacy.",
+        "description": "Only the greatest of elf-friends are treated to this rare delicacy.",
         "tags": [
-          {
-            "name": "Ration",
-            "value": null,
-            "description": "It's edible, more or less."
-          },
-          {
-            "name": "Uses",
-            "value": 7,
-            "description": "It can only be used n times."
-          },
+          {"name": "Ration", "value": null, "description": "It's edible, more or less."},
+          {"name": "Uses", "value": 7, "description": "It can only be used n times."},
           {
             "name": "Coins",
             "value": 10,
@@ -1413,11 +1311,7 @@ List<Item> getItemList() => [
         "description":
             "When you share halfling pipeleaf with someone, expend two uses and take +1 forward to Parley with them.",
         "tags": [
-          {
-            "name": "Uses",
-            "value": 6,
-            "description": "It can only be used n times."
-          },
+          {"name": "Uses", "value": 6, "description": "It can only be used n times."},
           {
             "name": "Coins",
             "value": 5,
@@ -1571,8 +1465,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Weight",
@@ -1613,8 +1506,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Weight",
@@ -2072,11 +1964,7 @@ List<Item> getItemList() => [
         "description":
             "James Ninefingers, eccentric genius mage, created these room-sized magical apparati. A stone chamber etched with runes and scribblings, glowing with a faint blue light. When you enter and say aloud the name of a location, roll+INT.\n* On a 10+, you arrive exactly where you'd intended.\n* On a 7-9, the GM chooses a safe location nearby.\n* On a miss, you end up someplace. Maybe it's nearby? It's definitely not safe. Strange things sometimes happen to those who bend time and space with these devices.",
         "tags": [
-          {
-            "name": "Slow",
-            "value": null,
-            "description": "It takes minutes or more to use."
-          }
+          {"name": "Slow", "value": null, "description": "It takes minutes or more to use."}
         ]
       }),
       Item.fromJson({
@@ -2191,8 +2079,7 @@ List<Item> getItemList() => [
           {
             "name": "Close",
             "value": null,
-            "description":
-                "It's useful for attacking something at arm's reach plus a foot or two."
+            "description": "It's useful for attacking something at arm's reach plus a foot or two."
           },
           {
             "name": "Piercing",

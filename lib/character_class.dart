@@ -19,6 +19,7 @@ class CharacterClass with KeyMixin {
     required this.bonds,
     required this.flags,
     required this.gearChoices,
+    required this.isSpellcaster,
   });
 
   /// Dynamic metadata
@@ -54,6 +55,9 @@ class CharacterClass with KeyMixin {
   /// This class's starting gear options
   final List<GearChoice> gearChoices;
 
+  /// Whether this class is a Magic User
+  final bool isSpellcaster;
+
   CharacterClass copyWith({
     dynamic meta,
     String? name,
@@ -66,6 +70,7 @@ class CharacterClass with KeyMixin {
     List<String>? bonds,
     List<String>? flags,
     List<GearChoice>? gearChoices,
+    bool? isSpellcaster,
   }) =>
       CharacterClass(
         meta: meta ?? this.meta,
@@ -79,6 +84,7 @@ class CharacterClass with KeyMixin {
         bonds: bonds ?? this.bonds,
         flags: flags ?? this.flags,
         gearChoices: gearChoices ?? this.gearChoices,
+        isSpellcaster: isSpellcaster ?? this.isSpellcaster,
       );
 
   factory CharacterClass.fromRawJson(String str) => CharacterClass.fromJson(json.decode(str));
@@ -99,6 +105,7 @@ class CharacterClass with KeyMixin {
         gearChoices: List<GearChoice>.from(
           json["gearChoices"].map((x) => GearChoice.fromJson(x)),
         ),
+        isSpellcaster: json["isSpellcaster"] ?? false,
       );
 
   Map<String, dynamic> toJson() => {
@@ -113,6 +120,7 @@ class CharacterClass with KeyMixin {
         "bonds": List<dynamic>.from(bonds),
         "flags": List<dynamic>.from(flags),
         "gearChoices": List<dynamic>.from(gearChoices.map((x) => x.toJson())),
+        "isSpellcaster": isSpellcaster,
       };
 
   @override
@@ -133,14 +141,27 @@ class CharacterClass with KeyMixin {
           alignments == other.alignments &&
           bonds == other.bonds &&
           flags == other.flags &&
-          gearChoices == other.gearChoices;
+          gearChoices == other.gearChoices &&
+          isSpellcaster == other.isSpellcaster;
 
   @override
-  int get hashCode => Object.hashAll(
-      [meta, name, key, description, damageDice, load, hp, alignments, bonds, flags, gearChoices]);
+  int get hashCode => Object.hashAll([
+        meta,
+        name,
+        key,
+        description,
+        damageDice,
+        load,
+        hp,
+        alignments,
+        bonds,
+        flags,
+        gearChoices,
+        isSpellcaster
+      ]);
 
   String get debugProperties =>
-      'meta: $meta, name: $name, key: $key, description: $description, damageDice: $damageDice, load: $load, hp: $hp, alignments: $alignments, bonds: $bonds, flags: $flags, gearChoices: $gearChoices';
+      'meta: $meta, name: $name, key: $key, description: $description, damageDice: $damageDice, load: $load, hp: $hp, alignments: $alignments, bonds: $bonds, flags: $flags, gearChoices: $gearChoices, isSpellcaster: $isSpellcaster';
 
   @override
   String toString() => 'CharacterClass($debugProperties)';

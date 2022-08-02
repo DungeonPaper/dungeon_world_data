@@ -513,7 +513,8 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 1
           }
-        ]
+        ],
+        "isSpellcaster": false,
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -823,7 +824,8 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 1
           }
-        ]
+        ],
+        "isSpellcaster": true,
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1230,7 +1232,8 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 1
           }
-        ]
+        ],
+        "isSpellcaster": false,
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1452,7 +1455,8 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 2
           }
-        ]
+        ],
+        "isSpellcaster": false,
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1655,7 +1659,8 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 1
           }
-        ]
+        ],
+        "isSpellcaster": false,
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1966,7 +1971,8 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 1
           }
-        ]
+        ],
+        "isSpellcaster": false,
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -2241,7 +2247,8 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 1
           }
-        ]
+        ],
+        "isSpellcaster": false,
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -2508,7 +2515,8 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 1
           }
-        ]
+        ],
+        "isSpellcaster": true,
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -2611,7 +2619,8 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 2
           }
-        ]
+        ],
+        "isSpellcaster": false,
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -2945,6 +2954,7 @@ List<CharacterClass> getCharacterClassList() => [
             "preselect": [],
             "maxSelections": 1
           }
-        ]
+        ],
+        "isSpellcaster": false,
       })
     ];

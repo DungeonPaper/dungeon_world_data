@@ -20,6 +20,7 @@ export interface CharacterClass {
   bonds: string[]
   flags: string[]
   gearChoices: GearChoice[]
+  isSpellcaster: boolean
 }
 
 export interface Meta {

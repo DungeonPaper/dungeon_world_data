@@ -55,7 +55,7 @@ class CharacterClass with KeyMixin {
   /// This class's starting gear options
   final List<GearChoice> gearChoices;
 
-  /// Whether this class is a Magic User
+  /// Whether this class is a Magic User, and therefore has access to spells
   final bool isSpellcaster;
 
   CharacterClass copyWith({

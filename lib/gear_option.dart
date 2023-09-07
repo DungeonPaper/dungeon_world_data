@@ -3,7 +3,8 @@ import 'dart:convert';
 import 'base.dart';
 import 'item.dart';
 
-/// Contains an item and amount
+/// Represents a single option in a [GearSelection].
+/// Contains an item, and amount to receive.
 class GearOption with KeyMixin {
   GearOption({
     required this.key,
@@ -11,9 +12,14 @@ class GearOption with KeyMixin {
     required this.amount,
   });
 
+  /// The key of the gear option.
   @override
   final String key;
+
+  /// The item to receive.
   final Item item;
+
+  /// The amount of the item to receive.
   final double amount;
 
   GearOption copyWith({

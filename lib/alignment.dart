@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'base.dart';
 
+/// The alignment types available in Dungeon World
 enum AlignmentType {
   good,
   lawful,
@@ -18,6 +19,7 @@ class Alignment with KeyMixin {
     required this.description,
   });
 
+  /// Dynamic metadata
   final dynamic meta;
 
   /// The alignment being described
@@ -77,6 +79,8 @@ class Alignment with KeyMixin {
   String toString() => 'Alignment($debugProperties)';
 }
 
+/// Describes the alignment values available in Dungeon World, and their respective
+/// descriptions.
 class AlignmentValues {
   AlignmentValues({
     required this.good,
@@ -86,10 +90,19 @@ class AlignmentValues {
     required this.chaotic,
   });
 
+  /// The description of the good alignment
   final String good;
+
+  /// The description of the evil alignment
   final String evil;
+
+  /// The description of the lawful alignment
   final String lawful;
+
+  /// The description of the neutral alignment
   final String neutral;
+
+  /// The description of the chaotic alignment
   final String chaotic;
 
   AlignmentValues copyWith({

@@ -262,7 +262,9 @@ List<Race> getRaceList() => [
         "description":
             "You may be elf, dwarf, halfling, or human, but you and your people are not from around here. At the beginning of each session, the GM will ask you something about your homeland, why you left, or what you left behind. If you answer them, mark XP.",
         "explanation": "",
-        "classKeys": [{"key": "barbarian", "name": "Barbarian", "type": "CharacterClass"}],
+        "classKeys": [
+          {"key": "barbarian", "name": "Barbarian", "type": "CharacterClass"}
+        ],
         "tags": [],
         "dice": []
       })

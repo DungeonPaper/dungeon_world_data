@@ -7,11 +7,8 @@ List<Tag> getTagList() => [
         "description":
             "It's only useful when carefully applied to a person or to something they eat or drink."
       }),
-      Tag.fromJson({
-        "name": "Awkward",
-        "value": null,
-        "description": "It's unwieldy and tough to use."
-      }),
+      Tag.fromJson(
+          {"name": "Awkward", "value": null, "description": "It's unwieldy and tough to use."}),
       Tag.fromJson({
         "name": "Bonus",
         "value": null,
@@ -30,22 +27,15 @@ List<Tag> getTagList() => [
         "description":
             "It's easy to get in trouble with it. If you interact with it without proper precautions the GM may freely invoke the consequences of your foolish actions."
       }),
-      Tag.fromJson({
-        "name": "Ration",
-        "value": null,
-        "description": "It's edible, more or less."
-      }),
+      Tag.fromJson({"name": "Ration", "value": null, "description": "It's edible, more or less."}),
       Tag.fromJson({
         "name": "Requires",
         "value": null,
         "description":
             "It's only useful to certain people. If you don't meet the requirements it works poorly, if at all."
       }),
-      Tag.fromJson({
-        "name": "Slow",
-        "value": null,
-        "description": "It takes minutes or more to use."
-      }),
+      Tag.fromJson(
+          {"name": "Slow", "value": null, "description": "It takes minutes or more to use."}),
       Tag.fromJson({
         "name": "Touch",
         "value": null,
@@ -62,16 +52,9 @@ List<Tag> getTagList() => [
         "description":
             "Count the listed amount against your load. Something with no listed weight isn't designed to be carried. 100 coins in standard denominations is 1 weight. The same value in gems or fine art may be lighter or heavier."
       }),
-      Tag.fromJson({
-        "name": "Worn",
-        "value": null,
-        "description": "To use it, you have to be wearing it."
-      }),
-      Tag.fromJson({
-        "name": "Uses",
-        "value": null,
-        "description": "It can only be used n times."
-      }),
+      Tag.fromJson(
+          {"name": "Worn", "value": null, "description": "To use it, you have to be wearing it."}),
+      Tag.fromJson({"name": "Uses", "value": null, "description": "It can only be used n times."}),
       Tag.fromJson({
         "name": "Ammo",
         "value": null,
@@ -81,8 +64,7 @@ List<Tag> getTagList() => [
       Tag.fromJson({
         "name": "Forceful",
         "value": null,
-        "description":
-            "It can knock someone back a pace, maybe even off their feet."
+        "description": "It can knock someone back a pace, maybe even off their feet."
       }),
       Tag.fromJson({
         "name": "Damage",
@@ -122,8 +104,7 @@ List<Tag> getTagList() => [
       Tag.fromJson({
         "name": "Stun",
         "value": null,
-        "description":
-            "When you attack with it, it does stun damage instead of normal damage."
+        "description": "When you attack with it, it does stun damage instead of normal damage."
       }),
       Tag.fromJson({
         "name": "Thrown",
@@ -134,14 +115,12 @@ List<Tag> getTagList() => [
       Tag.fromJson({
         "name": "Hand",
         "value": null,
-        "description":
-            "It's useful for attacking something within your reach, no further."
+        "description": "It's useful for attacking something within your reach, no further."
       }),
       Tag.fromJson({
         "name": "Close",
         "value": null,
-        "description":
-            "It's useful for attacking something at arm's reach plus a foot or two."
+        "description": "It's useful for attacking something at arm's reach plus a foot or two."
       }),
       Tag.fromJson({
         "name": "Reach",
@@ -152,14 +131,12 @@ List<Tag> getTagList() => [
       Tag.fromJson({
         "name": "Near",
         "value": null,
-        "description":
-            "It's useful for attacking if you can see the whites of their eyes."
+        "description": "It's useful for attacking if you can see the whites of their eyes."
       }),
       Tag.fromJson({
         "name": "Far",
         "value": null,
-        "description":
-            "It's useful for attacking something in shouting distance."
+        "description": "It's useful for attacking something in shouting distance."
       }),
       Tag.fromJson({
         "name": "Armor",

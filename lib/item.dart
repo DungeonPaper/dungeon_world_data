@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'base.dart';
 import 'tag.dart';
 
+/// Represents an item: a potion, weapon, armor, etc.
+/// Contains a name, description, and tags.
 class Item with KeyMixin {
   Item({
     required this.meta,
@@ -12,12 +14,19 @@ class Item with KeyMixin {
     required this.tags,
   });
 
+  /// Dynamic metadata
   final dynamic meta;
 
   @override
   final String key;
+
+  /// The name of the item.
   final String name;
+
+  /// The description of the item.
   final String description;
+
+  /// The tags of the item.
   final List<Tag> tags;
 
   Item copyWith({

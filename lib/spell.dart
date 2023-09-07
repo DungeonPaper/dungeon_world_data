@@ -5,6 +5,7 @@ import 'dice.dart';
 import 'entity_reference.dart';
 import 'tag.dart';
 
+/// Represents a spell, or spell-like ability.
 class Spell with KeyMixin {
   Spell({
     required this.meta,
@@ -22,12 +23,26 @@ class Spell with KeyMixin {
 
   @override
   final String key;
+
+  /// The name of the spell
   final String name;
+
+  /// The description of the spell's effect, and how it works mechanically.
   final String description;
+
+  /// The explanation of the spell's effect - how it works in the fiction, examples or other details.
   final String explanation;
+
+  /// The level of the spell
   final String level;
+
+  /// Classes that can use this spell
   final List<EntityReference> classKeys;
+
+  /// The dice list rolled when using this spell.
   final List<Dice> dice;
+
+  /// The tags of this spell
   final List<Tag> tags;
 
   Spell copyWith({

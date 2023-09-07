@@ -1,12 +1,12 @@
 import '_repository.dart' as _r;
 
-import 'data/classes.dart';
-import 'data/items.dart';
-import 'data/monsters.dart';
-import 'data/moves.dart';
-import 'data/races.dart';
-import 'data/spells.dart';
-import 'data/tags.dart';
+import 'data/en-US/classes.dart';
+import 'data/en-US/items.dart';
+import 'data/en-US/monsters.dart';
+import 'data/en-US/moves.dart';
+import 'data/en-US/races.dart';
+import 'data/en-US/spells.dart';
+import 'data/en-US/tags.dart';
 
 final _repo = _r.DungeonWorldRepository();
 

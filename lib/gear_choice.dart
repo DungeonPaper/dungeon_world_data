@@ -3,7 +3,10 @@ import 'dart:convert';
 import 'base.dart';
 import 'gear_selection.dart';
 
-/// This is the top level choice - provides one or more options to choose from.
+/// Represents a choice of starting gear for a class.
+///
+/// This is the top level choice - provides one or more options to choose from,
+/// where each option is a [GearSelection], which is a list of [GearOption]s.
 ///
 /// For example, "choose a gift from your parents" which gives either "your father's sword" or
 /// "your mother's mace"
@@ -18,9 +21,17 @@ class GearChoice with KeyMixin {
 
   @override
   final String key;
+
+  /// The description of the gear choice. For example, "Choose a gift from your parents".
   final String description;
+
+  /// The list of selections available for this gear choice.
   final List<GearSelection> selections;
+
+  /// The list of selections to preselect (if any).
   final List<int> preselect;
+
+  /// The maximum number of selections that can be made, if any.
   final int? maxSelections;
 
   GearChoice copyWith({
@@ -59,6 +70,7 @@ class GearChoice with KeyMixin {
         "maxSelections": maxSelections,
       };
 
+  /// The preselected gear selections, if any.
   List<GearSelection> get preselectedGearSelections => preselect.isEmpty
       ? []
       : preselect.first == -1

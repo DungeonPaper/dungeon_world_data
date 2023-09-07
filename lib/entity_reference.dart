@@ -1,8 +1,16 @@
 import 'dart:convert';
 
+/// A reference to an entity.
+/// This is useful for storing the name & key of an entity without having to store the entire entity,
+/// possibly for use in a dropdown or other UI element, or linking between entities in a database.
 class EntityReference {
+  /// The key of the entity.
   final String key;
+
+  /// The name of the entity.
   final String name;
+
+  /// The type of the entity.
   final String type;
 
   EntityReference({

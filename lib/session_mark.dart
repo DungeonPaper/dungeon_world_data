@@ -2,7 +2,20 @@ import 'dart:convert';
 
 import 'base.dart';
 
-enum SessionMarkType { bond, flag, endOfSession, other }
+/// The type of session mark
+enum SessionMarkType {
+  /// A bond
+  bond,
+
+  /// A flag
+  flag,
+
+  /// An end of session mark
+  endOfSession,
+
+  /// A custom mark
+  other
+}
 
 class SessionMark with KeyMixin {
   SessionMark({
@@ -14,8 +27,14 @@ class SessionMark with KeyMixin {
 
   @override
   final String key;
+
+  /// The description of the session mark. When to mark it, what it means, etc.
   final String description;
+
+  /// Whether or not the session mark has been completed, or checked.
   final bool completed;
+
+  /// The type of session mark.
   final SessionMarkType type;
 
   SessionMark copyWith({

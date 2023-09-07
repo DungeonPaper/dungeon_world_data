@@ -5,12 +5,24 @@ import 'dice.dart';
 import 'entity_reference.dart';
 import 'tag.dart';
 
+/// The category of a move.
 enum MoveCategory {
+  /// Starting move - attached to a class, given automatically.
   starting,
+
+  /// Basic move - available to all classes.
   basic,
+
+  /// Special move - available to all classes, but represent more advanced moves than basic.
   special,
+
+  /// Advanced move - attached to a class, and given betweens levels 2 and 5.
   advanced1,
+
+  /// Advanced move - attached to a class, and given betweens levels 6 and 10.
   advanced2,
+
+  /// Other types of moves
   other,
 }
 
@@ -31,12 +43,26 @@ class Move with KeyMixin {
 
   @override
   final String key;
+
+  /// The name of the move.
   final String name;
+
+  /// The description of the move - what it does, and how it works mechanically.
   final String description;
+
+  /// The explanation of the move - how it works in the fiction, examples or other details.
   final String explanation;
+
+  /// The dice of the move - how many dice to roll, and what size.
   final List<Dice> dice;
+
+  /// The class keys of the move - which classes can take this move.
   final List<EntityReference> classKeys;
+
+  /// The tags of the move
   final List<Tag> tags;
+
+  /// The category of the move
   final MoveCategory category;
 
   Move copyWith({

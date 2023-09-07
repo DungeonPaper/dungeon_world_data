@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'base.dart';
 import 'tag.dart';
 
+/// Represents a monster.
 class Monster with KeyMixin {
   Monster({
     required this.meta,
@@ -18,10 +19,20 @@ class Monster with KeyMixin {
 
   @override
   final String key;
+
+  /// The name of the monster.
   final String name;
+
+  /// The description of the monster.
   final String description;
+
+  /// The instinct of the monster.
   final String instinct;
+
+  /// The tags of the monster.
   final List<Tag> tags;
+
+  /// The moves of the monster.
   final List<String> moves;
 
   Monster copyWith({

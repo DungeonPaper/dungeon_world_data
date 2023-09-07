@@ -5,6 +5,7 @@ import 'dice.dart';
 import 'entity_reference.dart';
 import 'tag.dart';
 
+/// Represents a playable race such as a human, elf, or dwarf.
 class Race with KeyMixin {
   Race({
     required this.meta,
@@ -21,11 +22,24 @@ class Race with KeyMixin {
 
   @override
   final String key;
+
+  /// The name of the race
   final String name;
+
+  /// The description of the race's unique move.
+  /// Contains what it does, and how it works mechanically.
   final String description;
+
+  /// The explanation of the race's unique move - how it works in the fiction, examples or other details.
   final String explanation;
+
+  /// Classes that can be assigned to this race
   final List<EntityReference> classKeys;
+
+  /// The tags of this race
   final List<Tag> tags;
+
+  /// The dice list rolled when using this race's unique move.
   final List<Dice> dice;
 
   Race copyWith({

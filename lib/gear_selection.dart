@@ -18,8 +18,14 @@ class GearSelection with KeyMixin {
 
   @override
   final String key;
+
+  /// The description of the gear selection. For example, "Your father's sword and 60 coins.".
   final String description;
+
+  /// The list of options contained in this selection.
   final List<GearOption> options;
+
+  /// The number of coins to receive.
   final double coins;
 
   GearSelection copyWith({

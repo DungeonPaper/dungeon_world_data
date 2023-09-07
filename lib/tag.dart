@@ -2,6 +2,9 @@ import 'dart:convert';
 
 import 'base.dart';
 
+/// Represents a tag.
+/// Contains a name, value, and description.
+/// Examples are weight: 1, damage: 1d6, etc.
 class Tag with KeyMixin {
   Tag({
     required this.name,
@@ -9,8 +12,13 @@ class Tag with KeyMixin {
     this.description = "",
   });
 
+  /// The name of the tag.
   final String name;
+
+  /// The value of the tag.
   final dynamic value;
+
+  /// The description of the tag.
   final String description;
 
   @override

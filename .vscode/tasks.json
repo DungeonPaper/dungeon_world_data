@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "dart",
+      "command": "dart",
+      "cwd": "",
+      "args": [
+        "doc",
+        "."
+      ],
+      "problemMatcher": [],
+      "label": "dart: dart doc .",
+      "detail": ""
+    },
+    {
+      "label": "Auto-fix all fixable problems",
+      "type": "dart",
+      "command": "dart",
+      "detail": "dart fix --apply",
+      "args": [
+        "fix",
+        "--apply"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "npm publish",
+      "type": "shell",
+      "command": "npm publish -d ../build",
+      "dependsOn": [
+        "npm build",
+      ],
+      "options": {
+        "cwd": "./web/src"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "npm build",
+      "type": "shell",
+      "command": "yarn build",
+      "options": {
+        "cwd": "./web/src"
+      },
+      "problemMatcher": []
+    },
+  ]
+}

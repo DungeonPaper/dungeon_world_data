@@ -1,75 +1,71 @@
-import 'package:dungeon_world_data/dw_data.dart';
+import 'package:dungeon_world_data/dice.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('Dice', () {
-    test('Sides and amount', () {
-      var expected = Dice(6, 2);
-      expect(expected.sides, equals(6));
-      expect(expected.amount, equals(2));
+    group("Parse JSON", () {
+      test("No modifier", () {
+        var str = "1d6";
+        var dice = Dice.fromJson(str);
+        expect(dice.amount, equals(1));
+        expect(dice.sides, equals(6));
+        expect(dice.modifierValue, equals(null));
+        expect(dice.modifierStat, equals(null));
+        expect(dice.modifierSign, equals('+'));
+      });
+      test("With positive modifier", () {
+        var str = "3d8+3";
+        var dice = Dice.fromJson(str);
+        expect(dice.amount, equals(3));
+        expect(dice.sides, equals(8));
+        expect(dice.modifierValue, equals(3));
+        expect(dice.modifierStat, equals(null));
+        expect(dice.modifierSign, equals('+'));
+      });
+      test("With negative modifier", () {
+        var str = "2d20-4";
+        var dice = Dice.fromJson(str);
+        expect(dice.amount, equals(2));
+        expect(dice.sides, equals(20));
+        expect(dice.modifierValue, equals(-4));
+        expect(dice.modifierStat, equals(null));
+        expect(dice.modifierSign, equals('-'));
+      });
+
+      test("With stat modifier", () {
+        var str = "1d6+DEX";
+        var dice = Dice.fromJson(str);
+        expect(dice.amount, equals(1));
+        expect(dice.sides, equals(6));
+        expect(dice.modifierValue, equals(null));
+        expect(dice.modifierStat, equals("DEX"));
+        expect(dice.modifierSign, equals('+'));
+        expect(dice.needsModifier, equals(true));
+        expect(() => dice.roll(), throwsException);
+      });
     });
 
-    test('String representation', () {
-      var dice1 = Dice(10, 4);
-      var dice2 = Dice(6, 2, 3);
-      var dice3 = Dice(20, 2, -4);
-      expect(dice1.toString(), equals('4d10'));
-      expect(dice2.toString(), equals('2d6+3'));
-      expect(dice3.toString(), equals('2d20-4'));
-    });
-
-    test('Multiplication', () {
-      num amt = 10;
-      var dice = Dice.d12 * amt;
-      expect(dice.amount, amt);
-    });
-
-    test('Equality', () {
-      var compare = {
-        Dice(4): Dice.d4,
-        Dice(6): Dice.d6,
-        Dice(8): Dice.d8,
-        Dice(10): Dice.d10,
-        Dice(12): Dice.d12,
-        Dice(20): Dice.d20,
-      };
-      for (var d in compare.keys) {
-        expect(d, equals(compare[d]));
-        expect(compare.values.where((el) => el == d).length, equals(1));
-      }
-    });
-
-    test('Roll', () {
-      var d1 = Dice.d6;
-      var d2 = Dice.d12 * 2;
-      var d3 = Dice.d8 * 3;
-      var roll1 = d1.getRoll();
-      var roll2 = d2.getRoll();
-      var roll3 = d3.getRoll();
-
-      expect(roll1.results[0], greaterThanOrEqualTo(1));
-      expect(roll1.results[0], lessThanOrEqualTo(6));
-
-      expect(roll2.results.length, equals(d2.amount));
-      expect(roll2.results[0], greaterThanOrEqualTo(1));
-      expect(roll2.results[0], lessThanOrEqualTo(12));
-      expect(roll2.results[1], greaterThanOrEqualTo(1));
-      expect(roll2.results[1], lessThanOrEqualTo(12));
-
-      expect(roll3.results.length, equals(d3.amount));
-      expect(roll3.results[0], greaterThanOrEqualTo(1));
-      expect(roll3.results[0], lessThanOrEqualTo(8));
-      expect(roll3.results[1], greaterThanOrEqualTo(1));
-      expect(roll3.results[1], lessThanOrEqualTo(8));
-      expect(roll3.results[2], greaterThanOrEqualTo(1));
-      expect(roll3.results[2], lessThanOrEqualTo(8));
-    });
-
-    test('Roll', () {
-      var dice = Dice.d6;
-      var roll = dice.getRoll();
-      expect(roll.results[0], greaterThanOrEqualTo(1));
-      expect(roll.results[0], lessThanOrEqualTo(6));
+    group("Dump JSON", () {
+      test("No modifier", () {
+        var str = "1d6";
+        var dice = Dice(amount: 1, sides: 6);
+        expect(dice.toJson(), equals(str));
+      });
+      test("With positive modifier", () {
+        var str = "3d8+3";
+        var dice = Dice(amount: 3, sides: 8, modifierValue: 3);
+        expect(dice.toJson(), equals(str));
+      });
+      test("With negative modifier", () {
+        var str = "2d20-4";
+        var dice = Dice(amount: 2, sides: 20, modifierValue: -4);
+        expect(dice.toJson(), equals(str));
+      });
+      test("With stat modifier", () {
+        var str = "2d20-DEX";
+        var dice = Dice(amount: 2, sides: 20, modifierStat: "DEX", modifierSign: "-");
+        expect(dice.toJson(), equals(str));
+      });
     });
   });
 }

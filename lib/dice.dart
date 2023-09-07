@@ -1,183 +1,193 @@
+import 'dart:convert';
 import 'dart:math';
-import 'package:quiver/core.dart';
 
+/// Dice can have sides, an amount and modifiers.
+///
+/// You may also use one of the rolling convenience methods.
+/// For more information about rolls see DiceRoll class
 class Dice {
-  // Amount of dice in set
-  num amount;
+  Dice({
+    required this.amount,
+    required this.sides,
+    this.modifierValue,
+    this.modifierStat,
+    String? modifierSign,
+  }) : modifierSign = modifierSign ??
+            (modifierValue != null
+                ? modifierValue >= 0
+                    ? "+"
+                    : "-"
+                : "+");
 
-  // No. of sides for the die
-  num sides;
+  final int amount;
+  final int sides;
+  final int? modifierValue;
+  final String? modifierStat;
+  final String modifierSign;
 
-  // Modifier value for dice, can be added to `DiceResult` value
-  num modifier;
-
-  // Last result rolled by this die
-  DiceResult lastResult;
-
-  /// Simple dice, with sides, die count and modifier.
-  /// You can multiply, add or subtract Dice objects to change the amount of rolls (notice dice must
-  /// be with the same amount of sides).
-  ///
-  /// To roll multiple dice at once, you may use the static `Dice.roll(<Dice>[...])`.
-  Dice(this.sides, [this.amount = 1, this.modifier = 0]);
-
-  static Dice d4 = Dice(4);
-  static Dice d6 = Dice(6);
-  static Dice d8 = Dice(8);
-  static Dice d10 = Dice(10);
-  static Dice d12 = Dice(12);
-  static Dice d20 = Dice(20);
-
-  Dice copyWith({int sides, int amount, int modifier}) => Dice(
-        sides ?? this.sides,
-        amount ?? this.amount,
-        modifier ?? this.modifier,
+  Dice copyWith({
+    int? amount,
+    int? sides,
+    int? modifierValue,
+    String? modifierSign,
+    String? modifierStat,
+  }) =>
+      Dice(
+        amount: amount ?? this.amount,
+        sides: sides ?? this.sides,
+        modifierSign: modifierSign ?? this.modifierSign,
+        modifierValue: modifierValue ?? this.modifierValue,
+        modifierStat: modifierStat ?? this.modifierStat,
       );
 
-  /// Parse strings such as `d6`, or `2d20` into a `Dice` object.
-  static Dice parse(String str) {
-    List segs = str.split(RegExp('d', caseSensitive: true));
-    if (segs[0] != '') {
-      return Dice(num.parse(segs[1]), num.parse(segs[0]));
+  factory Dice.fromRawJson(String str) => Dice.fromJson(json.decode(str));
+
+  static Dice d4 = Dice(amount: 1, sides: 4);
+  static Dice d6 = Dice(amount: 1, sides: 6);
+  static Dice d8 = Dice(amount: 1, sides: 8);
+  static Dice d10 = Dice(amount: 1, sides: 10);
+  static Dice d12 = Dice(amount: 1, sides: 12);
+  static Dice d20 = Dice(amount: 1, sides: 20);
+  static Dice d60 = Dice(amount: 1, sides: 60);
+  static Dice d100 = Dice(amount: 1, sides: 100);
+  static final _dicePattern = RegExp(r'(\d+)d([0-9]+)(([+-])([0-9a-z]+))?', caseSensitive: false);
+
+  String toRawJson() => toJson();
+
+  factory Dice.fromJson(String json) {
+    final matches = _diceMatches(json);
+    final amount = int.tryParse(matches[0]!);
+    final sides = int.tryParse(matches[1]!);
+    final modifierSign = matches[2];
+    final modifierValue = matches[3] != null ? int.tryParse(matches[3]!) : null;
+    final modifierStat =
+        matches[3] != null && modifierValue == null ? matches[3]!.toUpperCase() : null;
+
+    if (sides == null || amount == null) {
+      throw Exception("Dice parsing failed");
     }
-    return Dice(num.parse(segs[1]));
+
+    return Dice(
+      amount: amount,
+      sides: sides,
+      modifierValue: modifierSign == '-' ? -(modifierValue ?? 0) : modifierValue,
+      modifierSign: modifierSign,
+      modifierStat: modifierStat,
+    );
+  }
+
+  Dice copyWithModifierValue(int statValue) => copyWith(
+        amount: amount,
+        sides: sides,
+        modifierValue: statValue,
+        modifierSign: !statValue.isNegative ? '+' : '-',
+      );
+
+  @override
+  String toString() => "${amount}d$sides$modifierWithSign";
+
+  String toJson() => toString();
+
+  String get modifierWithSign =>
+      hasModifier ? "$modifierSign${modifierValue?.abs() ?? modifierStat}" : "";
+
+  bool get hasModifier => ((modifierValue != null && modifierValue != 0) || modifierStat != null);
+
+  String get modifier =>
+      hasModifier ? modifierStat ?? (modifierValue != 0 ? modifierValue : '')!.toString() : "";
+
+  DiceRoll roll() {
+    if (needsModifier) {
+      throw Exception("Dice is being rolled without an actual modifier."
+          "Use `copyWithModifierValue`.\n"
+          "Expected modifier: $modifierWithSign");
+    }
+    final arr = <int>[];
+    for (var i = 0; i < amount; i++) {
+      arr.add(Random().nextInt(sides) + 1);
+    }
+    return DiceRoll(dice: this, results: arr);
+  }
+
+  bool get needsModifier => modifierStat != null && modifierValue == null;
+
+  operator +(int amount) => copyWith(amount: this.amount + amount);
+  operator -(int amount) => copyWith(amount: this.amount - amount);
+  operator *(int amount) => copyWith(amount: this.amount * amount);
+  operator /(int amount) => copyWith(amount: this.amount ~/ amount);
+
+  static List<Dice> flatten(List<Dice> dice) =>
+      dice.fold([], (all, cur) => [...all, ...List.filled(cur.amount, cur / cur.amount)]);
+
+  static List<String?> _diceMatches(String json) {
+    _assertDicePattern(json);
+    final m = _dicePattern.firstMatch(json)!;
+    return m.groups([1, 2, 4, 5]);
+  }
+
+  static void _assertDicePattern(String dice) {
+    if (!_dicePattern.hasMatch(dice)) {
+      throw Exception("Dice format is invalid, must be {amount}d{sides}([+-]{modifier})"
+          "(e.g. 1d20, 2d6+DEX, 1d8-3)\n"
+          "Received: $dice");
+    }
+  }
+
+  static List<Dice> guessFromString(String str) {
+    final basicRollPattern = RegExp(r'\broll([+-][a-z]+)\b', caseSensitive: false);
+    final dicePattern = RegExp(r'\b\dd\d+\b', caseSensitive: false);
+    final found = <Dice>[];
+    final basicRollMatches = basicRollPattern.allMatches(str);
+    for (final match in basicRollMatches) {
+      found.add(Dice.fromJson('2d6' + match.group(1)!.toUpperCase()));
+    }
+    final diceMatches = dicePattern.allMatches(str);
+    for (final match in diceMatches) {
+      found.add(Dice.fromJson(match.input.substring(match.start, match.end)));
+    }
+    return found;
   }
 
   @override
-  String toString() =>
-      '${amount}d${sides}${modifier != null && modifier != 0 ? modRepr : ''}';
-
-  Dice operator *(obj) {
-    if (obj is Dice) {
-      if (obj.sides != sides) {
-        throw ("Can't multiply different sided die!");
-      }
-      return Dice(sides, obj.amount * amount, modifier);
-    }
-
-    if (obj is num) {
-      return Dice(sides, (amount * obj).toInt());
-    }
-
-    return this;
-  }
-
-  Dice operator /(obj) {
-    if (obj is Dice) {
-      if (obj.sides != sides) {
-        throw ("Can't divide different sided die!");
-      }
-      return Dice(sides, obj.amount / amount, modifier);
-    }
-
-    if (obj is num) {
-      return Dice(sides, amount ~/ obj, modifier);
-    }
-
-    return this;
-  }
-
-  Dice operator +(obj) {
-    if (obj is Dice) {
-      if (obj.sides != sides) {
-        throw ("Can't add different sided die!");
-      }
-      return Dice(sides, obj.amount + amount, modifier);
-    }
-
-    if (obj is num) {
-      return Dice(sides, amount + obj.toInt(), modifier);
-    }
-
-    return this;
-  }
-
-  Dice operator -(obj) {
-    if (obj is Dice) {
-      if (obj.sides != sides) {
-        throw ("Can't subtract different sided die!");
-      }
-      return Dice(sides, obj.amount - amount, modifier);
-    }
-
-    if (obj is num) {
-      return Dice(sides, amount - obj.toInt(), modifier);
-    }
-
-    return this;
-  }
+  bool operator ==(Object? other) =>
+      identical(this, other) ||
+      other is Dice &&
+          runtimeType == other.runtimeType &&
+          amount == other.amount &&
+          sides == other.sides &&
+          modifierValue == other.modifierValue &&
+          modifierSign == other.modifierSign &&
+          modifierStat == other.modifierStat;
 
   @override
-  bool operator ==(obj) {
-    if (obj is Dice) {
-      return amount == obj.amount &&
-          sides == obj.sides &&
-          modifier == obj.modifier;
-    }
+  int get hashCode => Object.hashAll([amount, sides, modifierValue, modifierSign, modifierStat]);
 
-    return obj.toString() == toString();
-  }
-
-  @override
-  int get hashCode => hash3(amount, sides, modifier);
-
-  /// Rolls the dice and returns the `DiceResult`.
-  DiceResult getRoll() {
-    var results = <num>[];
-    for (num i = 0; i < amount; i++) {
-      results.add(Random().nextInt(sides) + 1);
-    }
-    return lastResult = DiceResult(this, results);
-  }
-
-  Dice get single => this / amount;
-  Dice multiple(int amount) => single * amount;
-
-  /// Roll arbitrary amount of (possibly) different sided dice.
-  static List<DiceResult> roll(List<Dice> dice) {
-    var results = <DiceResult>[];
-    dice.forEach((die) {
-      results.add(die.getRoll());
-    });
-
-    return results;
-  }
-
-  String get modRepr => (modifier > 0 ? '+' : '') + modifier.toString();
+  String get debugProperties =>
+      'amount: $amount, sides: $sides, modifierValue: $modifierValue, modifierSign: $modifierSign, modifierStat: $modifierStat';
 }
 
-class DiceResult {
-  /// The corresponding dice.
-  Dice dice;
+class DiceRoll {
+  final Dice dice;
+  final List<int> results;
 
-  /// List of results, by order of dice rolled.
-  List<num> results;
-
-  /// Represents a result of a die roll
-  DiceResult(this.dice, this.results);
-
-  @override
-  String toString() => '$dice${didHitNaturalMax ? '*' : ''} => $total';
-
-  // More detailed version of `toString`.
-  String get toDetailedString =>
-      '$dice${didHitNaturalMax ? '*' : ''} => $total\n  $mappedResults\n  ${didHitNaturalMax ? "Die no. ${indexOfNaturalMax} hit 20" : "Didn\'t hit 20"}';
-
-  // All results layed out with their respective die.
-  String get mappedResults {
-    var out = <String>[];
-    for (num i = 0; i < results.length; i++) {
-      out.add('${i + 1}: ${results[i]}');
-    }
-    return out.toString() + (dice.modifier != 0 ? ' (${dice.modRepr})' : '');
+  DiceRoll({required this.dice, required this.results}) {
+    assertDiceModifier();
   }
 
-  /// Total (accumulated) value of result, including modifiers.
-  num get total => results.reduce((tot, cur) => tot + cur) + dice.modifier;
+  static List<DiceRoll> rollMany(List<Dice> dice) => dice.map((d) => roll(d)).toList();
 
-  // Boolean that represents whether any of the rolled dice hit their natural max value (e.g. 20 for d20)
-  bool get didHitNaturalMax => results.any((r) => r == dice.sides);
+  static DiceRoll roll(Dice dice) => dice.roll();
 
-  // Get first index of the die that hit natural max value.
-  num get indexOfNaturalMax => results.indexOf(dice.sides);
+  int get total => results.reduce((all, cur) => all + cur) + (dice.modifierValue ?? 0);
+
+  bool get didHitNaturalMax => indexOfNaturalMax >= 0;
+  int get indexOfNaturalMax => results.indexOf(dice.sides);
+
+  void assertDiceModifier() {
+    if (dice.needsModifier) {
+      throw Exception("Dice is being rolled without an actual modifier."
+          "Use `dice.copyWithModifierValue(int modifierValue)`.\n"
+          "Expected modifier: ${dice.modifierWithSign}");
+    }
+  }
 }

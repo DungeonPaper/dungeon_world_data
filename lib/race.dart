@@ -5,17 +5,8 @@ import 'dice.dart';
 import 'entity_reference.dart';
 import 'tag.dart';
 
-enum MoveCategory {
-  starting,
-  basic,
-  special,
-  advanced1,
-  advanced2,
-  other,
-}
-
-class Move with KeyMixin {
-  Move({
+class Race with KeyMixin {
+  Race({
     required this.meta,
     required this.key,
     required this.name,
@@ -24,7 +15,6 @@ class Move with KeyMixin {
     required this.dice,
     required this.classKeys,
     required this.tags,
-    required this.category,
   });
 
   final dynamic meta;
@@ -34,49 +24,45 @@ class Move with KeyMixin {
   final String name;
   final String description;
   final String explanation;
-  final List<Dice> dice;
   final List<EntityReference> classKeys;
   final List<Tag> tags;
-  final MoveCategory category;
+  final List<Dice> dice;
 
-  Move copyWith({
+  Race copyWith({
     dynamic meta,
     String? key,
     String? name,
     String? description,
     String? explanation,
-    List<Dice>? dice,
     List<EntityReference>? classKeys,
     List<Tag>? tags,
-    MoveCategory? category,
+    List<Dice>? dice,
   }) =>
-      Move(
+      Race(
         meta: meta ?? this.meta,
         key: key ?? this.key,
         name: name ?? this.name,
         description: description ?? this.description,
         explanation: explanation ?? this.explanation,
-        dice: dice ?? this.dice,
         classKeys: classKeys ?? this.classKeys,
         tags: tags ?? this.tags,
-        category: category ?? this.category,
+        dice: dice ?? this.dice,
       );
 
-  factory Move.fromRawJson(String str) => Move.fromJson(json.decode(str));
+  factory Race.fromRawJson(String str) => Race.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory Move.fromJson(Map<String, dynamic> json) => Move(
+  factory Race.fromJson(Map<String, dynamic> json) => Race(
         meta: json["_meta"],
         key: json["key"],
         name: json["name"],
         description: json["description"],
         explanation: json["explanation"],
-        dice: List<Dice>.from(json["dice"].map((x) => Dice.fromJson(x))),
         classKeys:
             List<EntityReference>.from(json["classKeys"].map((x) => EntityReference.fromJson(x))),
         tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
-        category: MoveCategory.values.firstWhere((element) => element.name == json["category"]),
+        dice: List<Dice>.from(json["dice"].map((x) => Dice.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -85,10 +71,9 @@ class Move with KeyMixin {
         "name": name,
         "description": description,
         "explanation": explanation,
-        "dice": List<String>.from(dice.map((x) => x.toJson())),
         "classKeys": List<dynamic>.from(classKeys.map((x) => x.toJson())),
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
-        "category": category.name,
+        "dice": List<dynamic>.from(dice.map((x) => x.toJson()))
       };
 
   @override
@@ -97,25 +82,24 @@ class Move with KeyMixin {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is Move &&
+      other is Race &&
           runtimeType == other.runtimeType &&
           meta == other.meta &&
           key == other.key &&
           name == other.name &&
           description == other.description &&
           explanation == other.explanation &&
-          dice == other.dice &&
           classKeys == other.classKeys &&
           tags == other.tags &&
-          category == other.category;
+          dice == other.dice;
 
   @override
   int get hashCode =>
-      Object.hashAll([meta, key, name, description, explanation, dice, classKeys, tags, category]);
+      Object.hashAll([meta, key, name, description, explanation, classKeys, tags, dice]);
 
   String get debugProperties =>
-      'name: $name, description: $description, explanation: $explanation, dice: $dice, classKeys: $classKeys, tags: $tags, category: $category';
+      'meta: $meta, key: $key, name: $name, description: $description, explanation: $explanation, classKeys: $classKeys, tags: $tags, dice: $dice';
 
   @override
-  String toString() => 'Move($debugProperties)';
+  String toString() => 'Race($debugProperties)';
 }

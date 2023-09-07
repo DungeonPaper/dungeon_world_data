@@ -1,71 +1,65 @@
-import 'dw_entity.dart';
+import 'dart:convert';
 
-class Tag<T> extends DWEntity {
-  static Map<String, String> tagInfoCache = {};
+import 'base.dart';
 
-  /// Tag or feature name
-  String name;
+class Tag with KeyMixin {
+  Tag({
+    required this.name,
+    required this.value,
+    this.description = "",
+  });
 
-  /// Value, if applicable
-  T value;
-
-  String description;
-
-  Tag(this.name, [this.value, this.description]) : super(key: name) {
-    if (description != null &&
-        description.isNotEmpty &&
-        !tagInfoCache.containsKey(key)) {
-      tagInfoCache[key] = description;
-    } else if (description == null ||
-        description.isEmpty && tagInfoCache.containsKey(key)) {
-      description = tagInfoCache[key];
-    }
-  }
+  final String name;
+  final dynamic value;
+  final String description;
 
   @override
-  String toString() => hasValue ? '$name: $value' : name;
+  String get key => name;
 
-  /// Returns whether this tag has a corresponding value or not
-  bool get hasValue => value != null;
+  Tag copyWith({
+    String? name,
+    dynamic value,
+    String? description,
+  }) =>
+      Tag(
+        name: name ?? this.name,
+        value: value ?? this.value,
+        description: description ?? this.description,
+      );
 
-  @override
-  String get key => DWEntity.generateKey(name);
+  factory Tag.fromRawJson(String str) => Tag.fromJson(json.decode(str));
 
-  factory Tag.fromJSON(obj) {
-    if (obj is String) {
-      if (obj == '') {
-        return null;
-      }
-      var amountThenName = RegExp('([0-9]+)\\s(.*)');
-      if (amountThenName.hasMatch(obj)) {
-        var match = amountThenName.allMatches(obj).toList().first;
-        var name = match.group(2);
-        var value = int.tryParse(match.group(1));
-        return Tag(name, value as dynamic);
-      }
-      var mapLike = RegExp('\\{(.*):\\s?([+-]?[0-9]+)\\}');
+  String toRawJson() => json.encode(toJson());
 
-      if (mapLike.hasMatch(obj)) {
-        var match = mapLike.allMatches(obj).toList().first;
-        var name = match.group(1);
-        var value = int.tryParse(match.group(2));
-        return Tag(name, value as dynamic);
-      }
-    }
+  factory Tag.fromJson(Map<String, dynamic> json) => Tag(
+        name: json["name"],
+        value: json["value"],
+        description: json["description"] ?? "",
+      );
 
-    if (obj is Map) {
-      var key = obj.keys.first.toString();
-      return Tag(key, obj[key]);
-    }
-
-    return Tag(obj);
-  }
+  Map<String, dynamic> toJson() => {
+        "name": name,
+        "value": value,
+        "description": description,
+      };
 
   @override
-  dynamic toJSON() {
-    return hasValue ? {name: value} : name;
-  }
+  String get displayName => name;
 
   @override
-  Tag copy() => Tag.fromJSON(toJSON());
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Tag &&
+          runtimeType == other.runtimeType &&
+          name == other.name &&
+          value == other.value &&
+          description == other.description;
+
+  @override
+  int get hashCode => Object.hashAll([name, value, description]);
+
+  String get debugProperties => 'name: $name, value: $value, description: $description';
+
+  @override
+  String toString() => 'Tag($debugProperties)';
 }

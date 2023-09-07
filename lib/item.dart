@@ -3,15 +3,13 @@ import 'dart:convert';
 import 'base.dart';
 import 'tag.dart';
 
-class Monster with KeyMixin {
-  Monster({
+class Item with KeyMixin {
+  Item({
     required this.meta,
     required this.key,
-    required this.name,
     required this.description,
-    required this.instinct,
+    required this.name,
     required this.tags,
-    required this.moves,
   });
 
   final dynamic meta;
@@ -20,41 +18,33 @@ class Monster with KeyMixin {
   final String key;
   final String name;
   final String description;
-  final String instinct;
   final List<Tag> tags;
-  final List<String> moves;
 
-  Monster copyWith({
+  Item copyWith({
     dynamic meta,
     String? key,
     String? name,
     String? description,
-    String? instinct,
     List<Tag>? tags,
-    List<String>? moves,
   }) =>
-      Monster(
+      Item(
         meta: meta ?? this.meta,
         key: key ?? this.key,
         name: name ?? this.name,
         description: description ?? this.description,
-        instinct: instinct ?? this.instinct,
         tags: tags ?? this.tags,
-        moves: moves ?? this.moves,
       );
 
-  factory Monster.fromRawJson(String str) => Monster.fromJson(json.decode(str));
+  factory Item.fromRawJson(String str) => Item.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory Monster.fromJson(Map<String, dynamic> json) => Monster(
+  factory Item.fromJson(Map<String, dynamic> json) => Item(
         meta: json["_meta"],
         key: json["key"],
         name: json["name"],
         description: json["description"],
-        instinct: json["instinct"],
-        tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))).toList(),
-        moves: json["moves"] ?? [],
+        tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -62,33 +52,28 @@ class Monster with KeyMixin {
         "key": key,
         "name": name,
         "description": description,
-        "instinct": instinct,
         "tags": List<dynamic>.from(tags.map((x) => x.toJson())),
-        "moves": moves,
       };
 
   @override
   String get displayName => name;
 
   @override
-  bool operator ==(Object? other) =>
+  bool operator ==(Object other) =>
       identical(this, other) ||
-      other is Monster &&
+      other is Item &&
           runtimeType == other.runtimeType &&
-          meta == other.meta &&
           key == other.key &&
           name == other.name &&
           description == other.description &&
-          instinct == other.instinct &&
-          tags == other.tags &&
-          moves == other.moves;
+          tags == other.tags;
 
   @override
-  int get hashCode => Object.hashAll([meta, key, name, description, instinct, tags, moves]);
+  int get hashCode => Object.hashAll([key, name, description, tags]);
 
   String get debugProperties =>
-      'meta: $meta, key: $key, name: $name, description: $description, instinct: $instinct, tags: $tags, moves: $moves';
+      'meta: $meta, key: $key, name: $name, description: $description, tags: $tags';
 
   @override
-  String toString() => 'Monster($debugProperties)';
+  String toString() => 'Item($debugProperties)';
 }

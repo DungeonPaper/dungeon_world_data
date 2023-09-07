@@ -1,78 +1,96 @@
-import 'package:dungeon_world_data/tag.dart';
-import 'package:meta/meta.dart';
-import 'dw_entity.dart';
-import 'mappers.dart';
+import 'dart:convert';
 
-class GearChoice extends DWEntity {
-  /// Description of choices, possibly with other benefits to the stats.
-  String label;
+import 'base.dart';
+import 'gear_selection.dart';
 
-  /// The list of options to choose from. `label` should specify how many to choose.
-  List<GearOption> gearOptions;
-
+/// This is the top level choice - provides one or more options to choose from.
+///
+/// For example, "choose a gift from your parents" which gives either "your father's sword" or
+/// "your mother's mace"
+class GearChoice with KeyMixin {
   GearChoice({
-    String key,
-    @required this.label,
-    @required this.gearOptions,
-  }) : super(key: key);
+    required this.key,
+    required this.description,
+    required this.selections,
+    this.preselect = const [],
+    this.maxSelections,
+  });
 
-  factory GearChoice.fromJSON(Map map) => GearChoice(
-        key: map['key'],
-        label: map['label'],
-        gearOptions: gearOptionMapper(map['list']),
+  @override
+  final String key;
+  final String description;
+  final List<GearSelection> selections;
+  final List<int> preselect;
+  final int? maxSelections;
+
+  GearChoice copyWith({
+    String? key,
+    String? description,
+    List<GearSelection>? selections,
+    List<int>? preselect,
+    int? maxSelections,
+  }) =>
+      GearChoice(
+        key: key ?? this.key,
+        description: description ?? this.description,
+        selections: selections ?? this.selections,
+        preselect: preselect ?? this.preselect,
+        maxSelections: maxSelections ?? this.maxSelections,
       );
 
-  @override
-  Map toJSON() => {
-        'key': key,
-        'label': label,
-        'list': listMapper<GearOption, dynamic, GearOption>(
-            gearOptions, (i) => i.toJSON()),
-      };
+  factory GearChoice.fromRawJson(String str) => GearChoice.fromJson(json.decode(str));
 
-  @override
-  GearChoice copy() => GearChoice.fromJSON(toJSON());
-}
+  String toRawJson() => json.encode(toJson());
 
-class GearOption extends DWEntity {
-  // String key;
-  String name;
-  List<Tag> tags;
-
-  GearOption({
-    String key,
-    @required this.name,
-    @required this.tags,
-  }) : super(key: key ?? DWEntity.generateKey(name));
-
-  factory GearOption.fromJSON(Map map) => GearOption(
-        key: map['key'],
-        name: map['name'],
-        tags: listMapper(map['tags'], (t) => Tag.fromJSON(t)),
+  factory GearChoice.fromJson(Map<String, dynamic> json) => GearChoice(
+        key: json["key"],
+        description: json["description"],
+        selections:
+            List<GearSelection>.from(json["selections"].map((x) => GearSelection.fromJson(x))),
+        preselect: List<int>.from(json['preselect']),
+        maxSelections: json['maxSelections'],
       );
 
-  factory GearOption.parse(dynamic str) {
-    if (str is Map) {
-      return GearOption.fromJSON(str);
-    }
-    final num openParen = str.indexOf('(');
-    final num closeParen = str.indexOf(')');
-    final name = str.substring(0, openParen > -1 ? openParen : null);
-    final rawTags = openParen > -1 && closeParen > -1
-        ? str.substring(openParen + 1, closeParen)
-        : '';
-    final tags = rawTags.isNotEmpty
-        ? rawTags.split(',').map((tag) => Tag.fromJSON(tag.trim())).toList()
-        : [];
-    return GearOption(name: name, tags: tags);
-  }
-
-  @override
-  dynamic toJSON() => {
-        'name': name,
-        'tags': listMapper<Tag, dynamic, Tag>(tags, (t) => t.toJSON()),
+  Map<String, dynamic> toJson() => {
+        "key": key,
+        "description": description,
+        "selections": List<dynamic>.from(selections.map((x) => x.toJson())),
+        "preselect": preselect,
+        "maxSelections": maxSelections,
       };
 
+  List<GearSelection> get preselectedGearSelections => preselect.isEmpty
+      ? []
+      : preselect.first == -1
+          ? selections
+          : selections.sublist(preselect.first, preselect.last);
+
   @override
-  GearOption copy() => GearOption.fromJSON(toJSON());
+  String get displayName => description;
+
+  @override
+  bool operator ==(Object? other) =>
+      identical(this, other) ||
+      other is GearChoice &&
+          runtimeType == other.runtimeType &&
+          key == other.key &&
+          description == other.description &&
+          selections == other.selections &&
+          preselect == other.preselect &&
+          maxSelections == other.maxSelections;
+
+  @override
+  int get hashCode => Object.hashAll([
+        key,
+        description,
+        selections,
+        preselect,
+        maxSelections,
+      ]);
+
+  String get debugProperties =>
+      'key: $key, description: $description, selections: $selections, preselect: $preselect, maxSelections: $maxSelections';
+
+  @override
+  String toString() => 'GearChoice($debugProperties)';
 }

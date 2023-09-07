@@ -4,28 +4,41 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-  {
-    "name": "All Tests",
-    "type": "dart",
-    "request": "launch",
-    "program": "test/"
-  },
-  {
-    "name": "Main",
-    "program": "bin/dw_data.dart",
-    "request": "launch",
-    "type": "dart"
-  },
-  {
-    "name": "Example",
-    "program": "example/example.dart",
-    "request": "launch",
-    "type": "dart"
-  },
-  {
-    "name": "Dump Dart",
-    "program": "scripts/dump/dump.dart",
-    "request": "launch",
-    "type": "dart"
-  }, ]
+    {
+      "name": "Dump json -> dart",
+      "type": "dart",
+      "request": "launch",
+      "program": "scripts/parsers/json_to_dart.dart"
+    },
+    {
+      "name": "Dump dart -> json",
+      "type": "dart",
+      "request": "launch",
+      "program": "scripts/parsers/dart_to_json.dart"
+    },
+    {
+      "name": "All Tests",
+      "type": "dart",
+      "request": "launch",
+      "program": "test/"
+    },
+    {
+      "name": "Main",
+      "program": "bin/dw_data.dart",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "Example",
+      "program": "example/example.dart",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "Dump Dart",
+      "program": "scripts/dump/dump.dart",
+      "request": "launch",
+      "type": "dart"
+    },
+  ]
 }

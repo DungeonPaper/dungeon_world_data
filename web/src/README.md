@@ -12,22 +12,22 @@ Homebew classes included:
 Import the default to access the entire data structure.
 
 ```javascript
-import dungeonWorld from "dw-data";
+import dungeonWorld from "dw-data"
 // or
-const dungeonWorld = require("dw-data");
+const dungeonWorld = require("dw-data")
 ```
 
 ## Available data
 
-| Name         | Type                 | Description                                                                                                                       |
-| ------------ | -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| basicMoves   | `Array<Move>`        | Dungeon World's basic moves, such as Hack & Slash, Defy Danger, etc.                                                              |
-| specialMoves | `Array<Move>`        | Dungeon World's special moves, such as Make Camp, Take Watch, etc.                                                                |
-| classes      | `Array<PlayerClass>` | All of Dungeon World's classes, plus some homebrews. See `PlayerClass` class for a full description of the usable properties.     |
-| equipment    | `Array<Equipment>`   | Dungeon World's main list of items.                                                                                               |
-| spells       | `Array<Spell>`       | Dungeon World's main spellbook list. Each class can have its own spells list, see `PlayerClass` in the docs for more information. |
-| monsters     | `Array<Monster>`     | Dungeon World's main monster list.                                                                                                |
-| tags         | `Array<Tag>`         | List of all basic tags, along with descriptions.                                                                                  |
+| Name               | Type                             |
+| ------------------ | -------------------------------- |
+| `characterClasses` | `Record<string, CharacterClass>` |
+| `items`            | `Record<string, Item>`           |
+| `moves`            | `Record<string, Move>`           |
+| `races`            | `Record<string, Race>`           |
+| `spells`           | `Record<string, Spell>`          |
+| `monsters`         | `Record<string, Monster>`        |
+| `tags`             | `Record<string, Tag>`            |
 
 ## Credits
 
@@ -36,7 +36,22 @@ The original data is from there and this is a direct export from the [Dart](http
 
 ## Contributing
 
+I am developing this package on my free time, so any support, whether code, issues, or just stars is
+very helpful to sustaining its life. If you are feeling incredibly generous and would like to donate
+just a small amount to help sustain this project, I would be very very thankful!
+
+<a href='https://ko-fi.com/casraf' target='_blank'>
+  <img height='36' style='border:0px;height:36px;'
+    src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
+    alt='Buy Me a Coffee at ko-fi.com' />
+</a>
+
+I welcome any issues or pull requests on GitHub. If you find a bug, or would like a new feature,
+don't hesitate to open an appropriate issue and I will do my best to reply promptly.
+
+### Code Contributors
+
 1. Make your changes
-1. Make a PR, explain what your changes do, what could break.
-1. ???
-1. Profit!
+2. Make a PR, explain what your changes do, what could break.
+3. ???
+4. Profit!

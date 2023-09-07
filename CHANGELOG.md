@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.0.0
+
+- Complete rewrite of library - see [README.md](/README.md) & docs
+
 ## v2.0.5-nullsafety
 
 - Improve types

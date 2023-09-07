@@ -10,7 +10,9 @@ final _jsonOutCopy =
 
 main() async {
   final contents = dungeonWorldData.toJson();
+  print("Writing $_jsonOut...");
   await File(_jsonOut).writeAsString(json.encode(contents));
+  print("Writing $_jsonOutCopy...");
   await File(_jsonOutCopy).writeAsString(json.encode(contents));
 
   for (final e in contents.entries) {

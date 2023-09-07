@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.0.1
+
+- Reduce package version dependencies
+
 ## v3.0.0
 
 - Complete rewrite of library - see [README.md](/README.md) & docs

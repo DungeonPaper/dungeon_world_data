@@ -23,3 +23,4 @@ script_runner:
     - format: dart format --line-length 100
     - web:copy-data: dart scripts/parsers/dart_to_json.dart
     - web:build: cd web/src && yarn build
+    - web:publish: cd web/src && npm publish -d ../build

@@ -6,7 +6,7 @@ import 'package:path/path.dart' as path;
 
 final _jsonOut = path.join(path.dirname(Platform.script.path), 'dumps', 'All.json');
 final _jsonOutCopy =
-    path.join(path.dirname(Platform.script.path), '..', '..', 'web', 'src', 'lib', 'dw_data.json');
+    path.join(path.dirname(Platform.script.path), '..', '..', 'web', 'src', 'dw_data.json');
 
 main() async {
   final contents = dungeonWorldData.toJson();

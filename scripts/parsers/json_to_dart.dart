@@ -12,7 +12,6 @@ final _dartOut = path.join(
   path.dirname(Platform.script.path),
   '..',
   '..',
-  'lib',
   'data',
 );
 

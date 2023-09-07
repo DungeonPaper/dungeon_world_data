@@ -1,9 +1,9 @@
 {
   "name": "dw-data",
-  "version": "3.0.0-pre.24",
+  "version": "3.0.0-pre.28",
   "main": "index.js",
   "repository": "https://github.com/chenasraf/dungeon_world_data",
-  "author": "Chen Asraf <contact@casraf.blog>",
+  "author": "Chen Asraf <contact@casraf.dev>",
   "license": "MIT",
   "types": "./index.d.ts",
   "scripts": {

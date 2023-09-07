@@ -31,3 +31,4 @@ doc/api/
 .flutter-plugins
 .flutter-plugins-dependencies
 web/dw_data.json
+.DS_Store

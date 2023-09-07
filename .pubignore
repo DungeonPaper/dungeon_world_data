@@ -1,0 +1,9 @@
+.dart_tool/
+build/
+pubpec.lock
+doc/api/
+*.iml
+*.ipr
+*.iws
+.idea/
+.DS_Store

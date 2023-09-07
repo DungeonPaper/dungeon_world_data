@@ -7,3 +7,8 @@ doc/api/
 *.iws
 .idea/
 .DS_Store
+web/
+test/
+scripts/
+example/
+test.js.*

@@ -779,20 +779,6 @@ List<Move> getMoveList() => [
       }),
       Move.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
-        "key": "divine_protection",
-        "name": "Divine Protection",
-        "description": "When you wear no armor or Shield you get 2 armor.",
-        "explanation": "",
-        "dice": [],
-        "classKeys": [
-          {"key": "cleric", "name": "Cleric", "type": "CharacterClass"},
-          {"key": "paladin", "name": "Paladin", "type": "CharacterClass"}
-        ],
-        "tags": [],
-        "category": "advanced1"
-      }),
-      Move.fromJson({
-        "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "devoted_healer",
         "name": "Devoted Healer",
         "description":
@@ -898,6 +884,19 @@ List<Move> getMoveList() => [
         "dice": ["1d4"],
         "classKeys": [
           {"key": "cleric", "name": "Cleric", "type": "CharacterClass"}
+        ],
+        "tags": [],
+        "category": "advanced2"
+      }),
+      Move.fromJson({
+        "_meta": {"language": "EN", "createdBy": "__repo__"},
+        "key": "divine_protection_paladin",
+        "name": "Divine Protection",
+        "description": "You get +2 armor while on a quest.",
+        "explanation": "",
+        "dice": [],
+        "classKeys": [
+          {"key": "paladin", "name": "Paladin", "type": "CharacterClass"}
         ],
         "tags": [],
         "category": "advanced2"
@@ -1858,7 +1857,6 @@ List<Move> getMoveList() => [
         "dice": [],
         "classKeys": [
           {"key": "cleric", "name": "Cleric", "type": "CharacterClass"},
-          {"key": "paladin", "name": "Paladin", "type": "CharacterClass"}
         ],
         "tags": [],
         "category": "advanced2"

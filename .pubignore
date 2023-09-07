@@ -10,5 +10,4 @@ doc/api/
 web/
 test/
 scripts/
-example/
 test.js.*

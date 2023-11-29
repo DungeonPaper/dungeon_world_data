@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.0.2
+
+- Update package dependencies
+
 ## v3.0.1
 
 - Reduce package version dependencies

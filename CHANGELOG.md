@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.0.3
+
+- Fixed "Cast A Sepll" move - separated into Wizard and Cleric separate moves
+
 ## v3.0.2
 
 - Update package dependencies

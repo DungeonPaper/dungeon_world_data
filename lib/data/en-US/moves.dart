@@ -641,7 +641,21 @@ List<Move> getMoveList() => [
       }),
       Move.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
-        "key": "cast_a_spell",
+        "key": "cast_a_spell_wizard",
+        "name": "Cast a Spell",
+        "description":
+            "When you release a spell you’ve prepared, roll+Int.\n* On a 10+, the spell is successfully cast and you do not forget the spell—you may cast it again later.\n* On a 7-9, the spell is cast, but choose one:\n\n* You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n* The spell disturbs the fabric of reality as it is cast—take -1 ongoing to cast a spell until the next time you Prepare Spells.\n* After it is cast, the spell is forgotten. You cannot cast the spell again until you prepare spells.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.",
+        "explanation": "",
+        "dice": ["2d6+WIS"],
+        "classKeys": [
+          {"key": "cleric", "name": "Wizard", "type": "CharacterClass"},
+        ],
+        "tags": [],
+        "category": "starting"
+      }),
+      Move.fromJson({
+        "_meta": {"language": "EN", "createdBy": "__repo__"},
+        "key": "cast_a_spell_cleric",
         "name": "Cast a Spell",
         "description":
             "When you unleash a spell granted to you by your deity, roll+Wis.\n* On a 10+, the spell is successfully cast and your deity does not revoke the spell, so you may cast it again.\n* On a 7-9, the spell is cast, but choose one:\n\n* You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n* Your casting distances you from your deity-take -1 ongoing to cast a spell until the next time you commune.\n* After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.",
@@ -649,7 +663,6 @@ List<Move> getMoveList() => [
         "dice": ["2d6+WIS"],
         "classKeys": [
           {"key": "cleric", "name": "Cleric", "type": "CharacterClass"},
-          {"key": "wizard", "name": "Wizard", "type": "CharacterClass"}
         ],
         "tags": [],
         "category": "starting"
@@ -2614,21 +2627,6 @@ List<Move> getMoveList() => [
         "explanation": "",
         "dice": [],
         "classKeys": [
-          {"key": "wizard", "name": "Wizard", "type": "CharacterClass"}
-        ],
-        "tags": [],
-        "category": "starting"
-      }),
-      Move.fromJson({
-        "_meta": {"language": "EN", "createdBy": "__repo__"},
-        "key": "cast_a_spell",
-        "name": "Cast a Spell",
-        "description":
-            "When you unleash a spell granted to you by your deity, roll+Wis.\n* On a 10+, the spell is successfully cast and your deity does not revoke the spell, so you may cast it again.\n* On a 7-9, the spell is cast, but choose one:\n\n* You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n* Your casting distances you from your deity-take -1 ongoing to cast a spell until the next time you commune.\n* After you cast it, the spell is revoked by your deity. You cannot cast the spell again until you commune and have it granted to you.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.",
-        "explanation": "",
-        "dice": ["2d6+WIS"],
-        "classKeys": [
-          {"key": "cleric", "name": "Cleric", "type": "CharacterClass"},
           {"key": "wizard", "name": "Wizard", "type": "CharacterClass"}
         ],
         "tags": [],

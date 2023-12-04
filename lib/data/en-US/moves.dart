@@ -646,7 +646,7 @@ List<Move> getMoveList() => [
         "description":
             "When you release a spell you’ve prepared, roll+Int.\n* On a 10+, the spell is successfully cast and you do not forget the spell—you may cast it again later.\n* On a 7-9, the spell is cast, but choose one:\n\n* You draw unwelcome attention or put yourself in a spot. The GM will tell you how.\n* The spell disturbs the fabric of reality as it is cast—take -1 ongoing to cast a spell until the next time you Prepare Spells.\n* After it is cast, the spell is forgotten. You cannot cast the spell again until you prepare spells.\nNote that maintaining spells with ongoing effects will sometimes cause a penalty to your roll to cast a spell.",
         "explanation": "",
-        "dice": ["2d6+WIS"],
+        "dice": ["2d6+INT"],
         "classKeys": [
           {"key": "cleric", "name": "Wizard", "type": "CharacterClass"},
         ],

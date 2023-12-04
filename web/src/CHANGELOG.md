@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.0.4
+
+- Fixed "Cast A Spell" Wizard move dice
+
 ## v3.0.3
 
 - Fixed "Cast A Spell" move - separated into Wizard and Cleric separate moves

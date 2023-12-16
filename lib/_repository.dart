@@ -128,13 +128,13 @@ class DungeonWorldRepository extends RepositoryMap<String, dynamic> {
   Map<String, Tag> get tags => getItem('Tags').cast<String, Tag>();
 
   /// Dump all the data as a JSON map. Same as `toJsonAsMaps()`
-  /// @see toJsonAsMaps()
-  /// @see toJsonAsLists()
+  /// See [toJsonAsMaps]
+  /// See [toJsonAsLists]
   Map<String, dynamic> toJson() => toJsonAsMaps();
 
   /// Dump all the data as a JSON map. Same as `toJson()`
-  /// @see toJson()
-  /// @see toJsonAsLists()
+  /// See [toJson]
+  /// See [toJsonAsLists]
   Map<String, dynamic> toJsonAsMaps() => {
         "CharacterClasses": characterClasses.map(((key, value) => MapEntry(key, value.toJson()))),
         "Items": items.map(((key, value) => MapEntry(key, value.toJson()))),
@@ -146,8 +146,8 @@ class DungeonWorldRepository extends RepositoryMap<String, dynamic> {
       };
 
   /// Dump all the data as a JSON lists, instead of key => value maps.
-  /// @see toJson()
-  /// @see toJsonAsMaps()
+  /// See [toJson]
+  /// See [toJsonAsMaps]
   Map<String, dynamic> toJsonAsLists() => {
         "CharacterClasses": characterClasses.values.map(((value) => value.toJson())).toList(),
         "Items": items.values.map(((value) => value.toJson())).toList(),

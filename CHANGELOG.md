@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.1.0
+
+- Added `registerEntityTypeResolver` and `resetEntityTypeResolver`
+
 ## v3.0.4
 
 - Fixed "Cast A Spell" Wizard move dice

@@ -4,6 +4,7 @@ import 'dart:convert';
 /// This is useful for storing the name & key of an entity without having to store the entire entity,
 /// possibly for use in a dropdown or other UI element, or linking between entities in a database.
 class EntityReference {
+
   /// The key of the entity.
   final String key;
 
@@ -19,9 +20,11 @@ class EntityReference {
     required this.type,
   });
 
-  factory EntityReference.fromRawJson(String str) => EntityReference.fromJson(json.decode(str));
+  factory EntityReference.fromRawJson(String str) =>
+      EntityReference.fromJson(json.decode(str));
 
-  factory EntityReference.fromJson(Map<String, dynamic> json) => EntityReference(
+  factory EntityReference.fromJson(Map<String, dynamic> json) =>
+      EntityReference(
         key: json['key'],
         name: json['name'],
         type: json['type'],
@@ -46,6 +49,7 @@ class EntityReference {
         type: type ?? this.type,
       );
 
+
   @override
   bool operator ==(Object? other) =>
       other is EntityReference &&
@@ -65,3 +69,4 @@ class EntityReference {
   @override
   String toString() => 'EntityReference(key: $key, name: $name, type: $type)';
 }
+

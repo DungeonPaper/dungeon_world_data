@@ -19,23 +19,23 @@ mixin KeyMixin {
 
 String defaultTypeResolver(Type type) {
   switch (type) {
-    case Move:
+    case == Move:
       return 'Move';
-    case Spell:
+    case == Spell:
       return 'Spell';
-    case Item:
+    case == Item:
       return 'Item';
-    case CharacterClass:
+    case == CharacterClass:
       return 'CharacterClass';
-    case Race:
+    case == Race:
       return 'Race';
-    case GearSelection:
+    case == GearSelection:
       return 'GearSelection';
-    case MoveCategory:
+    case == MoveCategory:
       return 'MoveCategory';
-    case Tag:
+    case == Tag:
       return 'Tag';
-    case Dice:
+    case == Dice:
       return 'Dice';
     default:
       final typeString = type.toString();

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v3.1.1
+
+- Fixed `defaultEntityTypeResolver` matcher
+- Updated dart SDK version
+
 ## v3.1.0
 
 - Added `registerEntityTypeResolver` and `resetEntityTypeResolver`

@@ -55,7 +55,7 @@ class RepositoryItem<T> {
 /// A repository containing game data separated by locale.
 /// Use this to store data that is locale-specific, such as names, descriptions, etc.
 class RepositoryMap<K, V> extends RepositoryItem<Map<K, V>> {
-  RepositoryMap([String? initialLocale]) : super(initialLocale);
+  RepositoryMap([super.initialLocale]);
 
   @override
   Map<K, V> create() => <K, V>{};
@@ -82,9 +82,9 @@ class RepositoryMap<K, V> extends RepositoryItem<Map<K, V>> {
 /// You can switch locale using [changeLocale] and get the data for the current locale using the various getters.
 class DungeonWorldRepository extends RepositoryMap<String, dynamic> {
   /// The current version of the data.
-  final version = '3.0.0';
+  final version = '3.1.0';
 
-  DungeonWorldRepository([String? initialLocale]) : super(initialLocale);
+  DungeonWorldRepository([super.initialLocale]);
 
   /// Create the initial data structure.
   @override

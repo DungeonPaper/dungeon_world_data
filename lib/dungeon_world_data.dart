@@ -14,4 +14,4 @@ export 'tag.dart';
 
 import 'repository.dart';
 
-final dungeonWorldData = loadRepository();
+final dungeonWorldData = loadRepositories();

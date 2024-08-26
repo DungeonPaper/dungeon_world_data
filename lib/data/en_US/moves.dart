@@ -375,7 +375,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "a_little_help_from_my_friends",
         "name": "A Little Help From My Friends",
-        "description": "When you successfully aid someone you take +1 forward as well.",
+        "description":
+            "When you successfully aid someone you take +1 forward as well.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -415,7 +416,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "bamboozle",
         "name": "Bamboozle",
-        "description": "When you Parley with someone, on a 7+ you also take +1 forward with them.",
+        "description":
+            "When you Parley with someone, on a 7+ you also take +1 forward with them.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -434,11 +436,7 @@ List<Move> getMoveList() => [
         "dice": [],
         "classKeys": [
           {"key": "bard", "name": "Bard", "type": "CharacterClass"},
-          {
-            "key": "cleric",
-            "name": "Cleric",
-            "type": "CharacterClass",
-          },
+          {"key": "cleric", "name": "Cleric", "type": "CharacterClass"},
           {"key": "fighter", "name": "Fighter", "type": "CharacterClass"}
         ],
         "tags": [],
@@ -457,7 +455,7 @@ List<Move> getMoveList() => [
           {"key": "fighter", "name": "Fighter", "type": "CharacterClass"}
         ],
         "tags": [],
-        "category": "advanced1"
+        "category": "advanced2"
       }),
       Move.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -648,7 +646,7 @@ List<Move> getMoveList() => [
         "explanation": "",
         "dice": ["2d6+INT"],
         "classKeys": [
-          {"key": "cleric", "name": "Wizard", "type": "CharacterClass"},
+          {"key": "cleric", "name": "Wizard", "type": "CharacterClass"}
         ],
         "tags": [],
         "category": "starting"
@@ -662,7 +660,7 @@ List<Move> getMoveList() => [
         "explanation": "",
         "dice": ["2d6+WIS"],
         "classKeys": [
-          {"key": "cleric", "name": "Cleric", "type": "CharacterClass"},
+          {"key": "cleric", "name": "Cleric", "type": "CharacterClass"}
         ],
         "tags": [],
         "category": "starting"
@@ -671,7 +669,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "chosen_one",
         "name": "Chosen One",
-        "description": "Choose one spell. You are granted that spell as if it was one level lower.",
+        "description":
+            "Choose one spell. You are granted that spell as if it was one level lower.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -684,7 +683,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "invigorate",
         "name": "Invigorate",
-        "description": "When you heal someone they take +2 forward to their damage.",
+        "description":
+            "When you heal someone they take +2 forward to their damage.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -711,7 +711,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "serenity",
         "name": "Serenity",
-        "description": "When you Cast a Spell you ignore the first -1 penalty from ongoing spells.",
+        "description":
+            "When you Cast a Spell you ignore the first -1 penalty from ongoing spells.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -850,7 +851,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "providence",
         "name": "Providence",
-        "description": "You ignore the -1 penalty from two spells you maintain.",
+        "description":
+            "You ignore the -1 penalty from two spells you maintain.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -937,26 +939,6 @@ List<Move> getMoveList() => [
         "dice": [],
         "classKeys": [
           {"key": "cleric", "name": "Cleric", "type": "CharacterClass"}
-        ],
-        "tags": [],
-        "category": "advanced2"
-      }),
-      Move.fromJson({
-        "_meta": {"language": "EN", "createdBy": "__repo__"},
-        "key": "multiclass_dabbler",
-        "name": "Multiclass Dabbler",
-        "description":
-            "Get one move from another class. Treat your level as one lower for choosing the move.",
-        "explanation": "",
-        "dice": [],
-        "classKeys": [
-          {"key": "bard", "name": "Bard", "type": "CharacterClass"},
-          {
-            "key": "cleric",
-            "name": "Cleric",
-            "type": "CharacterClass",
-          },
-          {"key": "fighter", "name": "Fighter", "type": "CharacterClass"}
         ],
         "tags": [],
         "category": "advanced2"
@@ -1076,7 +1058,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "barkskin",
         "name": "Barkskin",
-        "description": "So long as your feet touch the ground you have +1 armor.",
+        "description":
+            "So long as your feet touch the ground you have +1 armor.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -1173,7 +1156,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "embracing_no_form",
         "name": "Embracing No Form",
-        "description": "When you shapeshift, roll 1d4 and add that total to your hold.",
+        "description":
+            "When you shapeshift, roll 1d4 and add that total to your hold.",
         "explanation": "",
         "dice": ["1d4"],
         "classKeys": [
@@ -1380,7 +1364,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "improved_weapon",
         "name": "Improved Weapon",
-        "description": "Choose one extra enhancement for your signature weapon.",
+        "description":
+            "Choose one extra enhancement for your signature weapon.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -1425,26 +1410,6 @@ List<Move> getMoveList() => [
         "explanation": "",
         "dice": ["1d4"],
         "classKeys": [
-          {"key": "fighter", "name": "Fighter", "type": "CharacterClass"}
-        ],
-        "tags": [],
-        "category": "advanced1"
-      }),
-      Move.fromJson({
-        "_meta": {"language": "EN", "createdBy": "__repo__"},
-        "key": "multiclass_dabbler",
-        "name": "Multiclass Dabbler",
-        "description":
-            "Get one move from another class. Treat your level as one lower for choosing the move.",
-        "explanation": "",
-        "dice": [],
-        "classKeys": [
-          {"key": "bard", "name": "Bard", "type": "CharacterClass"},
-          {
-            "key": "cleric",
-            "name": "Cleric",
-            "type": "CharacterClass",
-          },
           {"key": "fighter", "name": "Fighter", "type": "CharacterClass"}
         ],
         "tags": [],
@@ -1534,21 +1499,6 @@ List<Move> getMoveList() => [
       }),
       Move.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
-        "key": "multiclass_initiate",
-        "name": "Multiclass Initiate",
-        "description":
-            "Get one move from another class. Treat your level as one lower for choosing the move.",
-        "explanation": "",
-        "dice": [],
-        "classKeys": [
-          {"key": "bard", "name": "Bard", "type": "CharacterClass"},
-          {"key": "fighter", "name": "Fighter", "type": "CharacterClass"}
-        ],
-        "tags": [],
-        "category": "advanced2"
-      }),
-      Move.fromJson({
-        "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "steel_hide",
         "name": "Steel Hide",
         "description": "You gain +2 armor.",
@@ -1611,20 +1561,6 @@ List<Move> getMoveList() => [
         "explanation": "",
         "dice": ["2d6+CHA", "1d8"],
         "classKeys": [
-          {"key": "paladin", "name": "Paladin", "type": "CharacterClass"}
-        ],
-        "tags": [],
-        "category": "starting"
-      }),
-      Move.fromJson({
-        "_meta": {"language": "EN", "createdBy": "__repo__"},
-        "key": "armored",
-        "name": "Armored",
-        "description": "You ignore the clumsy tag on armor you wear.",
-        "explanation": "",
-        "dice": [],
-        "classKeys": [
-          {"key": "fighter", "name": "Fighter", "type": "CharacterClass"},
           {"key": "paladin", "name": "Paladin", "type": "CharacterClass"}
         ],
         "tags": [],
@@ -1717,7 +1653,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "charge",
         "name": "Charge!",
-        "description": "When you lead the charge into combat, those you lead take +1 forward.",
+        "description":
+            "When you lead the charge into combat, those you lead take +1 forward.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -1869,7 +1806,7 @@ List<Move> getMoveList() => [
         "explanation": "",
         "dice": [],
         "classKeys": [
-          {"key": "cleric", "name": "Cleric", "type": "CharacterClass"},
+          {"key": "cleric", "name": "Cleric", "type": "CharacterClass"}
         ],
         "tags": [],
         "category": "advanced2"
@@ -2015,7 +1952,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "familiar_prey",
         "name": "Familiar Prey",
-        "description": "When you Spout Lore about a monster you use WIS instead of INT.",
+        "description":
+            "When you Spout Lore about a monster you use WIS instead of INT.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -2125,7 +2063,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "a_safe_place",
         "name": "A Safe Place",
-        "description": "When you set the watch for the night, everyone takes +1 to Take Watch.",
+        "description":
+            "When you set the watch for the night, everyone takes +1 to Take Watch.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -2138,7 +2077,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "wild_speech",
         "name": "Wild Speech",
-        "description": "You can speak with and understand any non-magical, non-planar creature.",
+        "description":
+            "You can speak with and understand any non-magical, non-planar creature.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -2179,7 +2119,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "smaugs_belly",
         "name": "Smaug's Belly",
-        "description": "When you know your target's weakest point your arrows have 2 piercing.",
+        "description":
+            "When you know your target's weakest point your arrows have 2 piercing.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -2346,7 +2287,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "cautious",
         "name": "Cautious",
-        "description": "When you use Trap Expert you always get +1 hold, even on a 6-.",
+        "description":
+            "When you use Trap Expert you always get +1 hold, even on a 6-.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -2387,7 +2329,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "poison_master",
         "name": "Poison Master",
-        "description": "After you've used a poison once it's no longer dangerous for you to use.",
+        "description":
+            "After you've used a poison once it's no longer dangerous for you to use.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -2497,7 +2440,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "serious_underdog",
         "name": "Serious Underdog",
-        "description": "You have +1 armor. When you're outnumbered, you have +2 armor instead.",
+        "description":
+            "You have +1 armor. When you're outnumbered, you have +2 armor instead.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -2636,7 +2580,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "prodigy",
         "name": "Prodigy",
-        "description": "Choose a spell. You prepare that spell as if it were one level lower.",
+        "description":
+            "Choose a spell. You prepare that spell as if it were one level lower.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -2691,7 +2636,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "expanded_spellbook",
         "name": "Expanded Spellbook",
-        "description": "Add a new spell from the spell list of any class to your spellbook.",
+        "description":
+            "Add a new spell from the spell list of any class to your spellbook.",
         "explanation": "",
         "dice": [],
         "classKeys": [
@@ -3208,7 +3154,8 @@ List<Move> getMoveList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "musclebound",
         "name": "Musclebound",
-        "description": "While you wield a weapon it gains the forceful and messy tags.",
+        "description":
+            "While you wield a weapon it gains the forceful and messy tags.",
         "explanation": "",
         "dice": [],
         "classKeys": [

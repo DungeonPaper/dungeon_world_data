@@ -48,7 +48,11 @@ List<CharacterClass> getCharacterClassList() => [
                           "value": null,
                           "description": "It's edible, more or less."
                         },
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 3,
@@ -128,7 +132,8 @@ List<CharacterClass> getCharacterClassList() => [
               },
               {
                 "key": "the_pipes_with_which_you_courted_your_first_love",
-                "description": "The pipes with which you courted your first love",
+                "description":
+                    "The pipes with which you courted your first love",
                 "options": [
                   {
                     "key": "the_pipes_with_which_you_courted_your_first_love",
@@ -136,7 +141,8 @@ List<CharacterClass> getCharacterClassList() => [
                       "_meta": {"language": "EN", "createdBy": "__repo__"},
                       "key": "memorable_pipes",
                       "name": "Memorable Pipes",
-                      "description": "The pipes with which you courted your first love",
+                      "description":
+                          "The pipes with which you courted your first love",
                       "tags": [
                         {
                           "name": "Weight",
@@ -417,7 +423,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.",
                       "tags": [
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 20,
@@ -450,7 +460,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "When you have a few minutes to bandage someone else's wounds, heal them of 4 damage and expend a use.",
                       "tags": [
-                        {"name": "Uses", "value": 3, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 3,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Slow",
                           "value": null,
@@ -488,7 +502,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "When you share halfling pipeleaf with someone, expend two uses and take +1 forward to Parley with them.",
                       "tags": [
-                        {"name": "Uses", "value": 6, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 6,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 5,
@@ -508,13 +526,18 @@ List<CharacterClass> getCharacterClassList() => [
                 ],
                 "coins": 0.0
               },
-              {"key": "coins", "description": "3 coins", "options": [], "coins": 3.0}
+              {
+                "key": "coins",
+                "description": "3 coins",
+                "options": [],
+                "coins": 3.0
+              }
             ],
             "preselect": [],
             "maxSelections": 1
           }
         ],
-        "isSpellcaster": false,
+        "isSpellcaster": false
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -527,8 +550,10 @@ List<CharacterClass> getCharacterClassList() => [
         "hp": 8,
         "alignments": {
           "good": "Endanger yourself to heal another.",
-          "evil": "Harm another to prove the superiority of your church or god.",
-          "lawful": "Endanger yourself following the precepts of your church or god.",
+          "evil":
+              "Harm another to prove the superiority of your church or god.",
+          "lawful":
+              "Endanger yourself following the precepts of your church or god.",
           "neutral": "",
           "chaotic": ""
         },
@@ -726,7 +751,8 @@ List<CharacterClass> getCharacterClassList() => [
                         {
                           "name": "Two_handed",
                           "value": null,
-                          "description": "It takes two hands to use it effectively."
+                          "description":
+                              "It takes two hands to use it effectively."
                         },
                         {
                           "name": "Coins",
@@ -768,7 +794,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.",
                       "tags": [
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 20,
@@ -825,7 +855,7 @@ List<CharacterClass> getCharacterClassList() => [
             "maxSelections": 1
           }
         ],
-        "isSpellcaster": true,
+        "isSpellcaster": true
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -983,7 +1013,8 @@ List<CharacterClass> getCharacterClassList() => [
                         {
                           "name": "Two_handed",
                           "value": null,
-                          "description": "It takes two hands to use it effectively."
+                          "description":
+                              "It takes two hands to use it effectively."
                         },
                         {
                           "name": "Coins",
@@ -1074,7 +1105,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.",
                       "tags": [
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 20,
@@ -1107,7 +1142,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "When you carefully treat someone's wounds with poultices and herbs, heal them of 7 damage and expend a use.",
                       "tags": [
-                        {"name": "Uses", "value": 2, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 2,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Slow",
                           "value": null,
@@ -1138,7 +1177,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "When you carefully treat someone's wounds with poultices and herbs, heal them of 7 damage and expend a use.",
                       "tags": [
-                        {"name": "Uses", "value": 2, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 2,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Slow",
                           "value": null,
@@ -1176,7 +1219,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "When you share halfling pipeleaf with someone, expend two uses and take +1 forward to Parley with them.",
                       "tags": [
-                        {"name": "Uses", "value": 6, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 6,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 5,
@@ -1233,7 +1280,7 @@ List<CharacterClass> getCharacterClassList() => [
             "maxSelections": 1
           }
         ],
-        "isSpellcaster": false,
+        "isSpellcaster": false
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1450,13 +1497,18 @@ List<CharacterClass> getCharacterClassList() => [
                 ],
                 "coins": 0.0
               },
-              {"key": "coins", "description": "22 coins", "options": [], "coins": 22.0}
+              {
+                "key": "coins",
+                "description": "22 coins",
+                "options": [],
+                "coins": 22.0
+              }
             ],
             "preselect": [],
             "maxSelections": 2
           }
         ],
-        "isSpellcaster": false,
+        "isSpellcaster": false
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1474,13 +1526,13 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "",
           "chaotic": ""
         },
-        "flags": [],
         "bonds": [
           "__________'s misguided behavior endangers their very soul!",
           "__________ has stood by me in battle and can be trusted completely.",
           "I respect the beliefs of __________ but hope they will someday see the true way.",
           "__________ is a brave soul, I have much to learn from them."
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "51e69ccb-5bdb-4e29-8c4e-1152830b9d12",
@@ -1513,7 +1565,8 @@ List<CharacterClass> getCharacterClassList() => [
                         {
                           "name": "Two_handed",
                           "value": null,
-                          "description": "It takes two hands to use it effectively."
+                          "description":
+                              "It takes two hands to use it effectively."
                         },
                         {
                           "name": "Coins",
@@ -1598,7 +1651,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.",
                       "tags": [
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 20,
@@ -1635,7 +1692,11 @@ List<CharacterClass> getCharacterClassList() => [
                           "value": null,
                           "description": "It's edible, more or less."
                         },
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 3,
@@ -1660,7 +1721,7 @@ List<CharacterClass> getCharacterClassList() => [
             "maxSelections": 1
           }
         ],
-        "isSpellcaster": false,
+        "isSpellcaster": false
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1678,13 +1739,13 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Help an animal or spirit of the wild.",
           "chaotic": "Free someone from literal or figurative bonds."
         },
-        "flags": [],
         "bonds": [
           "I have guided ______________________ before and they owe me for it.",
           "______________________ is a friend of nature, so I will be their friend as well.",
           "______________________ has no respect for nature, so I have no respect for them.",
-          "______________________ does not understand life in the wild, so I will teach them.",
+          "______________________ does not understand life in the wild, so I will teach them."
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "b81a5df6-2a18-4880-a664-6b07b34f2219",
@@ -1711,7 +1772,8 @@ List<CharacterClass> getCharacterClassList() => [
                         {
                           "name": "Far",
                           "value": null,
-                          "description": "It's useful for attacking something in shouting distance."
+                          "description":
+                              "It's useful for attacking something in shouting distance."
                         },
                         {
                           "name": "Weight",
@@ -1777,7 +1839,8 @@ List<CharacterClass> getCharacterClassList() => [
                         {
                           "name": "Far",
                           "value": null,
-                          "description": "It's useful for attacking something in shouting distance."
+                          "description":
+                              "It's useful for attacking something in shouting distance."
                         },
                         {
                           "name": "Weight",
@@ -1855,7 +1918,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.",
                       "tags": [
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 20,
@@ -1885,7 +1952,11 @@ List<CharacterClass> getCharacterClassList() => [
                           "value": null,
                           "description": "It's edible, more or less."
                         },
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 3,
@@ -1900,8 +1971,8 @@ List<CharacterClass> getCharacterClassList() => [
                         }
                       ]
                     },
-                    "amount": 1.0,
-                  },
+                    "amount": 1.0
+                  }
                 ],
                 "coins": 0.0
               },
@@ -1918,7 +1989,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.",
                       "tags": [
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 20,
@@ -1963,6 +2038,7 @@ List<CharacterClass> getCharacterClassList() => [
                         }
                       ]
                     },
+                    "amount": 1.0
                   }
                 ],
                 "coins": 0.0
@@ -1972,7 +2048,7 @@ List<CharacterClass> getCharacterClassList() => [
             "maxSelections": 1
           }
         ],
-        "isSpellcaster": false,
+        "isSpellcaster": false
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -1990,13 +2066,13 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Avoid detection or infiltrate a location.",
           "chaotic": "Leap into danger without a plan."
         },
-        "flags": [],
         "bonds": [
           "I stole something from __________.",
           "__________ has my back when things go wrong.",
           "__________ knows incriminating details about me.",
           "__________ and I have a con running."
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "96787798-9785-4e9a-b07e-4126ad86b100",
@@ -2191,7 +2267,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.",
                       "tags": [
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 20,
@@ -2248,7 +2328,7 @@ List<CharacterClass> getCharacterClassList() => [
             "maxSelections": 1
           }
         ],
-        "isSpellcaster": false,
+        "isSpellcaster": false
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -2266,12 +2346,12 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Discover something about a magical mystery.",
           "chaotic": ""
         },
-        "flags": [],
         "bonds": [
           "__________ will play an important role in the events to come. I have foreseen it!",
           "__________ is keeping an important secret from me.",
           "__________ is woefully misinformed about the world; I will teach them all that I can."
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "f0807b81-5678-4553-8548-0788992acf10",
@@ -2332,7 +2412,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "When your bag of books contains just the right book for the subject you're spouting lore on, consult the book, mark off a use, and take +1 to your roll.",
                       "tags": [
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 10,
@@ -2418,7 +2502,8 @@ List<CharacterClass> getCharacterClassList() => [
                         {
                           "name": "Two_handed",
                           "value": null,
-                          "description": "It takes two hands to use it effectively."
+                          "description":
+                              "It takes two hands to use it effectively."
                         },
                         {
                           "name": "Coins",
@@ -2516,7 +2601,7 @@ List<CharacterClass> getCharacterClassList() => [
             "maxSelections": 1
           }
         ],
-        "isSpellcaster": true,
+        "isSpellcaster": true
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -2530,15 +2615,16 @@ List<CharacterClass> getCharacterClassList() => [
           "good": "",
           "evil": "Sacrifice an unwilling victim to the flames.",
           "lawful": "",
-          "neutral": "Exchange a sacrifice, freely given, for a service rendered.",
+          "neutral":
+              "Exchange a sacrifice, freely given, for a service rendered.",
           "chaotic": "Spread a dangerous new idea"
         },
-        "flags": [],
         "bonds": [
           "__________ has felt the hellish touch of fire, now they know my strength.",
           "I will teach __________ the true meaning of sacrifice.",
           "I cast something into the fire for __________ and still owe them their due."
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "76316345-ccad-43e2-b0f4-fc0e51fbf50b",
@@ -2562,7 +2648,11 @@ List<CharacterClass> getCharacterClassList() => [
                           "value": null,
                           "description": "It's edible, more or less."
                         },
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 3,
@@ -2614,13 +2704,18 @@ List<CharacterClass> getCharacterClassList() => [
                 ],
                 "coins": 0.0
               },
-              {"key": "coins", "description": "10 coins", "options": [], "coins": 10.0}
+              {
+                "key": "coins",
+                "description": "10 coins",
+                "options": [],
+                "coins": 10.0
+              }
             ],
             "preselect": [],
             "maxSelections": 2
           }
         ],
-        "isSpellcaster": false,
+        "isSpellcaster": false
       }),
       CharacterClass.fromJson({
         "_meta": {"language": "EN", "createdBy": "__repo__"},
@@ -2637,13 +2732,13 @@ List<CharacterClass> getCharacterClassList() => [
           "neutral": "Teach someone the ways of your people.",
           "chaotic": "You eschew a convention of the civilized world."
         },
-        "flags": [],
         "bonds": [
           "______________________ is puny and foolish, but amusing to me.",
           "______________________ 's ways are strange and confusing.",
           "______________________ is always getting into trouble - I must protect them from themselves.",
           "______________________ shares my hunger for glory; the earth will tremble at our passing!"
         ],
+        "flags": [],
         "gearChoices": [
           {
             "key": "7b819c33-10da-41ae-b31e-fa48c39b4cdd",
@@ -2667,7 +2762,11 @@ List<CharacterClass> getCharacterClassList() => [
                           "value": null,
                           "description": "It's edible, more or less."
                         },
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 3,
@@ -2734,7 +2833,8 @@ List<CharacterClass> getCharacterClassList() => [
                       "_meta": {"language": "EN", "createdBy": "__repo__"},
                       "key": "token_of_origin",
                       "name": "Token Of Origin",
-                      "description": "A token of where you've traveled or where you're from.",
+                      "description":
+                          "A token of where you've traveled or where you're from.",
                       "tags": [
                         {
                           "name": "Weight",
@@ -2858,7 +2958,11 @@ List<CharacterClass> getCharacterClassList() => [
                       "description":
                           "Adventuring gear is a collection of useful mundane items such as chalk, poles, spikes, ropes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.",
                       "tags": [
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 20,
@@ -2888,7 +2992,11 @@ List<CharacterClass> getCharacterClassList() => [
                           "value": null,
                           "description": "It's edible, more or less."
                         },
-                        {"name": "Uses", "value": 5, "description": "It can only be used n times."},
+                        {
+                          "name": "Uses",
+                          "value": 5,
+                          "description": "It can only be used n times."
+                        },
                         {
                           "name": "Coins",
                           "value": 3,
@@ -2955,6 +3063,6 @@ List<CharacterClass> getCharacterClassList() => [
             "maxSelections": 1
           }
         ],
-        "isSpellcaster": false,
+        "isSpellcaster": false
       })
     ];

@@ -25,3 +25,5 @@ script_runner:
     - web:copy-data: dart scripts/parsers/dart_to_json.dart
     - web:build: cd web/src && yarn build
     - web:publish: cd web/src && npm publish -d ../build
+    - conv:d2j: dart scripts/parsers/dart_to_json.dart
+    - conv:j2d: dart scripts/parsers/json_to_dart.dart

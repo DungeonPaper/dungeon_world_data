@@ -122,7 +122,8 @@ List<Race> getRaceList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "ceeca68d-0e0e-480c-9a8e-a3b50bb4111a",
         "name": "Halfling",
-        "description": "When you Defy Danger and use your small size to your advantage, take +1.",
+        "description":
+            "When you Defy Danger and use your small size to your advantage, take +1.",
         "explanation": "",
         "classKeys": [
           {"key": "fighter", "name": "Fighter", "type": "CharacterClass"}
@@ -211,7 +212,8 @@ List<Race> getRaceList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "24d11979-8018-4a69-95a0-346f4bbcad5c",
         "name": "Elf",
-        "description": "Magic is as natural as breath to you. Detect Magic is a cantrip for you.",
+        "description":
+            "Magic is as natural as breath to you. Detect Magic is a cantrip for you.",
         "explanation": "",
         "classKeys": [
           {"key": "wizard", "name": "Wizard", "type": "CharacterClass"}
@@ -223,7 +225,8 @@ List<Race> getRaceList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "0b0d4852-8757-410e-90ab-e1f29319bc2e",
         "name": "Human",
-        "description": "Choose one Cleric spell. You can cast it as if it was a Wizard spell.",
+        "description":
+            "Choose one Cleric spell. You can cast it as if it was a Wizard spell.",
         "explanation": "",
         "classKeys": [
           {"key": "wizard", "name": "Wizard", "type": "CharacterClass"}
@@ -247,7 +250,8 @@ List<Race> getRaceList() => [
         "_meta": {"language": "EN", "createdBy": "__repo__"},
         "key": "8ac5f523-1005-4b14-a0e0-9436effdb2fc",
         "name": "Human",
-        "description": "When you Make Camp next to a large, open flame, regain all of your HP.",
+        "description":
+            "When you Make Camp next to a large, open flame, regain all of your HP.",
         "explanation": "",
         "classKeys": [
           {"key": "immolator", "name": "Immolator", "type": "CharacterClass"}

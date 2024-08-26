@@ -4,22 +4,42 @@ import 'dart:io';
 import 'package:dungeon_world_data/dungeon_world_data.dart';
 import 'package:path/path.dart' as path;
 
-final _jsonOut = path.join(path.dirname(Platform.script.path), 'dumps', 'All.json');
-final _jsonOutCopy =
-    path.join(path.dirname(Platform.script.path), '..', '..', 'web', 'src', 'dw_data.json');
+void exportLanguage(String locale) async {
+  final webSrc = path.join(Directory.current.path, 'web', 'src');
+  final allFile = path.join(webSrc, 'raw_data', locale, 'All.json');
+  final buildFile = path.join(webSrc, locale, 'dw_data.json');
 
-main() async {
-  final contents = dungeonWorldData.toJson();
-  print("Writing $_jsonOut...");
-  await File(_jsonOut).writeAsString(json.encode(contents));
-  print("Writing $_jsonOutCopy...");
-  await File(_jsonOutCopy).writeAsString(json.encode(contents));
+  Directory(path.dirname(allFile)).createSync(recursive: true);
+  Directory(path.dirname(buildFile)).createSync(recursive: true);
+
+  final contents = dungeonWorldData.toJson()[locale]!;
+
+  print("Writing $allFile...");
+  await File(allFile).writeAsString(json.encode(contents));
+
+  print("Writing $buildFile...");
+  await File(buildFile).writeAsString(json.encode(contents));
+
+  final List<String> files = [];
 
   for (final e in contents.entries) {
-    final filePath = path.join(path.dirname(_jsonOut), e.key + ".json");
+    final filePath = path.join(path.dirname(allFile), "${e.key}.json");
+
     print("Writing $filePath...");
     await File(filePath).writeAsString(json.encode(e.value));
+    files.add(filePath);
   }
+
+  final result = await Process.run('prettier', ['--write', ...files, allFile]);
+  stdout.write(result.stdout);
+  stderr.write(result.stderr);
 
   print("Done");
 }
+
+main() async {
+  exportLanguage('en_US');
+  exportLanguage('pt_BR');
+  exportLanguage('pl_PL');
+}
+

@@ -8,9 +8,9 @@ import { DungeonWorldRepository } from "./types"
 type Locale = keyof typeof _locales
 
 const _locales = {
-  en_US: en_US,
-  pt_BR: pt_BR,
-  pl_PL: pl_PL,
+  en_US: en_US as never,
+  pt_BR: pt_BR as never,
+  pl_PL: pl_PL as never,
 } as const
 
 class DungeonWorldData {

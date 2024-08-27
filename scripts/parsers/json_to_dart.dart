@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:path/path.dart' as path;
 
-final webSrc = path.join(Directory.current.path, 'web', 'src');
+final webSrc = path.join(Directory.current.path, 'web');
 final jsonInDir = path.join(webSrc, 'raw_data');
 final dartOutDir = path.join(Directory.current.path, 'lib', 'data');
 

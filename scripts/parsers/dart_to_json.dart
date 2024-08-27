@@ -5,7 +5,7 @@ import 'package:dungeon_world_data/dungeon_world_data.dart';
 import 'package:path/path.dart' as path;
 
 void exportLanguage(String locale) async {
-  final webSrc = path.join(Directory.current.path, 'web', 'src');
+  final webSrc = path.join(Directory.current.path, 'web');
   final allFile = path.join(webSrc, 'raw_data', locale, 'All.json');
   final buildFile = path.join(webSrc, locale, 'dw_data.json');
 

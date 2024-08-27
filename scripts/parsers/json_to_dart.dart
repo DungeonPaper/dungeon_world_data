@@ -32,36 +32,30 @@ final clsFileMap = {
 };
 
 generateLocale(String locale) async {
-  final inputFile = path.join(jsonInDir, locale, 'All.json');
   final outputFile = path.join(dartOutDir, locale);
   final loaderFile = path.join(outputFile, '$locale.dart');
 
   Directory(outputFile).createSync(recursive: true);
 
-  final Map<String, dynamic> map =
-      json.decode(await File(inputFile).readAsString());
-
   final List<String> files = [];
 
-  for (final e in map.entries) {
-    if (clsNameMap[e.key] == null) {
-      continue;
-    }
-    print('Parsing $e');
+  for (final k in clsNameMap.keys) {
+    final inputFile = path.join(jsonInDir, locale, '$k.json');
+    final Map<String, dynamic> map =
+        json.decode(await File(inputFile).readAsString());
     final file =
-        path.join(outputFile, "${clsFileMap[e.key] ?? e.key.toLowerCase()}.dart");
-    print('Writing to $file');
-    final list = (e.value as Map<String, dynamic>)
-        .values
-        .map((r) => '${clsNameMap[e.key]}.fromJson(${json.encode(r)})');
-
+        path.join(outputFile, "${clsFileMap[k] ?? k.toLowerCase()}.dart");
+      print('Writing to $file');
+      final list = (map)
+          .values
+          .map((r) => '${clsNameMap[k]}.fromJson(${json.encode(r)})');
     await File(file).writeAsString('''
-import 'package:dungeon_world_data/${clsImportMap[e.key]}.dart';
+        import 'package:dungeon_world_data/${clsImportMap[k]}.dart';
 
-List<${clsNameMap[e.key]}> get${clsNameMap[e.key]}List() => [
-  ${list.join(',\n\t')}
-];
-''');
+        List<${clsNameMap[k]}> get${clsNameMap[k]}List() => [
+        ${list.join(',\n\t')}
+        ];
+        ''');
     files.add(file);
   }
 

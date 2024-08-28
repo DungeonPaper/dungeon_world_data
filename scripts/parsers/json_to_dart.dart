@@ -70,21 +70,18 @@ import 'moves.dart';
 import 'races.dart';
 import 'spells.dart';
 import 'tags.dart';
+final _locale = '$locale';
 
 void loadRepository(DungeonWorldRepository repo) {
-  repo.initLocale('$locale');
-  repo.changeLocale('$locale');
+  final data = repo.initLocale(_locale);
 
-  repo.characterClasses
-      .addEntries(getCharacterClassList().map((cls) => MapEntry(cls.key, cls)));
-  repo.items.addEntries(getItemList().map((item) => MapEntry(item.key, item)));
-  repo.monsters.addEntries(
-      getMonsterList().map((monster) => MapEntry(monster.key, monster)));
-  repo.moves.addEntries(getMoveList().map((move) => MapEntry(move.key, move)));
-  repo.races.addEntries(getRaceList().map((race) => MapEntry(race.key, race)));
-  repo.spells
-      .addEntries(getSpellList().map((spell) => MapEntry(spell.key, spell)));
-  repo.tags.addEntries(getTagList().map((tag) => MapEntry(tag.name, tag)));
+  data.characterClasses .addEntries(getCharacterClassList().map((cls) => MapEntry(cls.key, cls)));
+  data.items.addEntries(getItemList().map((item) => MapEntry(item.key, item)));
+  data.monsters.addEntries( getMonsterList().map((monster) => MapEntry(monster.key, monster)));
+  data.moves.addEntries(getMoveList().map((move) => MapEntry(move.key, move)));
+  data.races.addEntries(getRaceList().map((race) => MapEntry(race.key, race)));
+  data.spells .addEntries(getSpellList().map((spell) => MapEntry(spell.key, spell)));
+  data.tags.addEntries(getTagList().map((tag) => MapEntry(tag.name, tag)));
 }
 ''');
   final result = await Process.run('dart', ['format', ...files, loaderFile]);
